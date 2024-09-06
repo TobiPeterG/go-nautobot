@@ -2243,6 +2243,8 @@ Class | Method | HTTP request | Description
  - [PrefixLocationAssignmentRequest](docs/PrefixLocationAssignmentRequest.md)
  - [PrefixType](docs/PrefixType.md)
  - [PrefixTypeChoices](docs/PrefixTypeChoices.md)
+ - [PrefixTypeLabel](docs/PrefixTypeLabel.md)
+ - [PrefixTypeValue](docs/PrefixTypeValue.md)
  - [PrimaryIPv4](docs/PrimaryIPv4.md)
  - [PrimaryIPv6](docs/PrimaryIPv6.md)
  - [ProvidedContentsEnum](docs/ProvidedContentsEnum.md)

@@ -72,18 +72,28 @@ if 'components' in data and 'schemas' in data['components']:
                             'default': 'single-phase'
                         }
         
-        # Handle Prefix schema
         if name == 'Prefix' and 'properties' in schema:
-            # Replace complex `type` object with a simpler string enum in Prefix
+            # Replace complex `type` object with a more detailed schema in Prefix
             if 'type' in schema['properties']:
                 type_property = schema['properties']['type']
                 if 'properties' in type_property and 'value' in type_property['properties']:
-                    print(f"Replacing complex 'type' field in Prefix")
+                    print(f"Replacing complex 'type' field in Prefix with detailed properties")
                     schema['properties']['type'] = {
-                        'type': 'string',
-                        'enum': ['container', 'network', 'pool'],
-                        'default': 'network'
+                        'type': 'object',
+                        'properties': {
+                            'value': {
+                                'type': 'string',
+                                'enum': ['container', 'network', 'pool'],
+                                'default': 'network'
+                            },
+                            'label': {
+                                'type': 'string',
+                                'enum': ['Container', 'Network', 'Pool'],
+                                'default': 'Network'
+                            }
+                        }
                     }
+
                     
         if 'properties' in schema:
             # Fix non-nullable types

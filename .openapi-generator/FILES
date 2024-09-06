@@ -902,6 +902,8 @@ docs/PrefixLocationAssignment.md
 docs/PrefixLocationAssignmentRequest.md
 docs/PrefixType.md
 docs/PrefixTypeChoices.md
+docs/PrefixTypeLabel.md
+docs/PrefixTypeValue.md
 docs/PrimaryIPv4.md
 docs/PrimaryIPv6.md
 docs/ProvidedContentsEnum.md
@@ -1923,6 +1925,8 @@ model_prefix_location_assignment.go
 model_prefix_location_assignment_request.go
 model_prefix_type.go
 model_prefix_type_choices.go
+model_prefix_type_label.go
+model_prefix_type_value.go
 model_primary_ipv4.go
 model_primary_ipv6.go
 model_provided_contents_enum.go
