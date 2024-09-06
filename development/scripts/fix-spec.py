@@ -41,9 +41,19 @@ if 'components' in data and 'schemas' in data['components']:
                     if 'enum' in value_property and set(value_property['enum']) == {'primary', 'redundant'}:
                         print(f"Replacing complex 'type' field in PowerFeed")
                         schema['properties']['type'] = {
-                            'type': 'string',
-                            'enum': ['primary', 'redundant'],
-                            'default': 'primary'
+                            'type': 'object',
+                            'properties': {
+                                'value': {
+                                    'type': 'string',
+                                    'enum': ['primary', 'redundant'],
+                                    'default': 'primary'
+                                },
+                                'label': {
+                                    'type': 'string',
+                                    'enum': ['Primary', 'Redundant'],
+                                    'default': 'Primary'
+                                }
+                            }
                         }
 
             # Replace nested `supply` field in PowerFeed
@@ -54,9 +64,19 @@ if 'components' in data and 'schemas' in data['components']:
                     if 'enum' in value_property and set(value_property['enum']) == {'ac', 'dc'}:
                         print(f"Replacing complex 'supply' field in PowerFeed")
                         schema['properties']['supply'] = {
-                            'type': 'string',
-                            'enum': ['ac', 'dc'],
-                            'default': 'ac'
+                            'type': 'object',
+                            'properties': {
+                                'value': {
+                                    'type': 'string',
+                                    'enum': ['ac', 'dc'],
+                                    'default': 'ac'
+                                },
+                                'label': {
+                                    'type': 'string',
+                                    'enum': ['AC', 'DC'],
+                                    'default': 'AC'
+                                }
+                            }
                         }
 
             # Replace nested `phase` field in PowerFeed
@@ -67,11 +87,21 @@ if 'components' in data and 'schemas' in data['components']:
                     if 'enum' in value_property and set(value_property['enum']) == {'single-phase', 'three-phase'}:
                         print(f"Replacing complex 'phase' field in PowerFeed")
                         schema['properties']['phase'] = {
-                            'type': 'string',
-                            'enum': ['single-phase', 'three-phase'],
-                            'default': 'single-phase'
+                            'type': 'object',
+                            'properties': {
+                                'value': {
+                                    'type': 'string',
+                                    'enum': ['single-phase', 'three-phase'],
+                                    'default': 'single-phase'
+                                },
+                                'label': {
+                                    'type': 'string',
+                                    'enum': ['Single phase', 'Three-phase'],
+                                    'default': 'Single phase'
+                                }
+                            }
                         }
-        
+
         if name == 'Prefix' and 'properties' in schema:
             # Replace complex `type` object with a more detailed schema in Prefix
             if 'type' in schema['properties']:
