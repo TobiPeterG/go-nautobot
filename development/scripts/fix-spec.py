@@ -24,14 +24,14 @@ if 'components' in data and 'schemas' in data['components']:
                 for field in fields_to_remove:
                     required_fields.remove(field)
                 
-        # Handle failover_strategy
+        # Handle failover_strategy (https://github.com/nautobot/nautobot/issues/6157)
         if 'failover_strategy' in schema.get('properties', {}):
             prop = schema['properties']['failover_strategy']
             if 'default' in prop and prop['default'] is None:
                 print(f"Removing 'default: null' in {name}.failover_strategy")
                 del prop['default']
                 
-        # Handle PowerFeed schema
+        # Handle PowerFeed schema (TODO: This might not be correct, but it works for now)
         if name == 'PowerFeed' and 'properties' in schema:
             # Replace nested `type` field in PowerFeed
             if 'type' in schema['properties']:
@@ -103,7 +103,7 @@ if 'components' in data and 'schemas' in data['components']:
                         }
 
         if name == 'Prefix' and 'properties' in schema:
-            # Replace complex `type` object with a more detailed schema in Prefix
+            # Replace complex `type` object with a more detailed schema in Prefix (TODO: This might not be correct, but it works for now)
             if 'type' in schema['properties']:
                 type_property = schema['properties']['type']
                 if 'properties' in type_property and 'value' in type_property['properties']:
@@ -123,7 +123,6 @@ if 'components' in data and 'schemas' in data['components']:
                             }
                         }
                     }
-
                     
         if 'properties' in schema:
             # Fix non-nullable types
@@ -137,7 +136,50 @@ if 'components' in data and 'schemas' in data['components']:
                 if ntype in schema['properties']:
                     if schema['properties'][ntype]['format'] == 'binary':
                         schema['properties'][ntype].pop('nullable')
+                        
+# Patch to use AvailableIP array directly instead of PaginatedAvailableIPList for GET and POST
+if 'paths' in data:
+    if '/ipam/prefixes/{id}/available-ips/' in data['paths']:
+        available_ips_path = data['paths']['/ipam/prefixes/{id}/available-ips/']
+        
+        # Update the GET request response to return an array of AvailableIP objects directly
+        if 'get' in available_ips_path and 'responses' in available_ips_path['get']:
+            responses = available_ips_path['get']['responses']
+            if '200' in responses and 'content' in responses['200']:
+                print("Updating available-ips GET response to return an array of AvailableIP objects")
+                responses['200']['content']['application/json']['schema'] = {
+                    'type': 'array',
+                    'items': {
+                        '$ref': '#/components/schemas/AvailableIP'
+                    }
+                }
+                responses['200']['content']['text/csv']['schema'] = {
+                    'type': 'array',
+                    'items': {
+                        '$ref': '#/components/schemas/AvailableIP'
+                    }
+                }
+
+        # Update the POST request response to return an array of IPAddress objects
+        if 'post' in available_ips_path and 'responses' in available_ips_path['post']:
+            responses_post = available_ips_path['post']['responses']
+            if '201' in responses_post and 'content' in responses_post['201']:
+                print("Updating available-ips POST response to return an array of IPAddress objects")
+                responses_post['201']['content']['application/json']['schema'] = {
+                    'type': 'array',
+                    'items': {
+                        '$ref': '#/components/schemas/IPAddress'
+                    }
+                }
+                responses_post['201']['content']['text/csv']['schema'] = {
+                    'type': 'array',
+                    'items': {
+                        '$ref': '#/components/schemas/IPAddress'
+                    }
+                }
+
 
 # Save the spec file
 with open(SPEC_PATH, 'w') as file:
     yaml.dump(data, file, Dumper=yaml.CDumper, sort_keys=False)
+    
