@@ -2588,14 +2588,16 @@ func (a *DcimAPIService) DcimCablesListExecute(r ApiDcimCablesListRequest) (*Pag
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2897,14 +2899,16 @@ func (a *DcimAPIService) DcimCablesNotesListExecute(r ApiDcimCablesNotesListRequ
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -3183,14 +3187,16 @@ func (a *DcimAPIService) DcimCablesRetrieveExecute(r ApiDcimCablesRetrieveReques
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -3495,14 +3501,16 @@ func (a *DcimAPIService) DcimConnectedDeviceListExecute(r ApiDcimConnectedDevice
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -4114,14 +4122,16 @@ func (a *DcimAPIService) DcimConsoleConnectionsListExecute(r ApiDcimConsoleConne
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -6198,14 +6208,16 @@ func (a *DcimAPIService) DcimConsolePortTemplatesListExecute(r ApiDcimConsolePor
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -6484,14 +6496,16 @@ func (a *DcimAPIService) DcimConsolePortTemplatesRetrieveExecute(r ApiDcimConsol
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -8758,14 +8772,16 @@ func (a *DcimAPIService) DcimConsolePortsListExecute(r ApiDcimConsolePortsListRe
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -9067,14 +9083,16 @@ func (a *DcimAPIService) DcimConsolePortsNotesListExecute(r ApiDcimConsolePortsN
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -9353,14 +9371,16 @@ func (a *DcimAPIService) DcimConsolePortsRetrieveExecute(r ApiDcimConsolePortsRe
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -9505,14 +9525,16 @@ func (a *DcimAPIService) DcimConsolePortsTraceRetrieveExecute(r ApiDcimConsolePo
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -11726,14 +11748,16 @@ func (a *DcimAPIService) DcimConsoleServerPortTemplatesListExecute(r ApiDcimCons
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -12012,14 +12036,16 @@ func (a *DcimAPIService) DcimConsoleServerPortTemplatesRetrieveExecute(r ApiDcim
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -14286,14 +14312,16 @@ func (a *DcimAPIService) DcimConsoleServerPortsListExecute(r ApiDcimConsoleServe
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -14595,14 +14623,16 @@ func (a *DcimAPIService) DcimConsoleServerPortsNotesListExecute(r ApiDcimConsole
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -14881,14 +14911,16 @@ func (a *DcimAPIService) DcimConsoleServerPortsRetrieveExecute(r ApiDcimConsoleS
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -15033,14 +15065,16 @@ func (a *DcimAPIService) DcimConsoleServerPortsTraceRetrieveExecute(r ApiDcimCon
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -17329,14 +17363,16 @@ func (a *DcimAPIService) DcimControllerManagedDeviceGroupsListExecute(r ApiDcimC
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -17638,14 +17674,16 @@ func (a *DcimAPIService) DcimControllerManagedDeviceGroupsNotesListExecute(r Api
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -17924,14 +17962,16 @@ func (a *DcimAPIService) DcimControllerManagedDeviceGroupsRetrieveExecute(r ApiD
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -20257,14 +20297,16 @@ func (a *DcimAPIService) DcimControllersListExecute(r ApiDcimControllersListRequ
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -20566,14 +20608,16 @@ func (a *DcimAPIService) DcimControllersNotesListExecute(r ApiDcimControllersNot
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -20852,14 +20896,16 @@ func (a *DcimAPIService) DcimControllersRetrieveExecute(r ApiDcimControllersRetr
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -22761,14 +22807,16 @@ func (a *DcimAPIService) DcimDeviceBayTemplatesListExecute(r ApiDcimDeviceBayTem
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -23047,14 +23095,16 @@ func (a *DcimAPIService) DcimDeviceBayTemplatesRetrieveExecute(r ApiDcimDeviceBa
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -25034,14 +25084,16 @@ func (a *DcimAPIService) DcimDeviceBaysListExecute(r ApiDcimDeviceBaysListReques
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -25343,14 +25395,16 @@ func (a *DcimAPIService) DcimDeviceBaysNotesListExecute(r ApiDcimDeviceBaysNotes
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -25629,14 +25683,16 @@ func (a *DcimAPIService) DcimDeviceBaysRetrieveExecute(r ApiDcimDeviceBaysRetrie
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -27542,14 +27598,16 @@ func (a *DcimAPIService) DcimDeviceFamiliesListExecute(r ApiDcimDeviceFamiliesLi
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -27851,14 +27909,16 @@ func (a *DcimAPIService) DcimDeviceFamiliesNotesListExecute(r ApiDcimDeviceFamil
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -28137,14 +28197,16 @@ func (a *DcimAPIService) DcimDeviceFamiliesRetrieveExecute(r ApiDcimDeviceFamili
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -30074,14 +30136,16 @@ func (a *DcimAPIService) DcimDeviceRedundancyGroupsListExecute(r ApiDcimDeviceRe
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -30383,14 +30447,16 @@ func (a *DcimAPIService) DcimDeviceRedundancyGroupsNotesListExecute(r ApiDcimDev
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -30669,14 +30735,16 @@ func (a *DcimAPIService) DcimDeviceRedundancyGroupsRetrieveExecute(r ApiDcimDevi
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -33846,14 +33914,16 @@ func (a *DcimAPIService) DcimDeviceTypesListExecute(r ApiDcimDeviceTypesListRequ
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -34155,14 +34225,16 @@ func (a *DcimAPIService) DcimDeviceTypesNotesListExecute(r ApiDcimDeviceTypesNot
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -34441,14 +34513,16 @@ func (a *DcimAPIService) DcimDeviceTypesRetrieveExecute(r ApiDcimDeviceTypesRetr
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -35590,14 +35664,16 @@ func (a *DcimAPIService) DcimDeviceTypesToSoftwareImageFilesListExecute(r ApiDci
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -35876,14 +35952,16 @@ func (a *DcimAPIService) DcimDeviceTypesToSoftwareImageFilesRetrieveExecute(r Ap
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -40660,14 +40738,16 @@ func (a *DcimAPIService) DcimDevicesListExecute(r ApiDcimDevicesListRequest) (*P
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -40822,14 +40902,16 @@ func (a *DcimAPIService) DcimDevicesNapalmRetrieveExecute(r ApiDcimDevicesNapalm
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -41131,14 +41213,16 @@ func (a *DcimAPIService) DcimDevicesNotesListExecute(r ApiDcimDevicesNotesListRe
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -41417,14 +41501,16 @@ func (a *DcimAPIService) DcimDevicesRetrieveExecute(r ApiDcimDevicesRetrieveRequ
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -43776,14 +43862,16 @@ func (a *DcimAPIService) DcimFrontPortTemplatesListExecute(r ApiDcimFrontPortTem
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -44062,14 +44150,16 @@ func (a *DcimAPIService) DcimFrontPortTemplatesRetrieveExecute(r ApiDcimFrontPor
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -46461,14 +46551,16 @@ func (a *DcimAPIService) DcimFrontPortsListExecute(r ApiDcimFrontPortsListReques
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -46770,14 +46862,16 @@ func (a *DcimAPIService) DcimFrontPortsNotesListExecute(r ApiDcimFrontPortsNotes
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -47076,14 +47170,16 @@ func (a *DcimAPIService) DcimFrontPortsPathsListExecute(r ApiDcimFrontPortsPaths
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -47228,14 +47324,16 @@ func (a *DcimAPIService) DcimFrontPortsRetrieveExecute(r ApiDcimFrontPortsRetrie
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -47746,14 +47844,16 @@ func (a *DcimAPIService) DcimInterfaceConnectionsListExecute(r ApiDcimInterfaceC
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -48775,14 +48875,16 @@ func (a *DcimAPIService) DcimInterfaceRedundancyGroupAssociationsListExecute(r A
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -49084,14 +49186,16 @@ func (a *DcimAPIService) DcimInterfaceRedundancyGroupAssociationsNotesListExecut
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -49370,14 +49474,16 @@ func (a *DcimAPIService) DcimInterfaceRedundancyGroupAssociationsRetrieveExecute
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -51544,14 +51650,16 @@ func (a *DcimAPIService) DcimInterfaceRedundancyGroupsListExecute(r ApiDcimInter
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -51853,14 +51961,16 @@ func (a *DcimAPIService) DcimInterfaceRedundancyGroupsNotesListExecute(r ApiDcim
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -52139,14 +52249,16 @@ func (a *DcimAPIService) DcimInterfaceRedundancyGroupsRetrieveExecute(r ApiDcimI
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -54369,14 +54481,16 @@ func (a *DcimAPIService) DcimInterfaceTemplatesListExecute(r ApiDcimInterfaceTem
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -54655,14 +54769,16 @@ func (a *DcimAPIService) DcimInterfaceTemplatesRetrieveExecute(r ApiDcimInterfac
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -55797,14 +55913,16 @@ func (a *DcimAPIService) DcimInterfaceVdcAssignmentsListExecute(r ApiDcimInterfa
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -56083,14 +56201,16 @@ func (a *DcimAPIService) DcimInterfaceVdcAssignmentsRetrieveExecute(r ApiDcimInt
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -59604,14 +59724,16 @@ func (a *DcimAPIService) DcimInterfacesListExecute(r ApiDcimInterfacesListReques
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -59913,14 +60035,16 @@ func (a *DcimAPIService) DcimInterfacesNotesListExecute(r ApiDcimInterfacesNotes
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -60199,14 +60323,16 @@ func (a *DcimAPIService) DcimInterfacesRetrieveExecute(r ApiDcimInterfacesRetrie
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -60351,14 +60477,16 @@ func (a *DcimAPIService) DcimInterfacesTraceRetrieveExecute(r ApiDcimInterfacesT
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -63266,14 +63394,16 @@ func (a *DcimAPIService) DcimInventoryItemsListExecute(r ApiDcimInventoryItemsLi
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -63575,14 +63705,16 @@ func (a *DcimAPIService) DcimInventoryItemsNotesListExecute(r ApiDcimInventoryIt
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -63861,14 +63993,16 @@ func (a *DcimAPIService) DcimInventoryItemsRetrieveExecute(r ApiDcimInventoryIte
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -65764,14 +65898,16 @@ func (a *DcimAPIService) DcimLocationTypesListExecute(r ApiDcimLocationTypesList
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -66073,14 +66209,16 @@ func (a *DcimAPIService) DcimLocationTypesNotesListExecute(r ApiDcimLocationType
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -66359,14 +66497,16 @@ func (a *DcimAPIService) DcimLocationTypesRetrieveExecute(r ApiDcimLocationTypes
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -71269,14 +71409,16 @@ func (a *DcimAPIService) DcimLocationsListExecute(r ApiDcimLocationsListRequest)
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -71578,14 +71720,16 @@ func (a *DcimAPIService) DcimLocationsNotesListExecute(r ApiDcimLocationsNotesLi
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -71864,14 +72008,16 @@ func (a *DcimAPIService) DcimLocationsRetrieveExecute(r ApiDcimLocationsRetrieve
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -73842,14 +73988,16 @@ func (a *DcimAPIService) DcimManufacturersListExecute(r ApiDcimManufacturersList
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -74151,14 +74299,16 @@ func (a *DcimAPIService) DcimManufacturersNotesListExecute(r ApiDcimManufacturer
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -74437,14 +74587,16 @@ func (a *DcimAPIService) DcimManufacturersRetrieveExecute(r ApiDcimManufacturers
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -76934,14 +77086,16 @@ func (a *DcimAPIService) DcimModuleBayTemplatesListExecute(r ApiDcimModuleBayTem
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -77220,14 +77374,16 @@ func (a *DcimAPIService) DcimModuleBayTemplatesRetrieveExecute(r ApiDcimModuleBa
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -79775,14 +79931,16 @@ func (a *DcimAPIService) DcimModuleBaysListExecute(r ApiDcimModuleBaysListReques
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -80084,14 +80242,16 @@ func (a *DcimAPIService) DcimModuleBaysNotesListExecute(r ApiDcimModuleBaysNotes
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -80370,14 +80530,16 @@ func (a *DcimAPIService) DcimModuleBaysRetrieveExecute(r ApiDcimModuleBaysRetrie
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -82290,14 +82452,16 @@ func (a *DcimAPIService) DcimModuleFamiliesListExecute(r ApiDcimModuleFamiliesLi
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -82599,14 +82763,16 @@ func (a *DcimAPIService) DcimModuleFamiliesNotesListExecute(r ApiDcimModuleFamil
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -82885,14 +83051,16 @@ func (a *DcimAPIService) DcimModuleFamiliesRetrieveExecute(r ApiDcimModuleFamili
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -85510,14 +85678,16 @@ func (a *DcimAPIService) DcimModuleTypesListExecute(r ApiDcimModuleTypesListRequ
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -85819,14 +85989,16 @@ func (a *DcimAPIService) DcimModuleTypesNotesListExecute(r ApiDcimModuleTypesNot
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -86105,14 +86277,16 @@ func (a *DcimAPIService) DcimModuleTypesRetrieveExecute(r ApiDcimModuleTypesRetr
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -89138,14 +89312,16 @@ func (a *DcimAPIService) DcimModulesListExecute(r ApiDcimModulesListRequest) (*P
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -89447,14 +89623,16 @@ func (a *DcimAPIService) DcimModulesNotesListExecute(r ApiDcimModulesNotesListRe
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -89733,14 +89911,16 @@ func (a *DcimAPIService) DcimModulesRetrieveExecute(r ApiDcimModulesRetrieveRequ
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -92192,14 +92372,16 @@ func (a *DcimAPIService) DcimPlatformsListExecute(r ApiDcimPlatformsListRequest)
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -92501,14 +92683,16 @@ func (a *DcimAPIService) DcimPlatformsNotesListExecute(r ApiDcimPlatformsNotesLi
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -92787,14 +92971,16 @@ func (a *DcimAPIService) DcimPlatformsRetrieveExecute(r ApiDcimPlatformsRetrieve
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -93543,14 +93729,16 @@ func (a *DcimAPIService) DcimPowerConnectionsListExecute(r ApiDcimPowerConnectio
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -97248,14 +97436,16 @@ func (a *DcimAPIService) DcimPowerFeedsListExecute(r ApiDcimPowerFeedsListReques
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -97557,14 +97747,16 @@ func (a *DcimAPIService) DcimPowerFeedsNotesListExecute(r ApiDcimPowerFeedsNotes
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -97843,14 +98035,16 @@ func (a *DcimAPIService) DcimPowerFeedsRetrieveExecute(r ApiDcimPowerFeedsRetrie
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -97995,14 +98189,16 @@ func (a *DcimAPIService) DcimPowerFeedsTraceRetrieveExecute(r ApiDcimPowerFeedsT
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -100499,14 +100695,16 @@ func (a *DcimAPIService) DcimPowerOutletTemplatesListExecute(r ApiDcimPowerOutle
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -100785,14 +100983,16 @@ func (a *DcimAPIService) DcimPowerOutletTemplatesRetrieveExecute(r ApiDcimPowerO
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -103343,14 +103543,16 @@ func (a *DcimAPIService) DcimPowerOutletsListExecute(r ApiDcimPowerOutletsListRe
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -103652,14 +103854,16 @@ func (a *DcimAPIService) DcimPowerOutletsNotesListExecute(r ApiDcimPowerOutletsN
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -103938,14 +104142,16 @@ func (a *DcimAPIService) DcimPowerOutletsRetrieveExecute(r ApiDcimPowerOutletsRe
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -104090,14 +104296,16 @@ func (a *DcimAPIService) DcimPowerOutletsTraceRetrieveExecute(r ApiDcimPowerOutl
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -106330,14 +106538,16 @@ func (a *DcimAPIService) DcimPowerPanelsListExecute(r ApiDcimPowerPanelsListRequ
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -106639,14 +106849,16 @@ func (a *DcimAPIService) DcimPowerPanelsNotesListExecute(r ApiDcimPowerPanelsNot
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -106925,14 +107137,16 @@ func (a *DcimAPIService) DcimPowerPanelsRetrieveExecute(r ApiDcimPowerPanelsRetr
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -109422,14 +109636,16 @@ func (a *DcimAPIService) DcimPowerPortTemplatesListExecute(r ApiDcimPowerPortTem
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -109708,14 +109924,16 @@ func (a *DcimAPIService) DcimPowerPortTemplatesRetrieveExecute(r ApiDcimPowerPor
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -112258,14 +112476,16 @@ func (a *DcimAPIService) DcimPowerPortsListExecute(r ApiDcimPowerPortsListReques
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -112567,14 +112787,16 @@ func (a *DcimAPIService) DcimPowerPortsNotesListExecute(r ApiDcimPowerPortsNotes
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -112853,14 +113075,16 @@ func (a *DcimAPIService) DcimPowerPortsRetrieveExecute(r ApiDcimPowerPortsRetrie
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -113005,14 +113229,16 @@ func (a *DcimAPIService) DcimPowerPortsTraceRetrieveExecute(r ApiDcimPowerPortsT
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -115077,14 +115303,16 @@ func (a *DcimAPIService) DcimRackGroupsListExecute(r ApiDcimRackGroupsListReques
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -115386,14 +115614,16 @@ func (a *DcimAPIService) DcimRackGroupsNotesListExecute(r ApiDcimRackGroupsNotes
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -115672,14 +115902,16 @@ func (a *DcimAPIService) DcimRackGroupsRetrieveExecute(r ApiDcimRackGroupsRetrie
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -117539,14 +117771,16 @@ func (a *DcimAPIService) DcimRackReservationsListExecute(r ApiDcimRackReservatio
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -117848,14 +118082,16 @@ func (a *DcimAPIService) DcimRackReservationsNotesListExecute(r ApiDcimRackReser
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -118134,14 +118370,16 @@ func (a *DcimAPIService) DcimRackReservationsRetrieveExecute(r ApiDcimRackReserv
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -119136,8 +119374,9 @@ func (a *DcimAPIService) DcimRacksElevationListExecute(r ApiDcimRacksElevationLi
 	if r.displayFullname != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "display_fullname", r.displayFullname, "form", "")
 	} else {
-		var defaultValue bool = true
-		r.displayFullname = &defaultValue
+        var defaultValue bool = true
+        parameterAddToHeaderOrQuery(localVarQueryParams, "display_fullname", defaultValue, "form", "")
+        r.displayFullname = &defaultValue
 	}
 	if r.exclude != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude", r.exclude, "form", "")
@@ -119145,14 +119384,16 @@ func (a *DcimAPIService) DcimRacksElevationListExecute(r ApiDcimRacksElevationLi
 	if r.expandDevices != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "expand_devices", r.expandDevices, "form", "")
 	} else {
-		var defaultValue bool = true
-		r.expandDevices = &defaultValue
+        var defaultValue bool = true
+        parameterAddToHeaderOrQuery(localVarQueryParams, "expand_devices", defaultValue, "form", "")
+        r.expandDevices = &defaultValue
 	}
 	if r.face != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "face", r.face, "form", "")
 	} else {
-		var defaultValue DcimRacksElevationListFaceParameter = "front"
-		r.face = &defaultValue
+        var defaultValue DcimRacksElevationListFaceParameter = "front"
+        parameterAddToHeaderOrQuery(localVarQueryParams, "face", defaultValue, "form", "")
+        r.face = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
@@ -119160,8 +119401,9 @@ func (a *DcimAPIService) DcimRacksElevationListExecute(r ApiDcimRacksElevationLi
 	if r.includeImages != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_images", r.includeImages, "form", "")
 	} else {
-		var defaultValue bool = true
-		r.includeImages = &defaultValue
+        var defaultValue bool = true
+        parameterAddToHeaderOrQuery(localVarQueryParams, "include_images", defaultValue, "form", "")
+        r.includeImages = &defaultValue
 	}
 	if r.isOccupied != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "is_occupied", r.isOccupied, "form", "")
@@ -119169,8 +119411,9 @@ func (a *DcimAPIService) DcimRacksElevationListExecute(r ApiDcimRacksElevationLi
 	if r.legendWidth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "legend_width", r.legendWidth, "form", "")
 	} else {
-		var defaultValue int32 = 30
-		r.legendWidth = &defaultValue
+        var defaultValue int32 = 30
+        parameterAddToHeaderOrQuery(localVarQueryParams, "legend_width", defaultValue, "form", "")
+        r.legendWidth = &defaultValue
 	}
 	if r.limit != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", r.limit, "form", "")
@@ -119184,8 +119427,9 @@ func (a *DcimAPIService) DcimRacksElevationListExecute(r ApiDcimRacksElevationLi
 	if r.render != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "render", r.render, "form", "")
 	} else {
-		var defaultValue DcimRacksElevationListRenderParameter = "json"
-		r.render = &defaultValue
+        var defaultValue DcimRacksElevationListRenderParameter = "json"
+        parameterAddToHeaderOrQuery(localVarQueryParams, "render", defaultValue, "form", "")
+        r.render = &defaultValue
 	}
 	if r.unitHeight != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "unit_height", r.unitHeight, "form", "")
@@ -119196,14 +119440,16 @@ func (a *DcimAPIService) DcimRacksElevationListExecute(r ApiDcimRacksElevationLi
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -122526,14 +122772,16 @@ func (a *DcimAPIService) DcimRacksListExecute(r ApiDcimRacksListRequest) (*Pagin
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -122835,14 +123083,16 @@ func (a *DcimAPIService) DcimRacksNotesListExecute(r ApiDcimRacksNotesListReques
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -123121,14 +123371,16 @@ func (a *DcimAPIService) DcimRacksRetrieveExecute(r ApiDcimRacksRetrieveRequest)
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -125499,14 +125751,16 @@ func (a *DcimAPIService) DcimRearPortTemplatesListExecute(r ApiDcimRearPortTempl
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -125785,14 +126039,16 @@ func (a *DcimAPIService) DcimRearPortTemplatesRetrieveExecute(r ApiDcimRearPortT
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -128204,14 +128460,16 @@ func (a *DcimAPIService) DcimRearPortsListExecute(r ApiDcimRearPortsListRequest)
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -128513,14 +128771,16 @@ func (a *DcimAPIService) DcimRearPortsNotesListExecute(r ApiDcimRearPortsNotesLi
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -128819,14 +129079,16 @@ func (a *DcimAPIService) DcimRearPortsPathsListExecute(r ApiDcimRearPortsPathsLi
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -128971,14 +129233,16 @@ func (a *DcimAPIService) DcimRearPortsRetrieveExecute(r ApiDcimRearPortsRetrieve
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -131648,14 +131912,16 @@ func (a *DcimAPIService) DcimSoftwareImageFilesListExecute(r ApiDcimSoftwareImag
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -131957,14 +132223,16 @@ func (a *DcimAPIService) DcimSoftwareImageFilesNotesListExecute(r ApiDcimSoftwar
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -132243,14 +132511,16 @@ func (a *DcimAPIService) DcimSoftwareImageFilesRetrieveExecute(r ApiDcimSoftware
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -134908,14 +135178,16 @@ func (a *DcimAPIService) DcimSoftwareVersionsListExecute(r ApiDcimSoftwareVersio
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -135217,14 +135489,16 @@ func (a *DcimAPIService) DcimSoftwareVersionsNotesListExecute(r ApiDcimSoftwareV
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -135503,14 +135777,16 @@ func (a *DcimAPIService) DcimSoftwareVersionsRetrieveExecute(r ApiDcimSoftwareVe
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -137538,14 +137814,16 @@ func (a *DcimAPIService) DcimVirtualChassisListExecute(r ApiDcimVirtualChassisLi
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -137847,14 +138125,16 @@ func (a *DcimAPIService) DcimVirtualChassisNotesListExecute(r ApiDcimVirtualChas
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -138133,14 +138413,16 @@ func (a *DcimAPIService) DcimVirtualChassisRetrieveExecute(r ApiDcimVirtualChass
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -140439,14 +140721,16 @@ func (a *DcimAPIService) DcimVirtualDeviceContextsListExecute(r ApiDcimVirtualDe
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -140748,14 +141032,16 @@ func (a *DcimAPIService) DcimVirtualDeviceContextsNotesListExecute(r ApiDcimVirt
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -141034,14 +141320,16 @@ func (a *DcimAPIService) DcimVirtualDeviceContextsRetrieveExecute(r ApiDcimVirtu
 	if r.depth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "depth", r.depth, "form", "")
 	} else {
-		var defaultValue int32 = 1
-		r.depth = &defaultValue
+        var defaultValue int32 = 1
+        parameterAddToHeaderOrQuery(localVarQueryParams, "depth", defaultValue, "form", "")
+        r.depth = &defaultValue
 	}
 	if r.excludeM2m != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", r.excludeM2m, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeM2m = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "exclude_m2m", defaultValue, "form", "")
+        r.excludeM2m = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

@@ -224480,9 +224480,14 @@ components:
       title: Software Image Files
       type: object
     BulkWritableExternalIntegrationRequest_http_method:
-      oneOf:
-      - $ref: "#/components/schemas/HttpMethodEnum"
-      - $ref: "#/components/schemas/BlankEnum"
+      enum:
+      - GET
+      - POST
+      - PUT
+      - PATCH
+      - DELETE
+      - ""
+      type: string
     BulkWritableExternalIntegrationRequest_secrets_group:
       description: Credentials used for authenticating with the remote system
       example:
@@ -224502,9 +224507,14 @@ components:
           type: string
       type: object
     BulkWritableGitRepositoryRequest_provided_contents_inner:
-      oneOf:
-      - $ref: "#/components/schemas/ProvidedContentsEnum"
-      - $ref: "#/components/schemas/BlankEnum"
+      enum:
+      - extras.configcontext
+      - extras.configcontextschema
+      - extras.exporttemplate
+      - extras.graphqlquery
+      - extras.job
+      - ""
+      type: string
     BulkWritableIPAddressRequest_namespace:
       example:
         object_type: app_label.modelname
@@ -224865,15 +224875,20 @@ components:
           type: string
       type: object
     BulkWritableRadioProfileRequest_frequency:
-      oneOf:
-      - $ref: "#/components/schemas/FrequencyEnum"
-      - $ref: "#/components/schemas/BlankEnum"
+      enum:
+      - 2.4GHz
+      - 5GHz
+      - 6GHz
+      - ""
+      type: string
     BulkWritableRelationshipRequest_required_on:
       description: Objects on the specified side MUST implement this relationship.
         Not permitted for symmetric relationships.
-      oneOf:
-      - $ref: "#/components/schemas/RequiredOnEnum"
-      - $ref: "#/components/schemas/BlankEnum"
+      enum:
+      - source
+      - destination
+      - ""
+      type: string
     BulkWritableSavedViewRequest_owner:
       description: The user that created this view
       example:
@@ -224946,9 +224961,18 @@ components:
       type: object
     BulkWritableSoftwareImageFileRequest_hashing_algorithm:
       description: Hashing algorithm for image file checksum
-      oneOf:
-      - $ref: "#/components/schemas/HashingAlgorithmEnum"
-      - $ref: "#/components/schemas/BlankEnum"
+      enum:
+      - md5
+      - sha1
+      - sha224
+      - sha384
+      - sha256
+      - sha512
+      - sha3
+      - blake2
+      - blake3
+      - ""
+      type: string
     BulkWritableVirtualMachineRequest_software_version:
       description: The software version installed on this virtual machine
       example:
@@ -225784,83 +225808,567 @@ components:
       readOnly: true
       type: object
     PatchedWritableCableRequest_type:
-      oneOf:
-      - $ref: "#/components/schemas/CableTypeChoices"
-      - $ref: "#/components/schemas/BlankEnum"
+      enum:
+      - cat3
+      - cat5
+      - cat5e
+      - cat6
+      - cat6a
+      - cat7
+      - cat7a
+      - cat8
+      - dac-active
+      - dac-passive
+      - mrj21-trunk
+      - coaxial
+      - mmf
+      - mmf-om1
+      - mmf-om2
+      - mmf-om3
+      - mmf-om4
+      - mmf-om5
+      - smf
+      - smf-os1
+      - smf-os2
+      - aoc
+      - power
+      - other
+      - ""
+      type: string
     PatchedWritableCableRequest_length_unit:
-      oneOf:
-      - $ref: "#/components/schemas/LengthUnitEnum"
-      - $ref: "#/components/schemas/BlankEnum"
+      enum:
+      - km
+      - m
+      - cm
+      - mi
+      - ft
+      - in
+      - ""
+      type: string
     PatchedWritableConsolePortRequest_type:
       description: Physical port type
-      oneOf:
-      - $ref: "#/components/schemas/ConsolePortTypeChoices"
-      - $ref: "#/components/schemas/BlankEnum"
+      enum:
+      - de-9
+      - db-25
+      - rj-11
+      - rj-12
+      - rj-45
+      - mini-din-8
+      - usb-a
+      - usb-b
+      - usb-c
+      - usb-mini-a
+      - usb-mini-b
+      - usb-micro-a
+      - usb-micro-b
+      - usb-micro-ab
+      - other
+      - ""
+      type: string
     PatchedWritableConsolePortTemplateRequest_type:
-      oneOf:
-      - $ref: "#/components/schemas/ConsolePortTypeChoices"
-      - $ref: "#/components/schemas/BlankEnum"
+      enum:
+      - de-9
+      - db-25
+      - rj-11
+      - rj-12
+      - rj-45
+      - mini-din-8
+      - usb-a
+      - usb-b
+      - usb-c
+      - usb-mini-a
+      - usb-mini-b
+      - usb-micro-a
+      - usb-micro-b
+      - usb-micro-ab
+      - other
+      - ""
+      type: string
     Rack_face:
-      oneOf:
-      - $ref: "#/components/schemas/FaceEnum"
-      - $ref: "#/components/schemas/BlankEnum"
+      enum:
+      - front
+      - rear
+      - ""
       title: Rack face
+      type: string
     Parent_child_status:
       description: Parent devices house child devices in device bays. Leave blank
         if this device type is neither a parent nor a child.
-      oneOf:
-      - $ref: "#/components/schemas/SubdeviceRoleEnum"
-      - $ref: "#/components/schemas/BlankEnum"
+      enum:
+      - parent
+      - child
+      - ""
       title: Parent/child status
+      type: string
     Redundancy_Protocol:
-      oneOf:
-      - $ref: "#/components/schemas/InterfaceRedundancyGroupProtocolChoices"
-      - $ref: "#/components/schemas/BlankEnum"
+      enum:
+      - hsrp
+      - vrrp
+      - glbp
+      - carp
+      - ""
       title: Redundancy Protocol
+      type: string
     PatchedWritableInterfaceRequest_mode:
-      oneOf:
-      - $ref: "#/components/schemas/InterfaceModeChoices"
-      - $ref: "#/components/schemas/BlankEnum"
+      enum:
+      - access
+      - tagged
+      - tagged-all
+      - ""
+      type: string
     PatchedWritablePowerFeedRequest_power_path:
       description: Physical power distribution redundancy path.
-      oneOf:
-      - $ref: "#/components/schemas/PowerPathEnum"
-      - $ref: "#/components/schemas/BlankEnum"
+      enum:
+      - a
+      - b
+      - ""
+      type: string
     PatchedWritablePowerOutletRequest_type:
       description: Physical port type
-      oneOf:
-      - $ref: "#/components/schemas/PowerOutletTypeChoices"
-      - $ref: "#/components/schemas/BlankEnum"
+      enum:
+      - iec-60320-c5
+      - iec-60320-c7
+      - iec-60320-c13
+      - iec-60320-c15
+      - iec-60320-c19
+      - iec-60320-c21
+      - iec-60309-p-n-e-4h
+      - iec-60309-p-n-e-6h
+      - iec-60309-p-n-e-9h
+      - iec-60309-2p-e-4h
+      - iec-60309-2p-e-6h
+      - iec-60309-2p-e-9h
+      - iec-60309-3p-e-4h
+      - iec-60309-3p-e-6h
+      - iec-60309-3p-e-9h
+      - iec-60309-3p-n-e-4h
+      - iec-60309-3p-n-e-6h
+      - iec-60309-3p-n-e-9h
+      - iec-60906-1
+      - nbr-14136-10a
+      - nbr-14136-20a
+      - nema-1-15r
+      - nema-5-15r
+      - nema-5-20r
+      - nema-5-30r
+      - nema-5-50r
+      - nema-6-15r
+      - nema-6-20r
+      - nema-6-30r
+      - nema-6-50r
+      - nema-10-30r
+      - nema-10-50r
+      - nema-14-20r
+      - nema-14-30r
+      - nema-14-50r
+      - nema-14-60r
+      - nema-15-15r
+      - nema-15-20r
+      - nema-15-30r
+      - nema-15-50r
+      - nema-15-60r
+      - nema-l1-15r
+      - nema-l5-15r
+      - nema-l5-20r
+      - nema-l5-30r
+      - nema-l5-50r
+      - nema-l6-15r
+      - nema-l6-20r
+      - nema-l6-30r
+      - nema-l6-50r
+      - nema-l10-30r
+      - nema-l14-20r
+      - nema-l14-30r
+      - nema-l14-50r
+      - nema-l14-60r
+      - nema-l15-20r
+      - nema-l15-30r
+      - nema-l15-50r
+      - nema-l15-60r
+      - nema-l21-20r
+      - nema-l21-30r
+      - nema-l22-30r
+      - CS6360C
+      - CS6364C
+      - CS8164C
+      - CS8264C
+      - CS8364C
+      - CS8464C
+      - ita-e
+      - ita-f
+      - ita-g
+      - ita-h
+      - ita-i
+      - ita-j
+      - ita-k
+      - ita-l
+      - ita-m
+      - ita-n
+      - ita-o
+      - ita-multistandard
+      - usb-a
+      - usb-micro-b
+      - usb-c
+      - dc-terminal
+      - hdot-cx
+      - saf-d-grid
+      - neutrik-powercon-20a
+      - neutrik-powercon-32a
+      - neutrik-powercon-true1
+      - neutrik-powercon-true1-top
+      - ubiquiti-smartpower
+      - eaton-c39
+      - hardwired
+      - other
+      - ""
+      type: string
     PatchedWritablePowerOutletRequest_feed_leg:
       description: Phase (for three-phase feeds)
-      oneOf:
-      - $ref: "#/components/schemas/FeedLegEnum"
-      - $ref: "#/components/schemas/BlankEnum"
+      enum:
+      - A
+      - B
+      - C
+      - ""
+      type: string
     PatchedWritablePowerOutletTemplateRequest_type:
-      oneOf:
-      - $ref: "#/components/schemas/PowerOutletTypeChoices"
-      - $ref: "#/components/schemas/BlankEnum"
+      enum:
+      - iec-60320-c5
+      - iec-60320-c7
+      - iec-60320-c13
+      - iec-60320-c15
+      - iec-60320-c19
+      - iec-60320-c21
+      - iec-60309-p-n-e-4h
+      - iec-60309-p-n-e-6h
+      - iec-60309-p-n-e-9h
+      - iec-60309-2p-e-4h
+      - iec-60309-2p-e-6h
+      - iec-60309-2p-e-9h
+      - iec-60309-3p-e-4h
+      - iec-60309-3p-e-6h
+      - iec-60309-3p-e-9h
+      - iec-60309-3p-n-e-4h
+      - iec-60309-3p-n-e-6h
+      - iec-60309-3p-n-e-9h
+      - iec-60906-1
+      - nbr-14136-10a
+      - nbr-14136-20a
+      - nema-1-15r
+      - nema-5-15r
+      - nema-5-20r
+      - nema-5-30r
+      - nema-5-50r
+      - nema-6-15r
+      - nema-6-20r
+      - nema-6-30r
+      - nema-6-50r
+      - nema-10-30r
+      - nema-10-50r
+      - nema-14-20r
+      - nema-14-30r
+      - nema-14-50r
+      - nema-14-60r
+      - nema-15-15r
+      - nema-15-20r
+      - nema-15-30r
+      - nema-15-50r
+      - nema-15-60r
+      - nema-l1-15r
+      - nema-l5-15r
+      - nema-l5-20r
+      - nema-l5-30r
+      - nema-l5-50r
+      - nema-l6-15r
+      - nema-l6-20r
+      - nema-l6-30r
+      - nema-l6-50r
+      - nema-l10-30r
+      - nema-l14-20r
+      - nema-l14-30r
+      - nema-l14-50r
+      - nema-l14-60r
+      - nema-l15-20r
+      - nema-l15-30r
+      - nema-l15-50r
+      - nema-l15-60r
+      - nema-l21-20r
+      - nema-l21-30r
+      - nema-l22-30r
+      - CS6360C
+      - CS6364C
+      - CS8164C
+      - CS8264C
+      - CS8364C
+      - CS8464C
+      - ita-e
+      - ita-f
+      - ita-g
+      - ita-h
+      - ita-i
+      - ita-j
+      - ita-k
+      - ita-l
+      - ita-m
+      - ita-n
+      - ita-o
+      - ita-multistandard
+      - usb-a
+      - usb-micro-b
+      - usb-c
+      - dc-terminal
+      - hdot-cx
+      - saf-d-grid
+      - neutrik-powercon-20a
+      - neutrik-powercon-32a
+      - neutrik-powercon-true1
+      - neutrik-powercon-true1-top
+      - ubiquiti-smartpower
+      - eaton-c39
+      - hardwired
+      - other
+      - ""
+      type: string
     PatchedWritablePowerPanelRequest_panel_type:
-      oneOf:
-      - $ref: "#/components/schemas/PanelTypeEnum"
-      - $ref: "#/components/schemas/BlankEnum"
+      enum:
+      - utility
+      - generator
+      - switchgear
+      - mdp
+      - ups
+      - transfer-switch
+      - pdu
+      - panelboard
+      - mlc
+      - rpp
+      - ""
+      type: string
     PatchedWritablePowerPortRequest_type:
       description: Physical port type
-      oneOf:
-      - $ref: "#/components/schemas/PowerPortTypeChoices"
-      - $ref: "#/components/schemas/BlankEnum"
+      enum:
+      - iec-60320-c6
+      - iec-60320-c8
+      - iec-60320-c14
+      - iec-60320-c16
+      - iec-60320-c20
+      - iec-60320-c22
+      - iec-60309-p-n-e-4h
+      - iec-60309-p-n-e-6h
+      - iec-60309-p-n-e-9h
+      - iec-60309-2p-e-4h
+      - iec-60309-2p-e-6h
+      - iec-60309-2p-e-9h
+      - iec-60309-3p-e-4h
+      - iec-60309-3p-e-6h
+      - iec-60309-3p-e-9h
+      - iec-60309-3p-n-e-4h
+      - iec-60309-3p-n-e-6h
+      - iec-60309-3p-n-e-9h
+      - iec-60906-1
+      - nbr-14136-10a
+      - nbr-14136-20a
+      - nema-1-15p
+      - nema-5-15p
+      - nema-5-20p
+      - nema-5-30p
+      - nema-5-50p
+      - nema-6-15p
+      - nema-6-20p
+      - nema-6-30p
+      - nema-6-50p
+      - nema-10-30p
+      - nema-10-50p
+      - nema-14-20p
+      - nema-14-30p
+      - nema-14-50p
+      - nema-14-60p
+      - nema-15-15p
+      - nema-15-20p
+      - nema-15-30p
+      - nema-15-50p
+      - nema-15-60p
+      - nema-l1-15p
+      - nema-l5-15p
+      - nema-l5-20p
+      - nema-l5-30p
+      - nema-l5-50p
+      - nema-l6-15p
+      - nema-l6-20p
+      - nema-l6-30p
+      - nema-l6-50p
+      - nema-l10-30p
+      - nema-l14-20p
+      - nema-l14-30p
+      - nema-l14-50p
+      - nema-l14-60p
+      - nema-l15-20p
+      - nema-l15-30p
+      - nema-l15-50p
+      - nema-l15-60p
+      - nema-l21-20p
+      - nema-l21-30p
+      - nema-l22-30p
+      - cs6361c
+      - cs6365c
+      - cs8165c
+      - cs8265c
+      - cs8365c
+      - cs8465c
+      - ita-c
+      - ita-e
+      - ita-f
+      - ita-ef
+      - ita-g
+      - ita-h
+      - ita-i
+      - ita-j
+      - ita-k
+      - ita-l
+      - ita-m
+      - ita-n
+      - ita-o
+      - usb-a
+      - usb-b
+      - usb-c
+      - usb-mini-a
+      - usb-mini-b
+      - usb-micro-a
+      - usb-micro-b
+      - usb-micro-ab
+      - usb-3-b
+      - usb-3-micro-b
+      - dc-terminal
+      - saf-d-grid
+      - neutrik-powercon-20
+      - neutrik-powercon-32
+      - neutrik-powercon-true1
+      - neutrik-powercon-true1-top
+      - ubiquiti-smartpower
+      - hardwired
+      - other
+      - ""
+      type: string
     PatchedWritablePowerPortTemplateRequest_type:
-      oneOf:
-      - $ref: "#/components/schemas/PowerPortTypeChoices"
-      - $ref: "#/components/schemas/BlankEnum"
+      enum:
+      - iec-60320-c6
+      - iec-60320-c8
+      - iec-60320-c14
+      - iec-60320-c16
+      - iec-60320-c20
+      - iec-60320-c22
+      - iec-60309-p-n-e-4h
+      - iec-60309-p-n-e-6h
+      - iec-60309-p-n-e-9h
+      - iec-60309-2p-e-4h
+      - iec-60309-2p-e-6h
+      - iec-60309-2p-e-9h
+      - iec-60309-3p-e-4h
+      - iec-60309-3p-e-6h
+      - iec-60309-3p-e-9h
+      - iec-60309-3p-n-e-4h
+      - iec-60309-3p-n-e-6h
+      - iec-60309-3p-n-e-9h
+      - iec-60906-1
+      - nbr-14136-10a
+      - nbr-14136-20a
+      - nema-1-15p
+      - nema-5-15p
+      - nema-5-20p
+      - nema-5-30p
+      - nema-5-50p
+      - nema-6-15p
+      - nema-6-20p
+      - nema-6-30p
+      - nema-6-50p
+      - nema-10-30p
+      - nema-10-50p
+      - nema-14-20p
+      - nema-14-30p
+      - nema-14-50p
+      - nema-14-60p
+      - nema-15-15p
+      - nema-15-20p
+      - nema-15-30p
+      - nema-15-50p
+      - nema-15-60p
+      - nema-l1-15p
+      - nema-l5-15p
+      - nema-l5-20p
+      - nema-l5-30p
+      - nema-l5-50p
+      - nema-l6-15p
+      - nema-l6-20p
+      - nema-l6-30p
+      - nema-l6-50p
+      - nema-l10-30p
+      - nema-l14-20p
+      - nema-l14-30p
+      - nema-l14-50p
+      - nema-l14-60p
+      - nema-l15-20p
+      - nema-l15-30p
+      - nema-l15-50p
+      - nema-l15-60p
+      - nema-l21-20p
+      - nema-l21-30p
+      - nema-l22-30p
+      - cs6361c
+      - cs6365c
+      - cs8165c
+      - cs8265c
+      - cs8365c
+      - cs8465c
+      - ita-c
+      - ita-e
+      - ita-f
+      - ita-ef
+      - ita-g
+      - ita-h
+      - ita-i
+      - ita-j
+      - ita-k
+      - ita-l
+      - ita-m
+      - ita-n
+      - ita-o
+      - usb-a
+      - usb-b
+      - usb-c
+      - usb-mini-a
+      - usb-mini-b
+      - usb-micro-a
+      - usb-micro-b
+      - usb-micro-ab
+      - usb-3-b
+      - usb-3-micro-b
+      - dc-terminal
+      - saf-d-grid
+      - neutrik-powercon-20
+      - neutrik-powercon-32
+      - neutrik-powercon-true1
+      - neutrik-powercon-true1-top
+      - ubiquiti-smartpower
+      - hardwired
+      - other
+      - ""
+      type: string
     PatchedWritableRackRequest_type:
-      oneOf:
-      - $ref: "#/components/schemas/RackTypeChoices"
-      - $ref: "#/components/schemas/BlankEnum"
+      enum:
+      - 2-post-frame
+      - 4-post-frame
+      - 4-post-cabinet
+      - wall-frame
+      - wall-frame-vertical
+      - wall-cabinet
+      - wall-cabinet-vertical
+      - other
+      - ""
+      type: string
     PatchedWritableRackRequest_outer_unit:
-      oneOf:
-      - $ref: "#/components/schemas/OuterUnitEnum"
-      - $ref: "#/components/schemas/BlankEnum"
+      enum:
+      - mm
+      - in
+      - ""
+      type: string
     PowerFeed_type_value:
       default: primary
       enum:
