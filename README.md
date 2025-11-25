@@ -144,7 +144,7 @@ gh workflow run release.yml -f tag=1.3.2
 ```
 
 ## TODO
-- get rid of the openAPI spec patcher, this means either solving issues with the code generator or with the Nautobot API (see `development/scripts/fix-spec.py`)
+- get rid of the openAPI spec patcher, this means either solving issues with the code generator or with the Nautobot API (see `development/create-bindings/scripts/fix-spec.py`)
 - create tests for API functions
 
 ## Author

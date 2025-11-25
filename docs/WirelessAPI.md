@@ -213,7 +213,7 @@ import (
 )
 
 func main() {
-	bulkWritableControllerManagedDeviceGroupRadioProfileAssignmentRequest := []openapiclient.BulkWritableControllerManagedDeviceGroupRadioProfileAssignmentRequest{*openapiclient.NewBulkWritableControllerManagedDeviceGroupRadioProfileAssignmentRequest("Id_example", *openapiclient.NewBulkWritableCableRequestStatus(), *openapiclient.NewBulkWritableCableRequestStatus())} // []BulkWritableControllerManagedDeviceGroupRadioProfileAssignmentRequest | 
+	bulkWritableControllerManagedDeviceGroupRadioProfileAssignmentRequest := []openapiclient.BulkWritableControllerManagedDeviceGroupRadioProfileAssignmentRequest{*openapiclient.NewBulkWritableControllerManagedDeviceGroupRadioProfileAssignmentRequest("Id_example", *openapiclient.NewApprovalWorkflowStageResponseApprovalWorkflowStage(), *openapiclient.NewApprovalWorkflowStageResponseApprovalWorkflowStage())} // []BulkWritableControllerManagedDeviceGroupRadioProfileAssignmentRequest | 
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -281,7 +281,7 @@ import (
 )
 
 func main() {
-	controllerManagedDeviceGroupRadioProfileAssignmentRequest := *openapiclient.NewControllerManagedDeviceGroupRadioProfileAssignmentRequest(*openapiclient.NewBulkWritableCableRequestStatus(), *openapiclient.NewBulkWritableCableRequestStatus()) // ControllerManagedDeviceGroupRadioProfileAssignmentRequest | 
+	controllerManagedDeviceGroupRadioProfileAssignmentRequest := *openapiclient.NewControllerManagedDeviceGroupRadioProfileAssignmentRequest(*openapiclient.NewApprovalWorkflowStageResponseApprovalWorkflowStage(), *openapiclient.NewApprovalWorkflowStageResponseApprovalWorkflowStage()) // ControllerManagedDeviceGroupRadioProfileAssignmentRequest | 
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -431,7 +431,7 @@ func main() {
 	radioProfileN := []string{"Inner_example"} // []string |  (optional)
 	sort := "sort_example" // string | Which field to use when ordering the results. (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
-	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional) (default to false)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -468,7 +468,7 @@ Name | Type | Description  | Notes
  **radioProfileN** | **[]string** |  | 
  **sort** | **string** | Which field to use when ordering the results. | 
  **depth** | **int32** | Serializer Depth | [default to 1]
- **excludeM2m** | **bool** | Exclude many-to-many fields from the response | [default to false]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
 
 ### Return type
 
@@ -586,7 +586,7 @@ func main() {
 	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | A UUID string identifying this controller managed device group radio profile assignment.
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
-	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional) (default to false)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -618,7 +618,7 @@ Name | Type | Description  | Notes
 
  **format** | [**CircuitsCircuitTerminationsListFormatParameter**](CircuitsCircuitTerminationsListFormatParameter.md) |  | 
  **depth** | **int32** | Serializer Depth | [default to 1]
- **excludeM2m** | **bool** | Exclude many-to-many fields from the response | [default to false]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
 
 ### Return type
 
@@ -660,7 +660,7 @@ import (
 
 func main() {
 	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | A UUID string identifying this controller managed device group radio profile assignment.
-	controllerManagedDeviceGroupRadioProfileAssignmentRequest := *openapiclient.NewControllerManagedDeviceGroupRadioProfileAssignmentRequest(*openapiclient.NewBulkWritableCableRequestStatus(), *openapiclient.NewBulkWritableCableRequestStatus()) // ControllerManagedDeviceGroupRadioProfileAssignmentRequest | 
+	controllerManagedDeviceGroupRadioProfileAssignmentRequest := *openapiclient.NewControllerManagedDeviceGroupRadioProfileAssignmentRequest(*openapiclient.NewApprovalWorkflowStageResponseApprovalWorkflowStage(), *openapiclient.NewApprovalWorkflowStageResponseApprovalWorkflowStage()) // ControllerManagedDeviceGroupRadioProfileAssignmentRequest | 
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -867,7 +867,7 @@ import (
 )
 
 func main() {
-	bulkWritableControllerManagedDeviceGroupWirelessNetworkAssignmentRequest := []openapiclient.BulkWritableControllerManagedDeviceGroupWirelessNetworkAssignmentRequest{*openapiclient.NewBulkWritableControllerManagedDeviceGroupWirelessNetworkAssignmentRequest("Id_example", *openapiclient.NewBulkWritableCableRequestStatus(), *openapiclient.NewBulkWritableCableRequestStatus())} // []BulkWritableControllerManagedDeviceGroupWirelessNetworkAssignmentRequest | 
+	bulkWritableControllerManagedDeviceGroupWirelessNetworkAssignmentRequest := []openapiclient.BulkWritableControllerManagedDeviceGroupWirelessNetworkAssignmentRequest{*openapiclient.NewBulkWritableControllerManagedDeviceGroupWirelessNetworkAssignmentRequest("Id_example", *openapiclient.NewApprovalWorkflowStageResponseApprovalWorkflowStage(), *openapiclient.NewApprovalWorkflowStageResponseApprovalWorkflowStage())} // []BulkWritableControllerManagedDeviceGroupWirelessNetworkAssignmentRequest | 
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -935,7 +935,7 @@ import (
 )
 
 func main() {
-	controllerManagedDeviceGroupWirelessNetworkAssignmentRequest := *openapiclient.NewControllerManagedDeviceGroupWirelessNetworkAssignmentRequest(*openapiclient.NewBulkWritableCableRequestStatus(), *openapiclient.NewBulkWritableCableRequestStatus()) // ControllerManagedDeviceGroupWirelessNetworkAssignmentRequest | 
+	controllerManagedDeviceGroupWirelessNetworkAssignmentRequest := *openapiclient.NewControllerManagedDeviceGroupWirelessNetworkAssignmentRequest(*openapiclient.NewApprovalWorkflowStageResponseApprovalWorkflowStage(), *openapiclient.NewApprovalWorkflowStageResponseApprovalWorkflowStage()) // ControllerManagedDeviceGroupWirelessNetworkAssignmentRequest | 
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -1082,13 +1082,13 @@ func main() {
 	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
 	q := "q_example" // string | Search (optional)
 	sort := "sort_example" // string | Which field to use when ordering the results. (optional)
-	vlan := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
+	vlan := []string{"Inner_example"} // []string |  (optional)
 	vlanIsnull := true // bool |  (optional)
-	vlanN := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
+	vlanN := []string{"Inner_example"} // []string |  (optional)
 	wirelessNetwork := []string{"Inner_example"} // []string |  (optional)
 	wirelessNetworkN := []string{"Inner_example"} // []string |  (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
-	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional) (default to false)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -1122,13 +1122,13 @@ Name | Type | Description  | Notes
  **offset** | **int32** | The initial index from which to return the results. | 
  **q** | **string** | Search | 
  **sort** | **string** | Which field to use when ordering the results. | 
- **vlan** | **string** |  | 
+ **vlan** | **[]string** |  | 
  **vlanIsnull** | **bool** |  | 
- **vlanN** | **string** |  | 
+ **vlanN** | **[]string** |  | 
  **wirelessNetwork** | **[]string** |  | 
  **wirelessNetworkN** | **[]string** |  | 
  **depth** | **int32** | Serializer Depth | [default to 1]
- **excludeM2m** | **bool** | Exclude many-to-many fields from the response | [default to false]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
 
 ### Return type
 
@@ -1246,7 +1246,7 @@ func main() {
 	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | A UUID string identifying this controller managed device group wireless network assignment.
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
-	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional) (default to false)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -1278,7 +1278,7 @@ Name | Type | Description  | Notes
 
  **format** | [**CircuitsCircuitTerminationsListFormatParameter**](CircuitsCircuitTerminationsListFormatParameter.md) |  | 
  **depth** | **int32** | Serializer Depth | [default to 1]
- **excludeM2m** | **bool** | Exclude many-to-many fields from the response | [default to false]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
 
 ### Return type
 
@@ -1320,7 +1320,7 @@ import (
 
 func main() {
 	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | A UUID string identifying this controller managed device group wireless network assignment.
-	controllerManagedDeviceGroupWirelessNetworkAssignmentRequest := *openapiclient.NewControllerManagedDeviceGroupWirelessNetworkAssignmentRequest(*openapiclient.NewBulkWritableCableRequestStatus(), *openapiclient.NewBulkWritableCableRequestStatus()) // ControllerManagedDeviceGroupWirelessNetworkAssignmentRequest | 
+	controllerManagedDeviceGroupWirelessNetworkAssignmentRequest := *openapiclient.NewControllerManagedDeviceGroupWirelessNetworkAssignmentRequest(*openapiclient.NewApprovalWorkflowStageResponseApprovalWorkflowStage(), *openapiclient.NewApprovalWorkflowStageResponseApprovalWorkflowStage()) // ControllerManagedDeviceGroupWirelessNetworkAssignmentRequest | 
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -1714,7 +1714,7 @@ Name | Type | Description  | Notes
 
 ## WirelessRadioProfilesList
 
-> PaginatedRadioProfileList WirelessRadioProfilesList(ctx).AllowedChannelList(allowedChannelList).ChannelWidth(channelWidth).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).ControllerManagedDeviceGroups(controllerManagedDeviceGroups).ControllerManagedDeviceGroupsIsnull(controllerManagedDeviceGroupsIsnull).ControllerManagedDeviceGroupsN(controllerManagedDeviceGroupsN).Created(created).CreatedGt(createdGt).CreatedGte(createdGte).CreatedIsnull(createdIsnull).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).Frequency(frequency).FrequencyIc(frequencyIc).FrequencyIe(frequencyIe).FrequencyIew(frequencyIew).FrequencyIre(frequencyIre).FrequencyIsw(frequencyIsw).FrequencyN(frequencyN).FrequencyNic(frequencyNic).FrequencyNie(frequencyNie).FrequencyNiew(frequencyNiew).FrequencyNire(frequencyNire).FrequencyNisw(frequencyNisw).FrequencyNre(frequencyNre).FrequencyRe(frequencyRe).HasControllerManagedDeviceGroups(hasControllerManagedDeviceGroups).Id(id).IdN(idN).LastUpdated(lastUpdated).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedIsnull(lastUpdatedIsnull).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).Q(q).RegulatoryDomain(regulatoryDomain).RegulatoryDomainIc(regulatoryDomainIc).RegulatoryDomainIe(regulatoryDomainIe).RegulatoryDomainIew(regulatoryDomainIew).RegulatoryDomainIre(regulatoryDomainIre).RegulatoryDomainIsw(regulatoryDomainIsw).RegulatoryDomainN(regulatoryDomainN).RegulatoryDomainNic(regulatoryDomainNic).RegulatoryDomainNie(regulatoryDomainNie).RegulatoryDomainNiew(regulatoryDomainNiew).RegulatoryDomainNire(regulatoryDomainNire).RegulatoryDomainNisw(regulatoryDomainNisw).RegulatoryDomainNre(regulatoryDomainNre).RegulatoryDomainRe(regulatoryDomainRe).RxPowerMin(rxPowerMin).RxPowerMinGt(rxPowerMinGt).RxPowerMinGte(rxPowerMinGte).RxPowerMinIsnull(rxPowerMinIsnull).RxPowerMinLt(rxPowerMinLt).RxPowerMinLte(rxPowerMinLte).RxPowerMinN(rxPowerMinN).Sort(sort).SupportedDataRates(supportedDataRates).SupportedDataRatesN(supportedDataRatesN).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).TxPowerMax(txPowerMax).TxPowerMaxGt(txPowerMaxGt).TxPowerMaxGte(txPowerMaxGte).TxPowerMaxIsnull(txPowerMaxIsnull).TxPowerMaxLt(txPowerMaxLt).TxPowerMaxLte(txPowerMaxLte).TxPowerMaxN(txPowerMaxN).TxPowerMin(txPowerMin).TxPowerMinGt(txPowerMinGt).TxPowerMinGte(txPowerMinGte).TxPowerMinIsnull(txPowerMinIsnull).TxPowerMinLt(txPowerMinLt).TxPowerMinLte(txPowerMinLte).TxPowerMinN(txPowerMinN).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+> PaginatedRadioProfileList WirelessRadioProfilesList(ctx).AllowedChannelList(allowedChannelList).ChannelWidth(channelWidth).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).ControllerManagedDeviceGroups(controllerManagedDeviceGroups).ControllerManagedDeviceGroupsDevices(controllerManagedDeviceGroupsDevices).ControllerManagedDeviceGroupsDevicesIsnull(controllerManagedDeviceGroupsDevicesIsnull).ControllerManagedDeviceGroupsDevicesN(controllerManagedDeviceGroupsDevicesN).ControllerManagedDeviceGroupsIsnull(controllerManagedDeviceGroupsIsnull).ControllerManagedDeviceGroupsN(controllerManagedDeviceGroupsN).Created(created).CreatedGt(createdGt).CreatedGte(createdGte).CreatedIsnull(createdIsnull).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).Frequency(frequency).FrequencyIc(frequencyIc).FrequencyIe(frequencyIe).FrequencyIew(frequencyIew).FrequencyIre(frequencyIre).FrequencyIsw(frequencyIsw).FrequencyN(frequencyN).FrequencyNic(frequencyNic).FrequencyNie(frequencyNie).FrequencyNiew(frequencyNiew).FrequencyNire(frequencyNire).FrequencyNisw(frequencyNisw).FrequencyNre(frequencyNre).FrequencyRe(frequencyRe).HasControllerManagedDeviceGroups(hasControllerManagedDeviceGroups).Id(id).IdN(idN).LastUpdated(lastUpdated).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedIsnull(lastUpdatedIsnull).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).Q(q).RegulatoryDomain(regulatoryDomain).RegulatoryDomainIc(regulatoryDomainIc).RegulatoryDomainIe(regulatoryDomainIe).RegulatoryDomainIew(regulatoryDomainIew).RegulatoryDomainIre(regulatoryDomainIre).RegulatoryDomainIsw(regulatoryDomainIsw).RegulatoryDomainN(regulatoryDomainN).RegulatoryDomainNic(regulatoryDomainNic).RegulatoryDomainNie(regulatoryDomainNie).RegulatoryDomainNiew(regulatoryDomainNiew).RegulatoryDomainNire(regulatoryDomainNire).RegulatoryDomainNisw(regulatoryDomainNisw).RegulatoryDomainNre(regulatoryDomainNre).RegulatoryDomainRe(regulatoryDomainRe).RxPowerMin(rxPowerMin).RxPowerMinGt(rxPowerMinGt).RxPowerMinGte(rxPowerMinGte).RxPowerMinIsnull(rxPowerMinIsnull).RxPowerMinLt(rxPowerMinLt).RxPowerMinLte(rxPowerMinLte).RxPowerMinN(rxPowerMinN).Sort(sort).SupportedDataRates(supportedDataRates).SupportedDataRatesN(supportedDataRatesN).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).TxPowerMax(txPowerMax).TxPowerMaxGt(txPowerMaxGt).TxPowerMaxGte(txPowerMaxGte).TxPowerMaxIsnull(txPowerMaxIsnull).TxPowerMaxLt(txPowerMaxLt).TxPowerMaxLte(txPowerMaxLte).TxPowerMaxN(txPowerMaxN).TxPowerMin(txPowerMin).TxPowerMinGt(txPowerMinGt).TxPowerMinGte(txPowerMinGte).TxPowerMinIsnull(txPowerMinIsnull).TxPowerMinLt(txPowerMinLt).TxPowerMinLte(txPowerMinLte).TxPowerMinN(txPowerMinN).Depth(depth).ExcludeM2m(excludeM2m).Execute()
 
 
 
@@ -1740,7 +1740,10 @@ func main() {
 	contactsIsnull := true // bool | Contacts (name or ID) is null (optional)
 	contactsN := []string{"Inner_example"} // []string |  (optional)
 	controllerManagedDeviceGroups := []string{"Inner_example"} // []string |  (optional)
-	controllerManagedDeviceGroupsIsnull := true // bool | Controller Managed Device Groups (name or ID) is null (optional)
+	controllerManagedDeviceGroupsDevices := []string{"Inner_example"} // []string |  (optional)
+	controllerManagedDeviceGroupsDevicesIsnull := true // bool |  (optional)
+	controllerManagedDeviceGroupsDevicesN := []string{"Inner_example"} // []string |  (optional)
+	controllerManagedDeviceGroupsIsnull := true // bool |  (optional)
 	controllerManagedDeviceGroupsN := []string{"Inner_example"} // []string |  (optional)
 	created := []time.Time{time.Now()} // []time.Time |  (optional)
 	createdGt := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -1838,11 +1841,11 @@ func main() {
 	txPowerMinLte := []int32{int32(123)} // []int32 |  (optional)
 	txPowerMinN := []int32{int32(123)} // []int32 |  (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
-	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional) (default to false)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.WirelessAPI.WirelessRadioProfilesList(context.Background()).AllowedChannelList(allowedChannelList).ChannelWidth(channelWidth).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).ControllerManagedDeviceGroups(controllerManagedDeviceGroups).ControllerManagedDeviceGroupsIsnull(controllerManagedDeviceGroupsIsnull).ControllerManagedDeviceGroupsN(controllerManagedDeviceGroupsN).Created(created).CreatedGt(createdGt).CreatedGte(createdGte).CreatedIsnull(createdIsnull).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).Frequency(frequency).FrequencyIc(frequencyIc).FrequencyIe(frequencyIe).FrequencyIew(frequencyIew).FrequencyIre(frequencyIre).FrequencyIsw(frequencyIsw).FrequencyN(frequencyN).FrequencyNic(frequencyNic).FrequencyNie(frequencyNie).FrequencyNiew(frequencyNiew).FrequencyNire(frequencyNire).FrequencyNisw(frequencyNisw).FrequencyNre(frequencyNre).FrequencyRe(frequencyRe).HasControllerManagedDeviceGroups(hasControllerManagedDeviceGroups).Id(id).IdN(idN).LastUpdated(lastUpdated).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedIsnull(lastUpdatedIsnull).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).Q(q).RegulatoryDomain(regulatoryDomain).RegulatoryDomainIc(regulatoryDomainIc).RegulatoryDomainIe(regulatoryDomainIe).RegulatoryDomainIew(regulatoryDomainIew).RegulatoryDomainIre(regulatoryDomainIre).RegulatoryDomainIsw(regulatoryDomainIsw).RegulatoryDomainN(regulatoryDomainN).RegulatoryDomainNic(regulatoryDomainNic).RegulatoryDomainNie(regulatoryDomainNie).RegulatoryDomainNiew(regulatoryDomainNiew).RegulatoryDomainNire(regulatoryDomainNire).RegulatoryDomainNisw(regulatoryDomainNisw).RegulatoryDomainNre(regulatoryDomainNre).RegulatoryDomainRe(regulatoryDomainRe).RxPowerMin(rxPowerMin).RxPowerMinGt(rxPowerMinGt).RxPowerMinGte(rxPowerMinGte).RxPowerMinIsnull(rxPowerMinIsnull).RxPowerMinLt(rxPowerMinLt).RxPowerMinLte(rxPowerMinLte).RxPowerMinN(rxPowerMinN).Sort(sort).SupportedDataRates(supportedDataRates).SupportedDataRatesN(supportedDataRatesN).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).TxPowerMax(txPowerMax).TxPowerMaxGt(txPowerMaxGt).TxPowerMaxGte(txPowerMaxGte).TxPowerMaxIsnull(txPowerMaxIsnull).TxPowerMaxLt(txPowerMaxLt).TxPowerMaxLte(txPowerMaxLte).TxPowerMaxN(txPowerMaxN).TxPowerMin(txPowerMin).TxPowerMinGt(txPowerMinGt).TxPowerMinGte(txPowerMinGte).TxPowerMinIsnull(txPowerMinIsnull).TxPowerMinLt(txPowerMinLt).TxPowerMinLte(txPowerMinLte).TxPowerMinN(txPowerMinN).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+	resp, r, err := apiClient.WirelessAPI.WirelessRadioProfilesList(context.Background()).AllowedChannelList(allowedChannelList).ChannelWidth(channelWidth).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).ControllerManagedDeviceGroups(controllerManagedDeviceGroups).ControllerManagedDeviceGroupsDevices(controllerManagedDeviceGroupsDevices).ControllerManagedDeviceGroupsDevicesIsnull(controllerManagedDeviceGroupsDevicesIsnull).ControllerManagedDeviceGroupsDevicesN(controllerManagedDeviceGroupsDevicesN).ControllerManagedDeviceGroupsIsnull(controllerManagedDeviceGroupsIsnull).ControllerManagedDeviceGroupsN(controllerManagedDeviceGroupsN).Created(created).CreatedGt(createdGt).CreatedGte(createdGte).CreatedIsnull(createdIsnull).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).Frequency(frequency).FrequencyIc(frequencyIc).FrequencyIe(frequencyIe).FrequencyIew(frequencyIew).FrequencyIre(frequencyIre).FrequencyIsw(frequencyIsw).FrequencyN(frequencyN).FrequencyNic(frequencyNic).FrequencyNie(frequencyNie).FrequencyNiew(frequencyNiew).FrequencyNire(frequencyNire).FrequencyNisw(frequencyNisw).FrequencyNre(frequencyNre).FrequencyRe(frequencyRe).HasControllerManagedDeviceGroups(hasControllerManagedDeviceGroups).Id(id).IdN(idN).LastUpdated(lastUpdated).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedIsnull(lastUpdatedIsnull).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).Q(q).RegulatoryDomain(regulatoryDomain).RegulatoryDomainIc(regulatoryDomainIc).RegulatoryDomainIe(regulatoryDomainIe).RegulatoryDomainIew(regulatoryDomainIew).RegulatoryDomainIre(regulatoryDomainIre).RegulatoryDomainIsw(regulatoryDomainIsw).RegulatoryDomainN(regulatoryDomainN).RegulatoryDomainNic(regulatoryDomainNic).RegulatoryDomainNie(regulatoryDomainNie).RegulatoryDomainNiew(regulatoryDomainNiew).RegulatoryDomainNire(regulatoryDomainNire).RegulatoryDomainNisw(regulatoryDomainNisw).RegulatoryDomainNre(regulatoryDomainNre).RegulatoryDomainRe(regulatoryDomainRe).RxPowerMin(rxPowerMin).RxPowerMinGt(rxPowerMinGt).RxPowerMinGte(rxPowerMinGte).RxPowerMinIsnull(rxPowerMinIsnull).RxPowerMinLt(rxPowerMinLt).RxPowerMinLte(rxPowerMinLte).RxPowerMinN(rxPowerMinN).Sort(sort).SupportedDataRates(supportedDataRates).SupportedDataRatesN(supportedDataRatesN).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).TxPowerMax(txPowerMax).TxPowerMaxGt(txPowerMaxGt).TxPowerMaxGte(txPowerMaxGte).TxPowerMaxIsnull(txPowerMaxIsnull).TxPowerMaxLt(txPowerMaxLt).TxPowerMaxLte(txPowerMaxLte).TxPowerMaxN(txPowerMaxN).TxPowerMin(txPowerMin).TxPowerMinGt(txPowerMinGt).TxPowerMinGte(txPowerMinGte).TxPowerMinIsnull(txPowerMinIsnull).TxPowerMinLt(txPowerMinLt).TxPowerMinLte(txPowerMinLte).TxPowerMinN(txPowerMinN).Depth(depth).ExcludeM2m(excludeM2m).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `WirelessAPI.WirelessRadioProfilesList``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -1869,7 +1872,10 @@ Name | Type | Description  | Notes
  **contactsIsnull** | **bool** | Contacts (name or ID) is null | 
  **contactsN** | **[]string** |  | 
  **controllerManagedDeviceGroups** | **[]string** |  | 
- **controllerManagedDeviceGroupsIsnull** | **bool** | Controller Managed Device Groups (name or ID) is null | 
+ **controllerManagedDeviceGroupsDevices** | **[]string** |  | 
+ **controllerManagedDeviceGroupsDevicesIsnull** | **bool** |  | 
+ **controllerManagedDeviceGroupsDevicesN** | **[]string** |  | 
+ **controllerManagedDeviceGroupsIsnull** | **bool** |  | 
  **controllerManagedDeviceGroupsN** | **[]string** |  | 
  **created** | [**[]time.Time**](time.Time.md) |  | 
  **createdGt** | [**[]time.Time**](time.Time.md) |  | 
@@ -1967,7 +1973,7 @@ Name | Type | Description  | Notes
  **txPowerMinLte** | **[]int32** |  | 
  **txPowerMinN** | **[]int32** |  | 
  **depth** | **int32** | Serializer Depth | [default to 1]
- **excludeM2m** | **bool** | Exclude many-to-many fields from the response | [default to false]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
 
 ### Return type
 
@@ -2087,7 +2093,7 @@ func main() {
 	limit := int32(56) // int32 | Number of results to return per page. (optional)
 	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
-	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional) (default to false)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -2121,7 +2127,7 @@ Name | Type | Description  | Notes
  **limit** | **int32** | Number of results to return per page. | 
  **offset** | **int32** | The initial index from which to return the results. | 
  **depth** | **int32** | Serializer Depth | [default to 1]
- **excludeM2m** | **bool** | Exclude many-to-many fields from the response | [default to false]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
 
 ### Return type
 
@@ -2239,7 +2245,7 @@ func main() {
 	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | A UUID string identifying this radio profile.
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
-	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional) (default to false)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -2271,7 +2277,7 @@ Name | Type | Description  | Notes
 
  **format** | [**CircuitsCircuitTerminationsListFormatParameter**](CircuitsCircuitTerminationsListFormatParameter.md) |  | 
  **depth** | **int32** | Serializer Depth | [default to 1]
- **excludeM2m** | **bool** | Exclude many-to-many fields from the response | [default to false]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
 
 ### Return type
 
@@ -2761,7 +2767,7 @@ func main() {
 	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
 	q := "q_example" // string | Search (optional)
 	radioProfiles := []string{"Inner_example"} // []string |  (optional)
-	radioProfilesIsnull := true // bool | Radio Profile (name or ID) is null (optional)
+	radioProfilesIsnull := true // bool |  (optional)
 	radioProfilesN := []string{"Inner_example"} // []string |  (optional)
 	rate := []int32{int32(123)} // []int32 |  (optional)
 	rateGt := []int32{int32(123)} // []int32 |  (optional)
@@ -2791,7 +2797,7 @@ func main() {
 	teamsIsnull := true // bool | Teams (name or ID) is null (optional)
 	teamsN := []string{"Inner_example"} // []string |  (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
-	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional) (default to false)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -2850,7 +2856,7 @@ Name | Type | Description  | Notes
  **offset** | **int32** | The initial index from which to return the results. | 
  **q** | **string** | Search | 
  **radioProfiles** | **[]string** |  | 
- **radioProfilesIsnull** | **bool** | Radio Profile (name or ID) is null | 
+ **radioProfilesIsnull** | **bool** |  | 
  **radioProfilesN** | **[]string** |  | 
  **rate** | **[]int32** |  | 
  **rateGt** | **[]int32** |  | 
@@ -2880,7 +2886,7 @@ Name | Type | Description  | Notes
  **teamsIsnull** | **bool** | Teams (name or ID) is null | 
  **teamsN** | **[]string** |  | 
  **depth** | **int32** | Serializer Depth | [default to 1]
- **excludeM2m** | **bool** | Exclude many-to-many fields from the response | [default to false]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
 
 ### Return type
 
@@ -3000,7 +3006,7 @@ func main() {
 	limit := int32(56) // int32 | Number of results to return per page. (optional)
 	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
-	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional) (default to false)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -3034,7 +3040,7 @@ Name | Type | Description  | Notes
  **limit** | **int32** | Number of results to return per page. | 
  **offset** | **int32** | The initial index from which to return the results. | 
  **depth** | **int32** | Serializer Depth | [default to 1]
- **excludeM2m** | **bool** | Exclude many-to-many fields from the response | [default to false]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
 
 ### Return type
 
@@ -3152,7 +3158,7 @@ func main() {
 	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | A UUID string identifying this supported data rate.
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
-	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional) (default to false)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -3184,7 +3190,7 @@ Name | Type | Description  | Notes
 
  **format** | [**CircuitsCircuitTerminationsListFormatParameter**](CircuitsCircuitTerminationsListFormatParameter.md) |  | 
  **depth** | **int32** | Serializer Depth | [default to 1]
- **excludeM2m** | **bool** | Exclude many-to-many fields from the response | [default to false]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
 
 ### Return type
 
@@ -3620,7 +3626,7 @@ Name | Type | Description  | Notes
 
 ## WirelessWirelessNetworksList
 
-> PaginatedWirelessNetworkList WirelessWirelessNetworksList(ctx).Authentication(authentication).AuthenticationIc(authenticationIc).AuthenticationIe(authenticationIe).AuthenticationIew(authenticationIew).AuthenticationIre(authenticationIre).AuthenticationIsw(authenticationIsw).AuthenticationN(authenticationN).AuthenticationNic(authenticationNic).AuthenticationNie(authenticationNie).AuthenticationNiew(authenticationNiew).AuthenticationNire(authenticationNire).AuthenticationNisw(authenticationNisw).AuthenticationNre(authenticationNre).AuthenticationRe(authenticationRe).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).ControllerManagedDeviceGroups(controllerManagedDeviceGroups).ControllerManagedDeviceGroupsIsnull(controllerManagedDeviceGroupsIsnull).ControllerManagedDeviceGroupsN(controllerManagedDeviceGroupsN).Created(created).CreatedGt(createdGt).CreatedGte(createdGte).CreatedIsnull(createdIsnull).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).Description(description).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIre(descriptionIre).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNire(descriptionNire).DescriptionNisw(descriptionNisw).DescriptionNre(descriptionNre).DescriptionRe(descriptionRe).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Enabled(enabled).Format(format).HasControllerManagedDeviceGroups(hasControllerManagedDeviceGroups).Hidden(hidden).Id(id).IdN(idN).LastUpdated(lastUpdated).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedIsnull(lastUpdatedIsnull).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).Mode(mode).ModeIc(modeIc).ModeIe(modeIe).ModeIew(modeIew).ModeIre(modeIre).ModeIsw(modeIsw).ModeN(modeN).ModeNic(modeNic).ModeNie(modeNie).ModeNiew(modeNiew).ModeNire(modeNire).ModeNisw(modeNisw).ModeNre(modeNre).ModeRe(modeRe).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).Q(q).SecretsGroup(secretsGroup).SecretsGroupIsnull(secretsGroupIsnull).SecretsGroupN(secretsGroupN).Sort(sort).Ssid(ssid).SsidIc(ssidIc).SsidIe(ssidIe).SsidIew(ssidIew).SsidIre(ssidIre).SsidIsw(ssidIsw).SsidN(ssidN).SsidNic(ssidNic).SsidNie(ssidNie).SsidNiew(ssidNiew).SsidNire(ssidNire).SsidNisw(ssidNisw).SsidNre(ssidNre).SsidRe(ssidRe).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Tenant(tenant).TenantIsnull(tenantIsnull).TenantN(tenantN).TenantGroup(tenantGroup).TenantGroupIsnull(tenantGroupIsnull).TenantGroupN(tenantGroupN).TenantId(tenantId).TenantIdIsnull(tenantIdIsnull).TenantIdN(tenantIdN).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+> PaginatedWirelessNetworkList WirelessWirelessNetworksList(ctx).Authentication(authentication).AuthenticationIc(authenticationIc).AuthenticationIe(authenticationIe).AuthenticationIew(authenticationIew).AuthenticationIre(authenticationIre).AuthenticationIsw(authenticationIsw).AuthenticationN(authenticationN).AuthenticationNic(authenticationNic).AuthenticationNie(authenticationNie).AuthenticationNiew(authenticationNiew).AuthenticationNire(authenticationNire).AuthenticationNisw(authenticationNisw).AuthenticationNre(authenticationNre).AuthenticationRe(authenticationRe).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).ControllerManagedDeviceGroups(controllerManagedDeviceGroups).ControllerManagedDeviceGroupsController(controllerManagedDeviceGroupsController).ControllerManagedDeviceGroupsControllerN(controllerManagedDeviceGroupsControllerN).ControllerManagedDeviceGroupsDevices(controllerManagedDeviceGroupsDevices).ControllerManagedDeviceGroupsDevicesIsnull(controllerManagedDeviceGroupsDevicesIsnull).ControllerManagedDeviceGroupsDevicesN(controllerManagedDeviceGroupsDevicesN).ControllerManagedDeviceGroupsIsnull(controllerManagedDeviceGroupsIsnull).ControllerManagedDeviceGroupsN(controllerManagedDeviceGroupsN).Created(created).CreatedGt(createdGt).CreatedGte(createdGte).CreatedIsnull(createdIsnull).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).Description(description).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIre(descriptionIre).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNire(descriptionNire).DescriptionNisw(descriptionNisw).DescriptionNre(descriptionNre).DescriptionRe(descriptionRe).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Enabled(enabled).Format(format).HasControllerManagedDeviceGroups(hasControllerManagedDeviceGroups).Hidden(hidden).Id(id).IdN(idN).LastUpdated(lastUpdated).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedIsnull(lastUpdatedIsnull).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).Mode(mode).ModeIc(modeIc).ModeIe(modeIe).ModeIew(modeIew).ModeIre(modeIre).ModeIsw(modeIsw).ModeN(modeN).ModeNic(modeNic).ModeNie(modeNie).ModeNiew(modeNiew).ModeNire(modeNire).ModeNisw(modeNisw).ModeNre(modeNre).ModeRe(modeRe).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).Q(q).SecretsGroup(secretsGroup).SecretsGroupIsnull(secretsGroupIsnull).SecretsGroupN(secretsGroupN).Sort(sort).Ssid(ssid).SsidIc(ssidIc).SsidIe(ssidIe).SsidIew(ssidIew).SsidIre(ssidIre).SsidIsw(ssidIsw).SsidN(ssidN).SsidNic(ssidNic).SsidNie(ssidNie).SsidNiew(ssidNiew).SsidNire(ssidNire).SsidNisw(ssidNisw).SsidNre(ssidNre).SsidRe(ssidRe).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Tenant(tenant).TenantIsnull(tenantIsnull).TenantN(tenantN).TenantGroup(tenantGroup).TenantGroupIsnull(tenantGroupIsnull).TenantGroupN(tenantGroupN).TenantId(tenantId).TenantIdIsnull(tenantIdIsnull).TenantIdN(tenantIdN).Depth(depth).ExcludeM2m(excludeM2m).Execute()
 
 
 
@@ -3658,7 +3664,12 @@ func main() {
 	contactsIsnull := true // bool | Contacts (name or ID) is null (optional)
 	contactsN := []string{"Inner_example"} // []string |  (optional)
 	controllerManagedDeviceGroups := []string{"Inner_example"} // []string |  (optional)
-	controllerManagedDeviceGroupsIsnull := true // bool | Controller Managed Device Groups (name or ID) is null (optional)
+	controllerManagedDeviceGroupsController := []string{"Inner_example"} // []string |  (optional)
+	controllerManagedDeviceGroupsControllerN := []string{"Inner_example"} // []string |  (optional)
+	controllerManagedDeviceGroupsDevices := []string{"Inner_example"} // []string |  (optional)
+	controllerManagedDeviceGroupsDevicesIsnull := true // bool |  (optional)
+	controllerManagedDeviceGroupsDevicesN := []string{"Inner_example"} // []string |  (optional)
+	controllerManagedDeviceGroupsIsnull := true // bool |  (optional)
 	controllerManagedDeviceGroupsN := []string{"Inner_example"} // []string |  (optional)
 	created := []time.Time{time.Now()} // []time.Time |  (optional)
 	createdGt := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -3728,7 +3739,7 @@ func main() {
 	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
 	q := "q_example" // string | Search (optional)
 	secretsGroup := []string{"Inner_example"} // []string |  (optional)
-	secretsGroupIsnull := true // bool | Secrets group (name or ID) is null (optional)
+	secretsGroupIsnull := true // bool |  (optional)
 	secretsGroupN := []string{"Inner_example"} // []string |  (optional)
 	sort := "sort_example" // string | Which field to use when ordering the results. (optional)
 	ssid := []string{"Inner_example"} // []string |  (optional)
@@ -3761,11 +3772,11 @@ func main() {
 	tenantIdIsnull := true // bool | Tenant (ID) (deprecated, use \"tenant\" filter instead) is null (optional)
 	tenantIdN := []*string{"Inner_example"} // []*string | Exclude Tenant (ID) (deprecated, use \"tenant\" filter instead) (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
-	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional) (default to false)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.WirelessAPI.WirelessWirelessNetworksList(context.Background()).Authentication(authentication).AuthenticationIc(authenticationIc).AuthenticationIe(authenticationIe).AuthenticationIew(authenticationIew).AuthenticationIre(authenticationIre).AuthenticationIsw(authenticationIsw).AuthenticationN(authenticationN).AuthenticationNic(authenticationNic).AuthenticationNie(authenticationNie).AuthenticationNiew(authenticationNiew).AuthenticationNire(authenticationNire).AuthenticationNisw(authenticationNisw).AuthenticationNre(authenticationNre).AuthenticationRe(authenticationRe).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).ControllerManagedDeviceGroups(controllerManagedDeviceGroups).ControllerManagedDeviceGroupsIsnull(controllerManagedDeviceGroupsIsnull).ControllerManagedDeviceGroupsN(controllerManagedDeviceGroupsN).Created(created).CreatedGt(createdGt).CreatedGte(createdGte).CreatedIsnull(createdIsnull).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).Description(description).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIre(descriptionIre).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNire(descriptionNire).DescriptionNisw(descriptionNisw).DescriptionNre(descriptionNre).DescriptionRe(descriptionRe).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Enabled(enabled).Format(format).HasControllerManagedDeviceGroups(hasControllerManagedDeviceGroups).Hidden(hidden).Id(id).IdN(idN).LastUpdated(lastUpdated).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedIsnull(lastUpdatedIsnull).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).Mode(mode).ModeIc(modeIc).ModeIe(modeIe).ModeIew(modeIew).ModeIre(modeIre).ModeIsw(modeIsw).ModeN(modeN).ModeNic(modeNic).ModeNie(modeNie).ModeNiew(modeNiew).ModeNire(modeNire).ModeNisw(modeNisw).ModeNre(modeNre).ModeRe(modeRe).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).Q(q).SecretsGroup(secretsGroup).SecretsGroupIsnull(secretsGroupIsnull).SecretsGroupN(secretsGroupN).Sort(sort).Ssid(ssid).SsidIc(ssidIc).SsidIe(ssidIe).SsidIew(ssidIew).SsidIre(ssidIre).SsidIsw(ssidIsw).SsidN(ssidN).SsidNic(ssidNic).SsidNie(ssidNie).SsidNiew(ssidNiew).SsidNire(ssidNire).SsidNisw(ssidNisw).SsidNre(ssidNre).SsidRe(ssidRe).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Tenant(tenant).TenantIsnull(tenantIsnull).TenantN(tenantN).TenantGroup(tenantGroup).TenantGroupIsnull(tenantGroupIsnull).TenantGroupN(tenantGroupN).TenantId(tenantId).TenantIdIsnull(tenantIdIsnull).TenantIdN(tenantIdN).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+	resp, r, err := apiClient.WirelessAPI.WirelessWirelessNetworksList(context.Background()).Authentication(authentication).AuthenticationIc(authenticationIc).AuthenticationIe(authenticationIe).AuthenticationIew(authenticationIew).AuthenticationIre(authenticationIre).AuthenticationIsw(authenticationIsw).AuthenticationN(authenticationN).AuthenticationNic(authenticationNic).AuthenticationNie(authenticationNie).AuthenticationNiew(authenticationNiew).AuthenticationNire(authenticationNire).AuthenticationNisw(authenticationNisw).AuthenticationNre(authenticationNre).AuthenticationRe(authenticationRe).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).ControllerManagedDeviceGroups(controllerManagedDeviceGroups).ControllerManagedDeviceGroupsController(controllerManagedDeviceGroupsController).ControllerManagedDeviceGroupsControllerN(controllerManagedDeviceGroupsControllerN).ControllerManagedDeviceGroupsDevices(controllerManagedDeviceGroupsDevices).ControllerManagedDeviceGroupsDevicesIsnull(controllerManagedDeviceGroupsDevicesIsnull).ControllerManagedDeviceGroupsDevicesN(controllerManagedDeviceGroupsDevicesN).ControllerManagedDeviceGroupsIsnull(controllerManagedDeviceGroupsIsnull).ControllerManagedDeviceGroupsN(controllerManagedDeviceGroupsN).Created(created).CreatedGt(createdGt).CreatedGte(createdGte).CreatedIsnull(createdIsnull).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).Description(description).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIre(descriptionIre).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNire(descriptionNire).DescriptionNisw(descriptionNisw).DescriptionNre(descriptionNre).DescriptionRe(descriptionRe).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Enabled(enabled).Format(format).HasControllerManagedDeviceGroups(hasControllerManagedDeviceGroups).Hidden(hidden).Id(id).IdN(idN).LastUpdated(lastUpdated).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedIsnull(lastUpdatedIsnull).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).Mode(mode).ModeIc(modeIc).ModeIe(modeIe).ModeIew(modeIew).ModeIre(modeIre).ModeIsw(modeIsw).ModeN(modeN).ModeNic(modeNic).ModeNie(modeNie).ModeNiew(modeNiew).ModeNire(modeNire).ModeNisw(modeNisw).ModeNre(modeNre).ModeRe(modeRe).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).Q(q).SecretsGroup(secretsGroup).SecretsGroupIsnull(secretsGroupIsnull).SecretsGroupN(secretsGroupN).Sort(sort).Ssid(ssid).SsidIc(ssidIc).SsidIe(ssidIe).SsidIew(ssidIew).SsidIre(ssidIre).SsidIsw(ssidIsw).SsidN(ssidN).SsidNic(ssidNic).SsidNie(ssidNie).SsidNiew(ssidNiew).SsidNire(ssidNire).SsidNisw(ssidNisw).SsidNre(ssidNre).SsidRe(ssidRe).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Tenant(tenant).TenantIsnull(tenantIsnull).TenantN(tenantN).TenantGroup(tenantGroup).TenantGroupIsnull(tenantGroupIsnull).TenantGroupN(tenantGroupN).TenantId(tenantId).TenantIdIsnull(tenantIdIsnull).TenantIdN(tenantIdN).Depth(depth).ExcludeM2m(excludeM2m).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `WirelessAPI.WirelessWirelessNetworksList``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -3804,7 +3815,12 @@ Name | Type | Description  | Notes
  **contactsIsnull** | **bool** | Contacts (name or ID) is null | 
  **contactsN** | **[]string** |  | 
  **controllerManagedDeviceGroups** | **[]string** |  | 
- **controllerManagedDeviceGroupsIsnull** | **bool** | Controller Managed Device Groups (name or ID) is null | 
+ **controllerManagedDeviceGroupsController** | **[]string** |  | 
+ **controllerManagedDeviceGroupsControllerN** | **[]string** |  | 
+ **controllerManagedDeviceGroupsDevices** | **[]string** |  | 
+ **controllerManagedDeviceGroupsDevicesIsnull** | **bool** |  | 
+ **controllerManagedDeviceGroupsDevicesN** | **[]string** |  | 
+ **controllerManagedDeviceGroupsIsnull** | **bool** |  | 
  **controllerManagedDeviceGroupsN** | **[]string** |  | 
  **created** | [**[]time.Time**](time.Time.md) |  | 
  **createdGt** | [**[]time.Time**](time.Time.md) |  | 
@@ -3874,7 +3890,7 @@ Name | Type | Description  | Notes
  **offset** | **int32** | The initial index from which to return the results. | 
  **q** | **string** | Search | 
  **secretsGroup** | **[]string** |  | 
- **secretsGroupIsnull** | **bool** | Secrets group (name or ID) is null | 
+ **secretsGroupIsnull** | **bool** |  | 
  **secretsGroupN** | **[]string** |  | 
  **sort** | **string** | Which field to use when ordering the results. | 
  **ssid** | **[]string** |  | 
@@ -3907,7 +3923,7 @@ Name | Type | Description  | Notes
  **tenantIdIsnull** | **bool** | Tenant (ID) (deprecated, use \&quot;tenant\&quot; filter instead) is null | 
  **tenantIdN** | **[]string** | Exclude Tenant (ID) (deprecated, use \&quot;tenant\&quot; filter instead) | 
  **depth** | **int32** | Serializer Depth | [default to 1]
- **excludeM2m** | **bool** | Exclude many-to-many fields from the response | [default to false]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
 
 ### Return type
 
@@ -4027,7 +4043,7 @@ func main() {
 	limit := int32(56) // int32 | Number of results to return per page. (optional)
 	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
-	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional) (default to false)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -4061,7 +4077,7 @@ Name | Type | Description  | Notes
  **limit** | **int32** | Number of results to return per page. | 
  **offset** | **int32** | The initial index from which to return the results. | 
  **depth** | **int32** | Serializer Depth | [default to 1]
- **excludeM2m** | **bool** | Exclude many-to-many fields from the response | [default to false]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
 
 ### Return type
 
@@ -4179,7 +4195,7 @@ func main() {
 	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | A UUID string identifying this wireless network.
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
-	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional) (default to false)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -4211,7 +4227,7 @@ Name | Type | Description  | Notes
 
  **format** | [**CircuitsCircuitTerminationsListFormatParameter**](CircuitsCircuitTerminationsListFormatParameter.md) |  | 
  **depth** | **int32** | Serializer Depth | [default to 1]
- **excludeM2m** | **bool** | Exclude many-to-many fields from the response | [default to false]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
 
 ### Return type
 

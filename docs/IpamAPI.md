@@ -314,7 +314,7 @@ import (
 )
 
 func main() {
-	bulkWritableIPAddressToInterfaceRequest := []openapiclient.BulkWritableIPAddressToInterfaceRequest{*openapiclient.NewBulkWritableIPAddressToInterfaceRequest("Id_example", *openapiclient.NewBulkWritableCableRequestStatus())} // []BulkWritableIPAddressToInterfaceRequest | 
+	bulkWritableIPAddressToInterfaceRequest := []openapiclient.BulkWritableIPAddressToInterfaceRequest{*openapiclient.NewBulkWritableIPAddressToInterfaceRequest("Id_example", *openapiclient.NewApprovalWorkflowStageResponseApprovalWorkflowStage())} // []BulkWritableIPAddressToInterfaceRequest | 
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -382,7 +382,7 @@ import (
 )
 
 func main() {
-	iPAddressToInterfaceRequest := *openapiclient.NewIPAddressToInterfaceRequest(*openapiclient.NewBulkWritableCableRequestStatus()) // IPAddressToInterfaceRequest | 
+	iPAddressToInterfaceRequest := *openapiclient.NewIPAddressToInterfaceRequest(*openapiclient.NewApprovalWorkflowStageResponseApprovalWorkflowStage()) // IPAddressToInterfaceRequest | 
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -526,10 +526,10 @@ func main() {
 	id := []string{"Inner_example"} // []string | Unique object identifier, either a UUID primary key or a composite key. (optional)
 	idN := []string{"Inner_example"} // []string |  (optional)
 	interface_ := []string{"Inner_example"} // []string |  (optional)
-	interfaceIsnull := true // bool | Interface (name or ID) is null (optional)
+	interfaceIsnull := true // bool |  (optional)
 	interfaceN := []string{"Inner_example"} // []string |  (optional)
-	ipAddress := []string{"Inner_example"} // []string | IP Address (ID) (optional)
-	ipAddressN := []string{"Inner_example"} // []string | Exclude IP Address (ID) (optional)
+	ipAddress := []string{"Inner_example"} // []string |  (optional)
+	ipAddressN := []string{"Inner_example"} // []string |  (optional)
 	isDefault := true // bool |  (optional)
 	isDestination := true // bool |  (optional)
 	isPreferred := true // bool |  (optional)
@@ -543,10 +543,10 @@ func main() {
 	q := "q_example" // string | Search (optional)
 	sort := "sort_example" // string | Which field to use when ordering the results. (optional)
 	vmInterface := []string{"Inner_example"} // []string |  (optional)
-	vmInterfaceIsnull := true // bool | VM Interface (name or ID) is null (optional)
+	vmInterfaceIsnull := true // bool |  (optional)
 	vmInterfaceN := []string{"Inner_example"} // []string |  (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
-	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional) (default to false)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -576,10 +576,10 @@ Name | Type | Description  | Notes
  **id** | **[]string** | Unique object identifier, either a UUID primary key or a composite key. | 
  **idN** | **[]string** |  | 
  **interface_** | **[]string** |  | 
- **interfaceIsnull** | **bool** | Interface (name or ID) is null | 
+ **interfaceIsnull** | **bool** |  | 
  **interfaceN** | **[]string** |  | 
- **ipAddress** | **[]string** | IP Address (ID) | 
- **ipAddressN** | **[]string** | Exclude IP Address (ID) | 
+ **ipAddress** | **[]string** |  | 
+ **ipAddressN** | **[]string** |  | 
  **isDefault** | **bool** |  | 
  **isDestination** | **bool** |  | 
  **isPreferred** | **bool** |  | 
@@ -593,10 +593,10 @@ Name | Type | Description  | Notes
  **q** | **string** | Search | 
  **sort** | **string** | Which field to use when ordering the results. | 
  **vmInterface** | **[]string** |  | 
- **vmInterfaceIsnull** | **bool** | VM Interface (name or ID) is null | 
+ **vmInterfaceIsnull** | **bool** |  | 
  **vmInterfaceN** | **[]string** |  | 
  **depth** | **int32** | Serializer Depth | [default to 1]
- **excludeM2m** | **bool** | Exclude many-to-many fields from the response | [default to false]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
 
 ### Return type
 
@@ -716,7 +716,7 @@ func main() {
 	limit := int32(56) // int32 | Number of results to return per page. (optional)
 	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
-	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional) (default to false)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -750,7 +750,7 @@ Name | Type | Description  | Notes
  **limit** | **int32** | Number of results to return per page. | 
  **offset** | **int32** | The initial index from which to return the results. | 
  **depth** | **int32** | Serializer Depth | [default to 1]
- **excludeM2m** | **bool** | Exclude many-to-many fields from the response | [default to false]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
 
 ### Return type
 
@@ -868,7 +868,7 @@ func main() {
 	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | A UUID string identifying this IP Address Assignment.
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
-	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional) (default to false)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -900,7 +900,7 @@ Name | Type | Description  | Notes
 
  **format** | [**CircuitsCircuitTerminationsListFormatParameter**](CircuitsCircuitTerminationsListFormatParameter.md) |  | 
  **depth** | **int32** | Serializer Depth | [default to 1]
- **excludeM2m** | **bool** | Exclude many-to-many fields from the response | [default to false]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
 
 ### Return type
 
@@ -942,7 +942,7 @@ import (
 
 func main() {
 	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | A UUID string identifying this IP Address Assignment.
-	iPAddressToInterfaceRequest := *openapiclient.NewIPAddressToInterfaceRequest(*openapiclient.NewBulkWritableCableRequestStatus()) // IPAddressToInterfaceRequest | 
+	iPAddressToInterfaceRequest := *openapiclient.NewIPAddressToInterfaceRequest(*openapiclient.NewApprovalWorkflowStageResponseApprovalWorkflowStage()) // IPAddressToInterfaceRequest | 
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -1149,7 +1149,7 @@ import (
 )
 
 func main() {
-	bulkWritableIPAddressRequest := []openapiclient.BulkWritableIPAddressRequest{*openapiclient.NewBulkWritableIPAddressRequest("Id_example", "Address_example", *openapiclient.NewBulkWritableCableRequestStatus())} // []BulkWritableIPAddressRequest | 
+	bulkWritableIPAddressRequest := []openapiclient.BulkWritableIPAddressRequest{*openapiclient.NewBulkWritableIPAddressRequest("Id_example", "Address_example", *openapiclient.NewApprovalWorkflowStageResponseApprovalWorkflowStage())} // []BulkWritableIPAddressRequest | 
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -1217,7 +1217,7 @@ import (
 )
 
 func main() {
-	iPAddressRequest := *openapiclient.NewIPAddressRequest("Address_example", *openapiclient.NewBulkWritableCableRequestStatus()) // IPAddressRequest | 
+	iPAddressRequest := *openapiclient.NewIPAddressRequest("Address_example", *openapiclient.NewApprovalWorkflowStageResponseApprovalWorkflowStage()) // IPAddressRequest | 
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -1336,7 +1336,7 @@ Name | Type | Description  | Notes
 
 ## IpamIpAddressesList
 
-> PaginatedIPAddressList IpamIpAddressesList(ctx).Address(address).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Created(created).CreatedGt(createdGt).CreatedGte(createdGte).CreatedIsnull(createdIsnull).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).Description(description).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIre(descriptionIre).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNire(descriptionNire).DescriptionNisw(descriptionNisw).DescriptionNre(descriptionNre).DescriptionRe(descriptionRe).Device(device).DeviceId(deviceId).DnsName(dnsName).DnsNameIc(dnsNameIc).DnsNameIe(dnsNameIe).DnsNameIew(dnsNameIew).DnsNameIre(dnsNameIre).DnsNameIsw(dnsNameIsw).DnsNameN(dnsNameN).DnsNameNic(dnsNameNic).DnsNameNie(dnsNameNie).DnsNameNiew(dnsNameNiew).DnsNameNire(dnsNameNire).DnsNameNisw(dnsNameNisw).DnsNameNre(dnsNameNre).DnsNameRe(dnsNameRe).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).HasInterfaceAssignments(hasInterfaceAssignments).HasNatInside(hasNatInside).Id(id).IdN(idN).Interfaces(interfaces).InterfacesIsnull(interfacesIsnull).InterfacesN(interfacesN).IpVersion(ipVersion).LastUpdated(lastUpdated).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedIsnull(lastUpdatedIsnull).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).MaskLength(maskLength).MaskLengthGt(maskLengthGt).MaskLengthGte(maskLengthGte).MaskLengthLt(maskLengthLt).MaskLengthLte(maskLengthLte).MaskLengthN(maskLengthN).Namespace(namespace).NamespaceN(namespaceN).NatInside(natInside).NatInsideIsnull(natInsideIsnull).NatInsideN(natInsideN).Offset(offset).Parent(parent).ParentIsnull(parentIsnull).ParentN(parentN).Prefix(prefix).PresentInVrf(presentInVrf).PresentInVrfId(presentInVrfId).Q(q).Role(role).RoleIsnull(roleIsnull).RoleN(roleN).Sort(sort).Status(status).StatusN(statusN).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Tenant(tenant).TenantIsnull(tenantIsnull).TenantN(tenantN).TenantGroup(tenantGroup).TenantGroupIsnull(tenantGroupIsnull).TenantGroupN(tenantGroupN).TenantId(tenantId).TenantIdIsnull(tenantIdIsnull).TenantIdN(tenantIdN).Type_(type_).TypeIc(typeIc).TypeIe(typeIe).TypeIew(typeIew).TypeIre(typeIre).TypeIsw(typeIsw).TypeN(typeN).TypeNic(typeNic).TypeNie(typeNie).TypeNiew(typeNiew).TypeNire(typeNire).TypeNisw(typeNisw).TypeNre(typeNre).TypeRe(typeRe).VirtualMachine(virtualMachine).VirtualMachineId(virtualMachineId).VmInterfaces(vmInterfaces).VmInterfacesIsnull(vmInterfacesIsnull).VmInterfacesN(vmInterfacesN).Vrfs(vrfs).VrfsIsnull(vrfsIsnull).VrfsN(vrfsN).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+> PaginatedIPAddressList IpamIpAddressesList(ctx).Address(address).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Created(created).CreatedGt(createdGt).CreatedGte(createdGte).CreatedIsnull(createdIsnull).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).Description(description).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIre(descriptionIre).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNire(descriptionNire).DescriptionNisw(descriptionNisw).DescriptionNre(descriptionNre).DescriptionRe(descriptionRe).Device(device).DeviceId(deviceId).DnsName(dnsName).DnsNameIc(dnsNameIc).DnsNameIe(dnsNameIe).DnsNameIew(dnsNameIew).DnsNameIre(dnsNameIre).DnsNameIsw(dnsNameIsw).DnsNameN(dnsNameN).DnsNameNic(dnsNameNic).DnsNameNie(dnsNameNie).DnsNameNiew(dnsNameNiew).DnsNameNire(dnsNameNire).DnsNameNisw(dnsNameNisw).DnsNameNre(dnsNameNre).DnsNameRe(dnsNameRe).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).HasInterfaceAssignments(hasInterfaceAssignments).HasNatInside(hasNatInside).Id(id).IdN(idN).Interfaces(interfaces).InterfacesIsnull(interfacesIsnull).InterfacesN(interfacesN).IpVersion(ipVersion).LastUpdated(lastUpdated).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedIsnull(lastUpdatedIsnull).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).MaskLength(maskLength).MaskLengthGt(maskLengthGt).MaskLengthGte(maskLengthGte).MaskLengthLt(maskLengthLt).MaskLengthLte(maskLengthLte).MaskLengthN(maskLengthN).Namespace(namespace).NamespaceN(namespaceN).NatInside(natInside).NatInsideIsnull(natInsideIsnull).NatInsideN(natInsideN).Offset(offset).Parent(parent).ParentIsnull(parentIsnull).ParentN(parentN).Prefix(prefix).PresentInVrf(presentInVrf).PresentInVrfId(presentInVrfId).Q(q).Role(role).RoleIsnull(roleIsnull).RoleN(roleN).Services(services).ServicesIsnull(servicesIsnull).ServicesN(servicesN).Sort(sort).Status(status).StatusN(statusN).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Tenant(tenant).TenantIsnull(tenantIsnull).TenantN(tenantN).TenantGroup(tenantGroup).TenantGroupIsnull(tenantGroupIsnull).TenantGroupN(tenantGroupN).TenantId(tenantId).TenantIdIsnull(tenantIdIsnull).TenantIdN(tenantIdN).Type_(type_).TypeIc(typeIc).TypeIe(typeIe).TypeIew(typeIew).TypeIre(typeIre).TypeIsw(typeIsw).TypeN(typeN).TypeNic(typeNic).TypeNie(typeNie).TypeNiew(typeNiew).TypeNire(typeNire).TypeNisw(typeNisw).TypeNre(typeNre).TypeRe(typeRe).VirtualMachine(virtualMachine).VirtualMachineId(virtualMachineId).VmInterfaces(vmInterfaces).VmInterfacesIsnull(vmInterfacesIsnull).VmInterfacesN(vmInterfacesN).Vrfs(vrfs).VrfsIsnull(vrfsIsnull).VrfsN(vrfsN).Depth(depth).ExcludeM2m(excludeM2m).Execute()
 
 
 
@@ -1405,7 +1405,7 @@ func main() {
 	id := []string{"Inner_example"} // []string | Unique object identifier, either a UUID primary key or a composite key. (optional)
 	idN := []string{"Inner_example"} // []string |  (optional)
 	interfaces := []string{"Inner_example"} // []string |  (optional)
-	interfacesIsnull := true // bool | Interfaces (ID or name) is null (optional)
+	interfacesIsnull := true // bool |  (optional)
 	interfacesN := []string{"Inner_example"} // []string |  (optional)
 	ipVersion := int32(56) // int32 |  (optional)
 	lastUpdated := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -1438,6 +1438,9 @@ func main() {
 	role := []string{"Inner_example"} // []string |  (optional)
 	roleIsnull := true // bool | Role (name or ID) is null (optional)
 	roleN := []string{"Inner_example"} // []string |  (optional)
+	services := []string{"Inner_example"} // []string |  (optional)
+	servicesIsnull := true // bool | Services (name or ID) is null (optional)
+	servicesN := []string{"Inner_example"} // []string |  (optional)
 	sort := "sort_example" // string | Which field to use when ordering the results. (optional)
 	status := []string{"Inner_example"} // []string |  (optional)
 	statusN := []string{"Inner_example"} // []string |  (optional)
@@ -1473,17 +1476,17 @@ func main() {
 	virtualMachine := []string{"Inner_example"} // []string | Virtual machine (name) (optional)
 	virtualMachineId := []string{"Inner_example"} // []string | Virtual machine (ID) (optional)
 	vmInterfaces := []string{"Inner_example"} // []string |  (optional)
-	vmInterfacesIsnull := true // bool | VM interfaces (ID or name) is null (optional)
+	vmInterfacesIsnull := true // bool |  (optional)
 	vmInterfacesN := []string{"Inner_example"} // []string |  (optional)
 	vrfs := []string{"Inner_example"} // []string |  (optional)
 	vrfsIsnull := true // bool | VRF (ID or RD) is null (optional)
 	vrfsN := []string{"Inner_example"} // []string |  (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
-	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional) (default to false)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.IpamAPI.IpamIpAddressesList(context.Background()).Address(address).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Created(created).CreatedGt(createdGt).CreatedGte(createdGte).CreatedIsnull(createdIsnull).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).Description(description).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIre(descriptionIre).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNire(descriptionNire).DescriptionNisw(descriptionNisw).DescriptionNre(descriptionNre).DescriptionRe(descriptionRe).Device(device).DeviceId(deviceId).DnsName(dnsName).DnsNameIc(dnsNameIc).DnsNameIe(dnsNameIe).DnsNameIew(dnsNameIew).DnsNameIre(dnsNameIre).DnsNameIsw(dnsNameIsw).DnsNameN(dnsNameN).DnsNameNic(dnsNameNic).DnsNameNie(dnsNameNie).DnsNameNiew(dnsNameNiew).DnsNameNire(dnsNameNire).DnsNameNisw(dnsNameNisw).DnsNameNre(dnsNameNre).DnsNameRe(dnsNameRe).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).HasInterfaceAssignments(hasInterfaceAssignments).HasNatInside(hasNatInside).Id(id).IdN(idN).Interfaces(interfaces).InterfacesIsnull(interfacesIsnull).InterfacesN(interfacesN).IpVersion(ipVersion).LastUpdated(lastUpdated).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedIsnull(lastUpdatedIsnull).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).MaskLength(maskLength).MaskLengthGt(maskLengthGt).MaskLengthGte(maskLengthGte).MaskLengthLt(maskLengthLt).MaskLengthLte(maskLengthLte).MaskLengthN(maskLengthN).Namespace(namespace).NamespaceN(namespaceN).NatInside(natInside).NatInsideIsnull(natInsideIsnull).NatInsideN(natInsideN).Offset(offset).Parent(parent).ParentIsnull(parentIsnull).ParentN(parentN).Prefix(prefix).PresentInVrf(presentInVrf).PresentInVrfId(presentInVrfId).Q(q).Role(role).RoleIsnull(roleIsnull).RoleN(roleN).Sort(sort).Status(status).StatusN(statusN).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Tenant(tenant).TenantIsnull(tenantIsnull).TenantN(tenantN).TenantGroup(tenantGroup).TenantGroupIsnull(tenantGroupIsnull).TenantGroupN(tenantGroupN).TenantId(tenantId).TenantIdIsnull(tenantIdIsnull).TenantIdN(tenantIdN).Type_(type_).TypeIc(typeIc).TypeIe(typeIe).TypeIew(typeIew).TypeIre(typeIre).TypeIsw(typeIsw).TypeN(typeN).TypeNic(typeNic).TypeNie(typeNie).TypeNiew(typeNiew).TypeNire(typeNire).TypeNisw(typeNisw).TypeNre(typeNre).TypeRe(typeRe).VirtualMachine(virtualMachine).VirtualMachineId(virtualMachineId).VmInterfaces(vmInterfaces).VmInterfacesIsnull(vmInterfacesIsnull).VmInterfacesN(vmInterfacesN).Vrfs(vrfs).VrfsIsnull(vrfsIsnull).VrfsN(vrfsN).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+	resp, r, err := apiClient.IpamAPI.IpamIpAddressesList(context.Background()).Address(address).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Created(created).CreatedGt(createdGt).CreatedGte(createdGte).CreatedIsnull(createdIsnull).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).Description(description).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIre(descriptionIre).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNire(descriptionNire).DescriptionNisw(descriptionNisw).DescriptionNre(descriptionNre).DescriptionRe(descriptionRe).Device(device).DeviceId(deviceId).DnsName(dnsName).DnsNameIc(dnsNameIc).DnsNameIe(dnsNameIe).DnsNameIew(dnsNameIew).DnsNameIre(dnsNameIre).DnsNameIsw(dnsNameIsw).DnsNameN(dnsNameN).DnsNameNic(dnsNameNic).DnsNameNie(dnsNameNie).DnsNameNiew(dnsNameNiew).DnsNameNire(dnsNameNire).DnsNameNisw(dnsNameNisw).DnsNameNre(dnsNameNre).DnsNameRe(dnsNameRe).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).HasInterfaceAssignments(hasInterfaceAssignments).HasNatInside(hasNatInside).Id(id).IdN(idN).Interfaces(interfaces).InterfacesIsnull(interfacesIsnull).InterfacesN(interfacesN).IpVersion(ipVersion).LastUpdated(lastUpdated).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedIsnull(lastUpdatedIsnull).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).MaskLength(maskLength).MaskLengthGt(maskLengthGt).MaskLengthGte(maskLengthGte).MaskLengthLt(maskLengthLt).MaskLengthLte(maskLengthLte).MaskLengthN(maskLengthN).Namespace(namespace).NamespaceN(namespaceN).NatInside(natInside).NatInsideIsnull(natInsideIsnull).NatInsideN(natInsideN).Offset(offset).Parent(parent).ParentIsnull(parentIsnull).ParentN(parentN).Prefix(prefix).PresentInVrf(presentInVrf).PresentInVrfId(presentInVrfId).Q(q).Role(role).RoleIsnull(roleIsnull).RoleN(roleN).Services(services).ServicesIsnull(servicesIsnull).ServicesN(servicesN).Sort(sort).Status(status).StatusN(statusN).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Tenant(tenant).TenantIsnull(tenantIsnull).TenantN(tenantN).TenantGroup(tenantGroup).TenantGroupIsnull(tenantGroupIsnull).TenantGroupN(tenantGroupN).TenantId(tenantId).TenantIdIsnull(tenantIdIsnull).TenantIdN(tenantIdN).Type_(type_).TypeIc(typeIc).TypeIe(typeIe).TypeIew(typeIew).TypeIre(typeIre).TypeIsw(typeIsw).TypeN(typeN).TypeNic(typeNic).TypeNie(typeNie).TypeNiew(typeNiew).TypeNire(typeNire).TypeNisw(typeNisw).TypeNre(typeNre).TypeRe(typeRe).VirtualMachine(virtualMachine).VirtualMachineId(virtualMachineId).VmInterfaces(vmInterfaces).VmInterfacesIsnull(vmInterfacesIsnull).VmInterfacesN(vmInterfacesN).Vrfs(vrfs).VrfsIsnull(vrfsIsnull).VrfsN(vrfsN).Depth(depth).ExcludeM2m(excludeM2m).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `IpamAPI.IpamIpAddressesList``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -1553,7 +1556,7 @@ Name | Type | Description  | Notes
  **id** | **[]string** | Unique object identifier, either a UUID primary key or a composite key. | 
  **idN** | **[]string** |  | 
  **interfaces** | **[]string** |  | 
- **interfacesIsnull** | **bool** | Interfaces (ID or name) is null | 
+ **interfacesIsnull** | **bool** |  | 
  **interfacesN** | **[]string** |  | 
  **ipVersion** | **int32** |  | 
  **lastUpdated** | [**[]time.Time**](time.Time.md) |  | 
@@ -1586,6 +1589,9 @@ Name | Type | Description  | Notes
  **role** | **[]string** |  | 
  **roleIsnull** | **bool** | Role (name or ID) is null | 
  **roleN** | **[]string** |  | 
+ **services** | **[]string** |  | 
+ **servicesIsnull** | **bool** | Services (name or ID) is null | 
+ **servicesN** | **[]string** |  | 
  **sort** | **string** | Which field to use when ordering the results. | 
  **status** | **[]string** |  | 
  **statusN** | **[]string** |  | 
@@ -1621,13 +1627,13 @@ Name | Type | Description  | Notes
  **virtualMachine** | **[]string** | Virtual machine (name) | 
  **virtualMachineId** | **[]string** | Virtual machine (ID) | 
  **vmInterfaces** | **[]string** |  | 
- **vmInterfacesIsnull** | **bool** | VM interfaces (ID or name) is null | 
+ **vmInterfacesIsnull** | **bool** |  | 
  **vmInterfacesN** | **[]string** |  | 
  **vrfs** | **[]string** |  | 
  **vrfsIsnull** | **bool** | VRF (ID or RD) is null | 
  **vrfsN** | **[]string** |  | 
  **depth** | **int32** | Serializer Depth | [default to 1]
- **excludeM2m** | **bool** | Exclude many-to-many fields from the response | [default to false]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
 
 ### Return type
 
@@ -1747,7 +1753,7 @@ func main() {
 	limit := int32(56) // int32 | Number of results to return per page. (optional)
 	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
-	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional) (default to false)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -1781,7 +1787,7 @@ Name | Type | Description  | Notes
  **limit** | **int32** | Number of results to return per page. | 
  **offset** | **int32** | The initial index from which to return the results. | 
  **depth** | **int32** | Serializer Depth | [default to 1]
- **excludeM2m** | **bool** | Exclude many-to-many fields from the response | [default to false]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
 
 ### Return type
 
@@ -1899,7 +1905,7 @@ func main() {
 	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | A UUID string identifying this IP address.
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
-	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional) (default to false)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -1931,7 +1937,7 @@ Name | Type | Description  | Notes
 
  **format** | [**CircuitsCircuitTerminationsListFormatParameter**](CircuitsCircuitTerminationsListFormatParameter.md) |  | 
  **depth** | **int32** | Serializer Depth | [default to 1]
- **excludeM2m** | **bool** | Exclude many-to-many fields from the response | [default to false]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
 
 ### Return type
 
@@ -1973,7 +1979,7 @@ import (
 
 func main() {
 	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | A UUID string identifying this IP address.
-	iPAddressRequest := *openapiclient.NewIPAddressRequest("Address_example", *openapiclient.NewBulkWritableCableRequestStatus()) // IPAddressRequest | 
+	iPAddressRequest := *openapiclient.NewIPAddressRequest("Address_example", *openapiclient.NewApprovalWorkflowStageResponseApprovalWorkflowStage()) // IPAddressRequest | 
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -2367,7 +2373,7 @@ Name | Type | Description  | Notes
 
 ## IpamNamespacesList
 
-> PaginatedNamespaceList IpamNamespacesList(ctx).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Created(created).CreatedGt(createdGt).CreatedGte(createdGte).CreatedIsnull(createdIsnull).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).Description(description).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIre(descriptionIre).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNire(descriptionNire).DescriptionNisw(descriptionNisw).DescriptionNre(descriptionNre).DescriptionRe(descriptionRe).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).Id(id).IdN(idN).LastUpdated(lastUpdated).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedIsnull(lastUpdatedIsnull).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).Location(location).LocationIsnull(locationIsnull).LocationN(locationN).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).Q(q).Sort(sort).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+> PaginatedNamespaceList IpamNamespacesList(ctx).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Created(created).CreatedGt(createdGt).CreatedGte(createdGte).CreatedIsnull(createdIsnull).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).Description(description).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIre(descriptionIre).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNire(descriptionNire).DescriptionNisw(descriptionNisw).DescriptionNre(descriptionNre).DescriptionRe(descriptionRe).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).Id(id).IdN(idN).LastUpdated(lastUpdated).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedIsnull(lastUpdatedIsnull).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).Location(location).LocationIsnull(locationIsnull).LocationN(locationN).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).Q(q).Sort(sort).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Tenant(tenant).TenantIsnull(tenantIsnull).TenantN(tenantN).TenantGroup(tenantGroup).TenantGroupIsnull(tenantGroupIsnull).TenantGroupN(tenantGroupN).TenantId(tenantId).TenantIdIsnull(tenantIdIsnull).TenantIdN(tenantIdN).Depth(depth).ExcludeM2m(excludeM2m).Execute()
 
 
 
@@ -2424,9 +2430,9 @@ func main() {
 	lastUpdatedLte := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedN := []time.Time{time.Now()} // []time.Time |  (optional)
 	limit := int32(56) // int32 | Number of results to return per page. (optional)
-	location := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
+	location := []string{"Inner_example"} // []string |  (optional)
 	locationIsnull := true // bool |  (optional)
-	locationN := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
+	locationN := []string{"Inner_example"} // []string |  (optional)
 	name := []string{"Inner_example"} // []string |  (optional)
 	nameIc := []string{"Inner_example"} // []string |  (optional)
 	nameIe := []string{"Inner_example"} // []string |  (optional)
@@ -2450,12 +2456,21 @@ func main() {
 	teams := []string{"Inner_example"} // []string |  (optional)
 	teamsIsnull := true // bool | Teams (name or ID) is null (optional)
 	teamsN := []string{"Inner_example"} // []string |  (optional)
+	tenant := []string{"Inner_example"} // []string |  (optional)
+	tenantIsnull := true // bool | Tenant (name or ID) is null (optional)
+	tenantN := []string{"Inner_example"} // []string |  (optional)
+	tenantGroup := []string{"Inner_example"} // []string |  (optional)
+	tenantGroupIsnull := true // bool | Tenant Group (name or ID) is null (optional)
+	tenantGroupN := []string{"Inner_example"} // []string |  (optional)
+	tenantId := []*string{"Inner_example"} // []*string | Tenant (ID) (deprecated, use \"tenant\" filter instead) (optional)
+	tenantIdIsnull := true // bool | Tenant (ID) (deprecated, use \"tenant\" filter instead) is null (optional)
+	tenantIdN := []*string{"Inner_example"} // []*string | Exclude Tenant (ID) (deprecated, use \"tenant\" filter instead) (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
-	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional) (default to false)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.IpamAPI.IpamNamespacesList(context.Background()).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Created(created).CreatedGt(createdGt).CreatedGte(createdGte).CreatedIsnull(createdIsnull).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).Description(description).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIre(descriptionIre).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNire(descriptionNire).DescriptionNisw(descriptionNisw).DescriptionNre(descriptionNre).DescriptionRe(descriptionRe).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).Id(id).IdN(idN).LastUpdated(lastUpdated).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedIsnull(lastUpdatedIsnull).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).Location(location).LocationIsnull(locationIsnull).LocationN(locationN).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).Q(q).Sort(sort).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+	resp, r, err := apiClient.IpamAPI.IpamNamespacesList(context.Background()).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Created(created).CreatedGt(createdGt).CreatedGte(createdGte).CreatedIsnull(createdIsnull).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).Description(description).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIre(descriptionIre).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNire(descriptionNire).DescriptionNisw(descriptionNisw).DescriptionNre(descriptionNre).DescriptionRe(descriptionRe).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).Id(id).IdN(idN).LastUpdated(lastUpdated).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedIsnull(lastUpdatedIsnull).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).Location(location).LocationIsnull(locationIsnull).LocationN(locationN).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).Q(q).Sort(sort).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Tenant(tenant).TenantIsnull(tenantIsnull).TenantN(tenantN).TenantGroup(tenantGroup).TenantGroupIsnull(tenantGroupIsnull).TenantGroupN(tenantGroupN).TenantId(tenantId).TenantIdIsnull(tenantIdIsnull).TenantIdN(tenantIdN).Depth(depth).ExcludeM2m(excludeM2m).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `IpamAPI.IpamNamespacesList``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -2513,9 +2528,9 @@ Name | Type | Description  | Notes
  **lastUpdatedLte** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedN** | [**[]time.Time**](time.Time.md) |  | 
  **limit** | **int32** | Number of results to return per page. | 
- **location** | **string** |  | 
+ **location** | **[]string** |  | 
  **locationIsnull** | **bool** |  | 
- **locationN** | **string** |  | 
+ **locationN** | **[]string** |  | 
  **name** | **[]string** |  | 
  **nameIc** | **[]string** |  | 
  **nameIe** | **[]string** |  | 
@@ -2539,8 +2554,17 @@ Name | Type | Description  | Notes
  **teams** | **[]string** |  | 
  **teamsIsnull** | **bool** | Teams (name or ID) is null | 
  **teamsN** | **[]string** |  | 
+ **tenant** | **[]string** |  | 
+ **tenantIsnull** | **bool** | Tenant (name or ID) is null | 
+ **tenantN** | **[]string** |  | 
+ **tenantGroup** | **[]string** |  | 
+ **tenantGroupIsnull** | **bool** | Tenant Group (name or ID) is null | 
+ **tenantGroupN** | **[]string** |  | 
+ **tenantId** | **[]string** | Tenant (ID) (deprecated, use \&quot;tenant\&quot; filter instead) | 
+ **tenantIdIsnull** | **bool** | Tenant (ID) (deprecated, use \&quot;tenant\&quot; filter instead) is null | 
+ **tenantIdN** | **[]string** | Exclude Tenant (ID) (deprecated, use \&quot;tenant\&quot; filter instead) | 
  **depth** | **int32** | Serializer Depth | [default to 1]
- **excludeM2m** | **bool** | Exclude many-to-many fields from the response | [default to false]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
 
 ### Return type
 
@@ -2660,7 +2684,7 @@ func main() {
 	limit := int32(56) // int32 | Number of results to return per page. (optional)
 	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
-	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional) (default to false)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -2694,7 +2718,7 @@ Name | Type | Description  | Notes
  **limit** | **int32** | Number of results to return per page. | 
  **offset** | **int32** | The initial index from which to return the results. | 
  **depth** | **int32** | Serializer Depth | [default to 1]
- **excludeM2m** | **bool** | Exclude many-to-many fields from the response | [default to false]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
 
 ### Return type
 
@@ -2812,7 +2836,7 @@ func main() {
 	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | A UUID string identifying this namespace.
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
-	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional) (default to false)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -2844,7 +2868,7 @@ Name | Type | Description  | Notes
 
  **format** | [**CircuitsCircuitTerminationsListFormatParameter**](CircuitsCircuitTerminationsListFormatParameter.md) |  | 
  **depth** | **int32** | Serializer Depth | [default to 1]
- **excludeM2m** | **bool** | Exclude many-to-many fields from the response | [default to false]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
 
 ### Return type
 
@@ -3093,7 +3117,7 @@ import (
 )
 
 func main() {
-	bulkWritablePrefixLocationAssignmentRequest := []openapiclient.BulkWritablePrefixLocationAssignmentRequest{*openapiclient.NewBulkWritablePrefixLocationAssignmentRequest("Id_example", *openapiclient.NewBulkWritableCableRequestStatus(), *openapiclient.NewBulkWritableCableRequestStatus())} // []BulkWritablePrefixLocationAssignmentRequest | 
+	bulkWritablePrefixLocationAssignmentRequest := []openapiclient.BulkWritablePrefixLocationAssignmentRequest{*openapiclient.NewBulkWritablePrefixLocationAssignmentRequest("Id_example", *openapiclient.NewApprovalWorkflowStageResponseApprovalWorkflowStage(), *openapiclient.NewApprovalWorkflowStageResponseApprovalWorkflowStage())} // []BulkWritablePrefixLocationAssignmentRequest | 
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -3161,7 +3185,7 @@ import (
 )
 
 func main() {
-	prefixLocationAssignmentRequest := *openapiclient.NewPrefixLocationAssignmentRequest(*openapiclient.NewBulkWritableCableRequestStatus(), *openapiclient.NewBulkWritableCableRequestStatus()) // PrefixLocationAssignmentRequest | 
+	prefixLocationAssignmentRequest := *openapiclient.NewPrefixLocationAssignmentRequest(*openapiclient.NewApprovalWorkflowStageResponseApprovalWorkflowStage(), *openapiclient.NewApprovalWorkflowStageResponseApprovalWorkflowStage()) // PrefixLocationAssignmentRequest | 
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -3314,7 +3338,7 @@ func main() {
 	q := "q_example" // string | Search (optional)
 	sort := "sort_example" // string | Which field to use when ordering the results. (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
-	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional) (default to false)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -3353,7 +3377,7 @@ Name | Type | Description  | Notes
  **q** | **string** | Search | 
  **sort** | **string** | Which field to use when ordering the results. | 
  **depth** | **int32** | Serializer Depth | [default to 1]
- **excludeM2m** | **bool** | Exclude many-to-many fields from the response | [default to false]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
 
 ### Return type
 
@@ -3471,7 +3495,7 @@ func main() {
 	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | A UUID string identifying this prefix location assignment.
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
-	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional) (default to false)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -3503,7 +3527,7 @@ Name | Type | Description  | Notes
 
  **format** | [**CircuitsCircuitTerminationsListFormatParameter**](CircuitsCircuitTerminationsListFormatParameter.md) |  | 
  **depth** | **int32** | Serializer Depth | [default to 1]
- **excludeM2m** | **bool** | Exclude many-to-many fields from the response | [default to false]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
 
 ### Return type
 
@@ -3545,7 +3569,7 @@ import (
 
 func main() {
 	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | A UUID string identifying this prefix location assignment.
-	prefixLocationAssignmentRequest := *openapiclient.NewPrefixLocationAssignmentRequest(*openapiclient.NewBulkWritableCableRequestStatus(), *openapiclient.NewBulkWritableCableRequestStatus()) // PrefixLocationAssignmentRequest | 
+	prefixLocationAssignmentRequest := *openapiclient.NewPrefixLocationAssignmentRequest(*openapiclient.NewApprovalWorkflowStageResponseApprovalWorkflowStage(), *openapiclient.NewApprovalWorkflowStageResponseApprovalWorkflowStage()) // PrefixLocationAssignmentRequest | 
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -3619,7 +3643,7 @@ import (
 
 func main() {
 	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | A UUID string identifying this IP address.
-	iPAllocationRequest := []openapiclient.IPAllocationRequest{*openapiclient.NewIPAllocationRequest(*openapiclient.NewBulkWritableCableRequestStatus())} // []IPAllocationRequest | 
+	iPAllocationRequest := []openapiclient.IPAllocationRequest{*openapiclient.NewIPAllocationRequest(*openapiclient.NewApprovalWorkflowStageResponseApprovalWorkflowStage())} // []IPAllocationRequest | 
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 	limit := int32(56) // int32 | Number of results to return per page. (optional)
 	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
@@ -3710,7 +3734,7 @@ func main() {
 	rangeStart := openapiclient.ipam_prefixes_available_ips_list_range_end_parameter{String: new(string)} // IpamPrefixesAvailableIpsListRangeEndParameter | IP from which enumeration/allocation should start. (optional)
 	sort := "sort_example" // string | Which field to use when ordering the results. (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
-	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional) (default to false)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -3747,7 +3771,7 @@ Name | Type | Description  | Notes
  **rangeStart** | [**IpamPrefixesAvailableIpsListRangeEndParameter**](IpamPrefixesAvailableIpsListRangeEndParameter.md) | IP from which enumeration/allocation should start. | 
  **sort** | **string** | Which field to use when ordering the results. | 
  **depth** | **int32** | Serializer Depth | [default to 1]
- **excludeM2m** | **bool** | Exclude many-to-many fields from the response | [default to false]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
 
 ### Return type
 
@@ -3789,7 +3813,7 @@ import (
 
 func main() {
 	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | A UUID string identifying this prefix.
-	prefixLengthRequest := *openapiclient.NewPrefixLengthRequest(int32(123), *openapiclient.NewBulkWritableCableRequestStatus()) // PrefixLengthRequest | 
+	prefixLengthRequest := *openapiclient.NewPrefixLengthRequest(int32(123), *openapiclient.NewApprovalWorkflowStageResponseApprovalWorkflowStage()) // PrefixLengthRequest | 
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 	limit := int32(56) // int32 | Number of results to return per page. (optional)
 	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
@@ -3874,7 +3898,7 @@ func main() {
 	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
 	sort := "sort_example" // string | Which field to use when ordering the results. (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
-	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional) (default to false)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -3909,7 +3933,7 @@ Name | Type | Description  | Notes
  **offset** | **int32** | The initial index from which to return the results. | 
  **sort** | **string** | Which field to use when ordering the results. | 
  **depth** | **int32** | Serializer Depth | [default to 1]
- **excludeM2m** | **bool** | Exclude many-to-many fields from the response | [default to false]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
 
 ### Return type
 
@@ -4084,7 +4108,7 @@ import (
 )
 
 func main() {
-	bulkWritablePrefixRequest := []openapiclient.BulkWritablePrefixRequest{*openapiclient.NewBulkWritablePrefixRequest("Id_example", "Prefix_example", *openapiclient.NewBulkWritableCableRequestStatus())} // []BulkWritablePrefixRequest | 
+	bulkWritablePrefixRequest := []openapiclient.BulkWritablePrefixRequest{*openapiclient.NewBulkWritablePrefixRequest("Id_example", "Prefix_example", *openapiclient.NewApprovalWorkflowStageResponseApprovalWorkflowStage())} // []BulkWritablePrefixRequest | 
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -4152,7 +4176,7 @@ import (
 )
 
 func main() {
-	writablePrefixRequest := *openapiclient.NewWritablePrefixRequest("Prefix_example", *openapiclient.NewBulkWritableCableRequestStatus()) // WritablePrefixRequest | 
+	writablePrefixRequest := *openapiclient.NewWritablePrefixRequest("Prefix_example", *openapiclient.NewApprovalWorkflowStageResponseApprovalWorkflowStage()) // WritablePrefixRequest | 
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -4271,7 +4295,7 @@ Name | Type | Description  | Notes
 
 ## IpamPrefixesList
 
-> PaginatedPrefixList IpamPrefixesList(ctx).CloudNetworks(cloudNetworks).CloudNetworksIsnull(cloudNetworksIsnull).CloudNetworksN(cloudNetworksN).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Contains(contains).Created(created).CreatedGt(createdGt).CreatedGte(createdGte).CreatedIsnull(createdIsnull).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).DateAllocated(dateAllocated).DateAllocatedGt(dateAllocatedGt).DateAllocatedGte(dateAllocatedGte).DateAllocatedIsnull(dateAllocatedIsnull).DateAllocatedLt(dateAllocatedLt).DateAllocatedLte(dateAllocatedLte).DateAllocatedN(dateAllocatedN).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).HasRir(hasRir).Id(id).IdN(idN).IpVersion(ipVersion).LastUpdated(lastUpdated).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedIsnull(lastUpdatedIsnull).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).Location(location).LocationN(locationN).Locations(locations).LocationsN(locationsN).Namespace(namespace).NamespaceN(namespaceN).Offset(offset).Parent(parent).ParentIsnull(parentIsnull).ParentN(parentN).Prefix(prefix).PrefixLength(prefixLength).PrefixLengthGt(prefixLengthGt).PrefixLengthGte(prefixLengthGte).PrefixLengthLt(prefixLengthLt).PrefixLengthLte(prefixLengthLte).PrefixLengthN(prefixLengthN).PresentInVrf(presentInVrf).PresentInVrfId(presentInVrfId).Q(q).Rir(rir).RirIsnull(rirIsnull).RirN(rirN).Role(role).RoleIsnull(roleIsnull).RoleN(roleN).Sort(sort).Status(status).StatusN(statusN).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Tenant(tenant).TenantIsnull(tenantIsnull).TenantN(tenantN).TenantGroup(tenantGroup).TenantGroupIsnull(tenantGroupIsnull).TenantGroupN(tenantGroupN).TenantId(tenantId).TenantIdIsnull(tenantIdIsnull).TenantIdN(tenantIdN).Type_(type_).TypeIc(typeIc).TypeIe(typeIe).TypeIew(typeIew).TypeIre(typeIre).TypeIsw(typeIsw).TypeN(typeN).TypeNic(typeNic).TypeNie(typeNie).TypeNiew(typeNiew).TypeNire(typeNire).TypeNisw(typeNisw).TypeNre(typeNre).TypeRe(typeRe).VlanId(vlanId).VlanIdIsnull(vlanIdIsnull).VlanIdN(vlanIdN).VlanVid(vlanVid).VlanVidGt(vlanVidGt).VlanVidGte(vlanVidGte).VlanVidLt(vlanVidLt).VlanVidLte(vlanVidLte).VlanVidN(vlanVidN).Vrfs(vrfs).VrfsIsnull(vrfsIsnull).VrfsN(vrfsN).Within(within).WithinInclude(withinInclude).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+> PaginatedPrefixList IpamPrefixesList(ctx).Ancestors(ancestors).CloudNetworks(cloudNetworks).CloudNetworksIsnull(cloudNetworksIsnull).CloudNetworksN(cloudNetworksN).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Contains(contains).Created(created).CreatedGt(createdGt).CreatedGte(createdGte).CreatedIsnull(createdIsnull).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).DateAllocated(dateAllocated).DateAllocatedGt(dateAllocatedGt).DateAllocatedGte(dateAllocatedGte).DateAllocatedIsnull(dateAllocatedIsnull).DateAllocatedLt(dateAllocatedLt).DateAllocatedLte(dateAllocatedLte).DateAllocatedN(dateAllocatedN).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).HasRir(hasRir).Id(id).IdN(idN).IpVersion(ipVersion).LastUpdated(lastUpdated).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedIsnull(lastUpdatedIsnull).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).Location(location).LocationN(locationN).Locations(locations).LocationsN(locationsN).Namespace(namespace).NamespaceN(namespaceN).Offset(offset).Parent(parent).ParentIsnull(parentIsnull).ParentN(parentN).Prefix(prefix).PrefixLength(prefixLength).PrefixLengthGt(prefixLengthGt).PrefixLengthGte(prefixLengthGte).PrefixLengthLt(prefixLengthLt).PrefixLengthLte(prefixLengthLte).PrefixLengthN(prefixLengthN).PresentInVrf(presentInVrf).PresentInVrfId(presentInVrfId).Q(q).Rir(rir).RirIsnull(rirIsnull).RirN(rirN).Role(role).RoleIsnull(roleIsnull).RoleN(roleN).Sort(sort).Status(status).StatusN(statusN).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Tenant(tenant).TenantIsnull(tenantIsnull).TenantN(tenantN).TenantGroup(tenantGroup).TenantGroupIsnull(tenantGroupIsnull).TenantGroupN(tenantGroupN).TenantId(tenantId).TenantIdIsnull(tenantIdIsnull).TenantIdN(tenantIdN).Type_(type_).TypeIc(typeIc).TypeIe(typeIe).TypeIew(typeIew).TypeIre(typeIre).TypeIsw(typeIsw).TypeN(typeN).TypeNic(typeNic).TypeNie(typeNie).TypeNiew(typeNiew).TypeNire(typeNire).TypeNisw(typeNisw).TypeNre(typeNre).TypeRe(typeRe).VlanId(vlanId).VlanIdIsnull(vlanIdIsnull).VlanIdN(vlanIdN).VlanVid(vlanVid).VlanVidGt(vlanVidGt).VlanVidGte(vlanVidGte).VlanVidLt(vlanVidLt).VlanVidLte(vlanVidLte).VlanVidN(vlanVidN).VpnTunnelEndpoints(vpnTunnelEndpoints).VpnTunnelEndpointsIsnull(vpnTunnelEndpointsIsnull).VpnTunnelEndpointsN(vpnTunnelEndpointsN).VpnTunnelEndpointsNameContains(vpnTunnelEndpointsNameContains).Vrfs(vrfs).VrfsIsnull(vrfsIsnull).VrfsN(vrfsN).Within(within).WithinInclude(withinInclude).Depth(depth).ExcludeM2m(excludeM2m).Execute()
 
 
 
@@ -4291,8 +4315,9 @@ import (
 )
 
 func main() {
+	ancestors := []string{"Inner_example"} // []string |  (optional)
 	cloudNetworks := []string{"Inner_example"} // []string |  (optional)
-	cloudNetworksIsnull := true // bool | Cloud Network (name or ID) is null (optional)
+	cloudNetworksIsnull := true // bool |  (optional)
 	cloudNetworksN := []string{"Inner_example"} // []string |  (optional)
 	contacts := []string{"Inner_example"} // []string |  (optional)
 	contactsIsnull := true // bool | Contacts (name or ID) is null (optional)
@@ -4348,7 +4373,7 @@ func main() {
 	presentInVrfId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | Present in VRF (optional)
 	q := "q_example" // string | Search (optional)
 	rir := []string{"Inner_example"} // []string |  (optional)
-	rirIsnull := true // bool | RIR (name or ID) is null (optional)
+	rirIsnull := true // bool |  (optional)
 	rirN := []string{"Inner_example"} // []string |  (optional)
 	role := []string{"Inner_example"} // []string |  (optional)
 	roleIsnull := true // bool | Role (name or ID) is null (optional)
@@ -4385,26 +4410,30 @@ func main() {
 	typeNisw := []string{"Inner_example"} // []string |  (optional)
 	typeNre := []string{"Inner_example"} // []string |  (optional)
 	typeRe := []string{"Inner_example"} // []string |  (optional)
-	vlanId := []*string{"Inner_example"} // []*string | VLAN (ID) (optional)
-	vlanIdIsnull := true // bool | VLAN (ID) is null (optional)
-	vlanIdN := []*string{"Inner_example"} // []*string | Exclude VLAN (ID) (optional)
+	vlanId := []*string{"Inner_example"} // []*string |  (optional)
+	vlanIdIsnull := true // bool |  (optional)
+	vlanIdN := []*string{"Inner_example"} // []*string |  (optional)
 	vlanVid := []int32{int32(123)} // []int32 | VLAN number (1-4095) (optional)
 	vlanVidGt := []int32{int32(123)} // []int32 | VLAN number (1-4095) is greater than (optional)
 	vlanVidGte := []int32{int32(123)} // []int32 | VLAN number (1-4095) is greater than or equal to (optional)
 	vlanVidLt := []int32{int32(123)} // []int32 | VLAN number (1-4095) is less than (optional)
 	vlanVidLte := []int32{int32(123)} // []int32 | VLAN number (1-4095) is less than or equal to (optional)
 	vlanVidN := []int32{int32(123)} // []int32 | Exclude VLAN number (1-4095) (optional)
+	vpnTunnelEndpoints := []string{"Inner_example"} // []string |  (optional)
+	vpnTunnelEndpointsIsnull := true // bool | VPN Tunnel Endpoint ID is null (optional)
+	vpnTunnelEndpointsN := []string{"Inner_example"} // []string |  (optional)
+	vpnTunnelEndpointsNameContains := "vpnTunnelEndpointsNameContains_example" // string | VPN Tunnel Endpoint Name Contains (optional)
 	vrfs := []string{"Inner_example"} // []string |  (optional)
 	vrfsIsnull := true // bool | Assigned VRF (ID or RD) is null (optional)
 	vrfsN := []string{"Inner_example"} // []string |  (optional)
 	within := []string{"Inner_example"} // []string | Within prefix (optional)
 	withinInclude := []string{"Inner_example"} // []string | Within and including prefix (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
-	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional) (default to false)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.IpamAPI.IpamPrefixesList(context.Background()).CloudNetworks(cloudNetworks).CloudNetworksIsnull(cloudNetworksIsnull).CloudNetworksN(cloudNetworksN).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Contains(contains).Created(created).CreatedGt(createdGt).CreatedGte(createdGte).CreatedIsnull(createdIsnull).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).DateAllocated(dateAllocated).DateAllocatedGt(dateAllocatedGt).DateAllocatedGte(dateAllocatedGte).DateAllocatedIsnull(dateAllocatedIsnull).DateAllocatedLt(dateAllocatedLt).DateAllocatedLte(dateAllocatedLte).DateAllocatedN(dateAllocatedN).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).HasRir(hasRir).Id(id).IdN(idN).IpVersion(ipVersion).LastUpdated(lastUpdated).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedIsnull(lastUpdatedIsnull).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).Location(location).LocationN(locationN).Locations(locations).LocationsN(locationsN).Namespace(namespace).NamespaceN(namespaceN).Offset(offset).Parent(parent).ParentIsnull(parentIsnull).ParentN(parentN).Prefix(prefix).PrefixLength(prefixLength).PrefixLengthGt(prefixLengthGt).PrefixLengthGte(prefixLengthGte).PrefixLengthLt(prefixLengthLt).PrefixLengthLte(prefixLengthLte).PrefixLengthN(prefixLengthN).PresentInVrf(presentInVrf).PresentInVrfId(presentInVrfId).Q(q).Rir(rir).RirIsnull(rirIsnull).RirN(rirN).Role(role).RoleIsnull(roleIsnull).RoleN(roleN).Sort(sort).Status(status).StatusN(statusN).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Tenant(tenant).TenantIsnull(tenantIsnull).TenantN(tenantN).TenantGroup(tenantGroup).TenantGroupIsnull(tenantGroupIsnull).TenantGroupN(tenantGroupN).TenantId(tenantId).TenantIdIsnull(tenantIdIsnull).TenantIdN(tenantIdN).Type_(type_).TypeIc(typeIc).TypeIe(typeIe).TypeIew(typeIew).TypeIre(typeIre).TypeIsw(typeIsw).TypeN(typeN).TypeNic(typeNic).TypeNie(typeNie).TypeNiew(typeNiew).TypeNire(typeNire).TypeNisw(typeNisw).TypeNre(typeNre).TypeRe(typeRe).VlanId(vlanId).VlanIdIsnull(vlanIdIsnull).VlanIdN(vlanIdN).VlanVid(vlanVid).VlanVidGt(vlanVidGt).VlanVidGte(vlanVidGte).VlanVidLt(vlanVidLt).VlanVidLte(vlanVidLte).VlanVidN(vlanVidN).Vrfs(vrfs).VrfsIsnull(vrfsIsnull).VrfsN(vrfsN).Within(within).WithinInclude(withinInclude).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+	resp, r, err := apiClient.IpamAPI.IpamPrefixesList(context.Background()).Ancestors(ancestors).CloudNetworks(cloudNetworks).CloudNetworksIsnull(cloudNetworksIsnull).CloudNetworksN(cloudNetworksN).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Contains(contains).Created(created).CreatedGt(createdGt).CreatedGte(createdGte).CreatedIsnull(createdIsnull).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).DateAllocated(dateAllocated).DateAllocatedGt(dateAllocatedGt).DateAllocatedGte(dateAllocatedGte).DateAllocatedIsnull(dateAllocatedIsnull).DateAllocatedLt(dateAllocatedLt).DateAllocatedLte(dateAllocatedLte).DateAllocatedN(dateAllocatedN).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).HasRir(hasRir).Id(id).IdN(idN).IpVersion(ipVersion).LastUpdated(lastUpdated).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedIsnull(lastUpdatedIsnull).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).Location(location).LocationN(locationN).Locations(locations).LocationsN(locationsN).Namespace(namespace).NamespaceN(namespaceN).Offset(offset).Parent(parent).ParentIsnull(parentIsnull).ParentN(parentN).Prefix(prefix).PrefixLength(prefixLength).PrefixLengthGt(prefixLengthGt).PrefixLengthGte(prefixLengthGte).PrefixLengthLt(prefixLengthLt).PrefixLengthLte(prefixLengthLte).PrefixLengthN(prefixLengthN).PresentInVrf(presentInVrf).PresentInVrfId(presentInVrfId).Q(q).Rir(rir).RirIsnull(rirIsnull).RirN(rirN).Role(role).RoleIsnull(roleIsnull).RoleN(roleN).Sort(sort).Status(status).StatusN(statusN).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Tenant(tenant).TenantIsnull(tenantIsnull).TenantN(tenantN).TenantGroup(tenantGroup).TenantGroupIsnull(tenantGroupIsnull).TenantGroupN(tenantGroupN).TenantId(tenantId).TenantIdIsnull(tenantIdIsnull).TenantIdN(tenantIdN).Type_(type_).TypeIc(typeIc).TypeIe(typeIe).TypeIew(typeIew).TypeIre(typeIre).TypeIsw(typeIsw).TypeN(typeN).TypeNic(typeNic).TypeNie(typeNie).TypeNiew(typeNiew).TypeNire(typeNire).TypeNisw(typeNisw).TypeNre(typeNre).TypeRe(typeRe).VlanId(vlanId).VlanIdIsnull(vlanIdIsnull).VlanIdN(vlanIdN).VlanVid(vlanVid).VlanVidGt(vlanVidGt).VlanVidGte(vlanVidGte).VlanVidLt(vlanVidLt).VlanVidLte(vlanVidLte).VlanVidN(vlanVidN).VpnTunnelEndpoints(vpnTunnelEndpoints).VpnTunnelEndpointsIsnull(vpnTunnelEndpointsIsnull).VpnTunnelEndpointsN(vpnTunnelEndpointsN).VpnTunnelEndpointsNameContains(vpnTunnelEndpointsNameContains).Vrfs(vrfs).VrfsIsnull(vrfsIsnull).VrfsN(vrfsN).Within(within).WithinInclude(withinInclude).Depth(depth).ExcludeM2m(excludeM2m).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `IpamAPI.IpamPrefixesList``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -4425,8 +4454,9 @@ Other parameters are passed through a pointer to a apiIpamPrefixesListRequest st
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **ancestors** | **[]string** |  | 
  **cloudNetworks** | **[]string** |  | 
- **cloudNetworksIsnull** | **bool** | Cloud Network (name or ID) is null | 
+ **cloudNetworksIsnull** | **bool** |  | 
  **cloudNetworksN** | **[]string** |  | 
  **contacts** | **[]string** |  | 
  **contactsIsnull** | **bool** | Contacts (name or ID) is null | 
@@ -4482,7 +4512,7 @@ Name | Type | Description  | Notes
  **presentInVrfId** | **string** | Present in VRF | 
  **q** | **string** | Search | 
  **rir** | **[]string** |  | 
- **rirIsnull** | **bool** | RIR (name or ID) is null | 
+ **rirIsnull** | **bool** |  | 
  **rirN** | **[]string** |  | 
  **role** | **[]string** |  | 
  **roleIsnull** | **bool** | Role (name or ID) is null | 
@@ -4519,22 +4549,26 @@ Name | Type | Description  | Notes
  **typeNisw** | **[]string** |  | 
  **typeNre** | **[]string** |  | 
  **typeRe** | **[]string** |  | 
- **vlanId** | **[]string** | VLAN (ID) | 
- **vlanIdIsnull** | **bool** | VLAN (ID) is null | 
- **vlanIdN** | **[]string** | Exclude VLAN (ID) | 
+ **vlanId** | **[]string** |  | 
+ **vlanIdIsnull** | **bool** |  | 
+ **vlanIdN** | **[]string** |  | 
  **vlanVid** | **[]int32** | VLAN number (1-4095) | 
  **vlanVidGt** | **[]int32** | VLAN number (1-4095) is greater than | 
  **vlanVidGte** | **[]int32** | VLAN number (1-4095) is greater than or equal to | 
  **vlanVidLt** | **[]int32** | VLAN number (1-4095) is less than | 
  **vlanVidLte** | **[]int32** | VLAN number (1-4095) is less than or equal to | 
  **vlanVidN** | **[]int32** | Exclude VLAN number (1-4095) | 
+ **vpnTunnelEndpoints** | **[]string** |  | 
+ **vpnTunnelEndpointsIsnull** | **bool** | VPN Tunnel Endpoint ID is null | 
+ **vpnTunnelEndpointsN** | **[]string** |  | 
+ **vpnTunnelEndpointsNameContains** | **string** | VPN Tunnel Endpoint Name Contains | 
  **vrfs** | **[]string** |  | 
  **vrfsIsnull** | **bool** | Assigned VRF (ID or RD) is null | 
  **vrfsN** | **[]string** |  | 
  **within** | **[]string** | Within prefix | 
  **withinInclude** | **[]string** | Within and including prefix | 
  **depth** | **int32** | Serializer Depth | [default to 1]
- **excludeM2m** | **bool** | Exclude many-to-many fields from the response | [default to false]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
 
 ### Return type
 
@@ -4654,7 +4688,7 @@ func main() {
 	limit := int32(56) // int32 | Number of results to return per page. (optional)
 	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
-	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional) (default to false)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -4688,7 +4722,7 @@ Name | Type | Description  | Notes
  **limit** | **int32** | Number of results to return per page. | 
  **offset** | **int32** | The initial index from which to return the results. | 
  **depth** | **int32** | Serializer Depth | [default to 1]
- **excludeM2m** | **bool** | Exclude many-to-many fields from the response | [default to false]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
 
 ### Return type
 
@@ -4806,7 +4840,7 @@ func main() {
 	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | A UUID string identifying this prefix.
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
-	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional) (default to false)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -4838,7 +4872,7 @@ Name | Type | Description  | Notes
 
  **format** | [**CircuitsCircuitTerminationsListFormatParameter**](CircuitsCircuitTerminationsListFormatParameter.md) |  | 
  **depth** | **int32** | Serializer Depth | [default to 1]
- **excludeM2m** | **bool** | Exclude many-to-many fields from the response | [default to false]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
 
 ### Return type
 
@@ -4880,7 +4914,7 @@ import (
 
 func main() {
 	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | A UUID string identifying this prefix.
-	writablePrefixRequest := *openapiclient.NewWritablePrefixRequest("Prefix_example", *openapiclient.NewBulkWritableCableRequestStatus()) // WritablePrefixRequest | 
+	writablePrefixRequest := *openapiclient.NewWritablePrefixRequest("Prefix_example", *openapiclient.NewApprovalWorkflowStageResponseApprovalWorkflowStage()) // WritablePrefixRequest | 
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -5353,7 +5387,7 @@ func main() {
 	teamsIsnull := true // bool | Teams (name or ID) is null (optional)
 	teamsN := []string{"Inner_example"} // []string |  (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
-	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional) (default to false)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -5437,7 +5471,7 @@ Name | Type | Description  | Notes
  **teamsIsnull** | **bool** | Teams (name or ID) is null | 
  **teamsN** | **[]string** |  | 
  **depth** | **int32** | Serializer Depth | [default to 1]
- **excludeM2m** | **bool** | Exclude many-to-many fields from the response | [default to false]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
 
 ### Return type
 
@@ -5557,7 +5591,7 @@ func main() {
 	limit := int32(56) // int32 | Number of results to return per page. (optional)
 	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
-	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional) (default to false)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -5591,7 +5625,7 @@ Name | Type | Description  | Notes
  **limit** | **int32** | Number of results to return per page. | 
  **offset** | **int32** | The initial index from which to return the results. | 
  **depth** | **int32** | Serializer Depth | [default to 1]
- **excludeM2m** | **bool** | Exclude many-to-many fields from the response | [default to false]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
 
 ### Return type
 
@@ -5709,7 +5743,7 @@ func main() {
 	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | A UUID string identifying this RIR.
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
-	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional) (default to false)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -5741,7 +5775,7 @@ Name | Type | Description  | Notes
 
  **format** | [**CircuitsCircuitTerminationsListFormatParameter**](CircuitsCircuitTerminationsListFormatParameter.md) |  | 
  **depth** | **int32** | Serializer Depth | [default to 1]
- **excludeM2m** | **bool** | Exclude many-to-many fields from the response | [default to false]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
 
 ### Return type
 
@@ -6259,7 +6293,7 @@ func main() {
 	tenantIdIsnull := true // bool | Tenant (ID) (deprecated, use \"tenant\" filter instead) is null (optional)
 	tenantIdN := []*string{"Inner_example"} // []*string | Exclude Tenant (ID) (deprecated, use \"tenant\" filter instead) (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
-	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional) (default to false)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -6346,7 +6380,7 @@ Name | Type | Description  | Notes
  **tenantIdIsnull** | **bool** | Tenant (ID) (deprecated, use \&quot;tenant\&quot; filter instead) is null | 
  **tenantIdN** | **[]string** | Exclude Tenant (ID) (deprecated, use \&quot;tenant\&quot; filter instead) | 
  **depth** | **int32** | Serializer Depth | [default to 1]
- **excludeM2m** | **bool** | Exclude many-to-many fields from the response | [default to false]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
 
 ### Return type
 
@@ -6466,7 +6500,7 @@ func main() {
 	limit := int32(56) // int32 | Number of results to return per page. (optional)
 	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
-	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional) (default to false)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -6500,7 +6534,7 @@ Name | Type | Description  | Notes
  **limit** | **int32** | Number of results to return per page. | 
  **offset** | **int32** | The initial index from which to return the results. | 
  **depth** | **int32** | Serializer Depth | [default to 1]
- **excludeM2m** | **bool** | Exclude many-to-many fields from the response | [default to false]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
 
 ### Return type
 
@@ -6618,7 +6652,7 @@ func main() {
 	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | A UUID string identifying this route target.
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
-	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional) (default to false)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -6650,7 +6684,7 @@ Name | Type | Description  | Notes
 
  **format** | [**CircuitsCircuitTerminationsListFormatParameter**](CircuitsCircuitTerminationsListFormatParameter.md) |  | 
  **depth** | **int32** | Serializer Depth | [default to 1]
- **excludeM2m** | **bool** | Exclude many-to-many fields from the response | [default to false]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
 
 ### Return type
 
@@ -7117,7 +7151,7 @@ func main() {
 	createdLte := []time.Time{time.Now()} // []time.Time |  (optional)
 	createdN := []time.Time{time.Now()} // []time.Time |  (optional)
 	device := []string{"Inner_example"} // []string |  (optional)
-	deviceIsnull := true // bool | Device (ID or name) is null (optional)
+	deviceIsnull := true // bool |  (optional)
 	deviceN := []string{"Inner_example"} // []string |  (optional)
 	dynamicGroups := []string{"Inner_example"} // []string |  (optional)
 	dynamicGroupsN := []string{"Inner_example"} // []string |  (optional)
@@ -7171,10 +7205,10 @@ func main() {
 	teamsIsnull := true // bool | Teams (name or ID) is null (optional)
 	teamsN := []string{"Inner_example"} // []string |  (optional)
 	virtualMachine := []string{"Inner_example"} // []string |  (optional)
-	virtualMachineIsnull := true // bool | Virtual machine (ID or name) is null (optional)
+	virtualMachineIsnull := true // bool |  (optional)
 	virtualMachineN := []string{"Inner_example"} // []string |  (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
-	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional) (default to false)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -7210,7 +7244,7 @@ Name | Type | Description  | Notes
  **createdLte** | [**[]time.Time**](time.Time.md) |  | 
  **createdN** | [**[]time.Time**](time.Time.md) |  | 
  **device** | **[]string** |  | 
- **deviceIsnull** | **bool** | Device (ID or name) is null | 
+ **deviceIsnull** | **bool** |  | 
  **deviceN** | **[]string** |  | 
  **dynamicGroups** | **[]string** |  | 
  **dynamicGroupsN** | **[]string** |  | 
@@ -7264,10 +7298,10 @@ Name | Type | Description  | Notes
  **teamsIsnull** | **bool** | Teams (name or ID) is null | 
  **teamsN** | **[]string** |  | 
  **virtualMachine** | **[]string** |  | 
- **virtualMachineIsnull** | **bool** | Virtual machine (ID or name) is null | 
+ **virtualMachineIsnull** | **bool** |  | 
  **virtualMachineN** | **[]string** |  | 
  **depth** | **int32** | Serializer Depth | [default to 1]
- **excludeM2m** | **bool** | Exclude many-to-many fields from the response | [default to false]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
 
 ### Return type
 
@@ -7387,7 +7421,7 @@ func main() {
 	limit := int32(56) // int32 | Number of results to return per page. (optional)
 	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
-	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional) (default to false)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -7421,7 +7455,7 @@ Name | Type | Description  | Notes
  **limit** | **int32** | Number of results to return per page. | 
  **offset** | **int32** | The initial index from which to return the results. | 
  **depth** | **int32** | Serializer Depth | [default to 1]
- **excludeM2m** | **bool** | Exclude many-to-many fields from the response | [default to false]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
 
 ### Return type
 
@@ -7539,7 +7573,7 @@ func main() {
 	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | A UUID string identifying this service.
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
-	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional) (default to false)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -7571,7 +7605,7 @@ Name | Type | Description  | Notes
 
  **format** | [**CircuitsCircuitTerminationsListFormatParameter**](CircuitsCircuitTerminationsListFormatParameter.md) |  | 
  **depth** | **int32** | Serializer Depth | [default to 1]
- **excludeM2m** | **bool** | Exclude many-to-many fields from the response | [default to false]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
 
 ### Return type
 
@@ -7687,7 +7721,7 @@ import (
 
 func main() {
 	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | A UUID string identifying this VLAN.
-	vLANAllocationRequest := []openapiclient.VLANAllocationRequest{*openapiclient.NewVLANAllocationRequest("Name_example", *openapiclient.NewBulkWritableCableRequestStatus())} // []VLANAllocationRequest | 
+	vLANAllocationRequest := []openapiclient.VLANAllocationRequest{*openapiclient.NewVLANAllocationRequest("Name_example", *openapiclient.NewApprovalWorkflowStageResponseApprovalWorkflowStage())} // []VLANAllocationRequest | 
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 	limit := int32(56) // int32 | Number of results to return per page. (optional)
 	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
@@ -7772,7 +7806,7 @@ func main() {
 	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
 	sort := "sort_example" // string | Which field to use when ordering the results. (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
-	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional) (default to false)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -7807,7 +7841,7 @@ Name | Type | Description  | Notes
  **offset** | **int32** | The initial index from which to return the results. | 
  **sort** | **string** | Which field to use when ordering the results. | 
  **depth** | **int32** | Serializer Depth | [default to 1]
- **excludeM2m** | **bool** | Exclude many-to-many fields from the response | [default to false]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
 
 ### Return type
 
@@ -8253,7 +8287,7 @@ func main() {
 	teamsIsnull := true // bool | Teams (name or ID) is null (optional)
 	teamsN := []string{"Inner_example"} // []string |  (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
-	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional) (default to false)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -8342,7 +8376,7 @@ Name | Type | Description  | Notes
  **teamsIsnull** | **bool** | Teams (name or ID) is null | 
  **teamsN** | **[]string** |  | 
  **depth** | **int32** | Serializer Depth | [default to 1]
- **excludeM2m** | **bool** | Exclude many-to-many fields from the response | [default to false]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
 
 ### Return type
 
@@ -8462,7 +8496,7 @@ func main() {
 	limit := int32(56) // int32 | Number of results to return per page. (optional)
 	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
-	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional) (default to false)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -8496,7 +8530,7 @@ Name | Type | Description  | Notes
  **limit** | **int32** | Number of results to return per page. | 
  **offset** | **int32** | The initial index from which to return the results. | 
  **depth** | **int32** | Serializer Depth | [default to 1]
- **excludeM2m** | **bool** | Exclude many-to-many fields from the response | [default to false]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
 
 ### Return type
 
@@ -8614,7 +8648,7 @@ func main() {
 	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | A UUID string identifying this VLAN group.
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
-	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional) (default to false)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -8646,7 +8680,7 @@ Name | Type | Description  | Notes
 
  **format** | [**CircuitsCircuitTerminationsListFormatParameter**](CircuitsCircuitTerminationsListFormatParameter.md) |  | 
  **depth** | **int32** | Serializer Depth | [default to 1]
- **excludeM2m** | **bool** | Exclude many-to-many fields from the response | [default to false]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
 
 ### Return type
 
@@ -8895,7 +8929,7 @@ import (
 )
 
 func main() {
-	bulkWritableVLANLocationAssignmentRequest := []openapiclient.BulkWritableVLANLocationAssignmentRequest{*openapiclient.NewBulkWritableVLANLocationAssignmentRequest("Id_example", *openapiclient.NewBulkWritableCableRequestStatus(), *openapiclient.NewBulkWritableCableRequestStatus())} // []BulkWritableVLANLocationAssignmentRequest | 
+	bulkWritableVLANLocationAssignmentRequest := []openapiclient.BulkWritableVLANLocationAssignmentRequest{*openapiclient.NewBulkWritableVLANLocationAssignmentRequest("Id_example", *openapiclient.NewApprovalWorkflowStageResponseApprovalWorkflowStage(), *openapiclient.NewApprovalWorkflowStageResponseApprovalWorkflowStage())} // []BulkWritableVLANLocationAssignmentRequest | 
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -8963,7 +8997,7 @@ import (
 )
 
 func main() {
-	vLANLocationAssignmentRequest := *openapiclient.NewVLANLocationAssignmentRequest(*openapiclient.NewBulkWritableCableRequestStatus(), *openapiclient.NewBulkWritableCableRequestStatus()) // VLANLocationAssignmentRequest | 
+	vLANLocationAssignmentRequest := *openapiclient.NewVLANLocationAssignmentRequest(*openapiclient.NewApprovalWorkflowStageResponseApprovalWorkflowStage(), *openapiclient.NewApprovalWorkflowStageResponseApprovalWorkflowStage()) // VLANLocationAssignmentRequest | 
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -9116,7 +9150,7 @@ func main() {
 	vlan := []string{"Inner_example"} // []string |  (optional)
 	vlanN := []string{"Inner_example"} // []string |  (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
-	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional) (default to false)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -9155,7 +9189,7 @@ Name | Type | Description  | Notes
  **vlan** | **[]string** |  | 
  **vlanN** | **[]string** |  | 
  **depth** | **int32** | Serializer Depth | [default to 1]
- **excludeM2m** | **bool** | Exclude many-to-many fields from the response | [default to false]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
 
 ### Return type
 
@@ -9273,7 +9307,7 @@ func main() {
 	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | A UUID string identifying this vlan location assignment.
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
-	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional) (default to false)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -9305,7 +9339,7 @@ Name | Type | Description  | Notes
 
  **format** | [**CircuitsCircuitTerminationsListFormatParameter**](CircuitsCircuitTerminationsListFormatParameter.md) |  | 
  **depth** | **int32** | Serializer Depth | [default to 1]
- **excludeM2m** | **bool** | Exclude many-to-many fields from the response | [default to false]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
 
 ### Return type
 
@@ -9347,7 +9381,7 @@ import (
 
 func main() {
 	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | A UUID string identifying this vlan location assignment.
-	vLANLocationAssignmentRequest := *openapiclient.NewVLANLocationAssignmentRequest(*openapiclient.NewBulkWritableCableRequestStatus(), *openapiclient.NewBulkWritableCableRequestStatus()) // VLANLocationAssignmentRequest | 
+	vLANLocationAssignmentRequest := *openapiclient.NewVLANLocationAssignmentRequest(*openapiclient.NewApprovalWorkflowStageResponseApprovalWorkflowStage(), *openapiclient.NewApprovalWorkflowStageResponseApprovalWorkflowStage()) // VLANLocationAssignmentRequest | 
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -9554,7 +9588,7 @@ import (
 )
 
 func main() {
-	bulkWritableVLANRequest := []openapiclient.BulkWritableVLANRequest{*openapiclient.NewBulkWritableVLANRequest("Id_example", int32(123), "Name_example", *openapiclient.NewBulkWritableCableRequestStatus())} // []BulkWritableVLANRequest | 
+	bulkWritableVLANRequest := []openapiclient.BulkWritableVLANRequest{*openapiclient.NewBulkWritableVLANRequest("Id_example", int32(123), "Name_example", *openapiclient.NewApprovalWorkflowStageResponseApprovalWorkflowStage())} // []BulkWritableVLANRequest | 
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -9622,7 +9656,7 @@ import (
 )
 
 func main() {
-	vLANRequest := *openapiclient.NewVLANRequest(int32(123), "Name_example", *openapiclient.NewBulkWritableCableRequestStatus()) // VLANRequest | 
+	vLANRequest := *openapiclient.NewVLANRequest(int32(123), "Name_example", *openapiclient.NewApprovalWorkflowStageResponseApprovalWorkflowStage()) // VLANRequest | 
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -9833,10 +9867,10 @@ func main() {
 	vidLte := []int32{int32(123)} // []int32 |  (optional)
 	vidN := []int32{int32(123)} // []int32 |  (optional)
 	vlanGroup := []string{"Inner_example"} // []string |  (optional)
-	vlanGroupIsnull := true // bool | VLAN Group (name or ID) is null (optional)
+	vlanGroupIsnull := true // bool |  (optional)
 	vlanGroupN := []string{"Inner_example"} // []string |  (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
-	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional) (default to false)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -9933,10 +9967,10 @@ Name | Type | Description  | Notes
  **vidLte** | **[]int32** |  | 
  **vidN** | **[]int32** |  | 
  **vlanGroup** | **[]string** |  | 
- **vlanGroupIsnull** | **bool** | VLAN Group (name or ID) is null | 
+ **vlanGroupIsnull** | **bool** |  | 
  **vlanGroupN** | **[]string** |  | 
  **depth** | **int32** | Serializer Depth | [default to 1]
- **excludeM2m** | **bool** | Exclude many-to-many fields from the response | [default to false]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
 
 ### Return type
 
@@ -10056,7 +10090,7 @@ func main() {
 	limit := int32(56) // int32 | Number of results to return per page. (optional)
 	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
-	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional) (default to false)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -10090,7 +10124,7 @@ Name | Type | Description  | Notes
  **limit** | **int32** | Number of results to return per page. | 
  **offset** | **int32** | The initial index from which to return the results. | 
  **depth** | **int32** | Serializer Depth | [default to 1]
- **excludeM2m** | **bool** | Exclude many-to-many fields from the response | [default to false]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
 
 ### Return type
 
@@ -10208,7 +10242,7 @@ func main() {
 	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | A UUID string identifying this VLAN.
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
-	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional) (default to false)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -10240,7 +10274,7 @@ Name | Type | Description  | Notes
 
  **format** | [**CircuitsCircuitTerminationsListFormatParameter**](CircuitsCircuitTerminationsListFormatParameter.md) |  | 
  **depth** | **int32** | Serializer Depth | [default to 1]
- **excludeM2m** | **bool** | Exclude many-to-many fields from the response | [default to false]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
 
 ### Return type
 
@@ -10282,7 +10316,7 @@ import (
 
 func main() {
 	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | A UUID string identifying this VLAN.
-	vLANRequest := *openapiclient.NewVLANRequest(int32(123), "Name_example", *openapiclient.NewBulkWritableCableRequestStatus()) // VLANRequest | 
+	vLANRequest := *openapiclient.NewVLANRequest(int32(123), "Name_example", *openapiclient.NewApprovalWorkflowStageResponseApprovalWorkflowStage()) // VLANRequest | 
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -10489,7 +10523,7 @@ import (
 )
 
 func main() {
-	bulkWritableVRFDeviceAssignmentRequest := []openapiclient.BulkWritableVRFDeviceAssignmentRequest{*openapiclient.NewBulkWritableVRFDeviceAssignmentRequest("Id_example", *openapiclient.NewBulkWritableCableRequestStatus())} // []BulkWritableVRFDeviceAssignmentRequest | 
+	bulkWritableVRFDeviceAssignmentRequest := []openapiclient.BulkWritableVRFDeviceAssignmentRequest{*openapiclient.NewBulkWritableVRFDeviceAssignmentRequest("Id_example", *openapiclient.NewApprovalWorkflowStageResponseApprovalWorkflowStage())} // []BulkWritableVRFDeviceAssignmentRequest | 
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -10557,7 +10591,7 @@ import (
 )
 
 func main() {
-	vRFDeviceAssignmentRequest := *openapiclient.NewVRFDeviceAssignmentRequest(*openapiclient.NewBulkWritableCableRequestStatus()) // VRFDeviceAssignmentRequest | 
+	vRFDeviceAssignmentRequest := *openapiclient.NewVRFDeviceAssignmentRequest(*openapiclient.NewApprovalWorkflowStageResponseApprovalWorkflowStage()) // VRFDeviceAssignmentRequest | 
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -10698,7 +10732,7 @@ import (
 func main() {
 	created := []time.Time{time.Now()} // []time.Time |  (optional)
 	device := []string{"Inner_example"} // []string |  (optional)
-	deviceIsnull := true // bool | Device (ID or name) is null (optional)
+	deviceIsnull := true // bool |  (optional)
 	deviceN := []string{"Inner_example"} // []string |  (optional)
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 	id := []string{"Inner_example"} // []string | Unique object identifier, either a UUID primary key or a composite key. (optional)
@@ -10738,15 +10772,15 @@ func main() {
 	rdRe := []string{"Inner_example"} // []string |  (optional)
 	sort := "sort_example" // string | Which field to use when ordering the results. (optional)
 	virtualDeviceContext := []string{"Inner_example"} // []string |  (optional)
-	virtualDeviceContextIsnull := true // bool | Virtual Device Context (ID or name) is null (optional)
+	virtualDeviceContextIsnull := true // bool |  (optional)
 	virtualDeviceContextN := []string{"Inner_example"} // []string |  (optional)
 	virtualMachine := []string{"Inner_example"} // []string |  (optional)
-	virtualMachineIsnull := true // bool | Virtual Machine (ID or name) is null (optional)
+	virtualMachineIsnull := true // bool |  (optional)
 	virtualMachineN := []string{"Inner_example"} // []string |  (optional)
 	vrf := []string{"Inner_example"} // []string |  (optional)
 	vrfN := []string{"Inner_example"} // []string |  (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
-	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional) (default to false)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -10773,7 +10807,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **created** | [**[]time.Time**](time.Time.md) |  | 
  **device** | **[]string** |  | 
- **deviceIsnull** | **bool** | Device (ID or name) is null | 
+ **deviceIsnull** | **bool** |  | 
  **deviceN** | **[]string** |  | 
  **format** | [**CircuitsCircuitTerminationsListFormatParameter**](CircuitsCircuitTerminationsListFormatParameter.md) |  | 
  **id** | **[]string** | Unique object identifier, either a UUID primary key or a composite key. | 
@@ -10813,15 +10847,15 @@ Name | Type | Description  | Notes
  **rdRe** | **[]string** |  | 
  **sort** | **string** | Which field to use when ordering the results. | 
  **virtualDeviceContext** | **[]string** |  | 
- **virtualDeviceContextIsnull** | **bool** | Virtual Device Context (ID or name) is null | 
+ **virtualDeviceContextIsnull** | **bool** |  | 
  **virtualDeviceContextN** | **[]string** |  | 
  **virtualMachine** | **[]string** |  | 
- **virtualMachineIsnull** | **bool** | Virtual Machine (ID or name) is null | 
+ **virtualMachineIsnull** | **bool** |  | 
  **virtualMachineN** | **[]string** |  | 
  **vrf** | **[]string** |  | 
  **vrfN** | **[]string** |  | 
  **depth** | **int32** | Serializer Depth | [default to 1]
- **excludeM2m** | **bool** | Exclude many-to-many fields from the response | [default to false]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
 
 ### Return type
 
@@ -10939,7 +10973,7 @@ func main() {
 	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | A UUID string identifying this VRF-device assignment.
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
-	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional) (default to false)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -10971,7 +11005,7 @@ Name | Type | Description  | Notes
 
  **format** | [**CircuitsCircuitTerminationsListFormatParameter**](CircuitsCircuitTerminationsListFormatParameter.md) |  | 
  **depth** | **int32** | Serializer Depth | [default to 1]
- **excludeM2m** | **bool** | Exclude many-to-many fields from the response | [default to false]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
 
 ### Return type
 
@@ -11013,7 +11047,7 @@ import (
 
 func main() {
 	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | A UUID string identifying this VRF-device assignment.
-	vRFDeviceAssignmentRequest := *openapiclient.NewVRFDeviceAssignmentRequest(*openapiclient.NewBulkWritableCableRequestStatus()) // VRFDeviceAssignmentRequest | 
+	vRFDeviceAssignmentRequest := *openapiclient.NewVRFDeviceAssignmentRequest(*openapiclient.NewApprovalWorkflowStageResponseApprovalWorkflowStage()) // VRFDeviceAssignmentRequest | 
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -11220,7 +11254,7 @@ import (
 )
 
 func main() {
-	bulkWritableVRFPrefixAssignmentRequest := []openapiclient.BulkWritableVRFPrefixAssignmentRequest{*openapiclient.NewBulkWritableVRFPrefixAssignmentRequest("Id_example", *openapiclient.NewBulkWritableCableRequestStatus(), *openapiclient.NewBulkWritableCableRequestStatus())} // []BulkWritableVRFPrefixAssignmentRequest | 
+	bulkWritableVRFPrefixAssignmentRequest := []openapiclient.BulkWritableVRFPrefixAssignmentRequest{*openapiclient.NewBulkWritableVRFPrefixAssignmentRequest("Id_example", *openapiclient.NewApprovalWorkflowStageResponseApprovalWorkflowStage(), *openapiclient.NewApprovalWorkflowStageResponseApprovalWorkflowStage())} // []BulkWritableVRFPrefixAssignmentRequest | 
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -11288,7 +11322,7 @@ import (
 )
 
 func main() {
-	vRFPrefixAssignmentRequest := *openapiclient.NewVRFPrefixAssignmentRequest(*openapiclient.NewBulkWritableCableRequestStatus(), *openapiclient.NewBulkWritableCableRequestStatus()) // VRFPrefixAssignmentRequest | 
+	vRFPrefixAssignmentRequest := *openapiclient.NewVRFPrefixAssignmentRequest(*openapiclient.NewApprovalWorkflowStageResponseApprovalWorkflowStage(), *openapiclient.NewApprovalWorkflowStageResponseApprovalWorkflowStage()) // VRFPrefixAssignmentRequest | 
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -11441,7 +11475,7 @@ func main() {
 	vrf := []string{"Inner_example"} // []string |  (optional)
 	vrfN := []string{"Inner_example"} // []string |  (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
-	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional) (default to false)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -11480,7 +11514,7 @@ Name | Type | Description  | Notes
  **vrf** | **[]string** |  | 
  **vrfN** | **[]string** |  | 
  **depth** | **int32** | Serializer Depth | [default to 1]
- **excludeM2m** | **bool** | Exclude many-to-many fields from the response | [default to false]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
 
 ### Return type
 
@@ -11598,7 +11632,7 @@ func main() {
 	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | A UUID string identifying this VRF-prefix assignment.
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
-	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional) (default to false)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -11630,7 +11664,7 @@ Name | Type | Description  | Notes
 
  **format** | [**CircuitsCircuitTerminationsListFormatParameter**](CircuitsCircuitTerminationsListFormatParameter.md) |  | 
  **depth** | **int32** | Serializer Depth | [default to 1]
- **excludeM2m** | **bool** | Exclude many-to-many fields from the response | [default to false]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
 
 ### Return type
 
@@ -11672,7 +11706,7 @@ import (
 
 func main() {
 	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | A UUID string identifying this VRF-prefix assignment.
-	vRFPrefixAssignmentRequest := *openapiclient.NewVRFPrefixAssignmentRequest(*openapiclient.NewBulkWritableCableRequestStatus(), *openapiclient.NewBulkWritableCableRequestStatus()) // VRFPrefixAssignmentRequest | 
+	vRFPrefixAssignmentRequest := *openapiclient.NewVRFPrefixAssignmentRequest(*openapiclient.NewApprovalWorkflowStageResponseApprovalWorkflowStage(), *openapiclient.NewApprovalWorkflowStageResponseApprovalWorkflowStage()) // VRFPrefixAssignmentRequest | 
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -12188,7 +12222,7 @@ func main() {
 	virtualMachines := []string{"Inner_example"} // []string |  (optional)
 	virtualMachinesN := []string{"Inner_example"} // []string |  (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
-	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional) (default to false)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -12315,7 +12349,7 @@ Name | Type | Description  | Notes
  **virtualMachines** | **[]string** |  | 
  **virtualMachinesN** | **[]string** |  | 
  **depth** | **int32** | Serializer Depth | [default to 1]
- **excludeM2m** | **bool** | Exclude many-to-many fields from the response | [default to false]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
 
 ### Return type
 
@@ -12435,7 +12469,7 @@ func main() {
 	limit := int32(56) // int32 | Number of results to return per page. (optional)
 	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
-	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional) (default to false)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -12469,7 +12503,7 @@ Name | Type | Description  | Notes
  **limit** | **int32** | Number of results to return per page. | 
  **offset** | **int32** | The initial index from which to return the results. | 
  **depth** | **int32** | Serializer Depth | [default to 1]
- **excludeM2m** | **bool** | Exclude many-to-many fields from the response | [default to false]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
 
 ### Return type
 
@@ -12587,7 +12621,7 @@ func main() {
 	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | A UUID string identifying this VRF.
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
-	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional) (default to false)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -12619,7 +12653,7 @@ Name | Type | Description  | Notes
 
  **format** | [**CircuitsCircuitTerminationsListFormatParameter**](CircuitsCircuitTerminationsListFormatParameter.md) |  | 
  **depth** | **int32** | Serializer Depth | [default to 1]
- **excludeM2m** | **bool** | Exclude many-to-many fields from the response | [default to false]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
 
 ### Return type
 
