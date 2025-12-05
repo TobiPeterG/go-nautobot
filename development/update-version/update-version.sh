@@ -3,7 +3,8 @@ set -euxo pipefail
 
 echo "Updating go-nautobot version"
 
-VERSION_FILE="/client/api/nautobot_version"
+VERSION_FILE="../../api/nautobot_version"
+. "../local_dev.env"
 CURRENT_VERSION=$(head -n 1 $VERSION_FILE)
 CURRENT_MAJOR_MINOR_VER=${CURRENT_VERSION%.*}
 
@@ -29,6 +30,6 @@ fi
 # TODO: remove beta when it's in production
 FINAL_NEW_TAG=${NEW_TAG}-beta
 
-echo $FINAL_NEW_TAG > /client/api/nautobot_version
+echo $FINAL_NEW_TAG > "$VERSION_FILE"
 
 echo "go-nautobot client version updated to $FINAL_NEW_TAG"
