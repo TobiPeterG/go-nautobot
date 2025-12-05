@@ -92,7 +92,7 @@ type Configuration struct {
 func NewConfiguration() *Configuration {
 	cfg := &Configuration{
 		DefaultHeader:    make(map[string]string),
-		UserAgent:        "go-nautobot/3.0.11-beta",
+		UserAgent:        "go-nautobot/3.0.0-beta",
 		Debug:            false,
 		Servers:          ServerConfigurations{
 			{
