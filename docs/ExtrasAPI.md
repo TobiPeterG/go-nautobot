@@ -264,6 +264,8 @@ Method | HTTP request | Description
 [**ExtrasJobQueuesRetrieve**](ExtrasAPI.md#ExtrasJobQueuesRetrieve) | **Get** /extras/job-queues/{id}/ | 
 [**ExtrasJobQueuesUpdate**](ExtrasAPI.md#ExtrasJobQueuesUpdate) | **Put** /extras/job-queues/{id}/ | 
 [**ExtrasJobResultsBulkDestroy**](ExtrasAPI.md#ExtrasJobResultsBulkDestroy) | **Delete** /extras/job-results/ | 
+[**ExtrasJobResultsCancelCreate**](ExtrasAPI.md#ExtrasJobResultsCancelCreate) | **Post** /extras/job-results/{id}/cancel/ | 
+[**ExtrasJobResultsCancelRetrieve**](ExtrasAPI.md#ExtrasJobResultsCancelRetrieve) | **Get** /extras/job-results/{id}/cancel/ | 
 [**ExtrasJobResultsDestroy**](ExtrasAPI.md#ExtrasJobResultsDestroy) | **Delete** /extras/job-results/{id}/ | 
 [**ExtrasJobResultsList**](ExtrasAPI.md#ExtrasJobResultsList) | **Get** /extras/job-results/ | 
 [**ExtrasJobResultsLogsRetrieve**](ExtrasAPI.md#ExtrasJobResultsLogsRetrieve) | **Get** /extras/job-results/{id}/logs/ | 
@@ -4632,7 +4634,7 @@ Name | Type | Description  | Notes
 
 ## ExtrasComputedFieldsCreate
 
-> ComputedField ExtrasComputedFieldsCreate(ctx).ComputedFieldRequest(computedFieldRequest).Format(format).Execute()
+> ComputedField ExtrasComputedFieldsCreate(ctx).WritableComputedFieldRequest(writableComputedFieldRequest).Format(format).Execute()
 
 
 
@@ -4651,12 +4653,12 @@ import (
 )
 
 func main() {
-	computedFieldRequest := *openapiclient.NewComputedFieldRequest("ContentType_example", "Label_example", "Template_example") // ComputedFieldRequest | 
+	writableComputedFieldRequest := *openapiclient.NewWritableComputedFieldRequest("ContentType_example", "Label_example", "Template_example") // WritableComputedFieldRequest | 
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.ExtrasAPI.ExtrasComputedFieldsCreate(context.Background()).ComputedFieldRequest(computedFieldRequest).Format(format).Execute()
+	resp, r, err := apiClient.ExtrasAPI.ExtrasComputedFieldsCreate(context.Background()).WritableComputedFieldRequest(writableComputedFieldRequest).Format(format).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `ExtrasAPI.ExtrasComputedFieldsCreate``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -4677,7 +4679,7 @@ Other parameters are passed through a pointer to a apiExtrasComputedFieldsCreate
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **computedFieldRequest** | [**ComputedFieldRequest**](ComputedFieldRequest.md) |  | 
+ **writableComputedFieldRequest** | [**WritableComputedFieldRequest**](WritableComputedFieldRequest.md) |  | 
  **format** | [**CircuitsCircuitTerminationsListFormatParameter**](CircuitsCircuitTerminationsListFormatParameter.md) |  | 
 
 ### Return type
@@ -5150,7 +5152,7 @@ Name | Type | Description  | Notes
 
 ## ExtrasComputedFieldsPartialUpdate
 
-> ComputedField ExtrasComputedFieldsPartialUpdate(ctx, id).Format(format).PatchedComputedFieldRequest(patchedComputedFieldRequest).Execute()
+> ComputedField ExtrasComputedFieldsPartialUpdate(ctx, id).Format(format).PatchedWritableComputedFieldRequest(patchedWritableComputedFieldRequest).Execute()
 
 
 
@@ -5171,11 +5173,11 @@ import (
 func main() {
 	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | A UUID string identifying this computed field.
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
-	patchedComputedFieldRequest := *openapiclient.NewPatchedComputedFieldRequest() // PatchedComputedFieldRequest |  (optional)
+	patchedWritableComputedFieldRequest := *openapiclient.NewPatchedWritableComputedFieldRequest() // PatchedWritableComputedFieldRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.ExtrasAPI.ExtrasComputedFieldsPartialUpdate(context.Background(), id).Format(format).PatchedComputedFieldRequest(patchedComputedFieldRequest).Execute()
+	resp, r, err := apiClient.ExtrasAPI.ExtrasComputedFieldsPartialUpdate(context.Background(), id).Format(format).PatchedWritableComputedFieldRequest(patchedWritableComputedFieldRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `ExtrasAPI.ExtrasComputedFieldsPartialUpdate``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -5202,7 +5204,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
  **format** | [**CircuitsCircuitTerminationsListFormatParameter**](CircuitsCircuitTerminationsListFormatParameter.md) |  | 
- **patchedComputedFieldRequest** | [**PatchedComputedFieldRequest**](PatchedComputedFieldRequest.md) |  | 
+ **patchedWritableComputedFieldRequest** | [**PatchedWritableComputedFieldRequest**](PatchedWritableComputedFieldRequest.md) |  | 
 
 ### Return type
 
@@ -5300,7 +5302,7 @@ Name | Type | Description  | Notes
 
 ## ExtrasComputedFieldsUpdate
 
-> ComputedField ExtrasComputedFieldsUpdate(ctx, id).ComputedFieldRequest(computedFieldRequest).Format(format).Execute()
+> ComputedField ExtrasComputedFieldsUpdate(ctx, id).WritableComputedFieldRequest(writableComputedFieldRequest).Format(format).Execute()
 
 
 
@@ -5320,12 +5322,12 @@ import (
 
 func main() {
 	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | A UUID string identifying this computed field.
-	computedFieldRequest := *openapiclient.NewComputedFieldRequest("ContentType_example", "Label_example", "Template_example") // ComputedFieldRequest | 
+	writableComputedFieldRequest := *openapiclient.NewWritableComputedFieldRequest("ContentType_example", "Label_example", "Template_example") // WritableComputedFieldRequest | 
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.ExtrasAPI.ExtrasComputedFieldsUpdate(context.Background(), id).ComputedFieldRequest(computedFieldRequest).Format(format).Execute()
+	resp, r, err := apiClient.ExtrasAPI.ExtrasComputedFieldsUpdate(context.Background(), id).WritableComputedFieldRequest(writableComputedFieldRequest).Format(format).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `ExtrasAPI.ExtrasComputedFieldsUpdate``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -5351,7 +5353,7 @@ Other parameters are passed through a pointer to a apiExtrasComputedFieldsUpdate
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **computedFieldRequest** | [**ComputedFieldRequest**](ComputedFieldRequest.md) |  | 
+ **writableComputedFieldRequest** | [**WritableComputedFieldRequest**](WritableComputedFieldRequest.md) |  | 
  **format** | [**CircuitsCircuitTerminationsListFormatParameter**](CircuitsCircuitTerminationsListFormatParameter.md) |  | 
 
 ### Return type
@@ -22173,6 +22175,156 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## ExtrasJobResultsCancelCreate
+
+> JobResult ExtrasJobResultsCancelCreate(ctx, id).JobResultRequest(jobResultRequest).Format(format).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/nautobot/go-nautobot/v3"
+)
+
+func main() {
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | A UUID string identifying this job result.
+	jobResultRequest := *openapiclient.NewJobResultRequest("Name_example") // JobResultRequest | 
+	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.ExtrasAPI.ExtrasJobResultsCancelCreate(context.Background(), id).JobResultRequest(jobResultRequest).Format(format).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `ExtrasAPI.ExtrasJobResultsCancelCreate``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ExtrasJobResultsCancelCreate`: JobResult
+	fmt.Fprintf(os.Stdout, "Response from `ExtrasAPI.ExtrasJobResultsCancelCreate`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**id** | **string** | A UUID string identifying this job result. | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiExtrasJobResultsCancelCreateRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **jobResultRequest** | [**JobResultRequest**](JobResultRequest.md) |  | 
+ **format** | [**CircuitsCircuitTerminationsListFormatParameter**](CircuitsCircuitTerminationsListFormatParameter.md) |  | 
+
+### Return type
+
+[**JobResult**](JobResult.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [tokenAuth](../README.md#tokenAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json, text/csv
+- **Accept**: application/json, text/csv
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## ExtrasJobResultsCancelRetrieve
+
+> JobResultCancelPreview ExtrasJobResultsCancelRetrieve(ctx, id).Format(format).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/nautobot/go-nautobot/v3"
+)
+
+func main() {
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | A UUID string identifying this job result.
+	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
+	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.ExtrasAPI.ExtrasJobResultsCancelRetrieve(context.Background(), id).Format(format).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `ExtrasAPI.ExtrasJobResultsCancelRetrieve``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ExtrasJobResultsCancelRetrieve`: JobResultCancelPreview
+	fmt.Fprintf(os.Stdout, "Response from `ExtrasAPI.ExtrasJobResultsCancelRetrieve`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**id** | **string** | A UUID string identifying this job result. | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiExtrasJobResultsCancelRetrieveRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **format** | [**CircuitsCircuitTerminationsListFormatParameter**](CircuitsCircuitTerminationsListFormatParameter.md) |  | 
+ **depth** | **int32** | Serializer Depth | [default to 1]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
+
+### Return type
+
+[**JobResultCancelPreview**](JobResultCancelPreview.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [tokenAuth](../README.md#tokenAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/csv
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## ExtrasJobResultsDestroy
 
 > ExtrasJobResultsDestroy(ctx, id).Format(format).Execute()
@@ -22245,7 +22397,7 @@ Name | Type | Description  | Notes
 
 ## ExtrasJobResultsList
 
-> PaginatedJobResultList ExtrasJobResultsList(ctx).DateCreated(dateCreated).DateCreatedGt(dateCreatedGt).DateCreatedGte(dateCreatedGte).DateCreatedLt(dateCreatedLt).DateCreatedLte(dateCreatedLte).DateCreatedN(dateCreatedN).DateDone(dateDone).DateDoneGt(dateDoneGt).DateDoneGte(dateDoneGte).DateDoneIsnull(dateDoneIsnull).DateDoneLt(dateDoneLt).DateDoneLte(dateDoneLte).DateDoneN(dateDoneN).DateStarted(dateStarted).DateStartedGt(dateStartedGt).DateStartedGte(dateStartedGte).DateStartedIsnull(dateStartedIsnull).DateStartedLt(dateStartedLt).DateStartedLte(dateStartedLte).DateStartedN(dateStartedN).Format(format).HasJobConsoleEntries(hasJobConsoleEntries).Id(id).IdN(idN).JobModel(jobModel).JobModelIsnull(jobModelIsnull).JobModelN(jobModelN).JobModelId(jobModelId).JobModelIdIsnull(jobModelIdIsnull).JobModelIdN(jobModelIdN).Limit(limit).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).Q(q).ScheduledJob(scheduledJob).ScheduledJobIsnull(scheduledJobIsnull).ScheduledJobN(scheduledJobN).Sort(sort).Status(status).StatusIc(statusIc).StatusIe(statusIe).StatusIew(statusIew).StatusIre(statusIre).StatusIsw(statusIsw).StatusN(statusN).StatusNic(statusNic).StatusNie(statusNie).StatusNiew(statusNiew).StatusNire(statusNire).StatusNisw(statusNisw).StatusNre(statusNre).StatusRe(statusRe).User(user).UserIsnull(userIsnull).UserN(userN).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+> PaginatedJobResultList ExtrasJobResultsList(ctx).CancelType(cancelType).CancelTypeIc(cancelTypeIc).CancelTypeIe(cancelTypeIe).CancelTypeIew(cancelTypeIew).CancelTypeIre(cancelTypeIre).CancelTypeIsw(cancelTypeIsw).CancelTypeN(cancelTypeN).CancelTypeNic(cancelTypeNic).CancelTypeNie(cancelTypeNie).CancelTypeNiew(cancelTypeNiew).CancelTypeNire(cancelTypeNire).CancelTypeNisw(cancelTypeNisw).CancelTypeNre(cancelTypeNre).CancelTypeRe(cancelTypeRe).CanceledBy(canceledBy).CanceledByIsnull(canceledByIsnull).CanceledByN(canceledByN).DateCanceled(dateCanceled).DateCanceledGt(dateCanceledGt).DateCanceledGte(dateCanceledGte).DateCanceledIsnull(dateCanceledIsnull).DateCanceledLt(dateCanceledLt).DateCanceledLte(dateCanceledLte).DateCanceledN(dateCanceledN).DateCreated(dateCreated).DateCreatedGt(dateCreatedGt).DateCreatedGte(dateCreatedGte).DateCreatedLt(dateCreatedLt).DateCreatedLte(dateCreatedLte).DateCreatedN(dateCreatedN).DateDone(dateDone).DateDoneGt(dateDoneGt).DateDoneGte(dateDoneGte).DateDoneIsnull(dateDoneIsnull).DateDoneLt(dateDoneLt).DateDoneLte(dateDoneLte).DateDoneN(dateDoneN).DateStarted(dateStarted).DateStartedGt(dateStartedGt).DateStartedGte(dateStartedGte).DateStartedIsnull(dateStartedIsnull).DateStartedLt(dateStartedLt).DateStartedLte(dateStartedLte).DateStartedN(dateStartedN).Format(format).HasJobConsoleEntries(hasJobConsoleEntries).Id(id).IdN(idN).JobModel(jobModel).JobModelIsnull(jobModelIsnull).JobModelN(jobModelN).JobModelId(jobModelId).JobModelIdIsnull(jobModelIdIsnull).JobModelIdN(jobModelIdN).Limit(limit).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).Q(q).ScheduledJob(scheduledJob).ScheduledJobIsnull(scheduledJobIsnull).ScheduledJobN(scheduledJobN).Sort(sort).Status(status).StatusIc(statusIc).StatusIe(statusIe).StatusIew(statusIew).StatusIre(statusIre).StatusIsw(statusIsw).StatusN(statusN).StatusNic(statusNic).StatusNie(statusNie).StatusNiew(statusNiew).StatusNire(statusNire).StatusNisw(statusNisw).StatusNre(statusNre).StatusRe(statusRe).User(user).UserIsnull(userIsnull).UserN(userN).Depth(depth).ExcludeM2m(excludeM2m).Execute()
 
 
 
@@ -22265,6 +22417,30 @@ import (
 )
 
 func main() {
+	cancelType := []openapiclient.ExtrasJobResultsListCancelTypeParameterInner{openapiclient.extras_job_results_list_cancel_type_parameter_inner("abandoned")} // []ExtrasJobResultsListCancelTypeParameterInner | Cancel type of the Job being canceled   (optional)
+	cancelTypeIc := []string{"Inner_example"} // []string |  (optional)
+	cancelTypeIe := []string{"Inner_example"} // []string |  (optional)
+	cancelTypeIew := []string{"Inner_example"} // []string |  (optional)
+	cancelTypeIre := []string{"Inner_example"} // []string |  (optional)
+	cancelTypeIsw := []string{"Inner_example"} // []string |  (optional)
+	cancelTypeN := []string{"Inner_example"} // []string |  (optional)
+	cancelTypeNic := []string{"Inner_example"} // []string |  (optional)
+	cancelTypeNie := []string{"Inner_example"} // []string |  (optional)
+	cancelTypeNiew := []string{"Inner_example"} // []string |  (optional)
+	cancelTypeNire := []string{"Inner_example"} // []string |  (optional)
+	cancelTypeNisw := []string{"Inner_example"} // []string |  (optional)
+	cancelTypeNre := []string{"Inner_example"} // []string |  (optional)
+	cancelTypeRe := []string{"Inner_example"} // []string |  (optional)
+	canceledBy := []string{"Inner_example"} // []string |  (optional)
+	canceledByIsnull := true // bool |  (optional)
+	canceledByN := []string{"Inner_example"} // []string |  (optional)
+	dateCanceled := []time.Time{time.Now()} // []time.Time |  (optional)
+	dateCanceledGt := []time.Time{time.Now()} // []time.Time |  (optional)
+	dateCanceledGte := []time.Time{time.Now()} // []time.Time |  (optional)
+	dateCanceledIsnull := true // bool |  (optional)
+	dateCanceledLt := []time.Time{time.Now()} // []time.Time |  (optional)
+	dateCanceledLte := []time.Time{time.Now()} // []time.Time |  (optional)
+	dateCanceledN := []time.Time{time.Now()} // []time.Time |  (optional)
 	dateCreated := []time.Time{time.Now()} // []time.Time |  (optional)
 	dateCreatedGt := []time.Time{time.Now()} // []time.Time |  (optional)
 	dateCreatedGte := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -22338,7 +22514,7 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.ExtrasAPI.ExtrasJobResultsList(context.Background()).DateCreated(dateCreated).DateCreatedGt(dateCreatedGt).DateCreatedGte(dateCreatedGte).DateCreatedLt(dateCreatedLt).DateCreatedLte(dateCreatedLte).DateCreatedN(dateCreatedN).DateDone(dateDone).DateDoneGt(dateDoneGt).DateDoneGte(dateDoneGte).DateDoneIsnull(dateDoneIsnull).DateDoneLt(dateDoneLt).DateDoneLte(dateDoneLte).DateDoneN(dateDoneN).DateStarted(dateStarted).DateStartedGt(dateStartedGt).DateStartedGte(dateStartedGte).DateStartedIsnull(dateStartedIsnull).DateStartedLt(dateStartedLt).DateStartedLte(dateStartedLte).DateStartedN(dateStartedN).Format(format).HasJobConsoleEntries(hasJobConsoleEntries).Id(id).IdN(idN).JobModel(jobModel).JobModelIsnull(jobModelIsnull).JobModelN(jobModelN).JobModelId(jobModelId).JobModelIdIsnull(jobModelIdIsnull).JobModelIdN(jobModelIdN).Limit(limit).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).Q(q).ScheduledJob(scheduledJob).ScheduledJobIsnull(scheduledJobIsnull).ScheduledJobN(scheduledJobN).Sort(sort).Status(status).StatusIc(statusIc).StatusIe(statusIe).StatusIew(statusIew).StatusIre(statusIre).StatusIsw(statusIsw).StatusN(statusN).StatusNic(statusNic).StatusNie(statusNie).StatusNiew(statusNiew).StatusNire(statusNire).StatusNisw(statusNisw).StatusNre(statusNre).StatusRe(statusRe).User(user).UserIsnull(userIsnull).UserN(userN).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+	resp, r, err := apiClient.ExtrasAPI.ExtrasJobResultsList(context.Background()).CancelType(cancelType).CancelTypeIc(cancelTypeIc).CancelTypeIe(cancelTypeIe).CancelTypeIew(cancelTypeIew).CancelTypeIre(cancelTypeIre).CancelTypeIsw(cancelTypeIsw).CancelTypeN(cancelTypeN).CancelTypeNic(cancelTypeNic).CancelTypeNie(cancelTypeNie).CancelTypeNiew(cancelTypeNiew).CancelTypeNire(cancelTypeNire).CancelTypeNisw(cancelTypeNisw).CancelTypeNre(cancelTypeNre).CancelTypeRe(cancelTypeRe).CanceledBy(canceledBy).CanceledByIsnull(canceledByIsnull).CanceledByN(canceledByN).DateCanceled(dateCanceled).DateCanceledGt(dateCanceledGt).DateCanceledGte(dateCanceledGte).DateCanceledIsnull(dateCanceledIsnull).DateCanceledLt(dateCanceledLt).DateCanceledLte(dateCanceledLte).DateCanceledN(dateCanceledN).DateCreated(dateCreated).DateCreatedGt(dateCreatedGt).DateCreatedGte(dateCreatedGte).DateCreatedLt(dateCreatedLt).DateCreatedLte(dateCreatedLte).DateCreatedN(dateCreatedN).DateDone(dateDone).DateDoneGt(dateDoneGt).DateDoneGte(dateDoneGte).DateDoneIsnull(dateDoneIsnull).DateDoneLt(dateDoneLt).DateDoneLte(dateDoneLte).DateDoneN(dateDoneN).DateStarted(dateStarted).DateStartedGt(dateStartedGt).DateStartedGte(dateStartedGte).DateStartedIsnull(dateStartedIsnull).DateStartedLt(dateStartedLt).DateStartedLte(dateStartedLte).DateStartedN(dateStartedN).Format(format).HasJobConsoleEntries(hasJobConsoleEntries).Id(id).IdN(idN).JobModel(jobModel).JobModelIsnull(jobModelIsnull).JobModelN(jobModelN).JobModelId(jobModelId).JobModelIdIsnull(jobModelIdIsnull).JobModelIdN(jobModelIdN).Limit(limit).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).Q(q).ScheduledJob(scheduledJob).ScheduledJobIsnull(scheduledJobIsnull).ScheduledJobN(scheduledJobN).Sort(sort).Status(status).StatusIc(statusIc).StatusIe(statusIe).StatusIew(statusIew).StatusIre(statusIre).StatusIsw(statusIsw).StatusN(statusN).StatusNic(statusNic).StatusNie(statusNie).StatusNiew(statusNiew).StatusNire(statusNire).StatusNisw(statusNisw).StatusNre(statusNre).StatusRe(statusRe).User(user).UserIsnull(userIsnull).UserN(userN).Depth(depth).ExcludeM2m(excludeM2m).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `ExtrasAPI.ExtrasJobResultsList``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -22359,6 +22535,30 @@ Other parameters are passed through a pointer to a apiExtrasJobResultsListReques
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **cancelType** | [**[]ExtrasJobResultsListCancelTypeParameterInner**](ExtrasJobResultsListCancelTypeParameterInner.md) | Cancel type of the Job being canceled   | 
+ **cancelTypeIc** | **[]string** |  | 
+ **cancelTypeIe** | **[]string** |  | 
+ **cancelTypeIew** | **[]string** |  | 
+ **cancelTypeIre** | **[]string** |  | 
+ **cancelTypeIsw** | **[]string** |  | 
+ **cancelTypeN** | **[]string** |  | 
+ **cancelTypeNic** | **[]string** |  | 
+ **cancelTypeNie** | **[]string** |  | 
+ **cancelTypeNiew** | **[]string** |  | 
+ **cancelTypeNire** | **[]string** |  | 
+ **cancelTypeNisw** | **[]string** |  | 
+ **cancelTypeNre** | **[]string** |  | 
+ **cancelTypeRe** | **[]string** |  | 
+ **canceledBy** | **[]string** |  | 
+ **canceledByIsnull** | **bool** |  | 
+ **canceledByN** | **[]string** |  | 
+ **dateCanceled** | [**[]time.Time**](time.Time.md) |  | 
+ **dateCanceledGt** | [**[]time.Time**](time.Time.md) |  | 
+ **dateCanceledGte** | [**[]time.Time**](time.Time.md) |  | 
+ **dateCanceledIsnull** | **bool** |  | 
+ **dateCanceledLt** | [**[]time.Time**](time.Time.md) |  | 
+ **dateCanceledLte** | [**[]time.Time**](time.Time.md) |  | 
+ **dateCanceledN** | [**[]time.Time**](time.Time.md) |  | 
  **dateCreated** | [**[]time.Time**](time.Time.md) |  | 
  **dateCreatedGt** | [**[]time.Time**](time.Time.md) |  | 
  **dateCreatedGte** | [**[]time.Time**](time.Time.md) |  | 
@@ -25355,7 +25555,7 @@ Name | Type | Description  | Notes
 
 ## ExtrasMetadataTypesList
 
-> PaginatedMetadataTypeList ExtrasMetadataTypesList(ctx).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).ContentTypes(contentTypes).ContentTypesN(contentTypesN).Created(created).CreatedGt(createdGt).CreatedGte(createdGte).CreatedIsnull(createdIsnull).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).DataType(dataType).DataTypeIc(dataTypeIc).DataTypeIe(dataTypeIe).DataTypeIew(dataTypeIew).DataTypeIre(dataTypeIre).DataTypeIsw(dataTypeIsw).DataTypeN(dataTypeN).DataTypeNic(dataTypeNic).DataTypeNie(dataTypeNie).DataTypeNiew(dataTypeNiew).DataTypeNire(dataTypeNire).DataTypeNisw(dataTypeNisw).DataTypeNre(dataTypeNre).DataTypeRe(dataTypeRe).Description(description).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIre(descriptionIre).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNire(descriptionNire).DescriptionNisw(descriptionNisw).DescriptionNre(descriptionNre).DescriptionRe(descriptionRe).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).Id(id).IdN(idN).LastUpdated(lastUpdated).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedIsnull(lastUpdatedIsnull).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).Q(q).Sort(sort).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+> PaginatedMetadataTypeList ExtrasMetadataTypesList(ctx).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).ContentTypeId(contentTypeId).ContentTypes(contentTypes).ContentTypesN(contentTypesN).Created(created).CreatedGt(createdGt).CreatedGte(createdGte).CreatedIsnull(createdIsnull).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).DataType(dataType).DataTypeIc(dataTypeIc).DataTypeIe(dataTypeIe).DataTypeIew(dataTypeIew).DataTypeIre(dataTypeIre).DataTypeIsw(dataTypeIsw).DataTypeN(dataTypeN).DataTypeNic(dataTypeNic).DataTypeNie(dataTypeNie).DataTypeNiew(dataTypeNiew).DataTypeNire(dataTypeNire).DataTypeNisw(dataTypeNisw).DataTypeNre(dataTypeNre).DataTypeRe(dataTypeRe).Description(description).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIre(descriptionIre).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNire(descriptionNire).DescriptionNisw(descriptionNisw).DescriptionNre(descriptionNre).DescriptionRe(descriptionRe).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).Id(id).IdN(idN).LastUpdated(lastUpdated).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedIsnull(lastUpdatedIsnull).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).Q(q).Sort(sort).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Depth(depth).ExcludeM2m(excludeM2m).Execute()
 
 
 
@@ -25378,6 +25578,7 @@ func main() {
 	contacts := []string{"Inner_example"} // []string |  (optional)
 	contactsIsnull := true // bool | Contacts (name or ID) is null (optional)
 	contactsN := []string{"Inner_example"} // []string |  (optional)
+	contentTypeId := int32(56) // int32 |  (optional)
 	contentTypes := []int32{int32(123)} // []int32 |  (optional)
 	contentTypesN := []int32{int32(123)} // []int32 |  (optional)
 	created := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -25456,7 +25657,7 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.ExtrasAPI.ExtrasMetadataTypesList(context.Background()).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).ContentTypes(contentTypes).ContentTypesN(contentTypesN).Created(created).CreatedGt(createdGt).CreatedGte(createdGte).CreatedIsnull(createdIsnull).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).DataType(dataType).DataTypeIc(dataTypeIc).DataTypeIe(dataTypeIe).DataTypeIew(dataTypeIew).DataTypeIre(dataTypeIre).DataTypeIsw(dataTypeIsw).DataTypeN(dataTypeN).DataTypeNic(dataTypeNic).DataTypeNie(dataTypeNie).DataTypeNiew(dataTypeNiew).DataTypeNire(dataTypeNire).DataTypeNisw(dataTypeNisw).DataTypeNre(dataTypeNre).DataTypeRe(dataTypeRe).Description(description).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIre(descriptionIre).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNire(descriptionNire).DescriptionNisw(descriptionNisw).DescriptionNre(descriptionNre).DescriptionRe(descriptionRe).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).Id(id).IdN(idN).LastUpdated(lastUpdated).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedIsnull(lastUpdatedIsnull).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).Q(q).Sort(sort).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+	resp, r, err := apiClient.ExtrasAPI.ExtrasMetadataTypesList(context.Background()).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).ContentTypeId(contentTypeId).ContentTypes(contentTypes).ContentTypesN(contentTypesN).Created(created).CreatedGt(createdGt).CreatedGte(createdGte).CreatedIsnull(createdIsnull).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).DataType(dataType).DataTypeIc(dataTypeIc).DataTypeIe(dataTypeIe).DataTypeIew(dataTypeIew).DataTypeIre(dataTypeIre).DataTypeIsw(dataTypeIsw).DataTypeN(dataTypeN).DataTypeNic(dataTypeNic).DataTypeNie(dataTypeNie).DataTypeNiew(dataTypeNiew).DataTypeNire(dataTypeNire).DataTypeNisw(dataTypeNisw).DataTypeNre(dataTypeNre).DataTypeRe(dataTypeRe).Description(description).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIre(descriptionIre).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNire(descriptionNire).DescriptionNisw(descriptionNisw).DescriptionNre(descriptionNre).DescriptionRe(descriptionRe).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).Id(id).IdN(idN).LastUpdated(lastUpdated).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedIsnull(lastUpdatedIsnull).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).Q(q).Sort(sort).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Depth(depth).ExcludeM2m(excludeM2m).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `ExtrasAPI.ExtrasMetadataTypesList``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -25480,6 +25681,7 @@ Name | Type | Description  | Notes
  **contacts** | **[]string** |  | 
  **contactsIsnull** | **bool** | Contacts (name or ID) is null | 
  **contactsN** | **[]string** |  | 
+ **contentTypeId** | **int32** |  | 
  **contentTypes** | **[]int32** |  | 
  **contentTypesN** | **[]int32** |  | 
  **created** | [**[]time.Time**](time.Time.md) |  | 
@@ -26741,9 +26943,9 @@ func main() {
 	changedObjectType := "changedObjectType_example" // string |  (optional)
 	changedObjectTypeIsnull := true // bool |  (optional)
 	changedObjectTypeN := "changedObjectTypeN_example" // string |  (optional)
-	changedObjectTypeId := []*int32{int32(123)} // []*int32 |  (optional)
+	changedObjectTypeId := []int32{int32(123)} // []int32 |  (optional)
 	changedObjectTypeIdIsnull := true // bool |  (optional)
-	changedObjectTypeIdN := []*int32{int32(123)} // []*int32 |  (optional)
+	changedObjectTypeIdN := []int32{int32(123)} // []int32 |  (optional)
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 	id := []string{"Inner_example"} // []string | Unique object identifier, either a UUID primary key or a composite key. (optional)
 	idN := []string{"Inner_example"} // []string |  (optional)
@@ -27357,7 +27559,7 @@ Name | Type | Description  | Notes
 
 ## ExtrasObjectMetadataList
 
-> PaginatedObjectMetadataList ExtrasObjectMetadataList(ctx).AssignedObjectId(assignedObjectId).AssignedObjectIdN(assignedObjectIdN).AssignedObjectType(assignedObjectType).AssignedObjectTypeIsnull(assignedObjectTypeIsnull).AssignedObjectTypeN(assignedObjectTypeN).Contact(contact).ContactIsnull(contactIsnull).ContactN(contactN).Created(created).CreatedGt(createdGt).CreatedGte(createdGte).CreatedIsnull(createdIsnull).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).Format(format).Id(id).IdN(idN).LastUpdated(lastUpdated).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedIsnull(lastUpdatedIsnull).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).MetadataType(metadataType).MetadataTypeN(metadataTypeN).Offset(offset).Q(q).ScopedFields(scopedFields).Sort(sort).Team(team).TeamIsnull(teamIsnull).TeamN(teamN).Value(value).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+> PaginatedObjectMetadataList ExtrasObjectMetadataList(ctx).AssignedObjectId(assignedObjectId).AssignedObjectIdN(assignedObjectIdN).AssignedObjectType(assignedObjectType).AssignedObjectTypeN(assignedObjectTypeN).Contact(contact).ContactIsnull(contactIsnull).ContactN(contactN).Created(created).CreatedGt(createdGt).CreatedGte(createdGte).CreatedIsnull(createdIsnull).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).Format(format).Id(id).IdN(idN).LastUpdated(lastUpdated).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedIsnull(lastUpdatedIsnull).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).MetadataType(metadataType).MetadataTypeN(metadataTypeN).Offset(offset).Q(q).ScopedFields(scopedFields).Sort(sort).Team(team).TeamIsnull(teamIsnull).TeamN(teamN).Value(value).Depth(depth).ExcludeM2m(excludeM2m).Execute()
 
 
 
@@ -27380,7 +27582,6 @@ func main() {
 	assignedObjectId := []string{"Inner_example"} // []string |  (optional)
 	assignedObjectIdN := []string{"Inner_example"} // []string |  (optional)
 	assignedObjectType := []int32{int32(123)} // []int32 |  (optional)
-	assignedObjectTypeIsnull := true // bool |  (optional)
 	assignedObjectTypeN := []int32{int32(123)} // []int32 |  (optional)
 	contact := []string{"Inner_example"} // []string |  (optional)
 	contactIsnull := true // bool | Contact (name or ID) is null (optional)
@@ -27418,7 +27619,7 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.ExtrasAPI.ExtrasObjectMetadataList(context.Background()).AssignedObjectId(assignedObjectId).AssignedObjectIdN(assignedObjectIdN).AssignedObjectType(assignedObjectType).AssignedObjectTypeIsnull(assignedObjectTypeIsnull).AssignedObjectTypeN(assignedObjectTypeN).Contact(contact).ContactIsnull(contactIsnull).ContactN(contactN).Created(created).CreatedGt(createdGt).CreatedGte(createdGte).CreatedIsnull(createdIsnull).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).Format(format).Id(id).IdN(idN).LastUpdated(lastUpdated).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedIsnull(lastUpdatedIsnull).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).MetadataType(metadataType).MetadataTypeN(metadataTypeN).Offset(offset).Q(q).ScopedFields(scopedFields).Sort(sort).Team(team).TeamIsnull(teamIsnull).TeamN(teamN).Value(value).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+	resp, r, err := apiClient.ExtrasAPI.ExtrasObjectMetadataList(context.Background()).AssignedObjectId(assignedObjectId).AssignedObjectIdN(assignedObjectIdN).AssignedObjectType(assignedObjectType).AssignedObjectTypeN(assignedObjectTypeN).Contact(contact).ContactIsnull(contactIsnull).ContactN(contactN).Created(created).CreatedGt(createdGt).CreatedGte(createdGte).CreatedIsnull(createdIsnull).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).Format(format).Id(id).IdN(idN).LastUpdated(lastUpdated).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedIsnull(lastUpdatedIsnull).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).MetadataType(metadataType).MetadataTypeN(metadataTypeN).Offset(offset).Q(q).ScopedFields(scopedFields).Sort(sort).Team(team).TeamIsnull(teamIsnull).TeamN(teamN).Value(value).Depth(depth).ExcludeM2m(excludeM2m).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `ExtrasAPI.ExtrasObjectMetadataList``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -27442,7 +27643,6 @@ Name | Type | Description  | Notes
  **assignedObjectId** | **[]string** |  | 
  **assignedObjectIdN** | **[]string** |  | 
  **assignedObjectType** | **[]int32** |  | 
- **assignedObjectTypeIsnull** | **bool** |  | 
  **assignedObjectTypeN** | **[]int32** |  | 
  **contact** | **[]string** |  | 
  **contactIsnull** | **bool** | Contact (name or ID) is null | 
@@ -31224,7 +31424,7 @@ func main() {
 	stateNisw := []string{"Inner_example"} // []string |  (optional)
 	stateNre := []string{"Inner_example"} // []string |  (optional)
 	stateRe := []string{"Inner_example"} // []string |  (optional)
-	timeZone := []openapiclient.DcimLocationsListTimeZoneParameterInner{openapiclient.dcim_locations_list_time_zone_parameter_inner("Africa/Abidjan")} // []DcimLocationsListTimeZoneParameterInner | Time zone   (optional)
+	timeZone := []openapiclient.DcimLocationsListTimeZoneParameterInner{openapiclient.dcim_locations_list_time_zone_parameter_inner("")} // []DcimLocationsListTimeZoneParameterInner | Time zone   (optional)
 	timeZoneIc := []string{"Inner_example"} // []string | Time zone (optional)
 	timeZoneIe := []string{"Inner_example"} // []string | Time zone (optional)
 	timeZoneIew := []string{"Inner_example"} // []string | Time zone (optional)

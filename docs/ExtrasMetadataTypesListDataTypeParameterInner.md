@@ -21,6 +21,8 @@
 
 * `MULTI_SELECT` (value: `"multi-select"`)
 
+* `NULL` (value: `"null"`)
+
 * `SELECT` (value: `"select"`)
 
 * `TEXT` (value: `"text"`)

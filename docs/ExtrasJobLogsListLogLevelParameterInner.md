@@ -13,6 +13,8 @@
 
 * `INFO` (value: `"info"`)
 
+* `NULL` (value: `"null"`)
+
 * `SUCCESS` (value: `"success"`)
 
 * `WARNING` (value: `"warning"`)

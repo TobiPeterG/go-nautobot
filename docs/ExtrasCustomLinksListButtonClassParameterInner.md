@@ -11,6 +11,8 @@
 
 * `LINK` (value: `"link"`)
 
+* `NULL` (value: `"null"`)
+
 * `PRIMARY` (value: `"primary"`)
 
 * `SUCCESS` (value: `"success"`)

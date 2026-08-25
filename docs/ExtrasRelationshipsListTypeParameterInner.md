@@ -5,6 +5,8 @@
 
 * `MANY_TO_MANY` (value: `"many-to-many"`)
 
+* `NULL` (value: `"null"`)
+
 * `ONE_TO_MANY` (value: `"one-to-many"`)
 
 * `ONE_TO_ONE` (value: `"one-to-one"`)

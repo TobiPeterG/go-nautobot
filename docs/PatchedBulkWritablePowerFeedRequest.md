@@ -16,12 +16,11 @@ Name | Type | Description | Notes
 **MaxUtilization** | Pointer to **int32** | Maximum permissible draw (percentage) | [optional] 
 **BreakerPosition** | Pointer to **NullableInt32** | Starting circuit breaker position in panel | [optional] 
 **Comments** | Pointer to **string** |  | [optional] 
-**Cable** | Pointer to [**NullableApprovalWorkflowUser**](ApprovalWorkflowUser.md) |  | [optional] 
 **PowerPanel** | Pointer to [**BulkWritablePowerFeedRequestPowerPanel**](BulkWritablePowerFeedRequestPowerPanel.md) |  | [optional] 
 **DestinationPanel** | Pointer to [**NullableBulkWritablePowerFeedRequestDestinationPanel**](BulkWritablePowerFeedRequestDestinationPanel.md) |  | [optional] 
 **Rack** | Pointer to [**NullableApprovalWorkflowUser**](ApprovalWorkflowUser.md) |  | [optional] 
 **Status** | Pointer to [**BulkWritableCableRequestStatus**](BulkWritableCableRequestStatus.md) |  | [optional] 
-**CustomFields** | Pointer to **map[string]interface{}** |  | [optional] 
+**CustomFields** | Pointer to **map[string]interface{}** | Custom field data for this object, keyed by each applicable Custom Field&#39;s &#x60;key&#x60;. Value types vary with the custom field&#39;s type (text, integer, boolean, date, URL, JSON, select, multi-select); undefined values are &#x60;null&#x60;. On write, the payload is merged with existing values (PATCH-style: keys omitted from the payload are left untouched), and keys that do not correspond to a defined custom field are ignored. | [optional] 
 **Relationships** | Pointer to [**map[string]ApprovalWorkflowDefinitionRequestRelationshipsValue**](ApprovalWorkflowDefinitionRequestRelationshipsValue.md) |  | [optional] 
 **Tags** | Pointer to [**[]BulkWritableCableRequestStatus**](BulkWritableCableRequestStatus.md) |  | [optional] 
 
@@ -359,41 +358,6 @@ SetComments sets Comments field to given value.
 
 HasComments returns a boolean if a field has been set.
 
-### GetCable
-
-`func (o *PatchedBulkWritablePowerFeedRequest) GetCable() ApprovalWorkflowUser`
-
-GetCable returns the Cable field if non-nil, zero value otherwise.
-
-### GetCableOk
-
-`func (o *PatchedBulkWritablePowerFeedRequest) GetCableOk() (*ApprovalWorkflowUser, bool)`
-
-GetCableOk returns a tuple with the Cable field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCable
-
-`func (o *PatchedBulkWritablePowerFeedRequest) SetCable(v ApprovalWorkflowUser)`
-
-SetCable sets Cable field to given value.
-
-### HasCable
-
-`func (o *PatchedBulkWritablePowerFeedRequest) HasCable() bool`
-
-HasCable returns a boolean if a field has been set.
-
-### SetCableNil
-
-`func (o *PatchedBulkWritablePowerFeedRequest) SetCableNil(b bool)`
-
- SetCableNil sets the value for Cable to be an explicit nil
-
-### UnsetCable
-`func (o *PatchedBulkWritablePowerFeedRequest) UnsetCable()`
-
-UnsetCable ensures that no value is present for Cable, not even an explicit nil
 ### GetPowerPanel
 
 `func (o *PatchedBulkWritablePowerFeedRequest) GetPowerPanel() BulkWritablePowerFeedRequestPowerPanel`
@@ -516,20 +480,20 @@ HasStatus returns a boolean if a field has been set.
 
 ### GetCustomFields
 
-`func (o *PatchedBulkWritablePowerFeedRequest) GetCustomFields() map[string]interface{}`
+`func (o *PatchedBulkWritablePowerFeedRequest) GetCustomFields() map[string]*interface{}`
 
 GetCustomFields returns the CustomFields field if non-nil, zero value otherwise.
 
 ### GetCustomFieldsOk
 
-`func (o *PatchedBulkWritablePowerFeedRequest) GetCustomFieldsOk() (*map[string]interface{}, bool)`
+`func (o *PatchedBulkWritablePowerFeedRequest) GetCustomFieldsOk() (*map[string]*interface{}, bool)`
 
 GetCustomFieldsOk returns a tuple with the CustomFields field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCustomFields
 
-`func (o *PatchedBulkWritablePowerFeedRequest) SetCustomFields(v map[string]interface{})`
+`func (o *PatchedBulkWritablePowerFeedRequest) SetCustomFields(v map[string]*interface{})`
 
 SetCustomFields sets CustomFields field to given value.
 

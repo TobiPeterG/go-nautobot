@@ -57,7 +57,12 @@ docs/BulkWritableApprovalWorkflowRequest.md
 docs/BulkWritableApprovalWorkflowStageDefinitionRequest.md
 docs/BulkWritableApprovalWorkflowStageRequest.md
 docs/BulkWritableCableRequest.md
+docs/BulkWritableCableRequestCableType.md
 docs/BulkWritableCableRequestStatus.md
+docs/BulkWritableCableToCableTerminationRequest.md
+docs/BulkWritableCableTypeRequest.md
+docs/BulkWritableCableTypeRequestMappingInner.md
+docs/BulkWritableCableTypeRequestPolarityMethod.md
 docs/BulkWritableCertificateProfileRequest.md
 docs/BulkWritableCertificateProfileRequestCertificateType.md
 docs/BulkWritableCircuitRequest.md
@@ -116,8 +121,10 @@ docs/BulkWritableGraphQLQueryRequest.md
 docs/BulkWritableGroupRequest.md
 docs/BulkWritableHealthCheckMonitorRequest.md
 docs/BulkWritableHealthCheckMonitorRequestHealthCheckType.md
+docs/BulkWritableIPAddressRangeRequest.md
+docs/BulkWritableIPAddressRangeRequestNamespace.md
+docs/BulkWritableIPAddressRangeRequestParent.md
 docs/BulkWritableIPAddressRequest.md
-docs/BulkWritableIPAddressRequestNamespace.md
 docs/BulkWritableIPAddressRequestParent.md
 docs/BulkWritableIPAddressToInterfaceRequest.md
 docs/BulkWritableImageAttachmentRequest.md
@@ -249,15 +256,20 @@ docs/BulkWritableWebhookRequest.md
 docs/BulkWritableWirelessNetworkRequest.md
 docs/ButtonClassEnum.md
 docs/Cable.md
+docs/CableEndEnum.md
 docs/CableLengthUnit.md
 docs/CableLengthUnitLabel.md
 docs/CableLengthUnitValue.md
 docs/CablePath.md
 docs/CableTermination.md
+docs/CableToCableTermination.md
+docs/CableToCableTerminationRequest.md
 docs/CableType.md
 docs/CableTypeChoices.md
 docs/CableTypeLabel.md
+docs/CableTypeRequest.md
 docs/CableTypeValue.md
+docs/CancelTypeEnum.md
 docs/CapabilitiesEnum.md
 docs/CertificateProfile.md
 docs/CertificateProfileRequest.md
@@ -292,7 +304,9 @@ docs/ClusterRequest.md
 docs/ClusterType.md
 docs/ClusterTypeRequest.md
 docs/ComputedField.md
-docs/ComputedFieldRequest.md
+docs/ComputedFieldOutputType.md
+docs/ComputedFieldOutputTypeLabel.md
+docs/ComputedFieldOutputTypeValue.md
 docs/ConfigContext.md
 docs/ConfigContextRequest.md
 docs/ConfigContextSchema.md
@@ -339,12 +353,14 @@ docs/DataComplianceRequest.md
 docs/DataTypeEnum.md
 docs/DataValidationAPI.md
 docs/DcimAPI.md
+docs/DcimCableTypesListPolarityMethodParameterInner.md
 docs/DcimCablesListLengthUnitParameterInner.md
+docs/DcimCablesToCableTerminationsListCableEndParameterInner.md
 docs/DcimConsolePortTemplatesListTypeParameterInner.md
 docs/DcimDeviceRedundancyGroupsListFailoverStrategyParameterInner.md
 docs/DcimFrontPortTemplatesListTypeParameterInner.md
 docs/DcimInterfaceTemplatesListTypeParameterInner.md
-docs/DcimInterfacesListModeParameterInner.md
+docs/DcimInterfacesListKindParameter.md
 docs/DcimLocationsListTimeZoneParameterInner.md
 docs/DcimPowerFeedsListBreakerPoleCountParameterInner.md
 docs/DcimPowerFeedsListPhaseParameterInner.md
@@ -375,6 +391,7 @@ docs/DeviceNAPALM.md
 docs/DeviceRedundancyGroup.md
 docs/DeviceRedundancyGroupFailoverStrategy.md
 docs/DeviceRedundancyGroupFailoverStrategyLabel.md
+docs/DeviceRedundancyGroupFailoverStrategyValue.md
 docs/DeviceType.md
 docs/DeviceTypeSubdeviceRole.md
 docs/DeviceTypeSubdeviceRoleLabel.md
@@ -401,6 +418,7 @@ docs/ExtrasDynamicGroupMembershipsListOperatorParameterInner.md
 docs/ExtrasDynamicGroupsListGroupTypeParameterInner.md
 docs/ExtrasExternalIntegrationsListHttpMethodParameterInner.md
 docs/ExtrasJobLogsListLogLevelParameterInner.md
+docs/ExtrasJobResultsListCancelTypeParameterInner.md
 docs/ExtrasMetadataTypesListDataTypeParameterInner.md
 docs/ExtrasObjectChangesListActionParameterInner.md
 docs/ExtrasRelationshipsListTypeParameterInner.md
@@ -435,7 +453,11 @@ docs/HealthCheckMonitor.md
 docs/HealthCheckMonitorRequest.md
 docs/HealthCheckTypeEnum.md
 docs/HttpMethodEnum.md
+docs/IEEE8021QMode.md
+docs/IEEE8021QMode1.md
 docs/IPAddress.md
+docs/IPAddressRange.md
+docs/IPAddressRangeRequest.md
 docs/IPAddressRequest.md
 docs/IPAddressToInterface.md
 docs/IPAddressToInterfaceRequest.md
@@ -454,6 +476,7 @@ docs/InterfaceDuplexValue.md
 docs/InterfaceMode.md
 docs/InterfaceModeChoices.md
 docs/InterfaceModeLabel.md
+docs/InterfaceModeValue.md
 docs/InterfaceRedundancyGroup.md
 docs/InterfaceRedundancyGroupAssociation.md
 docs/InterfaceRedundancyGroupAssociationRequest.md
@@ -491,9 +514,14 @@ docs/JobQueueOverride.md
 docs/JobQueueRequest.md
 docs/JobRequest.md
 docs/JobResult.md
+docs/JobResultCancelPreview.md
+docs/JobResultCancelType.md
+docs/JobResultCanceledBy.md
+docs/JobResultRequest.md
 docs/JobResultStatus.md
 docs/JobResultStatusValue.md
 docs/JobRunResponse.md
+docs/JobStatusEnum.md
 docs/JobVariable.md
 docs/LengthUnitEnum.md
 docs/LoadBalancerPool.md
@@ -543,6 +571,8 @@ docs/NestedApprovalWorkflowStage.md
 docs/NestedApprovalWorkflowStageDefinition.md
 docs/NestedApprovalWorkflowStageResponse.md
 docs/NestedCable.md
+docs/NestedCableToCableTermination.md
+docs/NestedCableType.md
 docs/NestedCertificateProfile.md
 docs/NestedCircuit.md
 docs/NestedCircuitTermination.md
@@ -586,12 +616,12 @@ docs/NestedGitRepository.md
 docs/NestedGraphQLQuery.md
 docs/NestedHealthCheckMonitor.md
 docs/NestedIPAddress.md
+docs/NestedIPAddressRange.md
 docs/NestedImageAttachment.md
 docs/NestedInterface.md
 docs/NestedInterfaceRedundancyGroup.md
 docs/NestedInterfaceRedundancyGroupAssociation.md
 docs/NestedInterfaceTemplate.md
-docs/NestedInterfaceVDCAssignment.md
 docs/NestedInventoryItem.md
 docs/NestedJob.md
 docs/NestedJobButton.md
@@ -689,6 +719,7 @@ docs/ObjectPermission.md
 docs/ObjectPermissionRequest.md
 docs/OperatorEnum.md
 docs/OuterUnitEnum.md
+docs/OutputTypeEnum.md
 docs/PaginatedApprovalWorkflowDefinitionList.md
 docs/PaginatedApprovalWorkflowList.md
 docs/PaginatedApprovalWorkflowStageDefinitionList.md
@@ -697,6 +728,8 @@ docs/PaginatedAvailableIPList.md
 docs/PaginatedAvailablePrefixList.md
 docs/PaginatedCableList.md
 docs/PaginatedCablePathList.md
+docs/PaginatedCableToCableTerminationList.md
+docs/PaginatedCableTypeList.md
 docs/PaginatedCertificateProfileList.md
 docs/PaginatedCircuitList.md
 docs/PaginatedCircuitTerminationList.md
@@ -748,6 +781,7 @@ docs/PaginatedGraphQLQueryList.md
 docs/PaginatedGroupList.md
 docs/PaginatedHealthCheckMonitorList.md
 docs/PaginatedIPAddressList.md
+docs/PaginatedIPAddressRangeList.md
 docs/PaginatedIPAddressToInterfaceList.md
 docs/PaginatedImageAttachmentList.md
 docs/PaginatedInterfaceConnectionList.md
@@ -865,6 +899,8 @@ docs/PatchedBulkWritableApprovalWorkflowRequest.md
 docs/PatchedBulkWritableApprovalWorkflowStageDefinitionRequest.md
 docs/PatchedBulkWritableApprovalWorkflowStageRequest.md
 docs/PatchedBulkWritableCableRequest.md
+docs/PatchedBulkWritableCableToCableTerminationRequest.md
+docs/PatchedBulkWritableCableTypeRequest.md
 docs/PatchedBulkWritableCertificateProfileRequest.md
 docs/PatchedBulkWritableCircuitRequest.md
 docs/PatchedBulkWritableCircuitTerminationRequest.md
@@ -913,6 +949,7 @@ docs/PatchedBulkWritableGitRepositoryRequest.md
 docs/PatchedBulkWritableGraphQLQueryRequest.md
 docs/PatchedBulkWritableGroupRequest.md
 docs/PatchedBulkWritableHealthCheckMonitorRequest.md
+docs/PatchedBulkWritableIPAddressRangeRequest.md
 docs/PatchedBulkWritableIPAddressRequest.md
 docs/PatchedBulkWritableIPAddressToInterfaceRequest.md
 docs/PatchedBulkWritableImageAttachmentRequest.md
@@ -1010,6 +1047,8 @@ docs/PatchedBulkWritableVirtualServerCertificateProfileAssignmentRequest.md
 docs/PatchedBulkWritableVirtualServerRequest.md
 docs/PatchedBulkWritableWebhookRequest.md
 docs/PatchedBulkWritableWirelessNetworkRequest.md
+docs/PatchedCableToCableTerminationRequest.md
+docs/PatchedCableTypeRequest.md
 docs/PatchedCertificateProfileRequest.md
 docs/PatchedCircuitRequest.md
 docs/PatchedCircuitTerminationRequest.md
@@ -1023,7 +1062,6 @@ docs/PatchedCloudServiceRequest.md
 docs/PatchedClusterGroupRequest.md
 docs/PatchedClusterRequest.md
 docs/PatchedClusterTypeRequest.md
-docs/PatchedComputedFieldRequest.md
 docs/PatchedConfigContextRequest.md
 docs/PatchedConfigContextSchemaRequest.md
 docs/PatchedContactAssociationRequest.md
@@ -1048,6 +1086,7 @@ docs/PatchedGitRepositoryRequest.md
 docs/PatchedGraphQLQueryRequest.md
 docs/PatchedGroupRequest.md
 docs/PatchedHealthCheckMonitorRequest.md
+docs/PatchedIPAddressRangeRequest.md
 docs/PatchedIPAddressRequest.md
 docs/PatchedIPAddressToInterfaceRequest.md
 docs/PatchedImageAttachmentRequest.md
@@ -1131,8 +1170,8 @@ docs/PatchedVirtualServerRequest.md
 docs/PatchedWebhookRequest.md
 docs/PatchedWirelessNetworkRequest.md
 docs/PatchedWritableCableRequest.md
-docs/PatchedWritableCableRequestLengthUnit.md
-docs/PatchedWritableCableRequestType.md
+docs/PatchedWritableCableRequestTerminationsValue.md
+docs/PatchedWritableComputedFieldRequest.md
 docs/PatchedWritableConsolePortRequest.md
 docs/PatchedWritableConsolePortRequestType.md
 docs/PatchedWritableConsolePortTemplateRequest.md
@@ -1147,7 +1186,6 @@ docs/PatchedWritableFrontPortRequest.md
 docs/PatchedWritableFrontPortTemplateRequest.md
 docs/PatchedWritableInterfaceRedundancyGroupRequest.md
 docs/PatchedWritableInterfaceRequest.md
-docs/PatchedWritableInterfaceRequestMode.md
 docs/PatchedWritableInterfaceRequestPortType.md
 docs/PatchedWritableInterfaceTemplateRequest.md
 docs/PatchedWritablePowerFeedRequest.md
@@ -1175,6 +1213,7 @@ docs/PathEndpoint.md
 docs/PhaseEnum.md
 docs/Platform.md
 docs/PlatformRequest.md
+docs/PolarityMethodEnum.md
 docs/PortTypeChoices.md
 docs/PowerFeed.md
 docs/PowerFeedBreakerPoleCount.md
@@ -1185,6 +1224,7 @@ docs/PowerFeedPhaseLabel.md
 docs/PowerFeedPhaseValue.md
 docs/PowerFeedPowerPath.md
 docs/PowerFeedPowerPathLabel.md
+docs/PowerFeedPowerPathValue.md
 docs/PowerFeedSupply.md
 docs/PowerFeedSupplyLabel.md
 docs/PowerFeedSupplyValue.md
@@ -1194,6 +1234,7 @@ docs/PowerFeedTypeLabel.md
 docs/PowerFeedTypeValue.md
 docs/PowerOutlet.md
 docs/PowerOutletFeedLeg.md
+docs/PowerOutletFeedLegValue.md
 docs/PowerOutletTemplate.md
 docs/PowerOutletType.md
 docs/PowerOutletTypeChoices.md
@@ -1293,6 +1334,7 @@ docs/Service.md
 docs/ServiceProtocol.md
 docs/ServiceProtocolChoices.md
 docs/ServiceProtocolLabel.md
+docs/ServiceProtocolValue.md
 docs/ServiceTypeEnum.md
 docs/SoftwareImageFile.md
 docs/SoftwareImageFileRequest.md
@@ -1399,6 +1441,7 @@ docs/WirelessNetworkModeChoices.md
 docs/WirelessNetworkRequest.md
 docs/WirelessSupportedDataRatesListStandardParameterInner.md
 docs/WritableCableRequest.md
+docs/WritableComputedFieldRequest.md
 docs/WritableConsolePortRequest.md
 docs/WritableConsolePortTemplateRequest.md
 docs/WritableConsoleServerPortRequest.md
@@ -1461,7 +1504,12 @@ model_bulk_writable_approval_workflow_request.go
 model_bulk_writable_approval_workflow_stage_definition_request.go
 model_bulk_writable_approval_workflow_stage_request.go
 model_bulk_writable_cable_request.go
+model_bulk_writable_cable_request_cable_type.go
 model_bulk_writable_cable_request_status.go
+model_bulk_writable_cable_to_cable_termination_request.go
+model_bulk_writable_cable_type_request.go
+model_bulk_writable_cable_type_request_mapping_inner.go
+model_bulk_writable_cable_type_request_polarity_method.go
 model_bulk_writable_certificate_profile_request.go
 model_bulk_writable_certificate_profile_request_certificate_type.go
 model_bulk_writable_circuit_request.go
@@ -1530,8 +1578,10 @@ model_bulk_writable_interface_template_request_duplex.go
 model_bulk_writable_interface_vdc_assignment_request.go
 model_bulk_writable_inventory_item_request.go
 model_bulk_writable_inventory_item_request_software_version.go
+model_bulk_writable_ip_address_range_request.go
+model_bulk_writable_ip_address_range_request_namespace.go
+model_bulk_writable_ip_address_range_request_parent.go
 model_bulk_writable_ip_address_request.go
-model_bulk_writable_ip_address_request_namespace.go
 model_bulk_writable_ip_address_request_parent.go
 model_bulk_writable_ip_address_to_interface_request.go
 model_bulk_writable_job_button_request.go
@@ -1653,15 +1703,20 @@ model_bulk_writable_webhook_request.go
 model_bulk_writable_wireless_network_request.go
 model_button_class_enum.go
 model_cable.go
+model_cable_end_enum.go
 model_cable_length_unit.go
 model_cable_length_unit_label.go
 model_cable_length_unit_value.go
 model_cable_path.go
 model_cable_termination.go
+model_cable_to_cable_termination.go
+model_cable_to_cable_termination_request.go
 model_cable_type.go
 model_cable_type_choices.go
 model_cable_type_label.go
+model_cable_type_request.go
 model_cable_type_value.go
+model_cancel_type_enum.go
 model_capabilities_enum.go
 model_certificate_profile.go
 model_certificate_profile_request.go
@@ -1694,7 +1749,9 @@ model_cluster_request.go
 model_cluster_type.go
 model_cluster_type_request.go
 model_computed_field.go
-model_computed_field_request.go
+model_computed_field_output_type.go
+model_computed_field_output_type_label.go
+model_computed_field_output_type_value.go
 model_config_context.go
 model_config_context_request.go
 model_config_context_schema.go
@@ -1738,12 +1795,14 @@ model_custom_link_request.go
 model_data_compliance.go
 model_data_compliance_request.go
 model_data_type_enum.go
+model_dcim_cable_types_list_polarity_method_parameter_inner.go
 model_dcim_cables_list_length_unit_parameter_inner.go
+model_dcim_cables_to_cable_terminations_list_cable_end_parameter_inner.go
 model_dcim_console_port_templates_list_type_parameter_inner.go
 model_dcim_device_redundancy_groups_list_failover_strategy_parameter_inner.go
 model_dcim_front_port_templates_list_type_parameter_inner.go
 model_dcim_interface_templates_list_type_parameter_inner.go
-model_dcim_interfaces_list_mode_parameter_inner.go
+model_dcim_interfaces_list_kind_parameter.go
 model_dcim_locations_list_time_zone_parameter_inner.go
 model_dcim_power_feeds_list_breaker_pole_count_parameter_inner.go
 model_dcim_power_feeds_list_phase_parameter_inner.go
@@ -1774,6 +1833,7 @@ model_device_napalm.go
 model_device_redundancy_group.go
 model_device_redundancy_group_failover_strategy.go
 model_device_redundancy_group_failover_strategy_label.go
+model_device_redundancy_group_failover_strategy_value.go
 model_device_type.go
 model_device_type_subdevice_role.go
 model_device_type_subdevice_role_label.go
@@ -1799,6 +1859,7 @@ model_extras_dynamic_group_memberships_list_operator_parameter_inner.go
 model_extras_dynamic_groups_list_group_type_parameter_inner.go
 model_extras_external_integrations_list_http_method_parameter_inner.go
 model_extras_job_logs_list_log_level_parameter_inner.go
+model_extras_job_results_list_cancel_type_parameter_inner.go
 model_extras_metadata_types_list_data_type_parameter_inner.go
 model_extras_object_changes_list_action_parameter_inner.go
 model_extras_relationships_list_type_parameter_inner.go
@@ -1832,6 +1893,8 @@ model_health_check_monitor.go
 model_health_check_monitor_request.go
 model_health_check_type_enum.go
 model_http_method_enum.go
+model_ieee802_1_q_mode.go
+model_ieee802_1_q_mode_1.go
 model_ike_version_enum.go
 model_image_attachment.go
 model_image_attachment_request.go
@@ -1844,6 +1907,7 @@ model_interface_duplex_value.go
 model_interface_mode.go
 model_interface_mode_choices.go
 model_interface_mode_label.go
+model_interface_mode_value.go
 model_interface_redundancy_group.go
 model_interface_redundancy_group_association.go
 model_interface_redundancy_group_association_request.go
@@ -1861,6 +1925,8 @@ model_interface_vdc_assignment_request.go
 model_inventory_item.go
 model_inventory_item_request.go
 model_ip_address.go
+model_ip_address_range.go
+model_ip_address_range_request.go
 model_ip_address_request.go
 model_ip_address_to_interface.go
 model_ip_address_to_interface_request.go
@@ -1887,9 +1953,14 @@ model_job_queue_override.go
 model_job_queue_request.go
 model_job_request.go
 model_job_result.go
+model_job_result_cancel_preview.go
+model_job_result_cancel_type.go
+model_job_result_canceled_by.go
+model_job_result_request.go
 model_job_result_status.go
 model_job_result_status_value.go
 model_job_run_response.go
+model_job_status_enum.go
 model_job_variable.go
 model_length_unit_enum.go
 model_load_balancer_pool.go
@@ -1938,6 +2009,8 @@ model_nested_approval_workflow_stage.go
 model_nested_approval_workflow_stage_definition.go
 model_nested_approval_workflow_stage_response.go
 model_nested_cable.go
+model_nested_cable_to_cable_termination.go
+model_nested_cable_type.go
 model_nested_certificate_profile.go
 model_nested_circuit.go
 model_nested_circuit_termination.go
@@ -1985,9 +2058,9 @@ model_nested_interface.go
 model_nested_interface_redundancy_group.go
 model_nested_interface_redundancy_group_association.go
 model_nested_interface_template.go
-model_nested_interface_vdc_assignment.go
 model_nested_inventory_item.go
 model_nested_ip_address.go
+model_nested_ip_address_range.go
 model_nested_job.go
 model_nested_job_button.go
 model_nested_job_hook.go
@@ -2084,6 +2157,7 @@ model_object_permission.go
 model_object_permission_request.go
 model_operator_enum.go
 model_outer_unit_enum.go
+model_output_type_enum.go
 model_paginated_approval_workflow_definition_list.go
 model_paginated_approval_workflow_list.go
 model_paginated_approval_workflow_stage_definition_list.go
@@ -2092,6 +2166,8 @@ model_paginated_available_ip_list.go
 model_paginated_available_prefix_list.go
 model_paginated_cable_list.go
 model_paginated_cable_path_list.go
+model_paginated_cable_to_cable_termination_list.go
+model_paginated_cable_type_list.go
 model_paginated_certificate_profile_list.go
 model_paginated_circuit_list.go
 model_paginated_circuit_termination_list.go
@@ -2151,6 +2227,7 @@ model_paginated_interface_template_list.go
 model_paginated_interface_vdc_assignment_list.go
 model_paginated_inventory_item_list.go
 model_paginated_ip_address_list.go
+model_paginated_ip_address_range_list.go
 model_paginated_ip_address_to_interface_list.go
 model_paginated_job_button_list.go
 model_paginated_job_hook_list.go
@@ -2260,6 +2337,8 @@ model_patched_bulk_writable_approval_workflow_request.go
 model_patched_bulk_writable_approval_workflow_stage_definition_request.go
 model_patched_bulk_writable_approval_workflow_stage_request.go
 model_patched_bulk_writable_cable_request.go
+model_patched_bulk_writable_cable_to_cable_termination_request.go
+model_patched_bulk_writable_cable_type_request.go
 model_patched_bulk_writable_certificate_profile_request.go
 model_patched_bulk_writable_circuit_request.go
 model_patched_bulk_writable_circuit_termination_request.go
@@ -2315,6 +2394,7 @@ model_patched_bulk_writable_interface_request.go
 model_patched_bulk_writable_interface_template_request.go
 model_patched_bulk_writable_interface_vdc_assignment_request.go
 model_patched_bulk_writable_inventory_item_request.go
+model_patched_bulk_writable_ip_address_range_request.go
 model_patched_bulk_writable_ip_address_request.go
 model_patched_bulk_writable_ip_address_to_interface_request.go
 model_patched_bulk_writable_job_button_request.go
@@ -2405,6 +2485,8 @@ model_patched_bulk_writable_vrf_prefix_assignment_request.go
 model_patched_bulk_writable_vrf_request.go
 model_patched_bulk_writable_webhook_request.go
 model_patched_bulk_writable_wireless_network_request.go
+model_patched_cable_to_cable_termination_request.go
+model_patched_cable_type_request.go
 model_patched_certificate_profile_request.go
 model_patched_circuit_request.go
 model_patched_circuit_termination_request.go
@@ -2418,7 +2500,6 @@ model_patched_cloud_service_request.go
 model_patched_cluster_group_request.go
 model_patched_cluster_request.go
 model_patched_cluster_type_request.go
-model_patched_computed_field_request.go
 model_patched_config_context_request.go
 model_patched_config_context_schema_request.go
 model_patched_contact_association_request.go
@@ -2447,6 +2528,7 @@ model_patched_image_attachment_request.go
 model_patched_interface_redundancy_group_association_request.go
 model_patched_interface_vdc_assignment_request.go
 model_patched_inventory_item_request.go
+model_patched_ip_address_range_request.go
 model_patched_ip_address_request.go
 model_patched_ip_address_to_interface_request.go
 model_patched_job_button_request.go
@@ -2526,8 +2608,8 @@ model_patched_vrf_request.go
 model_patched_webhook_request.go
 model_patched_wireless_network_request.go
 model_patched_writable_cable_request.go
-model_patched_writable_cable_request_length_unit.go
-model_patched_writable_cable_request_type.go
+model_patched_writable_cable_request_terminations_value.go
+model_patched_writable_computed_field_request.go
 model_patched_writable_console_port_request.go
 model_patched_writable_console_port_request_type.go
 model_patched_writable_console_port_template_request.go
@@ -2542,7 +2624,6 @@ model_patched_writable_front_port_request.go
 model_patched_writable_front_port_template_request.go
 model_patched_writable_interface_redundancy_group_request.go
 model_patched_writable_interface_request.go
-model_patched_writable_interface_request_mode.go
 model_patched_writable_interface_request_port_type.go
 model_patched_writable_interface_template_request.go
 model_patched_writable_power_feed_request.go
@@ -2570,6 +2651,7 @@ model_path_endpoint.go
 model_phase_enum.go
 model_platform.go
 model_platform_request.go
+model_polarity_method_enum.go
 model_port_type_choices.go
 model_power_feed.go
 model_power_feed_breaker_pole_count.go
@@ -2580,6 +2662,7 @@ model_power_feed_phase_label.go
 model_power_feed_phase_value.go
 model_power_feed_power_path.go
 model_power_feed_power_path_label.go
+model_power_feed_power_path_value.go
 model_power_feed_supply.go
 model_power_feed_supply_label.go
 model_power_feed_supply_value.go
@@ -2589,6 +2672,7 @@ model_power_feed_type_label.go
 model_power_feed_type_value.go
 model_power_outlet.go
 model_power_outlet_feed_leg.go
+model_power_outlet_feed_leg_value.go
 model_power_outlet_template.go
 model_power_outlet_type.go
 model_power_outlet_type_choices.go
@@ -2688,6 +2772,7 @@ model_service.go
 model_service_protocol.go
 model_service_protocol_choices.go
 model_service_protocol_label.go
+model_service_protocol_value.go
 model_service_type_enum.go
 model_software_image_file.go
 model_software_image_file_request.go
@@ -2784,6 +2869,7 @@ model_wireless_network_mode_choices.go
 model_wireless_network_request.go
 model_wireless_supported_data_rates_list_standard_parameter_inner.go
 model_writable_cable_request.go
+model_writable_computed_field_request.go
 model_writable_console_port_request.go
 model_writable_console_port_template_request.go
 model_writable_console_server_port_request.go

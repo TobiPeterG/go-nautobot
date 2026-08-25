@@ -18,10 +18,11 @@ Name | Type | Description | Notes
 **PrimaryIp4** | Pointer to [**NullablePrimaryIPv4**](PrimaryIPv4.md) |  | [optional] 
 **PrimaryIp6** | Pointer to [**NullablePrimaryIPv6**](PrimaryIPv6.md) |  | [optional] 
 **Tenant** | Pointer to [**NullableApprovalWorkflowUser**](ApprovalWorkflowUser.md) |  | [optional] 
+**ControllerManagedDeviceGroup** | Pointer to [**NullableApprovalWorkflowUser**](ApprovalWorkflowUser.md) |  | [optional] 
 **Created** | **NullableTime** |  | [readonly] 
 **LastUpdated** | **NullableTime** |  | [readonly] 
 **NotesUrl** | **string** |  | [readonly] 
-**CustomFields** | Pointer to **map[string]interface{}** |  | [optional] 
+**CustomFields** | Pointer to **map[string]interface{}** | Custom field data for this object, keyed by each applicable Custom Field&#39;s &#x60;key&#x60;. Value types vary with the custom field&#39;s type (text, integer, boolean, date, URL, JSON, select, multi-select); undefined values are &#x60;null&#x60;. On write, the payload is merged with existing values (PATCH-style: keys omitted from the payload are left untouched), and keys that do not correspond to a defined custom field are ignored. | [optional] 
 **Tags** | Pointer to [**[]BulkWritableCableRequestStatus**](BulkWritableCableRequestStatus.md) |  | [optional] 
 
 ## Methods
@@ -408,6 +409,41 @@ HasTenant returns a boolean if a field has been set.
 `func (o *VirtualDeviceContext) UnsetTenant()`
 
 UnsetTenant ensures that no value is present for Tenant, not even an explicit nil
+### GetControllerManagedDeviceGroup
+
+`func (o *VirtualDeviceContext) GetControllerManagedDeviceGroup() ApprovalWorkflowUser`
+
+GetControllerManagedDeviceGroup returns the ControllerManagedDeviceGroup field if non-nil, zero value otherwise.
+
+### GetControllerManagedDeviceGroupOk
+
+`func (o *VirtualDeviceContext) GetControllerManagedDeviceGroupOk() (*ApprovalWorkflowUser, bool)`
+
+GetControllerManagedDeviceGroupOk returns a tuple with the ControllerManagedDeviceGroup field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetControllerManagedDeviceGroup
+
+`func (o *VirtualDeviceContext) SetControllerManagedDeviceGroup(v ApprovalWorkflowUser)`
+
+SetControllerManagedDeviceGroup sets ControllerManagedDeviceGroup field to given value.
+
+### HasControllerManagedDeviceGroup
+
+`func (o *VirtualDeviceContext) HasControllerManagedDeviceGroup() bool`
+
+HasControllerManagedDeviceGroup returns a boolean if a field has been set.
+
+### SetControllerManagedDeviceGroupNil
+
+`func (o *VirtualDeviceContext) SetControllerManagedDeviceGroupNil(b bool)`
+
+ SetControllerManagedDeviceGroupNil sets the value for ControllerManagedDeviceGroup to be an explicit nil
+
+### UnsetControllerManagedDeviceGroup
+`func (o *VirtualDeviceContext) UnsetControllerManagedDeviceGroup()`
+
+UnsetControllerManagedDeviceGroup ensures that no value is present for ControllerManagedDeviceGroup, not even an explicit nil
 ### GetCreated
 
 `func (o *VirtualDeviceContext) GetCreated() time.Time`
@@ -490,20 +526,20 @@ SetNotesUrl sets NotesUrl field to given value.
 
 ### GetCustomFields
 
-`func (o *VirtualDeviceContext) GetCustomFields() map[string]interface{}`
+`func (o *VirtualDeviceContext) GetCustomFields() map[string]*interface{}`
 
 GetCustomFields returns the CustomFields field if non-nil, zero value otherwise.
 
 ### GetCustomFieldsOk
 
-`func (o *VirtualDeviceContext) GetCustomFieldsOk() (*map[string]interface{}, bool)`
+`func (o *VirtualDeviceContext) GetCustomFieldsOk() (*map[string]*interface{}, bool)`
 
 GetCustomFieldsOk returns a tuple with the CustomFields field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCustomFields
 
-`func (o *VirtualDeviceContext) SetCustomFields(v map[string]interface{})`
+`func (o *VirtualDeviceContext) SetCustomFields(v map[string]*interface{})`
 
 SetCustomFields sets CustomFields field to given value.
 

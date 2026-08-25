@@ -5,12 +5,12 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | Pointer to **string** |  | [optional] 
-**Units** | **interface{}** | List of rack unit numbers to reserve | 
+**Units** | **[]int32** | List of rack unit numbers to reserve | 
 **Description** | **string** |  | 
 **Rack** | [**BulkWritableCableRequestStatus**](BulkWritableCableRequestStatus.md) |  | 
 **Tenant** | Pointer to [**NullableApprovalWorkflowUser**](ApprovalWorkflowUser.md) |  | [optional] 
 **User** | Pointer to [**BulkWritableRackReservationRequestUser**](BulkWritableRackReservationRequestUser.md) |  | [optional] 
-**CustomFields** | Pointer to **map[string]interface{}** |  | [optional] 
+**CustomFields** | Pointer to **map[string]interface{}** | Custom field data for this object, keyed by each applicable Custom Field&#39;s &#x60;key&#x60;. Value types vary with the custom field&#39;s type (text, integer, boolean, date, URL, JSON, select, multi-select); undefined values are &#x60;null&#x60;. On write, the payload is merged with existing values (PATCH-style: keys omitted from the payload are left untouched), and keys that do not correspond to a defined custom field are ignored. | [optional] 
 **Relationships** | Pointer to [**map[string]ApprovalWorkflowDefinitionRequestRelationshipsValue**](ApprovalWorkflowDefinitionRequestRelationshipsValue.md) |  | [optional] 
 **Tags** | Pointer to [**[]BulkWritableCableRequestStatus**](BulkWritableCableRequestStatus.md) |  | [optional] 
 
@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 
 ### NewRackReservationRequest
 
-`func NewRackReservationRequest(units interface{}, description string, rack BulkWritableCableRequestStatus, ) *RackReservationRequest`
+`func NewRackReservationRequest(units []int32, description string, rack BulkWritableCableRequestStatus, ) *RackReservationRequest`
 
 NewRackReservationRequest instantiates a new RackReservationRequest object
 This constructor will assign default values to properties that have it defined,
@@ -60,34 +60,24 @@ HasId returns a boolean if a field has been set.
 
 ### GetUnits
 
-`func (o *RackReservationRequest) GetUnits() interface{}`
+`func (o *RackReservationRequest) GetUnits() []int32`
 
 GetUnits returns the Units field if non-nil, zero value otherwise.
 
 ### GetUnitsOk
 
-`func (o *RackReservationRequest) GetUnitsOk() (*interface{}, bool)`
+`func (o *RackReservationRequest) GetUnitsOk() (*[]int32, bool)`
 
 GetUnitsOk returns a tuple with the Units field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUnits
 
-`func (o *RackReservationRequest) SetUnits(v interface{})`
+`func (o *RackReservationRequest) SetUnits(v []int32)`
 
 SetUnits sets Units field to given value.
 
 
-### SetUnitsNil
-
-`func (o *RackReservationRequest) SetUnitsNil(b bool)`
-
- SetUnitsNil sets the value for Units to be an explicit nil
-
-### UnsetUnits
-`func (o *RackReservationRequest) UnsetUnits()`
-
-UnsetUnits ensures that no value is present for Units, not even an explicit nil
 ### GetDescription
 
 `func (o *RackReservationRequest) GetDescription() string`
@@ -190,20 +180,20 @@ HasUser returns a boolean if a field has been set.
 
 ### GetCustomFields
 
-`func (o *RackReservationRequest) GetCustomFields() map[string]interface{}`
+`func (o *RackReservationRequest) GetCustomFields() map[string]*interface{}`
 
 GetCustomFields returns the CustomFields field if non-nil, zero value otherwise.
 
 ### GetCustomFieldsOk
 
-`func (o *RackReservationRequest) GetCustomFieldsOk() (*map[string]interface{}, bool)`
+`func (o *RackReservationRequest) GetCustomFieldsOk() (*map[string]*interface{}, bool)`
 
 GetCustomFieldsOk returns a tuple with the CustomFields field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCustomFields
 
-`func (o *RackReservationRequest) SetCustomFields(v map[string]interface{})`
+`func (o *RackReservationRequest) SetCustomFields(v map[string]*interface{})`
 
 SetCustomFields sets CustomFields field to given value.
 

@@ -6,10 +6,10 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | Pointer to **string** |  | [optional] 
 **ObjectTypes** | **[]string** |  | 
+**Actions** | **[]string** | The list of actions granted by this permission | 
 **Name** | **string** |  | 
 **Description** | Pointer to **string** |  | [optional] 
 **Enabled** | Pointer to **bool** |  | [optional] 
-**Actions** | **interface{}** | The list of actions granted by this permission | 
 **Constraints** | Pointer to **interface{}** | Queryset filter matching the applicable objects of the selected type(s) | [optional] 
 **Groups** | Pointer to [**[]BulkWritableCableRequestStatus**](BulkWritableCableRequestStatus.md) |  | [optional] 
 **Users** | Pointer to [**[]BulkWritableCableRequestStatus**](BulkWritableCableRequestStatus.md) |  | [optional] 
@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 
 ### NewObjectPermissionRequest
 
-`func NewObjectPermissionRequest(objectTypes []string, name string, actions interface{}, ) *ObjectPermissionRequest`
+`func NewObjectPermissionRequest(objectTypes []string, actions []string, name string, ) *ObjectPermissionRequest`
 
 NewObjectPermissionRequest instantiates a new ObjectPermissionRequest object
 This constructor will assign default values to properties that have it defined,
@@ -76,6 +76,26 @@ and a boolean to check if the value has been set.
 `func (o *ObjectPermissionRequest) SetObjectTypes(v []string)`
 
 SetObjectTypes sets ObjectTypes field to given value.
+
+
+### GetActions
+
+`func (o *ObjectPermissionRequest) GetActions() []string`
+
+GetActions returns the Actions field if non-nil, zero value otherwise.
+
+### GetActionsOk
+
+`func (o *ObjectPermissionRequest) GetActionsOk() (*[]string, bool)`
+
+GetActionsOk returns a tuple with the Actions field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetActions
+
+`func (o *ObjectPermissionRequest) SetActions(v []string)`
+
+SetActions sets Actions field to given value.
 
 
 ### GetName
@@ -148,36 +168,6 @@ SetEnabled sets Enabled field to given value.
 
 HasEnabled returns a boolean if a field has been set.
 
-### GetActions
-
-`func (o *ObjectPermissionRequest) GetActions() interface{}`
-
-GetActions returns the Actions field if non-nil, zero value otherwise.
-
-### GetActionsOk
-
-`func (o *ObjectPermissionRequest) GetActionsOk() (*interface{}, bool)`
-
-GetActionsOk returns a tuple with the Actions field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetActions
-
-`func (o *ObjectPermissionRequest) SetActions(v interface{})`
-
-SetActions sets Actions field to given value.
-
-
-### SetActionsNil
-
-`func (o *ObjectPermissionRequest) SetActionsNil(b bool)`
-
- SetActionsNil sets the value for Actions to be an explicit nil
-
-### UnsetActions
-`func (o *ObjectPermissionRequest) UnsetActions()`
-
-UnsetActions ensures that no value is present for Actions, not even an explicit nil
 ### GetConstraints
 
 `func (o *ObjectPermissionRequest) GetConstraints() interface{}`

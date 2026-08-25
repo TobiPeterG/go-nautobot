@@ -9,6 +9,8 @@
 
 * `MD5` (value: `"md5"`)
 
+* `NULL` (value: `"null"`)
+
 * `SHA1` (value: `"sha1"`)
 
 * `SHA224` (value: `"sha224"`)

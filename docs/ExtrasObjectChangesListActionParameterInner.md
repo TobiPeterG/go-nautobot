@@ -7,6 +7,8 @@
 
 * `DELETE` (value: `"delete"`)
 
+* `NULL` (value: `"null"`)
+
 * `UPDATE` (value: `"update"`)
 
 

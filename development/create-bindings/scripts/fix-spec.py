@@ -19,6 +19,18 @@ with open(SPEC_PATH, 'r') as file:
 if 'components' in data and 'schemas' in data['components']:
     for name, schema in data['components']['schemas'].items():
 
+        # OpenAPI Generator turns "802.1Q Mode" into the invalid Go identifier "8021QMode".
+        if name in (
+            'PatchedWritableInterfaceRequest',
+            'PatchedWritableVMInterfaceRequest',
+            'WritableInterfaceRequest',
+            'WritableVMInterfaceRequest',
+        ):
+            mode_property = schema.get('properties', {}).get('mode', {})
+            if mode_property.get('title') == '802.1Q Mode':
+                print(f"Replacing Go-unsafe title in {name}.properties.mode")
+                mode_property['title'] = 'IEEE802.1Q Mode'
+
         # Remove *_count from required (https://github.com/nautobot/nautobot/issues/6183)
         if 'required' in schema:
             required_fields = schema['required']
@@ -142,6 +154,14 @@ if 'components' in data and 'schemas' in data['components']:
 
 # Patch to use AvailableIP array directly instead of PaginatedAvailableIPList (https://github.com/nautobot/nautobot/issues/2131)
 if 'paths' in data:
+    # OpenAPI Generator also uses these inline query schema titles as Go type names.
+    for path_name in ('/dcim/interfaces/', '/virtualization/interfaces/'):
+        for parameter in data['paths'].get(path_name, {}).get('get', {}).get('parameters', []):
+            items = parameter.get('schema', {}).get('items', {})
+            if parameter.get('name') == 'mode' and items.get('title') == '802.1Q Mode':
+                print(f"Replacing Go-unsafe title in {path_name} GET mode parameter")
+                items['title'] = 'IEEE802.1Q Mode'
+
     if '/ipam/prefixes/{id}/available-ips/' in data['paths']:
         available_ips_path = data['paths']['/ipam/prefixes/{id}/available-ips/']
         if 'get' in available_ips_path and 'responses' in available_ips_path['get']:

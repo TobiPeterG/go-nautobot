@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **MacAddress** | Pointer to **NullableString** |  | [optional] 
 **Enabled** | Pointer to **bool** |  | [optional] 
 **Mtu** | Pointer to **NullableInt32** |  | [optional] 
-**Mode** | Pointer to [**PatchedWritableInterfaceRequestMode**](PatchedWritableInterfaceRequestMode.md) |  | [optional] 
+**Mode** | Pointer to [**IEEE8021QMode1**](IEEE8021QMode1.md) |  | [optional] 
 **Name** | **string** |  | 
 **Description** | Pointer to **string** |  | [optional] 
 **Status** | [**BulkWritableCableRequestStatus**](BulkWritableCableRequestStatus.md) |  | 
@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **UntaggedVlan** | Pointer to [**NullableApprovalWorkflowUser**](ApprovalWorkflowUser.md) |  | [optional] 
 **Vrf** | Pointer to [**NullableApprovalWorkflowUser**](ApprovalWorkflowUser.md) |  | [optional] 
 **TaggedVlans** | Pointer to [**[]TaggedVLANs**](TaggedVLANs.md) |  | [optional] 
-**CustomFields** | Pointer to **map[string]interface{}** |  | [optional] 
+**CustomFields** | Pointer to **map[string]interface{}** | Custom field data for this object, keyed by each applicable Custom Field&#39;s &#x60;key&#x60;. Value types vary with the custom field&#39;s type (text, integer, boolean, date, URL, JSON, select, multi-select); undefined values are &#x60;null&#x60;. On write, the payload is merged with existing values (PATCH-style: keys omitted from the payload are left untouched), and keys that do not correspond to a defined custom field are ignored. | [optional] 
 **Relationships** | Pointer to [**map[string]ApprovalWorkflowDefinitionRequestRelationshipsValue**](ApprovalWorkflowDefinitionRequestRelationshipsValue.md) |  | [optional] 
 **Tags** | Pointer to [**[]BulkWritableCableRequestStatus**](BulkWritableCableRequestStatus.md) |  | [optional] 
 
@@ -164,20 +164,20 @@ HasMtu returns a boolean if a field has been set.
 UnsetMtu ensures that no value is present for Mtu, not even an explicit nil
 ### GetMode
 
-`func (o *WritableVMInterfaceRequest) GetMode() PatchedWritableInterfaceRequestMode`
+`func (o *WritableVMInterfaceRequest) GetMode() IEEE8021QMode1`
 
 GetMode returns the Mode field if non-nil, zero value otherwise.
 
 ### GetModeOk
 
-`func (o *WritableVMInterfaceRequest) GetModeOk() (*PatchedWritableInterfaceRequestMode, bool)`
+`func (o *WritableVMInterfaceRequest) GetModeOk() (*IEEE8021QMode1, bool)`
 
 GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMode
 
-`func (o *WritableVMInterfaceRequest) SetMode(v PatchedWritableInterfaceRequestMode)`
+`func (o *WritableVMInterfaceRequest) SetMode(v IEEE8021QMode1)`
 
 SetMode sets Mode field to given value.
 
@@ -474,20 +474,20 @@ HasTaggedVlans returns a boolean if a field has been set.
 
 ### GetCustomFields
 
-`func (o *WritableVMInterfaceRequest) GetCustomFields() map[string]interface{}`
+`func (o *WritableVMInterfaceRequest) GetCustomFields() map[string]*interface{}`
 
 GetCustomFields returns the CustomFields field if non-nil, zero value otherwise.
 
 ### GetCustomFieldsOk
 
-`func (o *WritableVMInterfaceRequest) GetCustomFieldsOk() (*map[string]interface{}, bool)`
+`func (o *WritableVMInterfaceRequest) GetCustomFieldsOk() (*map[string]*interface{}, bool)`
 
 GetCustomFieldsOk returns a tuple with the CustomFields field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCustomFields
 
-`func (o *WritableVMInterfaceRequest) SetCustomFields(v map[string]interface{})`
+`func (o *WritableVMInterfaceRequest) SetCustomFields(v map[string]*interface{})`
 
 SetCustomFields sets CustomFields field to given value.
 

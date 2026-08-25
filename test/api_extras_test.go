@@ -3377,6 +3377,34 @@ func Test_nautobot_ExtrasAPIService(t *testing.T) {
 
 	})
 
+	t.Run("Test ExtrasAPIService ExtrasJobResultsCancelCreate", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		var id string
+
+		resp, httpRes, err := apiClient.ExtrasAPI.ExtrasJobResultsCancelCreate(context.Background(), id).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test ExtrasAPIService ExtrasJobResultsCancelRetrieve", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		var id string
+
+		resp, httpRes, err := apiClient.ExtrasAPI.ExtrasJobResultsCancelRetrieve(context.Background(), id).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
 	t.Run("Test ExtrasAPIService ExtrasJobResultsDestroy", func(t *testing.T) {
 
 		t.Skip("skip test")  // remove to run test

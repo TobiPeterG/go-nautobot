@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **Display** | **string** | Human friendly display value | [readonly] 
 **Url** | **string** |  | [readonly] 
 **NaturalSlug** | **string** |  | [readonly] 
-**TaskQueues** | **interface{}** |  | [readonly] 
+**TaskQueues** | **[]string** |  | [readonly] 
 **TaskQueuesOverride** | **bool** |  | [readonly] 
 **ModuleName** | **string** | Dotted name of the Python module providing this job | [readonly] 
 **JobClassName** | **string** | Name of the Python class providing this job | [readonly] 
@@ -46,13 +46,13 @@ Name | Type | Description | Notes
 **LastUpdated** | **NullableTime** |  | [readonly] 
 **Tags** | Pointer to [**[]BulkWritableCableRequestStatus**](BulkWritableCableRequestStatus.md) |  | [optional] 
 **NotesUrl** | **string** |  | [readonly] 
-**CustomFields** | Pointer to **map[string]interface{}** |  | [optional] 
+**CustomFields** | Pointer to **map[string]interface{}** | Custom field data for this object, keyed by each applicable Custom Field&#39;s &#x60;key&#x60;. Value types vary with the custom field&#39;s type (text, integer, boolean, date, URL, JSON, select, multi-select); undefined values are &#x60;null&#x60;. On write, the payload is merged with existing values (PATCH-style: keys omitted from the payload are left untouched), and keys that do not correspond to a defined custom field are ignored. | [optional] 
 
 ## Methods
 
 ### NewJob
 
-`func NewJob(objectType string, display string, url string, naturalSlug string, taskQueues interface{}, taskQueuesOverride bool, moduleName string, jobClassName string, grouping string, name string, installed bool, isJobHookReceiver bool, isJobButtonReceiver bool, readOnly bool, supportsDryrun bool, defaultJobQueue BulkWritableCableRequestStatus, created NullableTime, lastUpdated NullableTime, notesUrl string, ) *Job`
+`func NewJob(objectType string, display string, url string, naturalSlug string, taskQueues []string, taskQueuesOverride bool, moduleName string, jobClassName string, grouping string, name string, installed bool, isJobHookReceiver bool, isJobButtonReceiver bool, readOnly bool, supportsDryrun bool, defaultJobQueue BulkWritableCableRequestStatus, created NullableTime, lastUpdated NullableTime, notesUrl string, ) *Job`
 
 NewJob instantiates a new Job object
 This constructor will assign default values to properties that have it defined,
@@ -174,34 +174,24 @@ SetNaturalSlug sets NaturalSlug field to given value.
 
 ### GetTaskQueues
 
-`func (o *Job) GetTaskQueues() interface{}`
+`func (o *Job) GetTaskQueues() []string`
 
 GetTaskQueues returns the TaskQueues field if non-nil, zero value otherwise.
 
 ### GetTaskQueuesOk
 
-`func (o *Job) GetTaskQueuesOk() (*interface{}, bool)`
+`func (o *Job) GetTaskQueuesOk() (*[]string, bool)`
 
 GetTaskQueuesOk returns a tuple with the TaskQueues field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTaskQueues
 
-`func (o *Job) SetTaskQueues(v interface{})`
+`func (o *Job) SetTaskQueues(v []string)`
 
 SetTaskQueues sets TaskQueues field to given value.
 
 
-### SetTaskQueuesNil
-
-`func (o *Job) SetTaskQueuesNil(b bool)`
-
- SetTaskQueuesNil sets the value for TaskQueues to be an explicit nil
-
-### UnsetTaskQueues
-`func (o *Job) UnsetTaskQueues()`
-
-UnsetTaskQueues ensures that no value is present for TaskQueues, not even an explicit nil
 ### GetTaskQueuesOverride
 
 `func (o *Job) GetTaskQueuesOverride() bool`
@@ -1054,20 +1044,20 @@ SetNotesUrl sets NotesUrl field to given value.
 
 ### GetCustomFields
 
-`func (o *Job) GetCustomFields() map[string]interface{}`
+`func (o *Job) GetCustomFields() map[string]*interface{}`
 
 GetCustomFields returns the CustomFields field if non-nil, zero value otherwise.
 
 ### GetCustomFieldsOk
 
-`func (o *Job) GetCustomFieldsOk() (*map[string]interface{}, bool)`
+`func (o *Job) GetCustomFieldsOk() (*map[string]*interface{}, bool)`
 
 GetCustomFieldsOk returns a tuple with the CustomFields field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCustomFields
 
-`func (o *Job) SetCustomFields(v map[string]interface{})`
+`func (o *Job) SetCustomFields(v map[string]*interface{})`
 
 SetCustomFields sets CustomFields field to given value.
 

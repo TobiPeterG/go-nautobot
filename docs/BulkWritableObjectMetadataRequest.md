@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **Id** | **string** |  | 
 **AssignedObjectType** | **string** |  | 
 **Value** | Pointer to **interface{}** |  | [optional] 
-**ScopedFields** | Pointer to **interface{}** | List of scoped fields, only direct fields on the model | [optional] 
+**ScopedFields** | Pointer to **[]string** | List of scoped fields, only direct fields on the model | [optional] 
 **AssignedObjectId** | **string** |  | 
 **MetadataType** | [**BulkWritableCableRequestStatus**](BulkWritableCableRequestStatus.md) |  | 
 **Contact** | Pointer to [**NullableApprovalWorkflowUser**](ApprovalWorkflowUser.md) |  | [optional] 
@@ -109,20 +109,20 @@ HasValue returns a boolean if a field has been set.
 UnsetValue ensures that no value is present for Value, not even an explicit nil
 ### GetScopedFields
 
-`func (o *BulkWritableObjectMetadataRequest) GetScopedFields() interface{}`
+`func (o *BulkWritableObjectMetadataRequest) GetScopedFields() []string`
 
 GetScopedFields returns the ScopedFields field if non-nil, zero value otherwise.
 
 ### GetScopedFieldsOk
 
-`func (o *BulkWritableObjectMetadataRequest) GetScopedFieldsOk() (*interface{}, bool)`
+`func (o *BulkWritableObjectMetadataRequest) GetScopedFieldsOk() (*[]string, bool)`
 
 GetScopedFieldsOk returns a tuple with the ScopedFields field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetScopedFields
 
-`func (o *BulkWritableObjectMetadataRequest) SetScopedFields(v interface{})`
+`func (o *BulkWritableObjectMetadataRequest) SetScopedFields(v []string)`
 
 SetScopedFields sets ScopedFields field to given value.
 
@@ -132,16 +132,6 @@ SetScopedFields sets ScopedFields field to given value.
 
 HasScopedFields returns a boolean if a field has been set.
 
-### SetScopedFieldsNil
-
-`func (o *BulkWritableObjectMetadataRequest) SetScopedFieldsNil(b bool)`
-
- SetScopedFieldsNil sets the value for ScopedFields to be an explicit nil
-
-### UnsetScopedFields
-`func (o *BulkWritableObjectMetadataRequest) UnsetScopedFields()`
-
-UnsetScopedFields ensures that no value is present for ScopedFields, not even an explicit nil
 ### GetAssignedObjectId
 
 `func (o *BulkWritableObjectMetadataRequest) GetAssignedObjectId() string`

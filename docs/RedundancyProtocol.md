@@ -9,6 +9,8 @@
 
 * `HSRP` (value: `"hsrp"`)
 
+* `NULL` (value: `"null"`)
+
 * `VRRP` (value: `"vrrp"`)
 
 

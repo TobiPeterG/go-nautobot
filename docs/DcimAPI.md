@@ -4,6 +4,17 @@ All URIs are relative to */api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**DcimCableTypesBulkDestroy**](DcimAPI.md#DcimCableTypesBulkDestroy) | **Delete** /dcim/cable-types/ | 
+[**DcimCableTypesBulkPartialUpdate**](DcimAPI.md#DcimCableTypesBulkPartialUpdate) | **Patch** /dcim/cable-types/ | 
+[**DcimCableTypesBulkUpdate**](DcimAPI.md#DcimCableTypesBulkUpdate) | **Put** /dcim/cable-types/ | 
+[**DcimCableTypesCreate**](DcimAPI.md#DcimCableTypesCreate) | **Post** /dcim/cable-types/ | 
+[**DcimCableTypesDestroy**](DcimAPI.md#DcimCableTypesDestroy) | **Delete** /dcim/cable-types/{id}/ | 
+[**DcimCableTypesList**](DcimAPI.md#DcimCableTypesList) | **Get** /dcim/cable-types/ | 
+[**DcimCableTypesNotesCreate**](DcimAPI.md#DcimCableTypesNotesCreate) | **Post** /dcim/cable-types/{id}/notes/ | 
+[**DcimCableTypesNotesList**](DcimAPI.md#DcimCableTypesNotesList) | **Get** /dcim/cable-types/{id}/notes/ | 
+[**DcimCableTypesPartialUpdate**](DcimAPI.md#DcimCableTypesPartialUpdate) | **Patch** /dcim/cable-types/{id}/ | 
+[**DcimCableTypesRetrieve**](DcimAPI.md#DcimCableTypesRetrieve) | **Get** /dcim/cable-types/{id}/ | 
+[**DcimCableTypesUpdate**](DcimAPI.md#DcimCableTypesUpdate) | **Put** /dcim/cable-types/{id}/ | 
 [**DcimCablesBulkDestroy**](DcimAPI.md#DcimCablesBulkDestroy) | **Delete** /dcim/cables/ | 
 [**DcimCablesBulkPartialUpdate**](DcimAPI.md#DcimCablesBulkPartialUpdate) | **Patch** /dcim/cables/ | 
 [**DcimCablesBulkUpdate**](DcimAPI.md#DcimCablesBulkUpdate) | **Put** /dcim/cables/ | 
@@ -14,6 +25,17 @@ Method | HTTP request | Description
 [**DcimCablesNotesList**](DcimAPI.md#DcimCablesNotesList) | **Get** /dcim/cables/{id}/notes/ | 
 [**DcimCablesPartialUpdate**](DcimAPI.md#DcimCablesPartialUpdate) | **Patch** /dcim/cables/{id}/ | 
 [**DcimCablesRetrieve**](DcimAPI.md#DcimCablesRetrieve) | **Get** /dcim/cables/{id}/ | 
+[**DcimCablesToCableTerminationsBulkDestroy**](DcimAPI.md#DcimCablesToCableTerminationsBulkDestroy) | **Delete** /dcim/cables-to-cable-terminations/ | 
+[**DcimCablesToCableTerminationsBulkPartialUpdate**](DcimAPI.md#DcimCablesToCableTerminationsBulkPartialUpdate) | **Patch** /dcim/cables-to-cable-terminations/ | 
+[**DcimCablesToCableTerminationsBulkUpdate**](DcimAPI.md#DcimCablesToCableTerminationsBulkUpdate) | **Put** /dcim/cables-to-cable-terminations/ | 
+[**DcimCablesToCableTerminationsCreate**](DcimAPI.md#DcimCablesToCableTerminationsCreate) | **Post** /dcim/cables-to-cable-terminations/ | 
+[**DcimCablesToCableTerminationsDestroy**](DcimAPI.md#DcimCablesToCableTerminationsDestroy) | **Delete** /dcim/cables-to-cable-terminations/{id}/ | 
+[**DcimCablesToCableTerminationsList**](DcimAPI.md#DcimCablesToCableTerminationsList) | **Get** /dcim/cables-to-cable-terminations/ | 
+[**DcimCablesToCableTerminationsNotesCreate**](DcimAPI.md#DcimCablesToCableTerminationsNotesCreate) | **Post** /dcim/cables-to-cable-terminations/{id}/notes/ | 
+[**DcimCablesToCableTerminationsNotesList**](DcimAPI.md#DcimCablesToCableTerminationsNotesList) | **Get** /dcim/cables-to-cable-terminations/{id}/notes/ | 
+[**DcimCablesToCableTerminationsPartialUpdate**](DcimAPI.md#DcimCablesToCableTerminationsPartialUpdate) | **Patch** /dcim/cables-to-cable-terminations/{id}/ | 
+[**DcimCablesToCableTerminationsRetrieve**](DcimAPI.md#DcimCablesToCableTerminationsRetrieve) | **Get** /dcim/cables-to-cable-terminations/{id}/ | 
+[**DcimCablesToCableTerminationsUpdate**](DcimAPI.md#DcimCablesToCableTerminationsUpdate) | **Put** /dcim/cables-to-cable-terminations/{id}/ | 
 [**DcimCablesUpdate**](DcimAPI.md#DcimCablesUpdate) | **Put** /dcim/cables/{id}/ | 
 [**DcimConnectedDeviceList**](DcimAPI.md#DcimConnectedDeviceList) | **Get** /dcim/connected-device/ | 
 [**DcimConsoleConnectionsList**](DcimAPI.md#DcimConsoleConnectionsList) | **Get** /dcim/console-connections/ | 
@@ -515,6 +537,1001 @@ Method | HTTP request | Description
 
 
 
+## DcimCableTypesBulkDestroy
+
+> DcimCableTypesBulkDestroy(ctx).BulkOperationRequest(bulkOperationRequest).Format(format).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/nautobot/go-nautobot/v3"
+)
+
+func main() {
+	bulkOperationRequest := []openapiclient.BulkOperationRequest{*openapiclient.NewBulkOperationRequest("Id_example")} // []BulkOperationRequest | 
+	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.DcimAPI.DcimCableTypesBulkDestroy(context.Background()).BulkOperationRequest(bulkOperationRequest).Format(format).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DcimAPI.DcimCableTypesBulkDestroy``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDcimCableTypesBulkDestroyRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **bulkOperationRequest** | [**[]BulkOperationRequest**](BulkOperationRequest.md) |  | 
+ **format** | [**CircuitsCircuitTerminationsListFormatParameter**](CircuitsCircuitTerminationsListFormatParameter.md) |  | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [tokenAuth](../README.md#tokenAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json, text/csv
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DcimCableTypesBulkPartialUpdate
+
+> []CableType DcimCableTypesBulkPartialUpdate(ctx).PatchedBulkWritableCableTypeRequest(patchedBulkWritableCableTypeRequest).Format(format).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/nautobot/go-nautobot/v3"
+)
+
+func main() {
+	patchedBulkWritableCableTypeRequest := []openapiclient.PatchedBulkWritableCableTypeRequest{*openapiclient.NewPatchedBulkWritableCableTypeRequest("Id_example")} // []PatchedBulkWritableCableTypeRequest | 
+	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DcimAPI.DcimCableTypesBulkPartialUpdate(context.Background()).PatchedBulkWritableCableTypeRequest(patchedBulkWritableCableTypeRequest).Format(format).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DcimAPI.DcimCableTypesBulkPartialUpdate``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `DcimCableTypesBulkPartialUpdate`: []CableType
+	fmt.Fprintf(os.Stdout, "Response from `DcimAPI.DcimCableTypesBulkPartialUpdate`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDcimCableTypesBulkPartialUpdateRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **patchedBulkWritableCableTypeRequest** | [**[]PatchedBulkWritableCableTypeRequest**](PatchedBulkWritableCableTypeRequest.md) |  | 
+ **format** | [**CircuitsCircuitTerminationsListFormatParameter**](CircuitsCircuitTerminationsListFormatParameter.md) |  | 
+
+### Return type
+
+[**[]CableType**](CableType.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [tokenAuth](../README.md#tokenAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json, text/csv
+- **Accept**: application/json, text/csv
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DcimCableTypesBulkUpdate
+
+> []CableType DcimCableTypesBulkUpdate(ctx).BulkWritableCableTypeRequest(bulkWritableCableTypeRequest).Format(format).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/nautobot/go-nautobot/v3"
+)
+
+func main() {
+	bulkWritableCableTypeRequest := []openapiclient.BulkWritableCableTypeRequest{*openapiclient.NewBulkWritableCableTypeRequest("Id_example", "Name_example")} // []BulkWritableCableTypeRequest | 
+	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DcimAPI.DcimCableTypesBulkUpdate(context.Background()).BulkWritableCableTypeRequest(bulkWritableCableTypeRequest).Format(format).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DcimAPI.DcimCableTypesBulkUpdate``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `DcimCableTypesBulkUpdate`: []CableType
+	fmt.Fprintf(os.Stdout, "Response from `DcimAPI.DcimCableTypesBulkUpdate`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDcimCableTypesBulkUpdateRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **bulkWritableCableTypeRequest** | [**[]BulkWritableCableTypeRequest**](BulkWritableCableTypeRequest.md) |  | 
+ **format** | [**CircuitsCircuitTerminationsListFormatParameter**](CircuitsCircuitTerminationsListFormatParameter.md) |  | 
+
+### Return type
+
+[**[]CableType**](CableType.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [tokenAuth](../README.md#tokenAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json, text/csv
+- **Accept**: application/json, text/csv
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DcimCableTypesCreate
+
+> CableType DcimCableTypesCreate(ctx).CableTypeRequest(cableTypeRequest).Format(format).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/nautobot/go-nautobot/v3"
+)
+
+func main() {
+	cableTypeRequest := *openapiclient.NewCableTypeRequest("Name_example") // CableTypeRequest | 
+	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DcimAPI.DcimCableTypesCreate(context.Background()).CableTypeRequest(cableTypeRequest).Format(format).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DcimAPI.DcimCableTypesCreate``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `DcimCableTypesCreate`: CableType
+	fmt.Fprintf(os.Stdout, "Response from `DcimAPI.DcimCableTypesCreate`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDcimCableTypesCreateRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cableTypeRequest** | [**CableTypeRequest**](CableTypeRequest.md) |  | 
+ **format** | [**CircuitsCircuitTerminationsListFormatParameter**](CircuitsCircuitTerminationsListFormatParameter.md) |  | 
+
+### Return type
+
+[**CableType**](CableType.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [tokenAuth](../README.md#tokenAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json, text/csv
+- **Accept**: application/json, text/csv
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DcimCableTypesDestroy
+
+> DcimCableTypesDestroy(ctx, id).Format(format).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/nautobot/go-nautobot/v3"
+)
+
+func main() {
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | A UUID string identifying this cable type.
+	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.DcimAPI.DcimCableTypesDestroy(context.Background(), id).Format(format).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DcimAPI.DcimCableTypesDestroy``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**id** | **string** | A UUID string identifying this cable type. | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDcimCableTypesDestroyRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **format** | [**CircuitsCircuitTerminationsListFormatParameter**](CircuitsCircuitTerminationsListFormatParameter.md) |  | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [tokenAuth](../README.md#tokenAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DcimCableTypesList
+
+> PaginatedCableTypeList DcimCableTypesList(ctx).AConnectors(aConnectors).AConnectorsGt(aConnectorsGt).AConnectorsGte(aConnectorsGte).AConnectorsLt(aConnectorsLt).AConnectorsLte(aConnectorsLte).AConnectorsN(aConnectorsN).BConnectors(bConnectors).BConnectorsGt(bConnectorsGt).BConnectorsGte(bConnectorsGte).BConnectorsLt(bConnectorsLt).BConnectorsLte(bConnectorsLte).BConnectorsN(bConnectorsN).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Created(created).CreatedGt(createdGt).CreatedGte(createdGte).CreatedIsnull(createdIsnull).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).HasEmbeddedTransceivers(hasEmbeddedTransceivers).Id(id).IdN(idN).IsBreakout(isBreakout).IsShuffle(isShuffle).LastUpdated(lastUpdated).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedIsnull(lastUpdatedIsnull).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).Manufacturer(manufacturer).ManufacturerIsnull(manufacturerIsnull).ManufacturerN(manufacturerN).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).PartNumber(partNumber).PartNumberIc(partNumberIc).PartNumberIe(partNumberIe).PartNumberIew(partNumberIew).PartNumberIre(partNumberIre).PartNumberIsw(partNumberIsw).PartNumberN(partNumberN).PartNumberNic(partNumberNic).PartNumberNie(partNumberNie).PartNumberNiew(partNumberNiew).PartNumberNire(partNumberNire).PartNumberNisw(partNumberNisw).PartNumberNre(partNumberNre).PartNumberRe(partNumberRe).PolarityMethod(polarityMethod).PolarityMethodIc(polarityMethodIc).PolarityMethodIe(polarityMethodIe).PolarityMethodIew(polarityMethodIew).PolarityMethodIre(polarityMethodIre).PolarityMethodIsw(polarityMethodIsw).PolarityMethodN(polarityMethodN).PolarityMethodNic(polarityMethodNic).PolarityMethodNie(polarityMethodNie).PolarityMethodNiew(polarityMethodNiew).PolarityMethodNire(polarityMethodNire).PolarityMethodNisw(polarityMethodNisw).PolarityMethodNre(polarityMethodNre).PolarityMethodRe(polarityMethodRe).Q(q).Sort(sort).StrandsPerLane(strandsPerLane).StrandsPerLaneGt(strandsPerLaneGt).StrandsPerLaneGte(strandsPerLaneGte).StrandsPerLaneLt(strandsPerLaneLt).StrandsPerLaneLte(strandsPerLaneLte).StrandsPerLaneN(strandsPerLaneN).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).TotalLanes(totalLanes).TotalLanesGt(totalLanesGt).TotalLanesGte(totalLanesGte).TotalLanesLt(totalLanesLt).TotalLanesLte(totalLanesLte).TotalLanesN(totalLanesN).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+    "time"
+	openapiclient "github.com/nautobot/go-nautobot/v3"
+)
+
+func main() {
+	aConnectors := []int32{int32(123)} // []int32 |  (optional)
+	aConnectorsGt := []int32{int32(123)} // []int32 |  (optional)
+	aConnectorsGte := []int32{int32(123)} // []int32 |  (optional)
+	aConnectorsLt := []int32{int32(123)} // []int32 |  (optional)
+	aConnectorsLte := []int32{int32(123)} // []int32 |  (optional)
+	aConnectorsN := []int32{int32(123)} // []int32 |  (optional)
+	bConnectors := []int32{int32(123)} // []int32 |  (optional)
+	bConnectorsGt := []int32{int32(123)} // []int32 |  (optional)
+	bConnectorsGte := []int32{int32(123)} // []int32 |  (optional)
+	bConnectorsLt := []int32{int32(123)} // []int32 |  (optional)
+	bConnectorsLte := []int32{int32(123)} // []int32 |  (optional)
+	bConnectorsN := []int32{int32(123)} // []int32 |  (optional)
+	contacts := []string{"Inner_example"} // []string |  (optional)
+	contactsIsnull := true // bool | Contacts (name or ID) is null (optional)
+	contactsN := []string{"Inner_example"} // []string |  (optional)
+	created := []time.Time{time.Now()} // []time.Time |  (optional)
+	createdGt := []time.Time{time.Now()} // []time.Time |  (optional)
+	createdGte := []time.Time{time.Now()} // []time.Time |  (optional)
+	createdIsnull := true // bool |  (optional)
+	createdLt := []time.Time{time.Now()} // []time.Time |  (optional)
+	createdLte := []time.Time{time.Now()} // []time.Time |  (optional)
+	createdN := []time.Time{time.Now()} // []time.Time |  (optional)
+	dynamicGroups := []string{"Inner_example"} // []string |  (optional)
+	dynamicGroupsN := []string{"Inner_example"} // []string |  (optional)
+	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
+	hasEmbeddedTransceivers := true // bool |  (optional)
+	id := []string{"Inner_example"} // []string | Unique object identifier, either a UUID primary key or a composite key. (optional)
+	idN := []string{"Inner_example"} // []string |  (optional)
+	isBreakout := true // bool |  (optional)
+	isShuffle := true // bool |  (optional)
+	lastUpdated := []time.Time{time.Now()} // []time.Time |  (optional)
+	lastUpdatedGt := []time.Time{time.Now()} // []time.Time |  (optional)
+	lastUpdatedGte := []time.Time{time.Now()} // []time.Time |  (optional)
+	lastUpdatedIsnull := true // bool |  (optional)
+	lastUpdatedLt := []time.Time{time.Now()} // []time.Time |  (optional)
+	lastUpdatedLte := []time.Time{time.Now()} // []time.Time |  (optional)
+	lastUpdatedN := []time.Time{time.Now()} // []time.Time |  (optional)
+	limit := int32(56) // int32 | Number of results to return per page. (optional)
+	manufacturer := []string{"Inner_example"} // []string |  (optional)
+	manufacturerIsnull := true // bool |  (optional)
+	manufacturerN := []string{"Inner_example"} // []string |  (optional)
+	name := []string{"Inner_example"} // []string |  (optional)
+	nameIc := []string{"Inner_example"} // []string |  (optional)
+	nameIe := []string{"Inner_example"} // []string |  (optional)
+	nameIew := []string{"Inner_example"} // []string |  (optional)
+	nameIre := []string{"Inner_example"} // []string |  (optional)
+	nameIsw := []string{"Inner_example"} // []string |  (optional)
+	nameN := []string{"Inner_example"} // []string |  (optional)
+	nameNic := []string{"Inner_example"} // []string |  (optional)
+	nameNie := []string{"Inner_example"} // []string |  (optional)
+	nameNiew := []string{"Inner_example"} // []string |  (optional)
+	nameNire := []string{"Inner_example"} // []string |  (optional)
+	nameNisw := []string{"Inner_example"} // []string |  (optional)
+	nameNre := []string{"Inner_example"} // []string |  (optional)
+	nameRe := []string{"Inner_example"} // []string |  (optional)
+	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
+	partNumber := []string{"Inner_example"} // []string |  (optional)
+	partNumberIc := []string{"Inner_example"} // []string |  (optional)
+	partNumberIe := []string{"Inner_example"} // []string |  (optional)
+	partNumberIew := []string{"Inner_example"} // []string |  (optional)
+	partNumberIre := []string{"Inner_example"} // []string |  (optional)
+	partNumberIsw := []string{"Inner_example"} // []string |  (optional)
+	partNumberN := []string{"Inner_example"} // []string |  (optional)
+	partNumberNic := []string{"Inner_example"} // []string |  (optional)
+	partNumberNie := []string{"Inner_example"} // []string |  (optional)
+	partNumberNiew := []string{"Inner_example"} // []string |  (optional)
+	partNumberNire := []string{"Inner_example"} // []string |  (optional)
+	partNumberNisw := []string{"Inner_example"} // []string |  (optional)
+	partNumberNre := []string{"Inner_example"} // []string |  (optional)
+	partNumberRe := []string{"Inner_example"} // []string |  (optional)
+	polarityMethod := []openapiclient.DcimCableTypesListPolarityMethodParameterInner{openapiclient.dcim_cable_types_list_polarity_method_parameter_inner("null")} // []DcimCableTypesListPolarityMethodParameterInner | Fiber polarity method. Informational only.   (optional)
+	polarityMethodIc := []string{"Inner_example"} // []string |  (optional)
+	polarityMethodIe := []string{"Inner_example"} // []string |  (optional)
+	polarityMethodIew := []string{"Inner_example"} // []string |  (optional)
+	polarityMethodIre := []string{"Inner_example"} // []string |  (optional)
+	polarityMethodIsw := []string{"Inner_example"} // []string |  (optional)
+	polarityMethodN := []string{"Inner_example"} // []string |  (optional)
+	polarityMethodNic := []string{"Inner_example"} // []string |  (optional)
+	polarityMethodNie := []string{"Inner_example"} // []string |  (optional)
+	polarityMethodNiew := []string{"Inner_example"} // []string |  (optional)
+	polarityMethodNire := []string{"Inner_example"} // []string |  (optional)
+	polarityMethodNisw := []string{"Inner_example"} // []string |  (optional)
+	polarityMethodNre := []string{"Inner_example"} // []string |  (optional)
+	polarityMethodRe := []string{"Inner_example"} // []string |  (optional)
+	q := "q_example" // string | Search (optional)
+	sort := "sort_example" // string | Which field to use when ordering the results. (optional)
+	strandsPerLane := []int32{int32(123)} // []int32 |  (optional)
+	strandsPerLaneGt := []int32{int32(123)} // []int32 |  (optional)
+	strandsPerLaneGte := []int32{int32(123)} // []int32 |  (optional)
+	strandsPerLaneLt := []int32{int32(123)} // []int32 |  (optional)
+	strandsPerLaneLte := []int32{int32(123)} // []int32 |  (optional)
+	strandsPerLaneN := []int32{int32(123)} // []int32 |  (optional)
+	tags := []string{"Inner_example"} // []string |  (optional)
+	tagsIsnull := true // bool |  (optional)
+	tagsN := []string{"Inner_example"} // []string |  (optional)
+	teams := []string{"Inner_example"} // []string |  (optional)
+	teamsIsnull := true // bool | Teams (name or ID) is null (optional)
+	teamsN := []string{"Inner_example"} // []string |  (optional)
+	totalLanes := []int32{int32(123)} // []int32 |  (optional)
+	totalLanesGt := []int32{int32(123)} // []int32 |  (optional)
+	totalLanesGte := []int32{int32(123)} // []int32 |  (optional)
+	totalLanesLt := []int32{int32(123)} // []int32 |  (optional)
+	totalLanesLte := []int32{int32(123)} // []int32 |  (optional)
+	totalLanesN := []int32{int32(123)} // []int32 |  (optional)
+	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DcimAPI.DcimCableTypesList(context.Background()).AConnectors(aConnectors).AConnectorsGt(aConnectorsGt).AConnectorsGte(aConnectorsGte).AConnectorsLt(aConnectorsLt).AConnectorsLte(aConnectorsLte).AConnectorsN(aConnectorsN).BConnectors(bConnectors).BConnectorsGt(bConnectorsGt).BConnectorsGte(bConnectorsGte).BConnectorsLt(bConnectorsLt).BConnectorsLte(bConnectorsLte).BConnectorsN(bConnectorsN).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Created(created).CreatedGt(createdGt).CreatedGte(createdGte).CreatedIsnull(createdIsnull).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).HasEmbeddedTransceivers(hasEmbeddedTransceivers).Id(id).IdN(idN).IsBreakout(isBreakout).IsShuffle(isShuffle).LastUpdated(lastUpdated).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedIsnull(lastUpdatedIsnull).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).Manufacturer(manufacturer).ManufacturerIsnull(manufacturerIsnull).ManufacturerN(manufacturerN).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).PartNumber(partNumber).PartNumberIc(partNumberIc).PartNumberIe(partNumberIe).PartNumberIew(partNumberIew).PartNumberIre(partNumberIre).PartNumberIsw(partNumberIsw).PartNumberN(partNumberN).PartNumberNic(partNumberNic).PartNumberNie(partNumberNie).PartNumberNiew(partNumberNiew).PartNumberNire(partNumberNire).PartNumberNisw(partNumberNisw).PartNumberNre(partNumberNre).PartNumberRe(partNumberRe).PolarityMethod(polarityMethod).PolarityMethodIc(polarityMethodIc).PolarityMethodIe(polarityMethodIe).PolarityMethodIew(polarityMethodIew).PolarityMethodIre(polarityMethodIre).PolarityMethodIsw(polarityMethodIsw).PolarityMethodN(polarityMethodN).PolarityMethodNic(polarityMethodNic).PolarityMethodNie(polarityMethodNie).PolarityMethodNiew(polarityMethodNiew).PolarityMethodNire(polarityMethodNire).PolarityMethodNisw(polarityMethodNisw).PolarityMethodNre(polarityMethodNre).PolarityMethodRe(polarityMethodRe).Q(q).Sort(sort).StrandsPerLane(strandsPerLane).StrandsPerLaneGt(strandsPerLaneGt).StrandsPerLaneGte(strandsPerLaneGte).StrandsPerLaneLt(strandsPerLaneLt).StrandsPerLaneLte(strandsPerLaneLte).StrandsPerLaneN(strandsPerLaneN).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).TotalLanes(totalLanes).TotalLanesGt(totalLanesGt).TotalLanesGte(totalLanesGte).TotalLanesLt(totalLanesLt).TotalLanesLte(totalLanesLte).TotalLanesN(totalLanesN).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DcimAPI.DcimCableTypesList``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `DcimCableTypesList`: PaginatedCableTypeList
+	fmt.Fprintf(os.Stdout, "Response from `DcimAPI.DcimCableTypesList`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDcimCableTypesListRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **aConnectors** | **[]int32** |  | 
+ **aConnectorsGt** | **[]int32** |  | 
+ **aConnectorsGte** | **[]int32** |  | 
+ **aConnectorsLt** | **[]int32** |  | 
+ **aConnectorsLte** | **[]int32** |  | 
+ **aConnectorsN** | **[]int32** |  | 
+ **bConnectors** | **[]int32** |  | 
+ **bConnectorsGt** | **[]int32** |  | 
+ **bConnectorsGte** | **[]int32** |  | 
+ **bConnectorsLt** | **[]int32** |  | 
+ **bConnectorsLte** | **[]int32** |  | 
+ **bConnectorsN** | **[]int32** |  | 
+ **contacts** | **[]string** |  | 
+ **contactsIsnull** | **bool** | Contacts (name or ID) is null | 
+ **contactsN** | **[]string** |  | 
+ **created** | [**[]time.Time**](time.Time.md) |  | 
+ **createdGt** | [**[]time.Time**](time.Time.md) |  | 
+ **createdGte** | [**[]time.Time**](time.Time.md) |  | 
+ **createdIsnull** | **bool** |  | 
+ **createdLt** | [**[]time.Time**](time.Time.md) |  | 
+ **createdLte** | [**[]time.Time**](time.Time.md) |  | 
+ **createdN** | [**[]time.Time**](time.Time.md) |  | 
+ **dynamicGroups** | **[]string** |  | 
+ **dynamicGroupsN** | **[]string** |  | 
+ **format** | [**CircuitsCircuitTerminationsListFormatParameter**](CircuitsCircuitTerminationsListFormatParameter.md) |  | 
+ **hasEmbeddedTransceivers** | **bool** |  | 
+ **id** | **[]string** | Unique object identifier, either a UUID primary key or a composite key. | 
+ **idN** | **[]string** |  | 
+ **isBreakout** | **bool** |  | 
+ **isShuffle** | **bool** |  | 
+ **lastUpdated** | [**[]time.Time**](time.Time.md) |  | 
+ **lastUpdatedGt** | [**[]time.Time**](time.Time.md) |  | 
+ **lastUpdatedGte** | [**[]time.Time**](time.Time.md) |  | 
+ **lastUpdatedIsnull** | **bool** |  | 
+ **lastUpdatedLt** | [**[]time.Time**](time.Time.md) |  | 
+ **lastUpdatedLte** | [**[]time.Time**](time.Time.md) |  | 
+ **lastUpdatedN** | [**[]time.Time**](time.Time.md) |  | 
+ **limit** | **int32** | Number of results to return per page. | 
+ **manufacturer** | **[]string** |  | 
+ **manufacturerIsnull** | **bool** |  | 
+ **manufacturerN** | **[]string** |  | 
+ **name** | **[]string** |  | 
+ **nameIc** | **[]string** |  | 
+ **nameIe** | **[]string** |  | 
+ **nameIew** | **[]string** |  | 
+ **nameIre** | **[]string** |  | 
+ **nameIsw** | **[]string** |  | 
+ **nameN** | **[]string** |  | 
+ **nameNic** | **[]string** |  | 
+ **nameNie** | **[]string** |  | 
+ **nameNiew** | **[]string** |  | 
+ **nameNire** | **[]string** |  | 
+ **nameNisw** | **[]string** |  | 
+ **nameNre** | **[]string** |  | 
+ **nameRe** | **[]string** |  | 
+ **offset** | **int32** | The initial index from which to return the results. | 
+ **partNumber** | **[]string** |  | 
+ **partNumberIc** | **[]string** |  | 
+ **partNumberIe** | **[]string** |  | 
+ **partNumberIew** | **[]string** |  | 
+ **partNumberIre** | **[]string** |  | 
+ **partNumberIsw** | **[]string** |  | 
+ **partNumberN** | **[]string** |  | 
+ **partNumberNic** | **[]string** |  | 
+ **partNumberNie** | **[]string** |  | 
+ **partNumberNiew** | **[]string** |  | 
+ **partNumberNire** | **[]string** |  | 
+ **partNumberNisw** | **[]string** |  | 
+ **partNumberNre** | **[]string** |  | 
+ **partNumberRe** | **[]string** |  | 
+ **polarityMethod** | [**[]DcimCableTypesListPolarityMethodParameterInner**](DcimCableTypesListPolarityMethodParameterInner.md) | Fiber polarity method. Informational only.   | 
+ **polarityMethodIc** | **[]string** |  | 
+ **polarityMethodIe** | **[]string** |  | 
+ **polarityMethodIew** | **[]string** |  | 
+ **polarityMethodIre** | **[]string** |  | 
+ **polarityMethodIsw** | **[]string** |  | 
+ **polarityMethodN** | **[]string** |  | 
+ **polarityMethodNic** | **[]string** |  | 
+ **polarityMethodNie** | **[]string** |  | 
+ **polarityMethodNiew** | **[]string** |  | 
+ **polarityMethodNire** | **[]string** |  | 
+ **polarityMethodNisw** | **[]string** |  | 
+ **polarityMethodNre** | **[]string** |  | 
+ **polarityMethodRe** | **[]string** |  | 
+ **q** | **string** | Search | 
+ **sort** | **string** | Which field to use when ordering the results. | 
+ **strandsPerLane** | **[]int32** |  | 
+ **strandsPerLaneGt** | **[]int32** |  | 
+ **strandsPerLaneGte** | **[]int32** |  | 
+ **strandsPerLaneLt** | **[]int32** |  | 
+ **strandsPerLaneLte** | **[]int32** |  | 
+ **strandsPerLaneN** | **[]int32** |  | 
+ **tags** | **[]string** |  | 
+ **tagsIsnull** | **bool** |  | 
+ **tagsN** | **[]string** |  | 
+ **teams** | **[]string** |  | 
+ **teamsIsnull** | **bool** | Teams (name or ID) is null | 
+ **teamsN** | **[]string** |  | 
+ **totalLanes** | **[]int32** |  | 
+ **totalLanesGt** | **[]int32** |  | 
+ **totalLanesGte** | **[]int32** |  | 
+ **totalLanesLt** | **[]int32** |  | 
+ **totalLanesLte** | **[]int32** |  | 
+ **totalLanesN** | **[]int32** |  | 
+ **depth** | **int32** | Serializer Depth | [default to 1]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
+
+### Return type
+
+[**PaginatedCableTypeList**](PaginatedCableTypeList.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [tokenAuth](../README.md#tokenAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/csv
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DcimCableTypesNotesCreate
+
+> Note DcimCableTypesNotesCreate(ctx, id).NoteInputRequest(noteInputRequest).Format(format).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/nautobot/go-nautobot/v3"
+)
+
+func main() {
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | A UUID string identifying this cable type.
+	noteInputRequest := *openapiclient.NewNoteInputRequest("Note_example") // NoteInputRequest | 
+	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DcimAPI.DcimCableTypesNotesCreate(context.Background(), id).NoteInputRequest(noteInputRequest).Format(format).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DcimAPI.DcimCableTypesNotesCreate``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `DcimCableTypesNotesCreate`: Note
+	fmt.Fprintf(os.Stdout, "Response from `DcimAPI.DcimCableTypesNotesCreate`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**id** | **string** | A UUID string identifying this cable type. | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDcimCableTypesNotesCreateRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **noteInputRequest** | [**NoteInputRequest**](NoteInputRequest.md) |  | 
+ **format** | [**CircuitsCircuitTerminationsListFormatParameter**](CircuitsCircuitTerminationsListFormatParameter.md) |  | 
+
+### Return type
+
+[**Note**](Note.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [tokenAuth](../README.md#tokenAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json, text/csv
+- **Accept**: application/json, text/csv
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DcimCableTypesNotesList
+
+> PaginatedNoteList DcimCableTypesNotesList(ctx, id).Format(format).Limit(limit).Offset(offset).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/nautobot/go-nautobot/v3"
+)
+
+func main() {
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | A UUID string identifying this cable type.
+	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
+	limit := int32(56) // int32 | Number of results to return per page. (optional)
+	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
+	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DcimAPI.DcimCableTypesNotesList(context.Background(), id).Format(format).Limit(limit).Offset(offset).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DcimAPI.DcimCableTypesNotesList``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `DcimCableTypesNotesList`: PaginatedNoteList
+	fmt.Fprintf(os.Stdout, "Response from `DcimAPI.DcimCableTypesNotesList`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**id** | **string** | A UUID string identifying this cable type. | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDcimCableTypesNotesListRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **format** | [**CircuitsCircuitTerminationsListFormatParameter**](CircuitsCircuitTerminationsListFormatParameter.md) |  | 
+ **limit** | **int32** | Number of results to return per page. | 
+ **offset** | **int32** | The initial index from which to return the results. | 
+ **depth** | **int32** | Serializer Depth | [default to 1]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
+
+### Return type
+
+[**PaginatedNoteList**](PaginatedNoteList.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [tokenAuth](../README.md#tokenAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/csv
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DcimCableTypesPartialUpdate
+
+> CableType DcimCableTypesPartialUpdate(ctx, id).Format(format).PatchedCableTypeRequest(patchedCableTypeRequest).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/nautobot/go-nautobot/v3"
+)
+
+func main() {
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | A UUID string identifying this cable type.
+	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
+	patchedCableTypeRequest := *openapiclient.NewPatchedCableTypeRequest() // PatchedCableTypeRequest |  (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DcimAPI.DcimCableTypesPartialUpdate(context.Background(), id).Format(format).PatchedCableTypeRequest(patchedCableTypeRequest).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DcimAPI.DcimCableTypesPartialUpdate``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `DcimCableTypesPartialUpdate`: CableType
+	fmt.Fprintf(os.Stdout, "Response from `DcimAPI.DcimCableTypesPartialUpdate`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**id** | **string** | A UUID string identifying this cable type. | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDcimCableTypesPartialUpdateRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **format** | [**CircuitsCircuitTerminationsListFormatParameter**](CircuitsCircuitTerminationsListFormatParameter.md) |  | 
+ **patchedCableTypeRequest** | [**PatchedCableTypeRequest**](PatchedCableTypeRequest.md) |  | 
+
+### Return type
+
+[**CableType**](CableType.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [tokenAuth](../README.md#tokenAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json, text/csv
+- **Accept**: application/json, text/csv
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DcimCableTypesRetrieve
+
+> CableType DcimCableTypesRetrieve(ctx, id).Format(format).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/nautobot/go-nautobot/v3"
+)
+
+func main() {
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | A UUID string identifying this cable type.
+	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
+	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DcimAPI.DcimCableTypesRetrieve(context.Background(), id).Format(format).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DcimAPI.DcimCableTypesRetrieve``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `DcimCableTypesRetrieve`: CableType
+	fmt.Fprintf(os.Stdout, "Response from `DcimAPI.DcimCableTypesRetrieve`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**id** | **string** | A UUID string identifying this cable type. | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDcimCableTypesRetrieveRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **format** | [**CircuitsCircuitTerminationsListFormatParameter**](CircuitsCircuitTerminationsListFormatParameter.md) |  | 
+ **depth** | **int32** | Serializer Depth | [default to 1]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
+
+### Return type
+
+[**CableType**](CableType.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [tokenAuth](../README.md#tokenAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/csv
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DcimCableTypesUpdate
+
+> CableType DcimCableTypesUpdate(ctx, id).CableTypeRequest(cableTypeRequest).Format(format).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/nautobot/go-nautobot/v3"
+)
+
+func main() {
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | A UUID string identifying this cable type.
+	cableTypeRequest := *openapiclient.NewCableTypeRequest("Name_example") // CableTypeRequest | 
+	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DcimAPI.DcimCableTypesUpdate(context.Background(), id).CableTypeRequest(cableTypeRequest).Format(format).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DcimAPI.DcimCableTypesUpdate``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `DcimCableTypesUpdate`: CableType
+	fmt.Fprintf(os.Stdout, "Response from `DcimAPI.DcimCableTypesUpdate`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**id** | **string** | A UUID string identifying this cable type. | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDcimCableTypesUpdateRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **cableTypeRequest** | [**CableTypeRequest**](CableTypeRequest.md) |  | 
+ **format** | [**CircuitsCircuitTerminationsListFormatParameter**](CircuitsCircuitTerminationsListFormatParameter.md) |  | 
+
+### Return type
+
+[**CableType**](CableType.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [tokenAuth](../README.md#tokenAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json, text/csv
+- **Accept**: application/json, text/csv
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## DcimCablesBulkDestroy
 
 > DcimCablesBulkDestroy(ctx).BulkOperationRequest(bulkOperationRequest).Format(format).Execute()
@@ -670,7 +1687,7 @@ import (
 )
 
 func main() {
-	bulkWritableCableRequest := []openapiclient.BulkWritableCableRequest{*openapiclient.NewBulkWritableCableRequest("Id_example", "TerminationAType_example", "TerminationBType_example", "TerminationAId_example", "TerminationBId_example", *openapiclient.NewBulkWritableCableRequestStatus())} // []BulkWritableCableRequest | 
+	bulkWritableCableRequest := []openapiclient.BulkWritableCableRequest{*openapiclient.NewBulkWritableCableRequest("Id_example", *openapiclient.NewBulkWritableCableRequestStatus())} // []BulkWritableCableRequest | 
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -738,7 +1755,7 @@ import (
 )
 
 func main() {
-	writableCableRequest := *openapiclient.NewWritableCableRequest("TerminationAType_example", "TerminationBType_example", "TerminationAId_example", "TerminationBId_example", *openapiclient.NewBulkWritableCableRequestStatus()) // WritableCableRequest | 
+	writableCableRequest := *openapiclient.NewWritableCableRequest(*openapiclient.NewBulkWritableCableRequestStatus()) // WritableCableRequest | 
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -857,7 +1874,7 @@ Name | Type | Description  | Notes
 
 ## DcimCablesList
 
-> PaginatedCableList DcimCablesList(ctx).Color(color).ColorIc(colorIc).ColorIe(colorIe).ColorIew(colorIew).ColorIre(colorIre).ColorIsw(colorIsw).ColorN(colorN).ColorNic(colorNic).ColorNie(colorNie).ColorNiew(colorNiew).ColorNire(colorNire).ColorNisw(colorNisw).ColorNre(colorNre).ColorRe(colorRe).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Created(created).CreatedGt(createdGt).CreatedGte(createdGte).CreatedIsnull(createdIsnull).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).Device(device).DeviceId(deviceId).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).Id(id).IdN(idN).Label(label).LabelIc(labelIc).LabelIe(labelIe).LabelIew(labelIew).LabelIre(labelIre).LabelIsw(labelIsw).LabelN(labelN).LabelNic(labelNic).LabelNie(labelNie).LabelNiew(labelNiew).LabelNire(labelNire).LabelNisw(labelNisw).LabelNre(labelNre).LabelRe(labelRe).LastUpdated(lastUpdated).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedIsnull(lastUpdatedIsnull).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Length(length).LengthGt(lengthGt).LengthGte(lengthGte).LengthIsnull(lengthIsnull).LengthLt(lengthLt).LengthLte(lengthLte).LengthN(lengthN).LengthUnit(lengthUnit).LengthUnitIc(lengthUnitIc).LengthUnitIe(lengthUnitIe).LengthUnitIew(lengthUnitIew).LengthUnitIre(lengthUnitIre).LengthUnitIsw(lengthUnitIsw).LengthUnitN(lengthUnitN).LengthUnitNic(lengthUnitNic).LengthUnitNie(lengthUnitNie).LengthUnitNiew(lengthUnitNiew).LengthUnitNire(lengthUnitNire).LengthUnitNisw(lengthUnitNisw).LengthUnitNre(lengthUnitNre).LengthUnitRe(lengthUnitRe).Limit(limit).Location(location).LocationId(locationId).Offset(offset).Q(q).Rack(rack).RackId(rackId).Sort(sort).Status(status).StatusN(statusN).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Tenant(tenant).TenantId(tenantId).TerminationAId(terminationAId).TerminationAIdN(terminationAIdN).TerminationAType(terminationAType).TerminationATypeN(terminationATypeN).TerminationBId(terminationBId).TerminationBIdN(terminationBIdN).TerminationBType(terminationBType).TerminationBTypeN(terminationBTypeN).TerminationType(terminationType).Type_(type_).TypeIc(typeIc).TypeIe(typeIe).TypeIew(typeIew).TypeIre(typeIre).TypeIsw(typeIsw).TypeN(typeN).TypeNic(typeNic).TypeNie(typeNie).TypeNiew(typeNiew).TypeNire(typeNire).TypeNisw(typeNisw).TypeNre(typeNre).TypeRe(typeRe).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+> PaginatedCableList DcimCablesList(ctx).CableType(cableType).CableTypeIsnull(cableTypeIsnull).CableTypeN(cableTypeN).Color(color).ColorIc(colorIc).ColorIe(colorIe).ColorIew(colorIew).ColorIre(colorIre).ColorIsw(colorIsw).ColorN(colorN).ColorNic(colorNic).ColorNie(colorNie).ColorNiew(colorNiew).ColorNire(colorNire).ColorNisw(colorNisw).ColorNre(colorNre).ColorRe(colorRe).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Created(created).CreatedGt(createdGt).CreatedGte(createdGte).CreatedIsnull(createdIsnull).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).Device(device).DeviceId(deviceId).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).HasCableType(hasCableType).Id(id).IdN(idN).IsDisconnected(isDisconnected).Label(label).LabelIc(labelIc).LabelIe(labelIe).LabelIew(labelIew).LabelIre(labelIre).LabelIsw(labelIsw).LabelN(labelN).LabelNic(labelNic).LabelNie(labelNie).LabelNiew(labelNiew).LabelNire(labelNire).LabelNisw(labelNisw).LabelNre(labelNre).LabelRe(labelRe).LastUpdated(lastUpdated).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedIsnull(lastUpdatedIsnull).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Length(length).LengthGt(lengthGt).LengthGte(lengthGte).LengthIsnull(lengthIsnull).LengthLt(lengthLt).LengthLte(lengthLte).LengthN(lengthN).LengthUnit(lengthUnit).LengthUnitIc(lengthUnitIc).LengthUnitIe(lengthUnitIe).LengthUnitIew(lengthUnitIew).LengthUnitIre(lengthUnitIre).LengthUnitIsw(lengthUnitIsw).LengthUnitN(lengthUnitN).LengthUnitNic(lengthUnitNic).LengthUnitNie(lengthUnitNie).LengthUnitNiew(lengthUnitNiew).LengthUnitNire(lengthUnitNire).LengthUnitNisw(lengthUnitNisw).LengthUnitNre(lengthUnitNre).LengthUnitRe(lengthUnitRe).Limit(limit).Location(location).LocationId(locationId).Offset(offset).Q(q).Rack(rack).RackId(rackId).Sort(sort).Status(status).StatusN(statusN).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Tenant(tenant).TenantId(tenantId).TerminationAId(terminationAId).TerminationAType(terminationAType).TerminationBId(terminationBId).TerminationBType(terminationBType).TerminationId(terminationId).TerminationType(terminationType).Type_(type_).TypeIc(typeIc).TypeIe(typeIe).TypeIew(typeIew).TypeIre(typeIre).TypeIsw(typeIsw).TypeN(typeN).TypeNic(typeNic).TypeNie(typeNie).TypeNiew(typeNiew).TypeNire(typeNire).TypeNisw(typeNisw).TypeNre(typeNre).TypeRe(typeRe).Depth(depth).ExcludeM2m(excludeM2m).Execute()
 
 
 
@@ -877,6 +1894,9 @@ import (
 )
 
 func main() {
+	cableType := []string{"Inner_example"} // []string |  (optional)
+	cableTypeIsnull := true // bool | Cable Type (name or ID) is null (optional)
+	cableTypeN := []string{"Inner_example"} // []string |  (optional)
 	color := []string{"Inner_example"} // []string |  (optional)
 	colorIc := []string{"Inner_example"} // []string |  (optional)
 	colorIe := []string{"Inner_example"} // []string |  (optional)
@@ -902,12 +1922,14 @@ func main() {
 	createdLte := []time.Time{time.Now()} // []time.Time |  (optional)
 	createdN := []time.Time{time.Now()} // []time.Time |  (optional)
 	device := []string{"Inner_example"} // []string |  (optional)
-	deviceId := []*string{"Inner_example"} // []*string | Device (ID) (optional)
+	deviceId := []string{"Inner_example"} // []string | Device (ID) (optional)
 	dynamicGroups := []string{"Inner_example"} // []string |  (optional)
 	dynamicGroupsN := []string{"Inner_example"} // []string |  (optional)
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
+	hasCableType := true // bool | Has cable type (optional)
 	id := []string{"Inner_example"} // []string | Unique object identifier, either a UUID primary key or a composite key. (optional)
 	idN := []string{"Inner_example"} // []string |  (optional)
+	isDisconnected := true // bool | Is disconnected (missing one or both side terminations) (optional)
 	label := []string{"Inner_example"} // []string |  (optional)
 	labelIc := []string{"Inner_example"} // []string |  (optional)
 	labelIe := []string{"Inner_example"} // []string |  (optional)
@@ -968,14 +1990,11 @@ func main() {
 	teamsN := []string{"Inner_example"} // []string |  (optional)
 	tenant := []string{"Inner_example"} // []string |  (optional)
 	tenantId := []string{"Inner_example"} // []string |  (optional)
-	terminationAId := []string{"Inner_example"} // []string |  (optional)
-	terminationAIdN := []string{"Inner_example"} // []string |  (optional)
-	terminationAType := []int32{int32(123)} // []int32 |  (optional)
-	terminationATypeN := []int32{int32(123)} // []int32 |  (optional)
-	terminationBId := []string{"Inner_example"} // []string |  (optional)
-	terminationBIdN := []string{"Inner_example"} // []string |  (optional)
-	terminationBType := []int32{int32(123)} // []int32 |  (optional)
-	terminationBTypeN := []int32{int32(123)} // []int32 |  (optional)
+	terminationAId := []string{"Inner_example"} // []string | Termination A (ID) (optional)
+	terminationAType := []string{"Inner_example"} // []string |  (optional)
+	terminationBId := []string{"Inner_example"} // []string | Termination B (ID) (optional)
+	terminationBType := []string{"Inner_example"} // []string |  (optional)
+	terminationId := []string{"Inner_example"} // []string | Termination (either end) (ID) (optional)
 	terminationType := []string{"Inner_example"} // []string |  (optional)
 	type_ := []string{"Inner_example"} // []string |  (optional)
 	typeIc := []string{"Inner_example"} // []string |  (optional)
@@ -996,7 +2015,7 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DcimAPI.DcimCablesList(context.Background()).Color(color).ColorIc(colorIc).ColorIe(colorIe).ColorIew(colorIew).ColorIre(colorIre).ColorIsw(colorIsw).ColorN(colorN).ColorNic(colorNic).ColorNie(colorNie).ColorNiew(colorNiew).ColorNire(colorNire).ColorNisw(colorNisw).ColorNre(colorNre).ColorRe(colorRe).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Created(created).CreatedGt(createdGt).CreatedGte(createdGte).CreatedIsnull(createdIsnull).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).Device(device).DeviceId(deviceId).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).Id(id).IdN(idN).Label(label).LabelIc(labelIc).LabelIe(labelIe).LabelIew(labelIew).LabelIre(labelIre).LabelIsw(labelIsw).LabelN(labelN).LabelNic(labelNic).LabelNie(labelNie).LabelNiew(labelNiew).LabelNire(labelNire).LabelNisw(labelNisw).LabelNre(labelNre).LabelRe(labelRe).LastUpdated(lastUpdated).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedIsnull(lastUpdatedIsnull).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Length(length).LengthGt(lengthGt).LengthGte(lengthGte).LengthIsnull(lengthIsnull).LengthLt(lengthLt).LengthLte(lengthLte).LengthN(lengthN).LengthUnit(lengthUnit).LengthUnitIc(lengthUnitIc).LengthUnitIe(lengthUnitIe).LengthUnitIew(lengthUnitIew).LengthUnitIre(lengthUnitIre).LengthUnitIsw(lengthUnitIsw).LengthUnitN(lengthUnitN).LengthUnitNic(lengthUnitNic).LengthUnitNie(lengthUnitNie).LengthUnitNiew(lengthUnitNiew).LengthUnitNire(lengthUnitNire).LengthUnitNisw(lengthUnitNisw).LengthUnitNre(lengthUnitNre).LengthUnitRe(lengthUnitRe).Limit(limit).Location(location).LocationId(locationId).Offset(offset).Q(q).Rack(rack).RackId(rackId).Sort(sort).Status(status).StatusN(statusN).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Tenant(tenant).TenantId(tenantId).TerminationAId(terminationAId).TerminationAIdN(terminationAIdN).TerminationAType(terminationAType).TerminationATypeN(terminationATypeN).TerminationBId(terminationBId).TerminationBIdN(terminationBIdN).TerminationBType(terminationBType).TerminationBTypeN(terminationBTypeN).TerminationType(terminationType).Type_(type_).TypeIc(typeIc).TypeIe(typeIe).TypeIew(typeIew).TypeIre(typeIre).TypeIsw(typeIsw).TypeN(typeN).TypeNic(typeNic).TypeNie(typeNie).TypeNiew(typeNiew).TypeNire(typeNire).TypeNisw(typeNisw).TypeNre(typeNre).TypeRe(typeRe).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+	resp, r, err := apiClient.DcimAPI.DcimCablesList(context.Background()).CableType(cableType).CableTypeIsnull(cableTypeIsnull).CableTypeN(cableTypeN).Color(color).ColorIc(colorIc).ColorIe(colorIe).ColorIew(colorIew).ColorIre(colorIre).ColorIsw(colorIsw).ColorN(colorN).ColorNic(colorNic).ColorNie(colorNie).ColorNiew(colorNiew).ColorNire(colorNire).ColorNisw(colorNisw).ColorNre(colorNre).ColorRe(colorRe).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Created(created).CreatedGt(createdGt).CreatedGte(createdGte).CreatedIsnull(createdIsnull).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).Device(device).DeviceId(deviceId).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).HasCableType(hasCableType).Id(id).IdN(idN).IsDisconnected(isDisconnected).Label(label).LabelIc(labelIc).LabelIe(labelIe).LabelIew(labelIew).LabelIre(labelIre).LabelIsw(labelIsw).LabelN(labelN).LabelNic(labelNic).LabelNie(labelNie).LabelNiew(labelNiew).LabelNire(labelNire).LabelNisw(labelNisw).LabelNre(labelNre).LabelRe(labelRe).LastUpdated(lastUpdated).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedIsnull(lastUpdatedIsnull).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Length(length).LengthGt(lengthGt).LengthGte(lengthGte).LengthIsnull(lengthIsnull).LengthLt(lengthLt).LengthLte(lengthLte).LengthN(lengthN).LengthUnit(lengthUnit).LengthUnitIc(lengthUnitIc).LengthUnitIe(lengthUnitIe).LengthUnitIew(lengthUnitIew).LengthUnitIre(lengthUnitIre).LengthUnitIsw(lengthUnitIsw).LengthUnitN(lengthUnitN).LengthUnitNic(lengthUnitNic).LengthUnitNie(lengthUnitNie).LengthUnitNiew(lengthUnitNiew).LengthUnitNire(lengthUnitNire).LengthUnitNisw(lengthUnitNisw).LengthUnitNre(lengthUnitNre).LengthUnitRe(lengthUnitRe).Limit(limit).Location(location).LocationId(locationId).Offset(offset).Q(q).Rack(rack).RackId(rackId).Sort(sort).Status(status).StatusN(statusN).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Tenant(tenant).TenantId(tenantId).TerminationAId(terminationAId).TerminationAType(terminationAType).TerminationBId(terminationBId).TerminationBType(terminationBType).TerminationId(terminationId).TerminationType(terminationType).Type_(type_).TypeIc(typeIc).TypeIe(typeIe).TypeIew(typeIew).TypeIre(typeIre).TypeIsw(typeIsw).TypeN(typeN).TypeNic(typeNic).TypeNie(typeNie).TypeNiew(typeNiew).TypeNire(typeNire).TypeNisw(typeNisw).TypeNre(typeNre).TypeRe(typeRe).Depth(depth).ExcludeM2m(excludeM2m).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DcimAPI.DcimCablesList``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -1017,6 +2036,9 @@ Other parameters are passed through a pointer to a apiDcimCablesListRequest stru
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **cableType** | **[]string** |  | 
+ **cableTypeIsnull** | **bool** | Cable Type (name or ID) is null | 
+ **cableTypeN** | **[]string** |  | 
  **color** | **[]string** |  | 
  **colorIc** | **[]string** |  | 
  **colorIe** | **[]string** |  | 
@@ -1046,8 +2068,10 @@ Name | Type | Description  | Notes
  **dynamicGroups** | **[]string** |  | 
  **dynamicGroupsN** | **[]string** |  | 
  **format** | [**CircuitsCircuitTerminationsListFormatParameter**](CircuitsCircuitTerminationsListFormatParameter.md) |  | 
+ **hasCableType** | **bool** | Has cable type | 
  **id** | **[]string** | Unique object identifier, either a UUID primary key or a composite key. | 
  **idN** | **[]string** |  | 
+ **isDisconnected** | **bool** | Is disconnected (missing one or both side terminations) | 
  **label** | **[]string** |  | 
  **labelIc** | **[]string** |  | 
  **labelIe** | **[]string** |  | 
@@ -1108,14 +2132,11 @@ Name | Type | Description  | Notes
  **teamsN** | **[]string** |  | 
  **tenant** | **[]string** |  | 
  **tenantId** | **[]string** |  | 
- **terminationAId** | **[]string** |  | 
- **terminationAIdN** | **[]string** |  | 
- **terminationAType** | **[]int32** |  | 
- **terminationATypeN** | **[]int32** |  | 
- **terminationBId** | **[]string** |  | 
- **terminationBIdN** | **[]string** |  | 
- **terminationBType** | **[]int32** |  | 
- **terminationBTypeN** | **[]int32** |  | 
+ **terminationAId** | **[]string** | Termination A (ID) | 
+ **terminationAType** | **[]string** |  | 
+ **terminationBId** | **[]string** | Termination B (ID) | 
+ **terminationBType** | **[]string** |  | 
+ **terminationId** | **[]string** | Termination (either end) (ID) | 
  **terminationType** | **[]string** |  | 
  **type_** | **[]string** |  | 
  **typeIc** | **[]string** |  | 
@@ -1456,6 +2477,853 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## DcimCablesToCableTerminationsBulkDestroy
+
+> DcimCablesToCableTerminationsBulkDestroy(ctx).BulkOperationRequest(bulkOperationRequest).Format(format).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/nautobot/go-nautobot/v3"
+)
+
+func main() {
+	bulkOperationRequest := []openapiclient.BulkOperationRequest{*openapiclient.NewBulkOperationRequest("Id_example")} // []BulkOperationRequest | 
+	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.DcimAPI.DcimCablesToCableTerminationsBulkDestroy(context.Background()).BulkOperationRequest(bulkOperationRequest).Format(format).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DcimAPI.DcimCablesToCableTerminationsBulkDestroy``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDcimCablesToCableTerminationsBulkDestroyRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **bulkOperationRequest** | [**[]BulkOperationRequest**](BulkOperationRequest.md) |  | 
+ **format** | [**CircuitsCircuitTerminationsListFormatParameter**](CircuitsCircuitTerminationsListFormatParameter.md) |  | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [tokenAuth](../README.md#tokenAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json, text/csv
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DcimCablesToCableTerminationsBulkPartialUpdate
+
+> []CableToCableTermination DcimCablesToCableTerminationsBulkPartialUpdate(ctx).PatchedBulkWritableCableToCableTerminationRequest(patchedBulkWritableCableToCableTerminationRequest).Format(format).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/nautobot/go-nautobot/v3"
+)
+
+func main() {
+	patchedBulkWritableCableToCableTerminationRequest := []openapiclient.PatchedBulkWritableCableToCableTerminationRequest{*openapiclient.NewPatchedBulkWritableCableToCableTerminationRequest("Id_example")} // []PatchedBulkWritableCableToCableTerminationRequest | 
+	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DcimAPI.DcimCablesToCableTerminationsBulkPartialUpdate(context.Background()).PatchedBulkWritableCableToCableTerminationRequest(patchedBulkWritableCableToCableTerminationRequest).Format(format).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DcimAPI.DcimCablesToCableTerminationsBulkPartialUpdate``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `DcimCablesToCableTerminationsBulkPartialUpdate`: []CableToCableTermination
+	fmt.Fprintf(os.Stdout, "Response from `DcimAPI.DcimCablesToCableTerminationsBulkPartialUpdate`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDcimCablesToCableTerminationsBulkPartialUpdateRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **patchedBulkWritableCableToCableTerminationRequest** | [**[]PatchedBulkWritableCableToCableTerminationRequest**](PatchedBulkWritableCableToCableTerminationRequest.md) |  | 
+ **format** | [**CircuitsCircuitTerminationsListFormatParameter**](CircuitsCircuitTerminationsListFormatParameter.md) |  | 
+
+### Return type
+
+[**[]CableToCableTermination**](CableToCableTermination.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [tokenAuth](../README.md#tokenAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json, text/csv
+- **Accept**: application/json, text/csv
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DcimCablesToCableTerminationsBulkUpdate
+
+> []CableToCableTermination DcimCablesToCableTerminationsBulkUpdate(ctx).BulkWritableCableToCableTerminationRequest(bulkWritableCableToCableTerminationRequest).Format(format).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/nautobot/go-nautobot/v3"
+)
+
+func main() {
+	bulkWritableCableToCableTerminationRequest := []openapiclient.BulkWritableCableToCableTerminationRequest{*openapiclient.NewBulkWritableCableToCableTerminationRequest("Id_example", openapiclient.CableEndEnum("A"), *openapiclient.NewBulkWritableCableRequestStatus())} // []BulkWritableCableToCableTerminationRequest | 
+	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DcimAPI.DcimCablesToCableTerminationsBulkUpdate(context.Background()).BulkWritableCableToCableTerminationRequest(bulkWritableCableToCableTerminationRequest).Format(format).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DcimAPI.DcimCablesToCableTerminationsBulkUpdate``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `DcimCablesToCableTerminationsBulkUpdate`: []CableToCableTermination
+	fmt.Fprintf(os.Stdout, "Response from `DcimAPI.DcimCablesToCableTerminationsBulkUpdate`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDcimCablesToCableTerminationsBulkUpdateRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **bulkWritableCableToCableTerminationRequest** | [**[]BulkWritableCableToCableTerminationRequest**](BulkWritableCableToCableTerminationRequest.md) |  | 
+ **format** | [**CircuitsCircuitTerminationsListFormatParameter**](CircuitsCircuitTerminationsListFormatParameter.md) |  | 
+
+### Return type
+
+[**[]CableToCableTermination**](CableToCableTermination.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [tokenAuth](../README.md#tokenAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json, text/csv
+- **Accept**: application/json, text/csv
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DcimCablesToCableTerminationsCreate
+
+> CableToCableTermination DcimCablesToCableTerminationsCreate(ctx).CableToCableTerminationRequest(cableToCableTerminationRequest).Format(format).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/nautobot/go-nautobot/v3"
+)
+
+func main() {
+	cableToCableTerminationRequest := *openapiclient.NewCableToCableTerminationRequest(openapiclient.CableEndEnum("A"), *openapiclient.NewBulkWritableCableRequestStatus()) // CableToCableTerminationRequest | 
+	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DcimAPI.DcimCablesToCableTerminationsCreate(context.Background()).CableToCableTerminationRequest(cableToCableTerminationRequest).Format(format).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DcimAPI.DcimCablesToCableTerminationsCreate``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `DcimCablesToCableTerminationsCreate`: CableToCableTermination
+	fmt.Fprintf(os.Stdout, "Response from `DcimAPI.DcimCablesToCableTerminationsCreate`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDcimCablesToCableTerminationsCreateRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cableToCableTerminationRequest** | [**CableToCableTerminationRequest**](CableToCableTerminationRequest.md) |  | 
+ **format** | [**CircuitsCircuitTerminationsListFormatParameter**](CircuitsCircuitTerminationsListFormatParameter.md) |  | 
+
+### Return type
+
+[**CableToCableTermination**](CableToCableTermination.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [tokenAuth](../README.md#tokenAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json, text/csv
+- **Accept**: application/json, text/csv
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DcimCablesToCableTerminationsDestroy
+
+> DcimCablesToCableTerminationsDestroy(ctx, id).Format(format).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/nautobot/go-nautobot/v3"
+)
+
+func main() {
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | A UUID string identifying this cable to cable termination.
+	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.DcimAPI.DcimCablesToCableTerminationsDestroy(context.Background(), id).Format(format).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DcimAPI.DcimCablesToCableTerminationsDestroy``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**id** | **string** | A UUID string identifying this cable to cable termination. | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDcimCablesToCableTerminationsDestroyRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **format** | [**CircuitsCircuitTerminationsListFormatParameter**](CircuitsCircuitTerminationsListFormatParameter.md) |  | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [tokenAuth](../README.md#tokenAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DcimCablesToCableTerminationsList
+
+> PaginatedCableToCableTerminationList DcimCablesToCableTerminationsList(ctx).Cable(cable).CableN(cableN).CableEnd(cableEnd).CableEndIc(cableEndIc).CableEndIe(cableEndIe).CableEndIew(cableEndIew).CableEndIre(cableEndIre).CableEndIsw(cableEndIsw).CableEndN(cableEndN).CableEndNic(cableEndNic).CableEndNie(cableEndNie).CableEndNiew(cableEndNiew).CableEndNire(cableEndNire).CableEndNisw(cableEndNisw).CableEndNre(cableEndNre).CableEndRe(cableEndRe).Connector(connector).ConnectorGt(connectorGt).ConnectorGte(connectorGte).ConnectorLt(connectorLt).ConnectorLte(connectorLte).ConnectorN(connectorN).Created(created).Format(format).Id(id).IdN(idN).LastUpdated(lastUpdated).Limit(limit).Offset(offset).Sort(sort).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+    "time"
+	openapiclient "github.com/nautobot/go-nautobot/v3"
+)
+
+func main() {
+	cable := []string{"Inner_example"} // []string |  (optional)
+	cableN := []string{"Inner_example"} // []string |  (optional)
+	cableEnd := []openapiclient.DcimCablesToCableTerminationsListCableEndParameterInner{openapiclient.dcim_cables_to_cable_terminations_list_cable_end_parameter_inner("A")} // []DcimCablesToCableTerminationsListCableEndParameterInner |  (optional)
+	cableEndIc := []string{"Inner_example"} // []string |  (optional)
+	cableEndIe := []string{"Inner_example"} // []string |  (optional)
+	cableEndIew := []string{"Inner_example"} // []string |  (optional)
+	cableEndIre := []string{"Inner_example"} // []string |  (optional)
+	cableEndIsw := []string{"Inner_example"} // []string |  (optional)
+	cableEndN := []string{"Inner_example"} // []string |  (optional)
+	cableEndNic := []string{"Inner_example"} // []string |  (optional)
+	cableEndNie := []string{"Inner_example"} // []string |  (optional)
+	cableEndNiew := []string{"Inner_example"} // []string |  (optional)
+	cableEndNire := []string{"Inner_example"} // []string |  (optional)
+	cableEndNisw := []string{"Inner_example"} // []string |  (optional)
+	cableEndNre := []string{"Inner_example"} // []string |  (optional)
+	cableEndRe := []string{"Inner_example"} // []string |  (optional)
+	connector := []int32{int32(123)} // []int32 |  (optional)
+	connectorGt := []int32{int32(123)} // []int32 |  (optional)
+	connectorGte := []int32{int32(123)} // []int32 |  (optional)
+	connectorLt := []int32{int32(123)} // []int32 |  (optional)
+	connectorLte := []int32{int32(123)} // []int32 |  (optional)
+	connectorN := []int32{int32(123)} // []int32 |  (optional)
+	created := []time.Time{time.Now()} // []time.Time |  (optional)
+	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
+	id := []string{"Inner_example"} // []string | Unique object identifier, either a UUID primary key or a composite key. (optional)
+	idN := []string{"Inner_example"} // []string |  (optional)
+	lastUpdated := []time.Time{time.Now()} // []time.Time |  (optional)
+	limit := int32(56) // int32 | Number of results to return per page. (optional)
+	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
+	sort := "sort_example" // string | Which field to use when ordering the results. (optional)
+	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DcimAPI.DcimCablesToCableTerminationsList(context.Background()).Cable(cable).CableN(cableN).CableEnd(cableEnd).CableEndIc(cableEndIc).CableEndIe(cableEndIe).CableEndIew(cableEndIew).CableEndIre(cableEndIre).CableEndIsw(cableEndIsw).CableEndN(cableEndN).CableEndNic(cableEndNic).CableEndNie(cableEndNie).CableEndNiew(cableEndNiew).CableEndNire(cableEndNire).CableEndNisw(cableEndNisw).CableEndNre(cableEndNre).CableEndRe(cableEndRe).Connector(connector).ConnectorGt(connectorGt).ConnectorGte(connectorGte).ConnectorLt(connectorLt).ConnectorLte(connectorLte).ConnectorN(connectorN).Created(created).Format(format).Id(id).IdN(idN).LastUpdated(lastUpdated).Limit(limit).Offset(offset).Sort(sort).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DcimAPI.DcimCablesToCableTerminationsList``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `DcimCablesToCableTerminationsList`: PaginatedCableToCableTerminationList
+	fmt.Fprintf(os.Stdout, "Response from `DcimAPI.DcimCablesToCableTerminationsList`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDcimCablesToCableTerminationsListRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cable** | **[]string** |  | 
+ **cableN** | **[]string** |  | 
+ **cableEnd** | [**[]DcimCablesToCableTerminationsListCableEndParameterInner**](DcimCablesToCableTerminationsListCableEndParameterInner.md) |  | 
+ **cableEndIc** | **[]string** |  | 
+ **cableEndIe** | **[]string** |  | 
+ **cableEndIew** | **[]string** |  | 
+ **cableEndIre** | **[]string** |  | 
+ **cableEndIsw** | **[]string** |  | 
+ **cableEndN** | **[]string** |  | 
+ **cableEndNic** | **[]string** |  | 
+ **cableEndNie** | **[]string** |  | 
+ **cableEndNiew** | **[]string** |  | 
+ **cableEndNire** | **[]string** |  | 
+ **cableEndNisw** | **[]string** |  | 
+ **cableEndNre** | **[]string** |  | 
+ **cableEndRe** | **[]string** |  | 
+ **connector** | **[]int32** |  | 
+ **connectorGt** | **[]int32** |  | 
+ **connectorGte** | **[]int32** |  | 
+ **connectorLt** | **[]int32** |  | 
+ **connectorLte** | **[]int32** |  | 
+ **connectorN** | **[]int32** |  | 
+ **created** | [**[]time.Time**](time.Time.md) |  | 
+ **format** | [**CircuitsCircuitTerminationsListFormatParameter**](CircuitsCircuitTerminationsListFormatParameter.md) |  | 
+ **id** | **[]string** | Unique object identifier, either a UUID primary key or a composite key. | 
+ **idN** | **[]string** |  | 
+ **lastUpdated** | [**[]time.Time**](time.Time.md) |  | 
+ **limit** | **int32** | Number of results to return per page. | 
+ **offset** | **int32** | The initial index from which to return the results. | 
+ **sort** | **string** | Which field to use when ordering the results. | 
+ **depth** | **int32** | Serializer Depth | [default to 1]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
+
+### Return type
+
+[**PaginatedCableToCableTerminationList**](PaginatedCableToCableTerminationList.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [tokenAuth](../README.md#tokenAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/csv
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DcimCablesToCableTerminationsNotesCreate
+
+> Note DcimCablesToCableTerminationsNotesCreate(ctx, id).NoteInputRequest(noteInputRequest).Format(format).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/nautobot/go-nautobot/v3"
+)
+
+func main() {
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | A UUID string identifying this cable to cable termination.
+	noteInputRequest := *openapiclient.NewNoteInputRequest("Note_example") // NoteInputRequest | 
+	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DcimAPI.DcimCablesToCableTerminationsNotesCreate(context.Background(), id).NoteInputRequest(noteInputRequest).Format(format).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DcimAPI.DcimCablesToCableTerminationsNotesCreate``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `DcimCablesToCableTerminationsNotesCreate`: Note
+	fmt.Fprintf(os.Stdout, "Response from `DcimAPI.DcimCablesToCableTerminationsNotesCreate`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**id** | **string** | A UUID string identifying this cable to cable termination. | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDcimCablesToCableTerminationsNotesCreateRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **noteInputRequest** | [**NoteInputRequest**](NoteInputRequest.md) |  | 
+ **format** | [**CircuitsCircuitTerminationsListFormatParameter**](CircuitsCircuitTerminationsListFormatParameter.md) |  | 
+
+### Return type
+
+[**Note**](Note.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [tokenAuth](../README.md#tokenAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json, text/csv
+- **Accept**: application/json, text/csv
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DcimCablesToCableTerminationsNotesList
+
+> PaginatedNoteList DcimCablesToCableTerminationsNotesList(ctx, id).Format(format).Limit(limit).Offset(offset).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/nautobot/go-nautobot/v3"
+)
+
+func main() {
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | A UUID string identifying this cable to cable termination.
+	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
+	limit := int32(56) // int32 | Number of results to return per page. (optional)
+	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
+	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DcimAPI.DcimCablesToCableTerminationsNotesList(context.Background(), id).Format(format).Limit(limit).Offset(offset).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DcimAPI.DcimCablesToCableTerminationsNotesList``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `DcimCablesToCableTerminationsNotesList`: PaginatedNoteList
+	fmt.Fprintf(os.Stdout, "Response from `DcimAPI.DcimCablesToCableTerminationsNotesList`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**id** | **string** | A UUID string identifying this cable to cable termination. | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDcimCablesToCableTerminationsNotesListRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **format** | [**CircuitsCircuitTerminationsListFormatParameter**](CircuitsCircuitTerminationsListFormatParameter.md) |  | 
+ **limit** | **int32** | Number of results to return per page. | 
+ **offset** | **int32** | The initial index from which to return the results. | 
+ **depth** | **int32** | Serializer Depth | [default to 1]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
+
+### Return type
+
+[**PaginatedNoteList**](PaginatedNoteList.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [tokenAuth](../README.md#tokenAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/csv
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DcimCablesToCableTerminationsPartialUpdate
+
+> CableToCableTermination DcimCablesToCableTerminationsPartialUpdate(ctx, id).Format(format).PatchedCableToCableTerminationRequest(patchedCableToCableTerminationRequest).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/nautobot/go-nautobot/v3"
+)
+
+func main() {
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | A UUID string identifying this cable to cable termination.
+	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
+	patchedCableToCableTerminationRequest := *openapiclient.NewPatchedCableToCableTerminationRequest() // PatchedCableToCableTerminationRequest |  (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DcimAPI.DcimCablesToCableTerminationsPartialUpdate(context.Background(), id).Format(format).PatchedCableToCableTerminationRequest(patchedCableToCableTerminationRequest).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DcimAPI.DcimCablesToCableTerminationsPartialUpdate``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `DcimCablesToCableTerminationsPartialUpdate`: CableToCableTermination
+	fmt.Fprintf(os.Stdout, "Response from `DcimAPI.DcimCablesToCableTerminationsPartialUpdate`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**id** | **string** | A UUID string identifying this cable to cable termination. | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDcimCablesToCableTerminationsPartialUpdateRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **format** | [**CircuitsCircuitTerminationsListFormatParameter**](CircuitsCircuitTerminationsListFormatParameter.md) |  | 
+ **patchedCableToCableTerminationRequest** | [**PatchedCableToCableTerminationRequest**](PatchedCableToCableTerminationRequest.md) |  | 
+
+### Return type
+
+[**CableToCableTermination**](CableToCableTermination.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [tokenAuth](../README.md#tokenAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json, text/csv
+- **Accept**: application/json, text/csv
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DcimCablesToCableTerminationsRetrieve
+
+> CableToCableTermination DcimCablesToCableTerminationsRetrieve(ctx, id).Format(format).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/nautobot/go-nautobot/v3"
+)
+
+func main() {
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | A UUID string identifying this cable to cable termination.
+	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
+	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
+	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DcimAPI.DcimCablesToCableTerminationsRetrieve(context.Background(), id).Format(format).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DcimAPI.DcimCablesToCableTerminationsRetrieve``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `DcimCablesToCableTerminationsRetrieve`: CableToCableTermination
+	fmt.Fprintf(os.Stdout, "Response from `DcimAPI.DcimCablesToCableTerminationsRetrieve`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**id** | **string** | A UUID string identifying this cable to cable termination. | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDcimCablesToCableTerminationsRetrieveRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **format** | [**CircuitsCircuitTerminationsListFormatParameter**](CircuitsCircuitTerminationsListFormatParameter.md) |  | 
+ **depth** | **int32** | Serializer Depth | [default to 1]
+ **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
+
+### Return type
+
+[**CableToCableTermination**](CableToCableTermination.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [tokenAuth](../README.md#tokenAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/csv
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DcimCablesToCableTerminationsUpdate
+
+> CableToCableTermination DcimCablesToCableTerminationsUpdate(ctx, id).CableToCableTerminationRequest(cableToCableTerminationRequest).Format(format).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/nautobot/go-nautobot/v3"
+)
+
+func main() {
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | A UUID string identifying this cable to cable termination.
+	cableToCableTerminationRequest := *openapiclient.NewCableToCableTerminationRequest(openapiclient.CableEndEnum("A"), *openapiclient.NewBulkWritableCableRequestStatus()) // CableToCableTerminationRequest | 
+	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DcimAPI.DcimCablesToCableTerminationsUpdate(context.Background(), id).CableToCableTerminationRequest(cableToCableTerminationRequest).Format(format).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DcimAPI.DcimCablesToCableTerminationsUpdate``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `DcimCablesToCableTerminationsUpdate`: CableToCableTermination
+	fmt.Fprintf(os.Stdout, "Response from `DcimAPI.DcimCablesToCableTerminationsUpdate`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**id** | **string** | A UUID string identifying this cable to cable termination. | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDcimCablesToCableTerminationsUpdateRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **cableToCableTerminationRequest** | [**CableToCableTerminationRequest**](CableToCableTerminationRequest.md) |  | 
+ **format** | [**CircuitsCircuitTerminationsListFormatParameter**](CircuitsCircuitTerminationsListFormatParameter.md) |  | 
+
+### Return type
+
+[**CableToCableTermination**](CableToCableTermination.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [tokenAuth](../README.md#tokenAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json, text/csv
+- **Accept**: application/json, text/csv
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## DcimCablesUpdate
 
 > Cable DcimCablesUpdate(ctx, id).WritableCableRequest(writableCableRequest).Format(format).Execute()
@@ -1478,7 +3346,7 @@ import (
 
 func main() {
 	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | A UUID string identifying this cable.
-	writableCableRequest := *openapiclient.NewWritableCableRequest("TerminationAType_example", "TerminationBType_example", "TerminationAId_example", "TerminationBId_example", *openapiclient.NewBulkWritableCableRequestStatus()) // WritableCableRequest | 
+	writableCableRequest := *openapiclient.NewWritableCableRequest(*openapiclient.NewBulkWritableCableRequestStatus()) // WritableCableRequest | 
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -1606,7 +3474,7 @@ Name | Type | Description  | Notes
 
 ## DcimConsoleConnectionsList
 
-> PaginatedConsolePortList DcimConsoleConnectionsList(ctx).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Device(device).DeviceId(deviceId).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).Id(id).IdN(idN).Limit(limit).Location(location).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).Sort(sort).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+> PaginatedConsolePortList DcimConsoleConnectionsList(ctx).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Device(device).DeviceId(deviceId).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).Id(id).IdN(idN).Limit(limit).Location(location).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).Q(q).Sort(sort).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Depth(depth).ExcludeM2m(excludeM2m).Execute()
 
 
 
@@ -1652,7 +3520,11 @@ func main() {
 	nameNre := []string{"Inner_example"} // []string |  (optional)
 	nameRe := []string{"Inner_example"} // []string |  (optional)
 	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
+	q := "q_example" // string | Search (optional)
 	sort := "sort_example" // string | Which field to use when ordering the results. (optional)
+	tags := []string{"Inner_example"} // []string |  (optional)
+	tagsIsnull := true // bool |  (optional)
+	tagsN := []string{"Inner_example"} // []string |  (optional)
 	teams := []string{"Inner_example"} // []string |  (optional)
 	teamsIsnull := true // bool | Teams (name or ID) is null (optional)
 	teamsN := []string{"Inner_example"} // []string |  (optional)
@@ -1661,7 +3533,7 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DcimAPI.DcimConsoleConnectionsList(context.Background()).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Device(device).DeviceId(deviceId).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).Id(id).IdN(idN).Limit(limit).Location(location).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).Sort(sort).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+	resp, r, err := apiClient.DcimAPI.DcimConsoleConnectionsList(context.Background()).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Device(device).DeviceId(deviceId).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).Id(id).IdN(idN).Limit(limit).Location(location).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).Q(q).Sort(sort).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Depth(depth).ExcludeM2m(excludeM2m).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DcimAPI.DcimConsoleConnectionsList``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -1709,7 +3581,11 @@ Name | Type | Description  | Notes
  **nameNre** | **[]string** |  | 
  **nameRe** | **[]string** |  | 
  **offset** | **int32** | The initial index from which to return the results. | 
+ **q** | **string** | Search | 
  **sort** | **string** | Which field to use when ordering the results. | 
+ **tags** | **[]string** |  | 
+ **tagsIsnull** | **bool** |  | 
+ **tagsN** | **[]string** |  | 
  **teams** | **[]string** |  | 
  **teamsIsnull** | **bool** | Teams (name or ID) is null | 
  **teamsN** | **[]string** |  | 
@@ -2866,7 +4742,7 @@ Name | Type | Description  | Notes
 
 ## DcimConsolePortsList
 
-> PaginatedConsolePortList DcimConsolePortsList(ctx).Cable(cable).CableIsnull(cableIsnull).CableN(cableN).Connected(connected).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Description(description).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIre(descriptionIre).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNire(descriptionNire).DescriptionNisw(descriptionNisw).DescriptionNre(descriptionNre).DescriptionRe(descriptionRe).Device(device).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).HasCable(hasCable).Id(id).IdN(idN).Label(label).LabelIc(labelIc).LabelIe(labelIe).LabelIew(labelIew).LabelIre(labelIre).LabelIsw(labelIsw).LabelN(labelN).LabelNic(labelNic).LabelNie(labelNie).LabelNiew(labelNiew).LabelNire(labelNire).LabelNisw(labelNisw).LabelNre(labelNre).LabelRe(labelRe).Limit(limit).Location(location).LocationN(locationN).Module(module).ModuleIsnull(moduleIsnull).ModuleN(moduleN).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).Q(q).Sort(sort).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Type_(type_).TypeIc(typeIc).TypeIe(typeIe).TypeIew(typeIew).TypeIre(typeIre).TypeIsw(typeIsw).TypeN(typeN).TypeNic(typeNic).TypeNie(typeNie).TypeNiew(typeNiew).TypeNire(typeNire).TypeNisw(typeNisw).TypeNre(typeNre).TypeRe(typeRe).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+> PaginatedConsolePortList DcimConsolePortsList(ctx).AvailableForCable(availableForCable).Cable(cable).CableN(cableN).Connected(connected).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Description(description).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIre(descriptionIre).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNire(descriptionNire).DescriptionNisw(descriptionNisw).DescriptionNre(descriptionNre).DescriptionRe(descriptionRe).Device(device).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).HasCable(hasCable).Id(id).IdN(idN).Label(label).LabelIc(labelIc).LabelIe(labelIe).LabelIew(labelIew).LabelIre(labelIre).LabelIsw(labelIsw).LabelN(labelN).LabelNic(labelNic).LabelNie(labelNie).LabelNiew(labelNiew).LabelNire(labelNire).LabelNisw(labelNisw).LabelNre(labelNre).LabelRe(labelRe).Limit(limit).Location(location).LocationN(locationN).Module(module).ModuleIsnull(moduleIsnull).ModuleN(moduleN).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).Q(q).Sort(sort).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Type_(type_).TypeIc(typeIc).TypeIe(typeIe).TypeIew(typeIew).TypeIre(typeIre).TypeIsw(typeIsw).TypeN(typeN).TypeNic(typeNic).TypeNie(typeNie).TypeNiew(typeNiew).TypeNire(typeNire).TypeNisw(typeNisw).TypeNre(typeNre).TypeRe(typeRe).Depth(depth).ExcludeM2m(excludeM2m).Execute()
 
 
 
@@ -2885,9 +4761,9 @@ import (
 )
 
 func main() {
+	availableForCable := []string{"Inner_example"} // []string |  (optional)
 	cable := []string{"Inner_example"} // []string | Cable (optional)
-	cableIsnull := true // bool |  (optional)
-	cableN := []string{"Inner_example"} // []string | Cable (optional)
+	cableN := []string{"Inner_example"} // []string | Exclude Cable (optional)
 	connected := true // bool | Connected status (bool) (optional)
 	contacts := []string{"Inner_example"} // []string |  (optional)
 	contactsIsnull := true // bool | Contacts (name or ID) is null (optional)
@@ -2975,7 +4851,7 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DcimAPI.DcimConsolePortsList(context.Background()).Cable(cable).CableIsnull(cableIsnull).CableN(cableN).Connected(connected).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Description(description).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIre(descriptionIre).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNire(descriptionNire).DescriptionNisw(descriptionNisw).DescriptionNre(descriptionNre).DescriptionRe(descriptionRe).Device(device).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).HasCable(hasCable).Id(id).IdN(idN).Label(label).LabelIc(labelIc).LabelIe(labelIe).LabelIew(labelIew).LabelIre(labelIre).LabelIsw(labelIsw).LabelN(labelN).LabelNic(labelNic).LabelNie(labelNie).LabelNiew(labelNiew).LabelNire(labelNire).LabelNisw(labelNisw).LabelNre(labelNre).LabelRe(labelRe).Limit(limit).Location(location).LocationN(locationN).Module(module).ModuleIsnull(moduleIsnull).ModuleN(moduleN).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).Q(q).Sort(sort).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Type_(type_).TypeIc(typeIc).TypeIe(typeIe).TypeIew(typeIew).TypeIre(typeIre).TypeIsw(typeIsw).TypeN(typeN).TypeNic(typeNic).TypeNie(typeNie).TypeNiew(typeNiew).TypeNire(typeNire).TypeNisw(typeNisw).TypeNre(typeNre).TypeRe(typeRe).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+	resp, r, err := apiClient.DcimAPI.DcimConsolePortsList(context.Background()).AvailableForCable(availableForCable).Cable(cable).CableN(cableN).Connected(connected).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Description(description).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIre(descriptionIre).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNire(descriptionNire).DescriptionNisw(descriptionNisw).DescriptionNre(descriptionNre).DescriptionRe(descriptionRe).Device(device).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).HasCable(hasCable).Id(id).IdN(idN).Label(label).LabelIc(labelIc).LabelIe(labelIe).LabelIew(labelIew).LabelIre(labelIre).LabelIsw(labelIsw).LabelN(labelN).LabelNic(labelNic).LabelNie(labelNie).LabelNiew(labelNiew).LabelNire(labelNire).LabelNisw(labelNisw).LabelNre(labelNre).LabelRe(labelRe).Limit(limit).Location(location).LocationN(locationN).Module(module).ModuleIsnull(moduleIsnull).ModuleN(moduleN).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).Q(q).Sort(sort).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Type_(type_).TypeIc(typeIc).TypeIe(typeIe).TypeIew(typeIew).TypeIre(typeIre).TypeIsw(typeIsw).TypeN(typeN).TypeNic(typeNic).TypeNie(typeNie).TypeNiew(typeNiew).TypeNire(typeNire).TypeNisw(typeNisw).TypeNre(typeNre).TypeRe(typeRe).Depth(depth).ExcludeM2m(excludeM2m).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DcimAPI.DcimConsolePortsList``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -2996,9 +4872,9 @@ Other parameters are passed through a pointer to a apiDcimConsolePortsListReques
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **availableForCable** | **[]string** |  | 
  **cable** | **[]string** | Cable | 
- **cableIsnull** | **bool** |  | 
- **cableN** | **[]string** | Cable | 
+ **cableN** | **[]string** | Exclude Cable | 
  **connected** | **bool** | Connected status (bool) | 
  **contacts** | **[]string** |  | 
  **contactsIsnull** | **bool** | Contacts (name or ID) is null | 
@@ -4688,7 +6564,7 @@ Name | Type | Description  | Notes
 
 ## DcimConsoleServerPortsList
 
-> PaginatedConsoleServerPortList DcimConsoleServerPortsList(ctx).Cable(cable).CableIsnull(cableIsnull).CableN(cableN).Connected(connected).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Description(description).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIre(descriptionIre).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNire(descriptionNire).DescriptionNisw(descriptionNisw).DescriptionNre(descriptionNre).DescriptionRe(descriptionRe).Device(device).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).HasCable(hasCable).Id(id).IdN(idN).Label(label).LabelIc(labelIc).LabelIe(labelIe).LabelIew(labelIew).LabelIre(labelIre).LabelIsw(labelIsw).LabelN(labelN).LabelNic(labelNic).LabelNie(labelNie).LabelNiew(labelNiew).LabelNire(labelNire).LabelNisw(labelNisw).LabelNre(labelNre).LabelRe(labelRe).Limit(limit).Location(location).LocationN(locationN).Module(module).ModuleIsnull(moduleIsnull).ModuleN(moduleN).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).Q(q).Sort(sort).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Type_(type_).TypeIc(typeIc).TypeIe(typeIe).TypeIew(typeIew).TypeIre(typeIre).TypeIsw(typeIsw).TypeN(typeN).TypeNic(typeNic).TypeNie(typeNie).TypeNiew(typeNiew).TypeNire(typeNire).TypeNisw(typeNisw).TypeNre(typeNre).TypeRe(typeRe).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+> PaginatedConsoleServerPortList DcimConsoleServerPortsList(ctx).AvailableForCable(availableForCable).Cable(cable).CableN(cableN).Connected(connected).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Description(description).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIre(descriptionIre).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNire(descriptionNire).DescriptionNisw(descriptionNisw).DescriptionNre(descriptionNre).DescriptionRe(descriptionRe).Device(device).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).HasCable(hasCable).Id(id).IdN(idN).Label(label).LabelIc(labelIc).LabelIe(labelIe).LabelIew(labelIew).LabelIre(labelIre).LabelIsw(labelIsw).LabelN(labelN).LabelNic(labelNic).LabelNie(labelNie).LabelNiew(labelNiew).LabelNire(labelNire).LabelNisw(labelNisw).LabelNre(labelNre).LabelRe(labelRe).Limit(limit).Location(location).LocationN(locationN).Module(module).ModuleIsnull(moduleIsnull).ModuleN(moduleN).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).Q(q).Sort(sort).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Type_(type_).TypeIc(typeIc).TypeIe(typeIe).TypeIew(typeIew).TypeIre(typeIre).TypeIsw(typeIsw).TypeN(typeN).TypeNic(typeNic).TypeNie(typeNie).TypeNiew(typeNiew).TypeNire(typeNire).TypeNisw(typeNisw).TypeNre(typeNre).TypeRe(typeRe).Depth(depth).ExcludeM2m(excludeM2m).Execute()
 
 
 
@@ -4707,9 +6583,9 @@ import (
 )
 
 func main() {
+	availableForCable := []string{"Inner_example"} // []string |  (optional)
 	cable := []string{"Inner_example"} // []string | Cable (optional)
-	cableIsnull := true // bool |  (optional)
-	cableN := []string{"Inner_example"} // []string | Cable (optional)
+	cableN := []string{"Inner_example"} // []string | Exclude Cable (optional)
 	connected := true // bool | Connected status (bool) (optional)
 	contacts := []string{"Inner_example"} // []string |  (optional)
 	contactsIsnull := true // bool | Contacts (name or ID) is null (optional)
@@ -4797,7 +6673,7 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DcimAPI.DcimConsoleServerPortsList(context.Background()).Cable(cable).CableIsnull(cableIsnull).CableN(cableN).Connected(connected).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Description(description).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIre(descriptionIre).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNire(descriptionNire).DescriptionNisw(descriptionNisw).DescriptionNre(descriptionNre).DescriptionRe(descriptionRe).Device(device).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).HasCable(hasCable).Id(id).IdN(idN).Label(label).LabelIc(labelIc).LabelIe(labelIe).LabelIew(labelIew).LabelIre(labelIre).LabelIsw(labelIsw).LabelN(labelN).LabelNic(labelNic).LabelNie(labelNie).LabelNiew(labelNiew).LabelNire(labelNire).LabelNisw(labelNisw).LabelNre(labelNre).LabelRe(labelRe).Limit(limit).Location(location).LocationN(locationN).Module(module).ModuleIsnull(moduleIsnull).ModuleN(moduleN).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).Q(q).Sort(sort).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Type_(type_).TypeIc(typeIc).TypeIe(typeIe).TypeIew(typeIew).TypeIre(typeIre).TypeIsw(typeIsw).TypeN(typeN).TypeNic(typeNic).TypeNie(typeNie).TypeNiew(typeNiew).TypeNire(typeNire).TypeNisw(typeNisw).TypeNre(typeNre).TypeRe(typeRe).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+	resp, r, err := apiClient.DcimAPI.DcimConsoleServerPortsList(context.Background()).AvailableForCable(availableForCable).Cable(cable).CableN(cableN).Connected(connected).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Description(description).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIre(descriptionIre).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNire(descriptionNire).DescriptionNisw(descriptionNisw).DescriptionNre(descriptionNre).DescriptionRe(descriptionRe).Device(device).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).HasCable(hasCable).Id(id).IdN(idN).Label(label).LabelIc(labelIc).LabelIe(labelIe).LabelIew(labelIew).LabelIre(labelIre).LabelIsw(labelIsw).LabelN(labelN).LabelNic(labelNic).LabelNie(labelNie).LabelNiew(labelNiew).LabelNire(labelNire).LabelNisw(labelNisw).LabelNre(labelNre).LabelRe(labelRe).Limit(limit).Location(location).LocationN(locationN).Module(module).ModuleIsnull(moduleIsnull).ModuleN(moduleN).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).Q(q).Sort(sort).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Type_(type_).TypeIc(typeIc).TypeIe(typeIe).TypeIew(typeIew).TypeIre(typeIre).TypeIsw(typeIsw).TypeN(typeN).TypeNic(typeNic).TypeNie(typeNie).TypeNiew(typeNiew).TypeNire(typeNire).TypeNisw(typeNisw).TypeNre(typeNre).TypeRe(typeRe).Depth(depth).ExcludeM2m(excludeM2m).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DcimAPI.DcimConsoleServerPortsList``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -4818,9 +6694,9 @@ Other parameters are passed through a pointer to a apiDcimConsoleServerPortsList
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **availableForCable** | **[]string** |  | 
  **cable** | **[]string** | Cable | 
- **cableIsnull** | **bool** |  | 
- **cableN** | **[]string** | Cable | 
+ **cableN** | **[]string** | Exclude Cable | 
  **connected** | **bool** | Connected status (bool) | 
  **contacts** | **[]string** |  | 
  **contactsIsnull** | **bool** | Contacts (name or ID) is null | 
@@ -5720,7 +7596,7 @@ Name | Type | Description  | Notes
 
 ## DcimControllerManagedDeviceGroupsList
 
-> PaginatedControllerManagedDeviceGroupList DcimControllerManagedDeviceGroupsList(ctx).Capabilities(capabilities).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Controller(controller).ControllerN(controllerN).Created(created).CreatedGt(createdGt).CreatedGte(createdGte).CreatedIsnull(createdIsnull).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).Description(description).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIre(descriptionIre).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNire(descriptionNire).DescriptionNisw(descriptionNisw).DescriptionNre(descriptionNre).DescriptionRe(descriptionRe).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).HasRadioProfiles(hasRadioProfiles).HasWirelessNetworks(hasWirelessNetworks).Id(id).IdN(idN).LastUpdated(lastUpdated).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedIsnull(lastUpdatedIsnull).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).Parent(parent).ParentIsnull(parentIsnull).ParentN(parentN).Q(q).RadioProfiles(radioProfiles).RadioProfilesN(radioProfilesN).Sort(sort).Subtree(subtree).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Tenant(tenant).TenantIsnull(tenantIsnull).TenantN(tenantN).TenantGroup(tenantGroup).TenantGroupIsnull(tenantGroupIsnull).TenantGroupN(tenantGroupN).TenantId(tenantId).TenantIdIsnull(tenantIdIsnull).TenantIdN(tenantIdN).Weight(weight).WeightGt(weightGt).WeightGte(weightGte).WeightLt(weightLt).WeightLte(weightLte).WeightN(weightN).WirelessNetworks(wirelessNetworks).WirelessNetworksN(wirelessNetworksN).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+> PaginatedControllerManagedDeviceGroupList DcimControllerManagedDeviceGroupsList(ctx).Capabilities(capabilities).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Controller(controller).ControllerN(controllerN).Created(created).CreatedGt(createdGt).CreatedGte(createdGte).CreatedIsnull(createdIsnull).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).Description(description).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIre(descriptionIre).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNire(descriptionNire).DescriptionNisw(descriptionNisw).DescriptionNre(descriptionNre).DescriptionRe(descriptionRe).Devices(devices).DevicesIsnull(devicesIsnull).DevicesN(devicesN).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).HasDevices(hasDevices).HasRadioProfiles(hasRadioProfiles).HasVirtualDeviceContexts(hasVirtualDeviceContexts).HasWirelessNetworks(hasWirelessNetworks).Id(id).IdN(idN).LastUpdated(lastUpdated).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedIsnull(lastUpdatedIsnull).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).Parent(parent).ParentIsnull(parentIsnull).ParentN(parentN).Q(q).RadioProfiles(radioProfiles).RadioProfilesN(radioProfilesN).Sort(sort).Subtree(subtree).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Tenant(tenant).TenantIsnull(tenantIsnull).TenantN(tenantN).TenantGroup(tenantGroup).TenantGroupIsnull(tenantGroupIsnull).TenantGroupN(tenantGroupN).TenantId(tenantId).TenantIdIsnull(tenantIdIsnull).TenantIdN(tenantIdN).VirtualDeviceContexts(virtualDeviceContexts).VirtualDeviceContextsIsnull(virtualDeviceContextsIsnull).VirtualDeviceContextsN(virtualDeviceContextsN).Weight(weight).WeightGt(weightGt).WeightGte(weightGte).WeightLt(weightLt).WeightLte(weightLte).WeightN(weightN).WirelessNetworks(wirelessNetworks).WirelessNetworksN(wirelessNetworksN).Depth(depth).ExcludeM2m(excludeM2m).Execute()
 
 
 
@@ -5767,10 +7643,15 @@ func main() {
 	descriptionNisw := []string{"Inner_example"} // []string |  (optional)
 	descriptionNre := []string{"Inner_example"} // []string |  (optional)
 	descriptionRe := []string{"Inner_example"} // []string |  (optional)
+	devices := []string{"Inner_example"} // []string |  (optional)
+	devicesIsnull := true // bool | Devices (name or ID) is null (optional)
+	devicesN := []string{"Inner_example"} // []string |  (optional)
 	dynamicGroups := []string{"Inner_example"} // []string |  (optional)
 	dynamicGroupsN := []string{"Inner_example"} // []string |  (optional)
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
+	hasDevices := true // bool | Has devices (optional)
 	hasRadioProfiles := true // bool | Has radio profiles (optional)
+	hasVirtualDeviceContexts := true // bool | Has virtual device contexts (optional)
 	hasWirelessNetworks := true // bool | Has wireless networks (optional)
 	id := []string{"Inner_example"} // []string | Unique object identifier, either a UUID primary key or a composite key. (optional)
 	idN := []string{"Inner_example"} // []string |  (optional)
@@ -5820,6 +7701,9 @@ func main() {
 	tenantId := []*string{"Inner_example"} // []*string | Tenant (ID) (deprecated, use \"tenant\" filter instead) (optional)
 	tenantIdIsnull := true // bool | Tenant (ID) (deprecated, use \"tenant\" filter instead) is null (optional)
 	tenantIdN := []*string{"Inner_example"} // []*string | Exclude Tenant (ID) (deprecated, use \"tenant\" filter instead) (optional)
+	virtualDeviceContexts := []string{"Inner_example"} // []string |  (optional)
+	virtualDeviceContextsIsnull := true // bool | Virtual device contexts (name or ID) is null (optional)
+	virtualDeviceContextsN := []string{"Inner_example"} // []string |  (optional)
 	weight := []int32{int32(123)} // []int32 |  (optional)
 	weightGt := []int32{int32(123)} // []int32 |  (optional)
 	weightGte := []int32{int32(123)} // []int32 |  (optional)
@@ -5833,7 +7717,7 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DcimAPI.DcimControllerManagedDeviceGroupsList(context.Background()).Capabilities(capabilities).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Controller(controller).ControllerN(controllerN).Created(created).CreatedGt(createdGt).CreatedGte(createdGte).CreatedIsnull(createdIsnull).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).Description(description).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIre(descriptionIre).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNire(descriptionNire).DescriptionNisw(descriptionNisw).DescriptionNre(descriptionNre).DescriptionRe(descriptionRe).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).HasRadioProfiles(hasRadioProfiles).HasWirelessNetworks(hasWirelessNetworks).Id(id).IdN(idN).LastUpdated(lastUpdated).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedIsnull(lastUpdatedIsnull).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).Parent(parent).ParentIsnull(parentIsnull).ParentN(parentN).Q(q).RadioProfiles(radioProfiles).RadioProfilesN(radioProfilesN).Sort(sort).Subtree(subtree).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Tenant(tenant).TenantIsnull(tenantIsnull).TenantN(tenantN).TenantGroup(tenantGroup).TenantGroupIsnull(tenantGroupIsnull).TenantGroupN(tenantGroupN).TenantId(tenantId).TenantIdIsnull(tenantIdIsnull).TenantIdN(tenantIdN).Weight(weight).WeightGt(weightGt).WeightGte(weightGte).WeightLt(weightLt).WeightLte(weightLte).WeightN(weightN).WirelessNetworks(wirelessNetworks).WirelessNetworksN(wirelessNetworksN).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+	resp, r, err := apiClient.DcimAPI.DcimControllerManagedDeviceGroupsList(context.Background()).Capabilities(capabilities).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Controller(controller).ControllerN(controllerN).Created(created).CreatedGt(createdGt).CreatedGte(createdGte).CreatedIsnull(createdIsnull).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).Description(description).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIre(descriptionIre).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNire(descriptionNire).DescriptionNisw(descriptionNisw).DescriptionNre(descriptionNre).DescriptionRe(descriptionRe).Devices(devices).DevicesIsnull(devicesIsnull).DevicesN(devicesN).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).HasDevices(hasDevices).HasRadioProfiles(hasRadioProfiles).HasVirtualDeviceContexts(hasVirtualDeviceContexts).HasWirelessNetworks(hasWirelessNetworks).Id(id).IdN(idN).LastUpdated(lastUpdated).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedIsnull(lastUpdatedIsnull).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).Parent(parent).ParentIsnull(parentIsnull).ParentN(parentN).Q(q).RadioProfiles(radioProfiles).RadioProfilesN(radioProfilesN).Sort(sort).Subtree(subtree).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Tenant(tenant).TenantIsnull(tenantIsnull).TenantN(tenantN).TenantGroup(tenantGroup).TenantGroupIsnull(tenantGroupIsnull).TenantGroupN(tenantGroupN).TenantId(tenantId).TenantIdIsnull(tenantIdIsnull).TenantIdN(tenantIdN).VirtualDeviceContexts(virtualDeviceContexts).VirtualDeviceContextsIsnull(virtualDeviceContextsIsnull).VirtualDeviceContextsN(virtualDeviceContextsN).Weight(weight).WeightGt(weightGt).WeightGte(weightGte).WeightLt(weightLt).WeightLte(weightLte).WeightN(weightN).WirelessNetworks(wirelessNetworks).WirelessNetworksN(wirelessNetworksN).Depth(depth).ExcludeM2m(excludeM2m).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DcimAPI.DcimControllerManagedDeviceGroupsList``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -5881,10 +7765,15 @@ Name | Type | Description  | Notes
  **descriptionNisw** | **[]string** |  | 
  **descriptionNre** | **[]string** |  | 
  **descriptionRe** | **[]string** |  | 
+ **devices** | **[]string** |  | 
+ **devicesIsnull** | **bool** | Devices (name or ID) is null | 
+ **devicesN** | **[]string** |  | 
  **dynamicGroups** | **[]string** |  | 
  **dynamicGroupsN** | **[]string** |  | 
  **format** | [**CircuitsCircuitTerminationsListFormatParameter**](CircuitsCircuitTerminationsListFormatParameter.md) |  | 
+ **hasDevices** | **bool** | Has devices | 
  **hasRadioProfiles** | **bool** | Has radio profiles | 
+ **hasVirtualDeviceContexts** | **bool** | Has virtual device contexts | 
  **hasWirelessNetworks** | **bool** | Has wireless networks | 
  **id** | **[]string** | Unique object identifier, either a UUID primary key or a composite key. | 
  **idN** | **[]string** |  | 
@@ -5934,6 +7823,9 @@ Name | Type | Description  | Notes
  **tenantId** | **[]string** | Tenant (ID) (deprecated, use \&quot;tenant\&quot; filter instead) | 
  **tenantIdIsnull** | **bool** | Tenant (ID) (deprecated, use \&quot;tenant\&quot; filter instead) is null | 
  **tenantIdN** | **[]string** | Exclude Tenant (ID) (deprecated, use \&quot;tenant\&quot; filter instead) | 
+ **virtualDeviceContexts** | **[]string** |  | 
+ **virtualDeviceContextsIsnull** | **bool** | Virtual device contexts (name or ID) is null | 
+ **virtualDeviceContextsN** | **[]string** |  | 
  **weight** | **[]int32** |  | 
  **weightGt** | **[]int32** |  | 
  **weightGte** | **[]int32** |  | 
@@ -15750,7 +17642,7 @@ Name | Type | Description  | Notes
 
 ## DcimFrontPortsList
 
-> PaginatedFrontPortList DcimFrontPortsList(ctx).Cable(cable).CableIsnull(cableIsnull).CableN(cableN).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Description(description).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIre(descriptionIre).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNire(descriptionNire).DescriptionNisw(descriptionNisw).DescriptionNre(descriptionNre).DescriptionRe(descriptionRe).Device(device).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).HasCable(hasCable).Id(id).IdN(idN).Label(label).LabelIc(labelIc).LabelIe(labelIe).LabelIew(labelIew).LabelIre(labelIre).LabelIsw(labelIsw).LabelN(labelN).LabelNic(labelNic).LabelNie(labelNie).LabelNiew(labelNiew).LabelNire(labelNire).LabelNisw(labelNisw).LabelNre(labelNre).LabelRe(labelRe).Limit(limit).Location(location).LocationN(locationN).Module(module).ModuleIsnull(moduleIsnull).ModuleN(moduleN).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).Q(q).RearPort(rearPort).RearPortN(rearPortN).RearPortPosition(rearPortPosition).RearPortPositionGt(rearPortPositionGt).RearPortPositionGte(rearPortPositionGte).RearPortPositionLt(rearPortPositionLt).RearPortPositionLte(rearPortPositionLte).RearPortPositionN(rearPortPositionN).Sort(sort).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Type_(type_).TypeIc(typeIc).TypeIe(typeIe).TypeIew(typeIew).TypeIre(typeIre).TypeIsw(typeIsw).TypeN(typeN).TypeNic(typeNic).TypeNie(typeNie).TypeNiew(typeNiew).TypeNire(typeNire).TypeNisw(typeNisw).TypeNre(typeNre).TypeRe(typeRe).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+> PaginatedFrontPortList DcimFrontPortsList(ctx).AvailableForCable(availableForCable).Cable(cable).CableN(cableN).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Description(description).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIre(descriptionIre).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNire(descriptionNire).DescriptionNisw(descriptionNisw).DescriptionNre(descriptionNre).DescriptionRe(descriptionRe).Device(device).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).HasCable(hasCable).Id(id).IdN(idN).Label(label).LabelIc(labelIc).LabelIe(labelIe).LabelIew(labelIew).LabelIre(labelIre).LabelIsw(labelIsw).LabelN(labelN).LabelNic(labelNic).LabelNie(labelNie).LabelNiew(labelNiew).LabelNire(labelNire).LabelNisw(labelNisw).LabelNre(labelNre).LabelRe(labelRe).Limit(limit).Location(location).LocationN(locationN).Module(module).ModuleIsnull(moduleIsnull).ModuleN(moduleN).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).Q(q).RearPort(rearPort).RearPortN(rearPortN).RearPortPosition(rearPortPosition).RearPortPositionGt(rearPortPositionGt).RearPortPositionGte(rearPortPositionGte).RearPortPositionLt(rearPortPositionLt).RearPortPositionLte(rearPortPositionLte).RearPortPositionN(rearPortPositionN).Sort(sort).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Type_(type_).TypeIc(typeIc).TypeIe(typeIe).TypeIew(typeIew).TypeIre(typeIre).TypeIsw(typeIsw).TypeN(typeN).TypeNic(typeNic).TypeNie(typeNie).TypeNiew(typeNiew).TypeNire(typeNire).TypeNisw(typeNisw).TypeNre(typeNre).TypeRe(typeRe).Depth(depth).ExcludeM2m(excludeM2m).Execute()
 
 
 
@@ -15769,9 +17661,9 @@ import (
 )
 
 func main() {
+	availableForCable := []string{"Inner_example"} // []string |  (optional)
 	cable := []string{"Inner_example"} // []string | Cable (optional)
-	cableIsnull := true // bool |  (optional)
-	cableN := []string{"Inner_example"} // []string | Cable (optional)
+	cableN := []string{"Inner_example"} // []string | Exclude Cable (optional)
 	contacts := []string{"Inner_example"} // []string |  (optional)
 	contactsIsnull := true // bool | Contacts (name or ID) is null (optional)
 	contactsN := []string{"Inner_example"} // []string |  (optional)
@@ -15866,7 +17758,7 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DcimAPI.DcimFrontPortsList(context.Background()).Cable(cable).CableIsnull(cableIsnull).CableN(cableN).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Description(description).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIre(descriptionIre).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNire(descriptionNire).DescriptionNisw(descriptionNisw).DescriptionNre(descriptionNre).DescriptionRe(descriptionRe).Device(device).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).HasCable(hasCable).Id(id).IdN(idN).Label(label).LabelIc(labelIc).LabelIe(labelIe).LabelIew(labelIew).LabelIre(labelIre).LabelIsw(labelIsw).LabelN(labelN).LabelNic(labelNic).LabelNie(labelNie).LabelNiew(labelNiew).LabelNire(labelNire).LabelNisw(labelNisw).LabelNre(labelNre).LabelRe(labelRe).Limit(limit).Location(location).LocationN(locationN).Module(module).ModuleIsnull(moduleIsnull).ModuleN(moduleN).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).Q(q).RearPort(rearPort).RearPortN(rearPortN).RearPortPosition(rearPortPosition).RearPortPositionGt(rearPortPositionGt).RearPortPositionGte(rearPortPositionGte).RearPortPositionLt(rearPortPositionLt).RearPortPositionLte(rearPortPositionLte).RearPortPositionN(rearPortPositionN).Sort(sort).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Type_(type_).TypeIc(typeIc).TypeIe(typeIe).TypeIew(typeIew).TypeIre(typeIre).TypeIsw(typeIsw).TypeN(typeN).TypeNic(typeNic).TypeNie(typeNie).TypeNiew(typeNiew).TypeNire(typeNire).TypeNisw(typeNisw).TypeNre(typeNre).TypeRe(typeRe).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+	resp, r, err := apiClient.DcimAPI.DcimFrontPortsList(context.Background()).AvailableForCable(availableForCable).Cable(cable).CableN(cableN).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Description(description).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIre(descriptionIre).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNire(descriptionNire).DescriptionNisw(descriptionNisw).DescriptionNre(descriptionNre).DescriptionRe(descriptionRe).Device(device).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).HasCable(hasCable).Id(id).IdN(idN).Label(label).LabelIc(labelIc).LabelIe(labelIe).LabelIew(labelIew).LabelIre(labelIre).LabelIsw(labelIsw).LabelN(labelN).LabelNic(labelNic).LabelNie(labelNie).LabelNiew(labelNiew).LabelNire(labelNire).LabelNisw(labelNisw).LabelNre(labelNre).LabelRe(labelRe).Limit(limit).Location(location).LocationN(locationN).Module(module).ModuleIsnull(moduleIsnull).ModuleN(moduleN).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).Q(q).RearPort(rearPort).RearPortN(rearPortN).RearPortPosition(rearPortPosition).RearPortPositionGt(rearPortPositionGt).RearPortPositionGte(rearPortPositionGte).RearPortPositionLt(rearPortPositionLt).RearPortPositionLte(rearPortPositionLte).RearPortPositionN(rearPortPositionN).Sort(sort).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Type_(type_).TypeIc(typeIc).TypeIe(typeIe).TypeIew(typeIew).TypeIre(typeIre).TypeIsw(typeIsw).TypeN(typeN).TypeNic(typeNic).TypeNie(typeNie).TypeNiew(typeNiew).TypeNire(typeNire).TypeNisw(typeNisw).TypeNre(typeNre).TypeRe(typeRe).Depth(depth).ExcludeM2m(excludeM2m).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DcimAPI.DcimFrontPortsList``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -15887,9 +17779,9 @@ Other parameters are passed through a pointer to a apiDcimFrontPortsListRequest 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **availableForCable** | **[]string** |  | 
  **cable** | **[]string** | Cable | 
- **cableIsnull** | **bool** |  | 
- **cableN** | **[]string** | Cable | 
+ **cableN** | **[]string** | Exclude Cable | 
  **contacts** | **[]string** |  | 
  **contactsIsnull** | **bool** | Contacts (name or ID) is null | 
  **contactsN** | **[]string** |  | 
@@ -16460,7 +18352,7 @@ Name | Type | Description  | Notes
 
 ## DcimInterfaceConnectionsList
 
-> PaginatedInterfaceConnectionList DcimInterfaceConnectionsList(ctx).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Device(device).DeviceId(deviceId).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).Id(id).IdN(idN).Limit(limit).Location(location).Offset(offset).Sort(sort).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+> PaginatedInterfaceConnectionList DcimInterfaceConnectionsList(ctx).Device(device).DeviceId(deviceId).Format(format).Id(id).IdN(idN).Limit(limit).Location(location).Offset(offset).Q(q).Sort(sort).Depth(depth).ExcludeM2m(excludeM2m).Execute()
 
 
 
@@ -16479,29 +18371,22 @@ import (
 )
 
 func main() {
-	contacts := []string{"Inner_example"} // []string |  (optional)
-	contactsIsnull := true // bool | Contacts (name or ID) is null (optional)
-	contactsN := []string{"Inner_example"} // []string |  (optional)
 	device := []string{"Inner_example"} // []string | Device (name) (optional)
 	deviceId := []string{"Inner_example"} // []string | Device (ID) (optional)
-	dynamicGroups := []string{"Inner_example"} // []string |  (optional)
-	dynamicGroupsN := []string{"Inner_example"} // []string |  (optional)
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 	id := []string{"Inner_example"} // []string | Unique object identifier, either a UUID primary key or a composite key. (optional)
 	idN := []string{"Inner_example"} // []string |  (optional)
 	limit := int32(56) // int32 | Number of results to return per page. (optional)
 	location := "location_example" // string | Location (name) (optional)
 	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
+	q := "q_example" // string | Search (optional)
 	sort := "sort_example" // string | Which field to use when ordering the results. (optional)
-	teams := []string{"Inner_example"} // []string |  (optional)
-	teamsIsnull := true // bool | Teams (name or ID) is null (optional)
-	teamsN := []string{"Inner_example"} // []string |  (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
 	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DcimAPI.DcimInterfaceConnectionsList(context.Background()).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Device(device).DeviceId(deviceId).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).Id(id).IdN(idN).Limit(limit).Location(location).Offset(offset).Sort(sort).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+	resp, r, err := apiClient.DcimAPI.DcimInterfaceConnectionsList(context.Background()).Device(device).DeviceId(deviceId).Format(format).Id(id).IdN(idN).Limit(limit).Location(location).Offset(offset).Q(q).Sort(sort).Depth(depth).ExcludeM2m(excludeM2m).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DcimAPI.DcimInterfaceConnectionsList``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -16522,23 +18407,16 @@ Other parameters are passed through a pointer to a apiDcimInterfaceConnectionsLi
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contacts** | **[]string** |  | 
- **contactsIsnull** | **bool** | Contacts (name or ID) is null | 
- **contactsN** | **[]string** |  | 
  **device** | **[]string** | Device (name) | 
  **deviceId** | **[]string** | Device (ID) | 
- **dynamicGroups** | **[]string** |  | 
- **dynamicGroupsN** | **[]string** |  | 
  **format** | [**CircuitsCircuitTerminationsListFormatParameter**](CircuitsCircuitTerminationsListFormatParameter.md) |  | 
  **id** | **[]string** | Unique object identifier, either a UUID primary key or a composite key. | 
  **idN** | **[]string** |  | 
  **limit** | **int32** | Number of results to return per page. | 
  **location** | **string** | Location (name) | 
  **offset** | **int32** | The initial index from which to return the results. | 
+ **q** | **string** | Search | 
  **sort** | **string** | Which field to use when ordering the results. | 
- **teams** | **[]string** |  | 
- **teamsIsnull** | **bool** | Teams (name or ID) is null | 
- **teamsN** | **[]string** |  | 
  **depth** | **int32** | Serializer Depth | [default to 1]
  **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
 
@@ -20184,7 +22062,7 @@ Name | Type | Description  | Notes
 
 ## DcimInterfacesList
 
-> PaginatedInterfaceList DcimInterfacesList(ctx).Bridge(bridge).BridgeIsnull(bridgeIsnull).BridgeN(bridgeN).BridgedInterfaces(bridgedInterfaces).BridgedInterfacesIsnull(bridgedInterfacesIsnull).BridgedInterfacesN(bridgedInterfacesN).Cable(cable).CableIsnull(cableIsnull).CableN(cableN).ChildInterfaces(childInterfaces).ChildInterfacesIsnull(childInterfacesIsnull).ChildInterfacesN(childInterfacesN).Connected(connected).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Description(description).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIre(descriptionIre).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNire(descriptionNire).DescriptionNisw(descriptionNisw).DescriptionNre(descriptionNre).DescriptionRe(descriptionRe).Device(device).DeviceId(deviceId).DeviceWithCommonVc(deviceWithCommonVc).Duplex(duplex).DuplexIc(duplexIc).DuplexIe(duplexIe).DuplexIew(duplexIew).DuplexIre(duplexIre).DuplexIsw(duplexIsw).DuplexN(duplexN).DuplexNic(duplexNic).DuplexNie(duplexNie).DuplexNiew(duplexNiew).DuplexNire(duplexNire).DuplexNisw(duplexNisw).DuplexNre(duplexNre).DuplexRe(duplexRe).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Enabled(enabled).Format(format).HasBridgedInterfaces(hasBridgedInterfaces).HasCable(hasCable).HasChildInterfaces(hasChildInterfaces).HasIpAddresses(hasIpAddresses).HasMemberInterfaces(hasMemberInterfaces).HasTaggedVlans(hasTaggedVlans).HasVirtualDeviceContexts(hasVirtualDeviceContexts).Id(id).IdN(idN).InterfaceRedundancyGroups(interfaceRedundancyGroups).InterfaceRedundancyGroupsIsnull(interfaceRedundancyGroupsIsnull).InterfaceRedundancyGroupsN(interfaceRedundancyGroupsN).IpAddresses(ipAddresses).Kind(kind).Label(label).LabelIc(labelIc).LabelIe(labelIe).LabelIew(labelIew).LabelIre(labelIre).LabelIsw(labelIsw).LabelN(labelN).LabelNic(labelNic).LabelNie(labelNie).LabelNiew(labelNiew).LabelNire(labelNire).LabelNisw(labelNisw).LabelNre(labelNre).LabelRe(labelRe).Lag(lag).LagIsnull(lagIsnull).LagN(lagN).Limit(limit).Location(location).LocationN(locationN).MacAddress(macAddress).MacAddressIc(macAddressIc).MacAddressIe(macAddressIe).MacAddressIew(macAddressIew).MacAddressIre(macAddressIre).MacAddressIsw(macAddressIsw).MacAddressN(macAddressN).MacAddressNic(macAddressNic).MacAddressNie(macAddressNie).MacAddressNiew(macAddressNiew).MacAddressNire(macAddressNire).MacAddressNisw(macAddressNisw).MacAddressNre(macAddressNre).MacAddressRe(macAddressRe).MemberInterfaces(memberInterfaces).MemberInterfacesIsnull(memberInterfacesIsnull).MemberInterfacesN(memberInterfacesN).MgmtOnly(mgmtOnly).Mode(mode).ModeIc(modeIc).ModeIe(modeIe).ModeIew(modeIew).ModeIre(modeIre).ModeIsw(modeIsw).ModeN(modeN).ModeNic(modeNic).ModeNie(modeNie).ModeNiew(modeNiew).ModeNire(modeNire).ModeNisw(modeNisw).ModeNre(modeNre).ModeRe(modeRe).Module(module).ModuleIsnull(moduleIsnull).ModuleN(moduleN).Mtu(mtu).MtuGt(mtuGt).MtuGte(mtuGte).MtuIsnull(mtuIsnull).MtuLt(mtuLt).MtuLte(mtuLte).MtuN(mtuN).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).ParentInterface(parentInterface).ParentInterfaceIsnull(parentInterfaceIsnull).ParentInterfaceN(parentInterfaceN).PortType(portType).PortTypeIc(portTypeIc).PortTypeIe(portTypeIe).PortTypeIew(portTypeIew).PortTypeIre(portTypeIre).PortTypeIsw(portTypeIsw).PortTypeN(portTypeN).PortTypeNic(portTypeNic).PortTypeNie(portTypeNie).PortTypeNiew(portTypeNiew).PortTypeNire(portTypeNire).PortTypeNisw(portTypeNisw).PortTypeNre(portTypeNre).PortTypeRe(portTypeRe).Q(q).Role(role).RoleIsnull(roleIsnull).RoleN(roleN).Sort(sort).Speed(speed).SpeedGt(speedGt).SpeedGte(speedGte).SpeedIsnull(speedIsnull).SpeedLt(speedLt).SpeedLte(speedLte).SpeedN(speedN).Status(status).StatusN(statusN).TaggedVlans(taggedVlans).TaggedVlansN(taggedVlansN).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Type_(type_).TypeIc(typeIc).TypeIe(typeIe).TypeIew(typeIew).TypeIre(typeIre).TypeIsw(typeIsw).TypeN(typeN).TypeNic(typeNic).TypeNie(typeNie).TypeNiew(typeNiew).TypeNire(typeNire).TypeNisw(typeNisw).TypeNre(typeNre).TypeRe(typeRe).UntaggedVlan(untaggedVlan).UntaggedVlanIsnull(untaggedVlanIsnull).UntaggedVlanN(untaggedVlanN).VirtualDeviceContexts(virtualDeviceContexts).VirtualDeviceContextsIsnull(virtualDeviceContextsIsnull).VirtualDeviceContextsN(virtualDeviceContextsN).Vlan(vlan).VlanId(vlanId).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+> PaginatedInterfaceList DcimInterfacesList(ctx).AvailableForCable(availableForCable).BreakoutPosition(breakoutPosition).BreakoutPositionGt(breakoutPositionGt).BreakoutPositionGte(breakoutPositionGte).BreakoutPositionIsnull(breakoutPositionIsnull).BreakoutPositionLt(breakoutPositionLt).BreakoutPositionLte(breakoutPositionLte).BreakoutPositionN(breakoutPositionN).Bridge(bridge).BridgeIsnull(bridgeIsnull).BridgeN(bridgeN).BridgedInterfaces(bridgedInterfaces).BridgedInterfacesIsnull(bridgedInterfacesIsnull).BridgedInterfacesN(bridgedInterfacesN).Cable(cable).CableN(cableN).ChildInterfaces(childInterfaces).ChildInterfacesIsnull(childInterfacesIsnull).ChildInterfacesN(childInterfacesN).Connected(connected).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Description(description).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIre(descriptionIre).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNire(descriptionNire).DescriptionNisw(descriptionNisw).DescriptionNre(descriptionNre).DescriptionRe(descriptionRe).Device(device).DeviceId(deviceId).DeviceWithCommonVc(deviceWithCommonVc).Duplex(duplex).DuplexIc(duplexIc).DuplexIe(duplexIe).DuplexIew(duplexIew).DuplexIre(duplexIre).DuplexIsw(duplexIsw).DuplexN(duplexN).DuplexNic(duplexNic).DuplexNie(duplexNie).DuplexNiew(duplexNiew).DuplexNire(duplexNire).DuplexNisw(duplexNisw).DuplexNre(duplexNre).DuplexRe(duplexRe).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Enabled(enabled).Format(format).HasBridgedInterfaces(hasBridgedInterfaces).HasCable(hasCable).HasChildInterfaces(hasChildInterfaces).HasIpAddresses(hasIpAddresses).HasMemberInterfaces(hasMemberInterfaces).HasTaggedVlans(hasTaggedVlans).HasVirtualDeviceContexts(hasVirtualDeviceContexts).Id(id).IdN(idN).InterfaceRedundancyGroups(interfaceRedundancyGroups).InterfaceRedundancyGroupsIsnull(interfaceRedundancyGroupsIsnull).InterfaceRedundancyGroupsN(interfaceRedundancyGroupsN).IpAddresses(ipAddresses).Kind(kind).Label(label).LabelIc(labelIc).LabelIe(labelIe).LabelIew(labelIew).LabelIre(labelIre).LabelIsw(labelIsw).LabelN(labelN).LabelNic(labelNic).LabelNie(labelNie).LabelNiew(labelNiew).LabelNire(labelNire).LabelNisw(labelNisw).LabelNre(labelNre).LabelRe(labelRe).Lag(lag).LagIsnull(lagIsnull).LagN(lagN).Limit(limit).Location(location).LocationN(locationN).MacAddress(macAddress).MacAddressIc(macAddressIc).MacAddressIe(macAddressIe).MacAddressIew(macAddressIew).MacAddressIre(macAddressIre).MacAddressIsw(macAddressIsw).MacAddressN(macAddressN).MacAddressNic(macAddressNic).MacAddressNie(macAddressNie).MacAddressNiew(macAddressNiew).MacAddressNire(macAddressNire).MacAddressNisw(macAddressNisw).MacAddressNre(macAddressNre).MacAddressRe(macAddressRe).MemberInterfaces(memberInterfaces).MemberInterfacesIsnull(memberInterfacesIsnull).MemberInterfacesN(memberInterfacesN).MgmtOnly(mgmtOnly).Mode(mode).ModeIc(modeIc).ModeIe(modeIe).ModeIew(modeIew).ModeIre(modeIre).ModeIsw(modeIsw).ModeN(modeN).ModeNic(modeNic).ModeNie(modeNie).ModeNiew(modeNiew).ModeNire(modeNire).ModeNisw(modeNisw).ModeNre(modeNre).ModeRe(modeRe).Module(module).ModuleIsnull(moduleIsnull).ModuleN(moduleN).Mtu(mtu).MtuGt(mtuGt).MtuGte(mtuGte).MtuIsnull(mtuIsnull).MtuLt(mtuLt).MtuLte(mtuLte).MtuN(mtuN).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).ParentInterface(parentInterface).ParentInterfaceIsnull(parentInterfaceIsnull).ParentInterfaceN(parentInterfaceN).PortType(portType).PortTypeIc(portTypeIc).PortTypeIe(portTypeIe).PortTypeIew(portTypeIew).PortTypeIre(portTypeIre).PortTypeIsw(portTypeIsw).PortTypeN(portTypeN).PortTypeNic(portTypeNic).PortTypeNie(portTypeNie).PortTypeNiew(portTypeNiew).PortTypeNire(portTypeNire).PortTypeNisw(portTypeNisw).PortTypeNre(portTypeNre).PortTypeRe(portTypeRe).Q(q).Role(role).RoleIsnull(roleIsnull).RoleN(roleN).Sort(sort).Speed(speed).SpeedGt(speedGt).SpeedGte(speedGte).SpeedIsnull(speedIsnull).SpeedLt(speedLt).SpeedLte(speedLte).SpeedN(speedN).Status(status).StatusN(statusN).TaggedVlans(taggedVlans).TaggedVlansN(taggedVlansN).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Type_(type_).TypeIc(typeIc).TypeIe(typeIe).TypeIew(typeIew).TypeIre(typeIre).TypeIsw(typeIsw).TypeN(typeN).TypeNic(typeNic).TypeNie(typeNie).TypeNiew(typeNiew).TypeNire(typeNire).TypeNisw(typeNisw).TypeNre(typeNre).TypeRe(typeRe).UntaggedVlan(untaggedVlan).UntaggedVlanIsnull(untaggedVlanIsnull).UntaggedVlanN(untaggedVlanN).VirtualDeviceContexts(virtualDeviceContexts).VirtualDeviceContextsIsnull(virtualDeviceContextsIsnull).VirtualDeviceContextsN(virtualDeviceContextsN).Vlan(vlan).VlanId(vlanId).Depth(depth).ExcludeM2m(excludeM2m).Execute()
 
 
 
@@ -20203,6 +22081,14 @@ import (
 )
 
 func main() {
+	availableForCable := []string{"Inner_example"} // []string |  (optional)
+	breakoutPosition := []int32{int32(123)} // []int32 |  (optional)
+	breakoutPositionGt := []int32{int32(123)} // []int32 |  (optional)
+	breakoutPositionGte := []int32{int32(123)} // []int32 |  (optional)
+	breakoutPositionIsnull := true // bool |  (optional)
+	breakoutPositionLt := []int32{int32(123)} // []int32 |  (optional)
+	breakoutPositionLte := []int32{int32(123)} // []int32 |  (optional)
+	breakoutPositionN := []int32{int32(123)} // []int32 |  (optional)
 	bridge := []string{"Inner_example"} // []string |  (optional)
 	bridgeIsnull := true // bool |  (optional)
 	bridgeN := []string{"Inner_example"} // []string |  (optional)
@@ -20210,8 +22096,7 @@ func main() {
 	bridgedInterfacesIsnull := true // bool |  (optional)
 	bridgedInterfacesN := []string{"Inner_example"} // []string |  (optional)
 	cable := []string{"Inner_example"} // []string | Cable (optional)
-	cableIsnull := true // bool |  (optional)
-	cableN := []string{"Inner_example"} // []string | Cable (optional)
+	cableN := []string{"Inner_example"} // []string | Exclude Cable (optional)
 	childInterfaces := []string{"Inner_example"} // []string |  (optional)
 	childInterfacesIsnull := true // bool |  (optional)
 	childInterfacesN := []string{"Inner_example"} // []string |  (optional)
@@ -20267,7 +22152,7 @@ func main() {
 	interfaceRedundancyGroupsIsnull := true // bool |  (optional)
 	interfaceRedundancyGroupsN := []string{"Inner_example"} // []string |  (optional)
 	ipAddresses := []string{"Inner_example"} // []string | IP addresses (address or ID) (optional)
-	kind := "kind_example" // string | Kind of interface (optional)
+	kind := openapiclient.dcim_interfaces_list_kind_parameter("null") // DcimInterfacesListKindParameter | Kind of interface   (optional)
 	label := []string{"Inner_example"} // []string |  (optional)
 	labelIc := []string{"Inner_example"} // []string |  (optional)
 	labelIe := []string{"Inner_example"} // []string |  (optional)
@@ -20306,7 +22191,7 @@ func main() {
 	memberInterfacesIsnull := true // bool |  (optional)
 	memberInterfacesN := []string{"Inner_example"} // []string |  (optional)
 	mgmtOnly := true // bool |  (optional)
-	mode := []openapiclient.DcimInterfacesListModeParameterInner{openapiclient.dcim_interfaces_list_mode_parameter_inner("access")} // []DcimInterfacesListModeParameterInner |  (optional)
+	mode := []openapiclient.IEEE8021QMode{openapiclient.IEEE802_1Q_Mode("access")} // []IEEE8021QMode |  (optional)
 	modeIc := []string{"Inner_example"} // []string |  (optional)
 	modeIe := []string{"Inner_example"} // []string |  (optional)
 	modeIew := []string{"Inner_example"} // []string |  (optional)
@@ -20411,7 +22296,7 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DcimAPI.DcimInterfacesList(context.Background()).Bridge(bridge).BridgeIsnull(bridgeIsnull).BridgeN(bridgeN).BridgedInterfaces(bridgedInterfaces).BridgedInterfacesIsnull(bridgedInterfacesIsnull).BridgedInterfacesN(bridgedInterfacesN).Cable(cable).CableIsnull(cableIsnull).CableN(cableN).ChildInterfaces(childInterfaces).ChildInterfacesIsnull(childInterfacesIsnull).ChildInterfacesN(childInterfacesN).Connected(connected).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Description(description).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIre(descriptionIre).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNire(descriptionNire).DescriptionNisw(descriptionNisw).DescriptionNre(descriptionNre).DescriptionRe(descriptionRe).Device(device).DeviceId(deviceId).DeviceWithCommonVc(deviceWithCommonVc).Duplex(duplex).DuplexIc(duplexIc).DuplexIe(duplexIe).DuplexIew(duplexIew).DuplexIre(duplexIre).DuplexIsw(duplexIsw).DuplexN(duplexN).DuplexNic(duplexNic).DuplexNie(duplexNie).DuplexNiew(duplexNiew).DuplexNire(duplexNire).DuplexNisw(duplexNisw).DuplexNre(duplexNre).DuplexRe(duplexRe).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Enabled(enabled).Format(format).HasBridgedInterfaces(hasBridgedInterfaces).HasCable(hasCable).HasChildInterfaces(hasChildInterfaces).HasIpAddresses(hasIpAddresses).HasMemberInterfaces(hasMemberInterfaces).HasTaggedVlans(hasTaggedVlans).HasVirtualDeviceContexts(hasVirtualDeviceContexts).Id(id).IdN(idN).InterfaceRedundancyGroups(interfaceRedundancyGroups).InterfaceRedundancyGroupsIsnull(interfaceRedundancyGroupsIsnull).InterfaceRedundancyGroupsN(interfaceRedundancyGroupsN).IpAddresses(ipAddresses).Kind(kind).Label(label).LabelIc(labelIc).LabelIe(labelIe).LabelIew(labelIew).LabelIre(labelIre).LabelIsw(labelIsw).LabelN(labelN).LabelNic(labelNic).LabelNie(labelNie).LabelNiew(labelNiew).LabelNire(labelNire).LabelNisw(labelNisw).LabelNre(labelNre).LabelRe(labelRe).Lag(lag).LagIsnull(lagIsnull).LagN(lagN).Limit(limit).Location(location).LocationN(locationN).MacAddress(macAddress).MacAddressIc(macAddressIc).MacAddressIe(macAddressIe).MacAddressIew(macAddressIew).MacAddressIre(macAddressIre).MacAddressIsw(macAddressIsw).MacAddressN(macAddressN).MacAddressNic(macAddressNic).MacAddressNie(macAddressNie).MacAddressNiew(macAddressNiew).MacAddressNire(macAddressNire).MacAddressNisw(macAddressNisw).MacAddressNre(macAddressNre).MacAddressRe(macAddressRe).MemberInterfaces(memberInterfaces).MemberInterfacesIsnull(memberInterfacesIsnull).MemberInterfacesN(memberInterfacesN).MgmtOnly(mgmtOnly).Mode(mode).ModeIc(modeIc).ModeIe(modeIe).ModeIew(modeIew).ModeIre(modeIre).ModeIsw(modeIsw).ModeN(modeN).ModeNic(modeNic).ModeNie(modeNie).ModeNiew(modeNiew).ModeNire(modeNire).ModeNisw(modeNisw).ModeNre(modeNre).ModeRe(modeRe).Module(module).ModuleIsnull(moduleIsnull).ModuleN(moduleN).Mtu(mtu).MtuGt(mtuGt).MtuGte(mtuGte).MtuIsnull(mtuIsnull).MtuLt(mtuLt).MtuLte(mtuLte).MtuN(mtuN).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).ParentInterface(parentInterface).ParentInterfaceIsnull(parentInterfaceIsnull).ParentInterfaceN(parentInterfaceN).PortType(portType).PortTypeIc(portTypeIc).PortTypeIe(portTypeIe).PortTypeIew(portTypeIew).PortTypeIre(portTypeIre).PortTypeIsw(portTypeIsw).PortTypeN(portTypeN).PortTypeNic(portTypeNic).PortTypeNie(portTypeNie).PortTypeNiew(portTypeNiew).PortTypeNire(portTypeNire).PortTypeNisw(portTypeNisw).PortTypeNre(portTypeNre).PortTypeRe(portTypeRe).Q(q).Role(role).RoleIsnull(roleIsnull).RoleN(roleN).Sort(sort).Speed(speed).SpeedGt(speedGt).SpeedGte(speedGte).SpeedIsnull(speedIsnull).SpeedLt(speedLt).SpeedLte(speedLte).SpeedN(speedN).Status(status).StatusN(statusN).TaggedVlans(taggedVlans).TaggedVlansN(taggedVlansN).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Type_(type_).TypeIc(typeIc).TypeIe(typeIe).TypeIew(typeIew).TypeIre(typeIre).TypeIsw(typeIsw).TypeN(typeN).TypeNic(typeNic).TypeNie(typeNie).TypeNiew(typeNiew).TypeNire(typeNire).TypeNisw(typeNisw).TypeNre(typeNre).TypeRe(typeRe).UntaggedVlan(untaggedVlan).UntaggedVlanIsnull(untaggedVlanIsnull).UntaggedVlanN(untaggedVlanN).VirtualDeviceContexts(virtualDeviceContexts).VirtualDeviceContextsIsnull(virtualDeviceContextsIsnull).VirtualDeviceContextsN(virtualDeviceContextsN).Vlan(vlan).VlanId(vlanId).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+	resp, r, err := apiClient.DcimAPI.DcimInterfacesList(context.Background()).AvailableForCable(availableForCable).BreakoutPosition(breakoutPosition).BreakoutPositionGt(breakoutPositionGt).BreakoutPositionGte(breakoutPositionGte).BreakoutPositionIsnull(breakoutPositionIsnull).BreakoutPositionLt(breakoutPositionLt).BreakoutPositionLte(breakoutPositionLte).BreakoutPositionN(breakoutPositionN).Bridge(bridge).BridgeIsnull(bridgeIsnull).BridgeN(bridgeN).BridgedInterfaces(bridgedInterfaces).BridgedInterfacesIsnull(bridgedInterfacesIsnull).BridgedInterfacesN(bridgedInterfacesN).Cable(cable).CableN(cableN).ChildInterfaces(childInterfaces).ChildInterfacesIsnull(childInterfacesIsnull).ChildInterfacesN(childInterfacesN).Connected(connected).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Description(description).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIre(descriptionIre).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNire(descriptionNire).DescriptionNisw(descriptionNisw).DescriptionNre(descriptionNre).DescriptionRe(descriptionRe).Device(device).DeviceId(deviceId).DeviceWithCommonVc(deviceWithCommonVc).Duplex(duplex).DuplexIc(duplexIc).DuplexIe(duplexIe).DuplexIew(duplexIew).DuplexIre(duplexIre).DuplexIsw(duplexIsw).DuplexN(duplexN).DuplexNic(duplexNic).DuplexNie(duplexNie).DuplexNiew(duplexNiew).DuplexNire(duplexNire).DuplexNisw(duplexNisw).DuplexNre(duplexNre).DuplexRe(duplexRe).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Enabled(enabled).Format(format).HasBridgedInterfaces(hasBridgedInterfaces).HasCable(hasCable).HasChildInterfaces(hasChildInterfaces).HasIpAddresses(hasIpAddresses).HasMemberInterfaces(hasMemberInterfaces).HasTaggedVlans(hasTaggedVlans).HasVirtualDeviceContexts(hasVirtualDeviceContexts).Id(id).IdN(idN).InterfaceRedundancyGroups(interfaceRedundancyGroups).InterfaceRedundancyGroupsIsnull(interfaceRedundancyGroupsIsnull).InterfaceRedundancyGroupsN(interfaceRedundancyGroupsN).IpAddresses(ipAddresses).Kind(kind).Label(label).LabelIc(labelIc).LabelIe(labelIe).LabelIew(labelIew).LabelIre(labelIre).LabelIsw(labelIsw).LabelN(labelN).LabelNic(labelNic).LabelNie(labelNie).LabelNiew(labelNiew).LabelNire(labelNire).LabelNisw(labelNisw).LabelNre(labelNre).LabelRe(labelRe).Lag(lag).LagIsnull(lagIsnull).LagN(lagN).Limit(limit).Location(location).LocationN(locationN).MacAddress(macAddress).MacAddressIc(macAddressIc).MacAddressIe(macAddressIe).MacAddressIew(macAddressIew).MacAddressIre(macAddressIre).MacAddressIsw(macAddressIsw).MacAddressN(macAddressN).MacAddressNic(macAddressNic).MacAddressNie(macAddressNie).MacAddressNiew(macAddressNiew).MacAddressNire(macAddressNire).MacAddressNisw(macAddressNisw).MacAddressNre(macAddressNre).MacAddressRe(macAddressRe).MemberInterfaces(memberInterfaces).MemberInterfacesIsnull(memberInterfacesIsnull).MemberInterfacesN(memberInterfacesN).MgmtOnly(mgmtOnly).Mode(mode).ModeIc(modeIc).ModeIe(modeIe).ModeIew(modeIew).ModeIre(modeIre).ModeIsw(modeIsw).ModeN(modeN).ModeNic(modeNic).ModeNie(modeNie).ModeNiew(modeNiew).ModeNire(modeNire).ModeNisw(modeNisw).ModeNre(modeNre).ModeRe(modeRe).Module(module).ModuleIsnull(moduleIsnull).ModuleN(moduleN).Mtu(mtu).MtuGt(mtuGt).MtuGte(mtuGte).MtuIsnull(mtuIsnull).MtuLt(mtuLt).MtuLte(mtuLte).MtuN(mtuN).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).ParentInterface(parentInterface).ParentInterfaceIsnull(parentInterfaceIsnull).ParentInterfaceN(parentInterfaceN).PortType(portType).PortTypeIc(portTypeIc).PortTypeIe(portTypeIe).PortTypeIew(portTypeIew).PortTypeIre(portTypeIre).PortTypeIsw(portTypeIsw).PortTypeN(portTypeN).PortTypeNic(portTypeNic).PortTypeNie(portTypeNie).PortTypeNiew(portTypeNiew).PortTypeNire(portTypeNire).PortTypeNisw(portTypeNisw).PortTypeNre(portTypeNre).PortTypeRe(portTypeRe).Q(q).Role(role).RoleIsnull(roleIsnull).RoleN(roleN).Sort(sort).Speed(speed).SpeedGt(speedGt).SpeedGte(speedGte).SpeedIsnull(speedIsnull).SpeedLt(speedLt).SpeedLte(speedLte).SpeedN(speedN).Status(status).StatusN(statusN).TaggedVlans(taggedVlans).TaggedVlansN(taggedVlansN).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Type_(type_).TypeIc(typeIc).TypeIe(typeIe).TypeIew(typeIew).TypeIre(typeIre).TypeIsw(typeIsw).TypeN(typeN).TypeNic(typeNic).TypeNie(typeNie).TypeNiew(typeNiew).TypeNire(typeNire).TypeNisw(typeNisw).TypeNre(typeNre).TypeRe(typeRe).UntaggedVlan(untaggedVlan).UntaggedVlanIsnull(untaggedVlanIsnull).UntaggedVlanN(untaggedVlanN).VirtualDeviceContexts(virtualDeviceContexts).VirtualDeviceContextsIsnull(virtualDeviceContextsIsnull).VirtualDeviceContextsN(virtualDeviceContextsN).Vlan(vlan).VlanId(vlanId).Depth(depth).ExcludeM2m(excludeM2m).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DcimAPI.DcimInterfacesList``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -20432,6 +22317,14 @@ Other parameters are passed through a pointer to a apiDcimInterfacesListRequest 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **availableForCable** | **[]string** |  | 
+ **breakoutPosition** | **[]int32** |  | 
+ **breakoutPositionGt** | **[]int32** |  | 
+ **breakoutPositionGte** | **[]int32** |  | 
+ **breakoutPositionIsnull** | **bool** |  | 
+ **breakoutPositionLt** | **[]int32** |  | 
+ **breakoutPositionLte** | **[]int32** |  | 
+ **breakoutPositionN** | **[]int32** |  | 
  **bridge** | **[]string** |  | 
  **bridgeIsnull** | **bool** |  | 
  **bridgeN** | **[]string** |  | 
@@ -20439,8 +22332,7 @@ Name | Type | Description  | Notes
  **bridgedInterfacesIsnull** | **bool** |  | 
  **bridgedInterfacesN** | **[]string** |  | 
  **cable** | **[]string** | Cable | 
- **cableIsnull** | **bool** |  | 
- **cableN** | **[]string** | Cable | 
+ **cableN** | **[]string** | Exclude Cable | 
  **childInterfaces** | **[]string** |  | 
  **childInterfacesIsnull** | **bool** |  | 
  **childInterfacesN** | **[]string** |  | 
@@ -20496,7 +22388,7 @@ Name | Type | Description  | Notes
  **interfaceRedundancyGroupsIsnull** | **bool** |  | 
  **interfaceRedundancyGroupsN** | **[]string** |  | 
  **ipAddresses** | **[]string** | IP addresses (address or ID) | 
- **kind** | **string** | Kind of interface | 
+ **kind** | [**DcimInterfacesListKindParameter**](DcimInterfacesListKindParameter.md) | Kind of interface   | 
  **label** | **[]string** |  | 
  **labelIc** | **[]string** |  | 
  **labelIe** | **[]string** |  | 
@@ -20535,7 +22427,7 @@ Name | Type | Description  | Notes
  **memberInterfacesIsnull** | **bool** |  | 
  **memberInterfacesN** | **[]string** |  | 
  **mgmtOnly** | **bool** |  | 
- **mode** | [**[]DcimInterfacesListModeParameterInner**](DcimInterfacesListModeParameterInner.md) |  | 
+ **mode** | [**[]IEEE8021QMode**](IEEE8021QMode.md) |  | 
  **modeIc** | **[]string** |  | 
  **modeIe** | **[]string** |  | 
  **modeIew** | **[]string** |  | 
@@ -23651,7 +25543,7 @@ func main() {
 	tenantId := []*string{"Inner_example"} // []*string | Tenant (ID) (deprecated, use \"tenant\" filter instead) (optional)
 	tenantIdIsnull := true // bool | Tenant (ID) (deprecated, use \"tenant\" filter instead) is null (optional)
 	tenantIdN := []*string{"Inner_example"} // []*string | Exclude Tenant (ID) (deprecated, use \"tenant\" filter instead) (optional)
-	timeZone := []openapiclient.DcimLocationsListTimeZoneParameterInner{openapiclient.dcim_locations_list_time_zone_parameter_inner("Africa/Abidjan")} // []DcimLocationsListTimeZoneParameterInner | Time zone   (optional)
+	timeZone := []openapiclient.DcimLocationsListTimeZoneParameterInner{openapiclient.dcim_locations_list_time_zone_parameter_inner("")} // []DcimLocationsListTimeZoneParameterInner | Time zone   (optional)
 	timeZoneIc := []string{"Inner_example"} // []string | Time zone (optional)
 	timeZoneIe := []string{"Inner_example"} // []string | Time zone (optional)
 	timeZoneIew := []string{"Inner_example"} // []string | Time zone (optional)
@@ -31151,7 +33043,7 @@ Name | Type | Description  | Notes
 
 ## DcimPowerConnectionsList
 
-> PaginatedPowerPortList DcimPowerConnectionsList(ctx).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Device(device).DeviceId(deviceId).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).Id(id).IdN(idN).Limit(limit).Location(location).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).Sort(sort).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+> PaginatedPowerPortList DcimPowerConnectionsList(ctx).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Device(device).DeviceId(deviceId).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).Id(id).IdN(idN).Limit(limit).Location(location).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).Q(q).Sort(sort).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Depth(depth).ExcludeM2m(excludeM2m).Execute()
 
 
 
@@ -31197,7 +33089,11 @@ func main() {
 	nameNre := []string{"Inner_example"} // []string |  (optional)
 	nameRe := []string{"Inner_example"} // []string |  (optional)
 	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
+	q := "q_example" // string | Search (optional)
 	sort := "sort_example" // string | Which field to use when ordering the results. (optional)
+	tags := []string{"Inner_example"} // []string |  (optional)
+	tagsIsnull := true // bool |  (optional)
+	tagsN := []string{"Inner_example"} // []string |  (optional)
 	teams := []string{"Inner_example"} // []string |  (optional)
 	teamsIsnull := true // bool | Teams (name or ID) is null (optional)
 	teamsN := []string{"Inner_example"} // []string |  (optional)
@@ -31206,7 +33102,7 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DcimAPI.DcimPowerConnectionsList(context.Background()).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Device(device).DeviceId(deviceId).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).Id(id).IdN(idN).Limit(limit).Location(location).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).Sort(sort).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+	resp, r, err := apiClient.DcimAPI.DcimPowerConnectionsList(context.Background()).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Device(device).DeviceId(deviceId).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).Id(id).IdN(idN).Limit(limit).Location(location).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).Q(q).Sort(sort).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Depth(depth).ExcludeM2m(excludeM2m).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DcimAPI.DcimPowerConnectionsList``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -31254,7 +33150,11 @@ Name | Type | Description  | Notes
  **nameNre** | **[]string** |  | 
  **nameRe** | **[]string** |  | 
  **offset** | **int32** | The initial index from which to return the results. | 
+ **q** | **string** | Search | 
  **sort** | **string** | Which field to use when ordering the results. | 
+ **tags** | **[]string** |  | 
+ **tagsIsnull** | **bool** |  | 
+ **tagsN** | **[]string** |  | 
  **teams** | **[]string** |  | 
  **teamsIsnull** | **bool** | Teams (name or ID) is null | 
  **teamsN** | **[]string** |  | 
@@ -31621,7 +33521,7 @@ Name | Type | Description  | Notes
 
 ## DcimPowerFeedsList
 
-> PaginatedPowerFeedList DcimPowerFeedsList(ctx).Amperage(amperage).AmperageGt(amperageGt).AmperageGte(amperageGte).AmperageLt(amperageLt).AmperageLte(amperageLte).AmperageN(amperageN).AvailablePower(availablePower).AvailablePowerGt(availablePowerGt).AvailablePowerGte(availablePowerGte).AvailablePowerLt(availablePowerLt).AvailablePowerLte(availablePowerLte).AvailablePowerN(availablePowerN).BreakerPoleCount(breakerPoleCount).BreakerPoleCountIc(breakerPoleCountIc).BreakerPoleCountIe(breakerPoleCountIe).BreakerPoleCountIew(breakerPoleCountIew).BreakerPoleCountIre(breakerPoleCountIre).BreakerPoleCountIsnull(breakerPoleCountIsnull).BreakerPoleCountIsw(breakerPoleCountIsw).BreakerPoleCountN(breakerPoleCountN).BreakerPoleCountNic(breakerPoleCountNic).BreakerPoleCountNie(breakerPoleCountNie).BreakerPoleCountNiew(breakerPoleCountNiew).BreakerPoleCountNire(breakerPoleCountNire).BreakerPoleCountNisw(breakerPoleCountNisw).BreakerPoleCountNre(breakerPoleCountNre).BreakerPoleCountRe(breakerPoleCountRe).BreakerPosition(breakerPosition).BreakerPositionGt(breakerPositionGt).BreakerPositionGte(breakerPositionGte).BreakerPositionIsnull(breakerPositionIsnull).BreakerPositionLt(breakerPositionLt).BreakerPositionLte(breakerPositionLte).BreakerPositionN(breakerPositionN).Cable(cable).CableIsnull(cableIsnull).CableN(cableN).Comments(comments).CommentsIc(commentsIc).CommentsIe(commentsIe).CommentsIew(commentsIew).CommentsIre(commentsIre).CommentsIsw(commentsIsw).CommentsN(commentsN).CommentsNic(commentsNic).CommentsNie(commentsNie).CommentsNiew(commentsNiew).CommentsNire(commentsNire).CommentsNisw(commentsNisw).CommentsNre(commentsNre).CommentsRe(commentsRe).Connected(connected).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Created(created).CreatedGt(createdGt).CreatedGte(createdGte).CreatedIsnull(createdIsnull).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).DestinationPanel(destinationPanel).DestinationPanelIsnull(destinationPanelIsnull).DestinationPanelN(destinationPanelN).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).HasCable(hasCable).Id(id).IdN(idN).LastUpdated(lastUpdated).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedIsnull(lastUpdatedIsnull).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).Location(location).LocationN(locationN).MaxUtilization(maxUtilization).MaxUtilizationGt(maxUtilizationGt).MaxUtilizationGte(maxUtilizationGte).MaxUtilizationLt(maxUtilizationLt).MaxUtilizationLte(maxUtilizationLte).MaxUtilizationN(maxUtilizationN).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).Phase(phase).PhaseIc(phaseIc).PhaseIe(phaseIe).PhaseIew(phaseIew).PhaseIre(phaseIre).PhaseIsw(phaseIsw).PhaseN(phaseN).PhaseNic(phaseNic).PhaseNie(phaseNie).PhaseNiew(phaseNiew).PhaseNire(phaseNire).PhaseNisw(phaseNisw).PhaseNre(phaseNre).PhaseRe(phaseRe).PowerPanel(powerPanel).PowerPanelN(powerPanelN).PowerPath(powerPath).PowerPathIc(powerPathIc).PowerPathIe(powerPathIe).PowerPathIew(powerPathIew).PowerPathIre(powerPathIre).PowerPathIsw(powerPathIsw).PowerPathN(powerPathN).PowerPathNic(powerPathNic).PowerPathNie(powerPathNie).PowerPathNiew(powerPathNiew).PowerPathNire(powerPathNire).PowerPathNisw(powerPathNisw).PowerPathNre(powerPathNre).PowerPathRe(powerPathRe).Q(q).Rack(rack).RackIsnull(rackIsnull).RackN(rackN).Sort(sort).Status(status).StatusN(statusN).Supply(supply).SupplyIc(supplyIc).SupplyIe(supplyIe).SupplyIew(supplyIew).SupplyIre(supplyIre).SupplyIsw(supplyIsw).SupplyN(supplyN).SupplyNic(supplyNic).SupplyNie(supplyNie).SupplyNiew(supplyNiew).SupplyNire(supplyNire).SupplyNisw(supplyNisw).SupplyNre(supplyNre).SupplyRe(supplyRe).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Type_(type_).TypeIc(typeIc).TypeIe(typeIe).TypeIew(typeIew).TypeIre(typeIre).TypeIsw(typeIsw).TypeN(typeN).TypeNic(typeNic).TypeNie(typeNie).TypeNiew(typeNiew).TypeNire(typeNire).TypeNisw(typeNisw).TypeNre(typeNre).TypeRe(typeRe).Voltage(voltage).VoltageGt(voltageGt).VoltageGte(voltageGte).VoltageLt(voltageLt).VoltageLte(voltageLte).VoltageN(voltageN).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+> PaginatedPowerFeedList DcimPowerFeedsList(ctx).Amperage(amperage).AmperageGt(amperageGt).AmperageGte(amperageGte).AmperageLt(amperageLt).AmperageLte(amperageLte).AmperageN(amperageN).AvailableForCable(availableForCable).AvailablePower(availablePower).AvailablePowerGt(availablePowerGt).AvailablePowerGte(availablePowerGte).AvailablePowerLt(availablePowerLt).AvailablePowerLte(availablePowerLte).AvailablePowerN(availablePowerN).BreakerPoleCount(breakerPoleCount).BreakerPoleCountIc(breakerPoleCountIc).BreakerPoleCountIe(breakerPoleCountIe).BreakerPoleCountIew(breakerPoleCountIew).BreakerPoleCountIre(breakerPoleCountIre).BreakerPoleCountIsnull(breakerPoleCountIsnull).BreakerPoleCountIsw(breakerPoleCountIsw).BreakerPoleCountN(breakerPoleCountN).BreakerPoleCountNic(breakerPoleCountNic).BreakerPoleCountNie(breakerPoleCountNie).BreakerPoleCountNiew(breakerPoleCountNiew).BreakerPoleCountNire(breakerPoleCountNire).BreakerPoleCountNisw(breakerPoleCountNisw).BreakerPoleCountNre(breakerPoleCountNre).BreakerPoleCountRe(breakerPoleCountRe).BreakerPosition(breakerPosition).BreakerPositionGt(breakerPositionGt).BreakerPositionGte(breakerPositionGte).BreakerPositionIsnull(breakerPositionIsnull).BreakerPositionLt(breakerPositionLt).BreakerPositionLte(breakerPositionLte).BreakerPositionN(breakerPositionN).Cable(cable).CableN(cableN).Comments(comments).CommentsIc(commentsIc).CommentsIe(commentsIe).CommentsIew(commentsIew).CommentsIre(commentsIre).CommentsIsw(commentsIsw).CommentsN(commentsN).CommentsNic(commentsNic).CommentsNie(commentsNie).CommentsNiew(commentsNiew).CommentsNire(commentsNire).CommentsNisw(commentsNisw).CommentsNre(commentsNre).CommentsRe(commentsRe).Connected(connected).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Created(created).CreatedGt(createdGt).CreatedGte(createdGte).CreatedIsnull(createdIsnull).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).DestinationPanel(destinationPanel).DestinationPanelIsnull(destinationPanelIsnull).DestinationPanelN(destinationPanelN).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).HasCable(hasCable).Id(id).IdN(idN).LastUpdated(lastUpdated).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedIsnull(lastUpdatedIsnull).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).Location(location).LocationN(locationN).MaxUtilization(maxUtilization).MaxUtilizationGt(maxUtilizationGt).MaxUtilizationGte(maxUtilizationGte).MaxUtilizationLt(maxUtilizationLt).MaxUtilizationLte(maxUtilizationLte).MaxUtilizationN(maxUtilizationN).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).Phase(phase).PhaseIc(phaseIc).PhaseIe(phaseIe).PhaseIew(phaseIew).PhaseIre(phaseIre).PhaseIsw(phaseIsw).PhaseN(phaseN).PhaseNic(phaseNic).PhaseNie(phaseNie).PhaseNiew(phaseNiew).PhaseNire(phaseNire).PhaseNisw(phaseNisw).PhaseNre(phaseNre).PhaseRe(phaseRe).PowerPanel(powerPanel).PowerPanelN(powerPanelN).PowerPath(powerPath).PowerPathIc(powerPathIc).PowerPathIe(powerPathIe).PowerPathIew(powerPathIew).PowerPathIre(powerPathIre).PowerPathIsw(powerPathIsw).PowerPathN(powerPathN).PowerPathNic(powerPathNic).PowerPathNie(powerPathNie).PowerPathNiew(powerPathNiew).PowerPathNire(powerPathNire).PowerPathNisw(powerPathNisw).PowerPathNre(powerPathNre).PowerPathRe(powerPathRe).Q(q).Rack(rack).RackIsnull(rackIsnull).RackN(rackN).Sort(sort).Status(status).StatusN(statusN).Supply(supply).SupplyIc(supplyIc).SupplyIe(supplyIe).SupplyIew(supplyIew).SupplyIre(supplyIre).SupplyIsw(supplyIsw).SupplyN(supplyN).SupplyNic(supplyNic).SupplyNie(supplyNie).SupplyNiew(supplyNiew).SupplyNire(supplyNire).SupplyNisw(supplyNisw).SupplyNre(supplyNre).SupplyRe(supplyRe).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Type_(type_).TypeIc(typeIc).TypeIe(typeIe).TypeIew(typeIew).TypeIre(typeIre).TypeIsw(typeIsw).TypeN(typeN).TypeNic(typeNic).TypeNie(typeNie).TypeNiew(typeNiew).TypeNire(typeNire).TypeNisw(typeNisw).TypeNre(typeNre).TypeRe(typeRe).Voltage(voltage).VoltageGt(voltageGt).VoltageGte(voltageGte).VoltageLt(voltageLt).VoltageLte(voltageLte).VoltageN(voltageN).Depth(depth).ExcludeM2m(excludeM2m).Execute()
 
 
 
@@ -31647,6 +33547,7 @@ func main() {
 	amperageLt := []int32{int32(123)} // []int32 |  (optional)
 	amperageLte := []int32{int32(123)} // []int32 |  (optional)
 	amperageN := []int32{int32(123)} // []int32 |  (optional)
+	availableForCable := []string{"Inner_example"} // []string |  (optional)
 	availablePower := []int32{int32(123)} // []int32 |  (optional)
 	availablePowerGt := []int32{int32(123)} // []int32 |  (optional)
 	availablePowerGte := []int32{int32(123)} // []int32 |  (optional)
@@ -31676,8 +33577,7 @@ func main() {
 	breakerPositionLte := []int32{int32(123)} // []int32 |  (optional)
 	breakerPositionN := []int32{int32(123)} // []int32 |  (optional)
 	cable := []string{"Inner_example"} // []string | Cable (optional)
-	cableIsnull := true // bool |  (optional)
-	cableN := []string{"Inner_example"} // []string | Cable (optional)
+	cableN := []string{"Inner_example"} // []string | Exclude Cable (optional)
 	comments := []string{"Inner_example"} // []string |  (optional)
 	commentsIc := []string{"Inner_example"} // []string |  (optional)
 	commentsIe := []string{"Inner_example"} // []string |  (optional)
@@ -31743,7 +33643,7 @@ func main() {
 	nameNre := []string{"Inner_example"} // []string |  (optional)
 	nameRe := []string{"Inner_example"} // []string |  (optional)
 	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
-	phase := []openapiclient.DcimPowerFeedsListPhaseParameterInner{openapiclient.dcim_power_feeds_list_phase_parameter_inner("single-phase")} // []DcimPowerFeedsListPhaseParameterInner |  (optional)
+	phase := []openapiclient.DcimPowerFeedsListPhaseParameterInner{openapiclient.dcim_power_feeds_list_phase_parameter_inner("null")} // []DcimPowerFeedsListPhaseParameterInner |  (optional)
 	phaseIc := []string{"Inner_example"} // []string |  (optional)
 	phaseIe := []string{"Inner_example"} // []string |  (optional)
 	phaseIew := []string{"Inner_example"} // []string |  (optional)
@@ -31800,7 +33700,7 @@ func main() {
 	teams := []string{"Inner_example"} // []string |  (optional)
 	teamsIsnull := true // bool | Teams (name or ID) is null (optional)
 	teamsN := []string{"Inner_example"} // []string |  (optional)
-	type_ := []openapiclient.DcimPowerFeedsListTypeParameterInner{openapiclient.dcim_power_feeds_list_type_parameter_inner("primary")} // []DcimPowerFeedsListTypeParameterInner |  (optional)
+	type_ := []openapiclient.DcimPowerFeedsListTypeParameterInner{openapiclient.dcim_power_feeds_list_type_parameter_inner("null")} // []DcimPowerFeedsListTypeParameterInner |  (optional)
 	typeIc := []string{"Inner_example"} // []string |  (optional)
 	typeIe := []string{"Inner_example"} // []string |  (optional)
 	typeIew := []string{"Inner_example"} // []string |  (optional)
@@ -31825,7 +33725,7 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DcimAPI.DcimPowerFeedsList(context.Background()).Amperage(amperage).AmperageGt(amperageGt).AmperageGte(amperageGte).AmperageLt(amperageLt).AmperageLte(amperageLte).AmperageN(amperageN).AvailablePower(availablePower).AvailablePowerGt(availablePowerGt).AvailablePowerGte(availablePowerGte).AvailablePowerLt(availablePowerLt).AvailablePowerLte(availablePowerLte).AvailablePowerN(availablePowerN).BreakerPoleCount(breakerPoleCount).BreakerPoleCountIc(breakerPoleCountIc).BreakerPoleCountIe(breakerPoleCountIe).BreakerPoleCountIew(breakerPoleCountIew).BreakerPoleCountIre(breakerPoleCountIre).BreakerPoleCountIsnull(breakerPoleCountIsnull).BreakerPoleCountIsw(breakerPoleCountIsw).BreakerPoleCountN(breakerPoleCountN).BreakerPoleCountNic(breakerPoleCountNic).BreakerPoleCountNie(breakerPoleCountNie).BreakerPoleCountNiew(breakerPoleCountNiew).BreakerPoleCountNire(breakerPoleCountNire).BreakerPoleCountNisw(breakerPoleCountNisw).BreakerPoleCountNre(breakerPoleCountNre).BreakerPoleCountRe(breakerPoleCountRe).BreakerPosition(breakerPosition).BreakerPositionGt(breakerPositionGt).BreakerPositionGte(breakerPositionGte).BreakerPositionIsnull(breakerPositionIsnull).BreakerPositionLt(breakerPositionLt).BreakerPositionLte(breakerPositionLte).BreakerPositionN(breakerPositionN).Cable(cable).CableIsnull(cableIsnull).CableN(cableN).Comments(comments).CommentsIc(commentsIc).CommentsIe(commentsIe).CommentsIew(commentsIew).CommentsIre(commentsIre).CommentsIsw(commentsIsw).CommentsN(commentsN).CommentsNic(commentsNic).CommentsNie(commentsNie).CommentsNiew(commentsNiew).CommentsNire(commentsNire).CommentsNisw(commentsNisw).CommentsNre(commentsNre).CommentsRe(commentsRe).Connected(connected).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Created(created).CreatedGt(createdGt).CreatedGte(createdGte).CreatedIsnull(createdIsnull).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).DestinationPanel(destinationPanel).DestinationPanelIsnull(destinationPanelIsnull).DestinationPanelN(destinationPanelN).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).HasCable(hasCable).Id(id).IdN(idN).LastUpdated(lastUpdated).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedIsnull(lastUpdatedIsnull).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).Location(location).LocationN(locationN).MaxUtilization(maxUtilization).MaxUtilizationGt(maxUtilizationGt).MaxUtilizationGte(maxUtilizationGte).MaxUtilizationLt(maxUtilizationLt).MaxUtilizationLte(maxUtilizationLte).MaxUtilizationN(maxUtilizationN).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).Phase(phase).PhaseIc(phaseIc).PhaseIe(phaseIe).PhaseIew(phaseIew).PhaseIre(phaseIre).PhaseIsw(phaseIsw).PhaseN(phaseN).PhaseNic(phaseNic).PhaseNie(phaseNie).PhaseNiew(phaseNiew).PhaseNire(phaseNire).PhaseNisw(phaseNisw).PhaseNre(phaseNre).PhaseRe(phaseRe).PowerPanel(powerPanel).PowerPanelN(powerPanelN).PowerPath(powerPath).PowerPathIc(powerPathIc).PowerPathIe(powerPathIe).PowerPathIew(powerPathIew).PowerPathIre(powerPathIre).PowerPathIsw(powerPathIsw).PowerPathN(powerPathN).PowerPathNic(powerPathNic).PowerPathNie(powerPathNie).PowerPathNiew(powerPathNiew).PowerPathNire(powerPathNire).PowerPathNisw(powerPathNisw).PowerPathNre(powerPathNre).PowerPathRe(powerPathRe).Q(q).Rack(rack).RackIsnull(rackIsnull).RackN(rackN).Sort(sort).Status(status).StatusN(statusN).Supply(supply).SupplyIc(supplyIc).SupplyIe(supplyIe).SupplyIew(supplyIew).SupplyIre(supplyIre).SupplyIsw(supplyIsw).SupplyN(supplyN).SupplyNic(supplyNic).SupplyNie(supplyNie).SupplyNiew(supplyNiew).SupplyNire(supplyNire).SupplyNisw(supplyNisw).SupplyNre(supplyNre).SupplyRe(supplyRe).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Type_(type_).TypeIc(typeIc).TypeIe(typeIe).TypeIew(typeIew).TypeIre(typeIre).TypeIsw(typeIsw).TypeN(typeN).TypeNic(typeNic).TypeNie(typeNie).TypeNiew(typeNiew).TypeNire(typeNire).TypeNisw(typeNisw).TypeNre(typeNre).TypeRe(typeRe).Voltage(voltage).VoltageGt(voltageGt).VoltageGte(voltageGte).VoltageLt(voltageLt).VoltageLte(voltageLte).VoltageN(voltageN).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+	resp, r, err := apiClient.DcimAPI.DcimPowerFeedsList(context.Background()).Amperage(amperage).AmperageGt(amperageGt).AmperageGte(amperageGte).AmperageLt(amperageLt).AmperageLte(amperageLte).AmperageN(amperageN).AvailableForCable(availableForCable).AvailablePower(availablePower).AvailablePowerGt(availablePowerGt).AvailablePowerGte(availablePowerGte).AvailablePowerLt(availablePowerLt).AvailablePowerLte(availablePowerLte).AvailablePowerN(availablePowerN).BreakerPoleCount(breakerPoleCount).BreakerPoleCountIc(breakerPoleCountIc).BreakerPoleCountIe(breakerPoleCountIe).BreakerPoleCountIew(breakerPoleCountIew).BreakerPoleCountIre(breakerPoleCountIre).BreakerPoleCountIsnull(breakerPoleCountIsnull).BreakerPoleCountIsw(breakerPoleCountIsw).BreakerPoleCountN(breakerPoleCountN).BreakerPoleCountNic(breakerPoleCountNic).BreakerPoleCountNie(breakerPoleCountNie).BreakerPoleCountNiew(breakerPoleCountNiew).BreakerPoleCountNire(breakerPoleCountNire).BreakerPoleCountNisw(breakerPoleCountNisw).BreakerPoleCountNre(breakerPoleCountNre).BreakerPoleCountRe(breakerPoleCountRe).BreakerPosition(breakerPosition).BreakerPositionGt(breakerPositionGt).BreakerPositionGte(breakerPositionGte).BreakerPositionIsnull(breakerPositionIsnull).BreakerPositionLt(breakerPositionLt).BreakerPositionLte(breakerPositionLte).BreakerPositionN(breakerPositionN).Cable(cable).CableN(cableN).Comments(comments).CommentsIc(commentsIc).CommentsIe(commentsIe).CommentsIew(commentsIew).CommentsIre(commentsIre).CommentsIsw(commentsIsw).CommentsN(commentsN).CommentsNic(commentsNic).CommentsNie(commentsNie).CommentsNiew(commentsNiew).CommentsNire(commentsNire).CommentsNisw(commentsNisw).CommentsNre(commentsNre).CommentsRe(commentsRe).Connected(connected).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Created(created).CreatedGt(createdGt).CreatedGte(createdGte).CreatedIsnull(createdIsnull).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).DestinationPanel(destinationPanel).DestinationPanelIsnull(destinationPanelIsnull).DestinationPanelN(destinationPanelN).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).HasCable(hasCable).Id(id).IdN(idN).LastUpdated(lastUpdated).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedIsnull(lastUpdatedIsnull).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).Location(location).LocationN(locationN).MaxUtilization(maxUtilization).MaxUtilizationGt(maxUtilizationGt).MaxUtilizationGte(maxUtilizationGte).MaxUtilizationLt(maxUtilizationLt).MaxUtilizationLte(maxUtilizationLte).MaxUtilizationN(maxUtilizationN).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).Phase(phase).PhaseIc(phaseIc).PhaseIe(phaseIe).PhaseIew(phaseIew).PhaseIre(phaseIre).PhaseIsw(phaseIsw).PhaseN(phaseN).PhaseNic(phaseNic).PhaseNie(phaseNie).PhaseNiew(phaseNiew).PhaseNire(phaseNire).PhaseNisw(phaseNisw).PhaseNre(phaseNre).PhaseRe(phaseRe).PowerPanel(powerPanel).PowerPanelN(powerPanelN).PowerPath(powerPath).PowerPathIc(powerPathIc).PowerPathIe(powerPathIe).PowerPathIew(powerPathIew).PowerPathIre(powerPathIre).PowerPathIsw(powerPathIsw).PowerPathN(powerPathN).PowerPathNic(powerPathNic).PowerPathNie(powerPathNie).PowerPathNiew(powerPathNiew).PowerPathNire(powerPathNire).PowerPathNisw(powerPathNisw).PowerPathNre(powerPathNre).PowerPathRe(powerPathRe).Q(q).Rack(rack).RackIsnull(rackIsnull).RackN(rackN).Sort(sort).Status(status).StatusN(statusN).Supply(supply).SupplyIc(supplyIc).SupplyIe(supplyIe).SupplyIew(supplyIew).SupplyIre(supplyIre).SupplyIsw(supplyIsw).SupplyN(supplyN).SupplyNic(supplyNic).SupplyNie(supplyNie).SupplyNiew(supplyNiew).SupplyNire(supplyNire).SupplyNisw(supplyNisw).SupplyNre(supplyNre).SupplyRe(supplyRe).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Type_(type_).TypeIc(typeIc).TypeIe(typeIe).TypeIew(typeIew).TypeIre(typeIre).TypeIsw(typeIsw).TypeN(typeN).TypeNic(typeNic).TypeNie(typeNie).TypeNiew(typeNiew).TypeNire(typeNire).TypeNisw(typeNisw).TypeNre(typeNre).TypeRe(typeRe).Voltage(voltage).VoltageGt(voltageGt).VoltageGte(voltageGte).VoltageLt(voltageLt).VoltageLte(voltageLte).VoltageN(voltageN).Depth(depth).ExcludeM2m(excludeM2m).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DcimAPI.DcimPowerFeedsList``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -31852,6 +33752,7 @@ Name | Type | Description  | Notes
  **amperageLt** | **[]int32** |  | 
  **amperageLte** | **[]int32** |  | 
  **amperageN** | **[]int32** |  | 
+ **availableForCable** | **[]string** |  | 
  **availablePower** | **[]int32** |  | 
  **availablePowerGt** | **[]int32** |  | 
  **availablePowerGte** | **[]int32** |  | 
@@ -31881,8 +33782,7 @@ Name | Type | Description  | Notes
  **breakerPositionLte** | **[]int32** |  | 
  **breakerPositionN** | **[]int32** |  | 
  **cable** | **[]string** | Cable | 
- **cableIsnull** | **bool** |  | 
- **cableN** | **[]string** | Cable | 
+ **cableN** | **[]string** | Exclude Cable | 
  **comments** | **[]string** |  | 
  **commentsIc** | **[]string** |  | 
  **commentsIe** | **[]string** |  | 
@@ -33666,7 +35566,7 @@ Name | Type | Description  | Notes
 
 ## DcimPowerOutletsList
 
-> PaginatedPowerOutletList DcimPowerOutletsList(ctx).Cable(cable).CableIsnull(cableIsnull).CableN(cableN).Connected(connected).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Description(description).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIre(descriptionIre).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNire(descriptionNire).DescriptionNisw(descriptionNisw).DescriptionNre(descriptionNre).DescriptionRe(descriptionRe).Device(device).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).FeedLeg(feedLeg).FeedLegIc(feedLegIc).FeedLegIe(feedLegIe).FeedLegIew(feedLegIew).FeedLegIre(feedLegIre).FeedLegIsw(feedLegIsw).FeedLegN(feedLegN).FeedLegNic(feedLegNic).FeedLegNie(feedLegNie).FeedLegNiew(feedLegNiew).FeedLegNire(feedLegNire).FeedLegNisw(feedLegNisw).FeedLegNre(feedLegNre).FeedLegRe(feedLegRe).Format(format).HasCable(hasCable).Id(id).IdN(idN).Label(label).LabelIc(labelIc).LabelIe(labelIe).LabelIew(labelIew).LabelIre(labelIre).LabelIsw(labelIsw).LabelN(labelN).LabelNic(labelNic).LabelNie(labelNie).LabelNiew(labelNiew).LabelNire(labelNire).LabelNisw(labelNisw).LabelNre(labelNre).LabelRe(labelRe).Limit(limit).Location(location).LocationN(locationN).Module(module).ModuleIsnull(moduleIsnull).ModuleN(moduleN).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).PowerPort(powerPort).PowerPortIsnull(powerPortIsnull).PowerPortN(powerPortN).Q(q).Sort(sort).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Type_(type_).TypeIc(typeIc).TypeIe(typeIe).TypeIew(typeIew).TypeIre(typeIre).TypeIsw(typeIsw).TypeN(typeN).TypeNic(typeNic).TypeNie(typeNie).TypeNiew(typeNiew).TypeNire(typeNire).TypeNisw(typeNisw).TypeNre(typeNre).TypeRe(typeRe).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+> PaginatedPowerOutletList DcimPowerOutletsList(ctx).AvailableForCable(availableForCable).Cable(cable).CableN(cableN).Connected(connected).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Description(description).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIre(descriptionIre).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNire(descriptionNire).DescriptionNisw(descriptionNisw).DescriptionNre(descriptionNre).DescriptionRe(descriptionRe).Device(device).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).FeedLeg(feedLeg).FeedLegIc(feedLegIc).FeedLegIe(feedLegIe).FeedLegIew(feedLegIew).FeedLegIre(feedLegIre).FeedLegIsw(feedLegIsw).FeedLegN(feedLegN).FeedLegNic(feedLegNic).FeedLegNie(feedLegNie).FeedLegNiew(feedLegNiew).FeedLegNire(feedLegNire).FeedLegNisw(feedLegNisw).FeedLegNre(feedLegNre).FeedLegRe(feedLegRe).Format(format).HasCable(hasCable).Id(id).IdN(idN).Label(label).LabelIc(labelIc).LabelIe(labelIe).LabelIew(labelIew).LabelIre(labelIre).LabelIsw(labelIsw).LabelN(labelN).LabelNic(labelNic).LabelNie(labelNie).LabelNiew(labelNiew).LabelNire(labelNire).LabelNisw(labelNisw).LabelNre(labelNre).LabelRe(labelRe).Limit(limit).Location(location).LocationN(locationN).Module(module).ModuleIsnull(moduleIsnull).ModuleN(moduleN).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).PowerPort(powerPort).PowerPortIsnull(powerPortIsnull).PowerPortN(powerPortN).Q(q).Sort(sort).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Type_(type_).TypeIc(typeIc).TypeIe(typeIe).TypeIew(typeIew).TypeIre(typeIre).TypeIsw(typeIsw).TypeN(typeN).TypeNic(typeNic).TypeNie(typeNie).TypeNiew(typeNiew).TypeNire(typeNire).TypeNisw(typeNisw).TypeNre(typeNre).TypeRe(typeRe).Depth(depth).ExcludeM2m(excludeM2m).Execute()
 
 
 
@@ -33685,9 +35585,9 @@ import (
 )
 
 func main() {
+	availableForCable := []string{"Inner_example"} // []string |  (optional)
 	cable := []string{"Inner_example"} // []string | Cable (optional)
-	cableIsnull := true // bool |  (optional)
-	cableN := []string{"Inner_example"} // []string | Cable (optional)
+	cableN := []string{"Inner_example"} // []string | Exclude Cable (optional)
 	connected := true // bool | Connected status (bool) (optional)
 	contacts := []string{"Inner_example"} // []string |  (optional)
 	contactsIsnull := true // bool | Contacts (name or ID) is null (optional)
@@ -33792,7 +35692,7 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DcimAPI.DcimPowerOutletsList(context.Background()).Cable(cable).CableIsnull(cableIsnull).CableN(cableN).Connected(connected).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Description(description).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIre(descriptionIre).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNire(descriptionNire).DescriptionNisw(descriptionNisw).DescriptionNre(descriptionNre).DescriptionRe(descriptionRe).Device(device).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).FeedLeg(feedLeg).FeedLegIc(feedLegIc).FeedLegIe(feedLegIe).FeedLegIew(feedLegIew).FeedLegIre(feedLegIre).FeedLegIsw(feedLegIsw).FeedLegN(feedLegN).FeedLegNic(feedLegNic).FeedLegNie(feedLegNie).FeedLegNiew(feedLegNiew).FeedLegNire(feedLegNire).FeedLegNisw(feedLegNisw).FeedLegNre(feedLegNre).FeedLegRe(feedLegRe).Format(format).HasCable(hasCable).Id(id).IdN(idN).Label(label).LabelIc(labelIc).LabelIe(labelIe).LabelIew(labelIew).LabelIre(labelIre).LabelIsw(labelIsw).LabelN(labelN).LabelNic(labelNic).LabelNie(labelNie).LabelNiew(labelNiew).LabelNire(labelNire).LabelNisw(labelNisw).LabelNre(labelNre).LabelRe(labelRe).Limit(limit).Location(location).LocationN(locationN).Module(module).ModuleIsnull(moduleIsnull).ModuleN(moduleN).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).PowerPort(powerPort).PowerPortIsnull(powerPortIsnull).PowerPortN(powerPortN).Q(q).Sort(sort).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Type_(type_).TypeIc(typeIc).TypeIe(typeIe).TypeIew(typeIew).TypeIre(typeIre).TypeIsw(typeIsw).TypeN(typeN).TypeNic(typeNic).TypeNie(typeNie).TypeNiew(typeNiew).TypeNire(typeNire).TypeNisw(typeNisw).TypeNre(typeNre).TypeRe(typeRe).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+	resp, r, err := apiClient.DcimAPI.DcimPowerOutletsList(context.Background()).AvailableForCable(availableForCable).Cable(cable).CableN(cableN).Connected(connected).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Description(description).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIre(descriptionIre).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNire(descriptionNire).DescriptionNisw(descriptionNisw).DescriptionNre(descriptionNre).DescriptionRe(descriptionRe).Device(device).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).FeedLeg(feedLeg).FeedLegIc(feedLegIc).FeedLegIe(feedLegIe).FeedLegIew(feedLegIew).FeedLegIre(feedLegIre).FeedLegIsw(feedLegIsw).FeedLegN(feedLegN).FeedLegNic(feedLegNic).FeedLegNie(feedLegNie).FeedLegNiew(feedLegNiew).FeedLegNire(feedLegNire).FeedLegNisw(feedLegNisw).FeedLegNre(feedLegNre).FeedLegRe(feedLegRe).Format(format).HasCable(hasCable).Id(id).IdN(idN).Label(label).LabelIc(labelIc).LabelIe(labelIe).LabelIew(labelIew).LabelIre(labelIre).LabelIsw(labelIsw).LabelN(labelN).LabelNic(labelNic).LabelNie(labelNie).LabelNiew(labelNiew).LabelNire(labelNire).LabelNisw(labelNisw).LabelNre(labelNre).LabelRe(labelRe).Limit(limit).Location(location).LocationN(locationN).Module(module).ModuleIsnull(moduleIsnull).ModuleN(moduleN).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).PowerPort(powerPort).PowerPortIsnull(powerPortIsnull).PowerPortN(powerPortN).Q(q).Sort(sort).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Type_(type_).TypeIc(typeIc).TypeIe(typeIe).TypeIew(typeIew).TypeIre(typeIre).TypeIsw(typeIsw).TypeN(typeN).TypeNic(typeNic).TypeNie(typeNie).TypeNiew(typeNiew).TypeNire(typeNire).TypeNisw(typeNisw).TypeNre(typeNre).TypeRe(typeRe).Depth(depth).ExcludeM2m(excludeM2m).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DcimAPI.DcimPowerOutletsList``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -33813,9 +35713,9 @@ Other parameters are passed through a pointer to a apiDcimPowerOutletsListReques
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **availableForCable** | **[]string** |  | 
  **cable** | **[]string** | Cable | 
- **cableIsnull** | **bool** |  | 
- **cableN** | **[]string** | Cable | 
+ **cableN** | **[]string** | Exclude Cable | 
  **connected** | **bool** | Connected status (bool) | 
  **contacts** | **[]string** |  | 
  **contactsIsnull** | **bool** | Contacts (name or ID) is null | 
@@ -36527,7 +38427,7 @@ Name | Type | Description  | Notes
 
 ## DcimPowerPortsList
 
-> PaginatedPowerPortList DcimPowerPortsList(ctx).AllocatedDraw(allocatedDraw).AllocatedDrawGt(allocatedDrawGt).AllocatedDrawGte(allocatedDrawGte).AllocatedDrawIsnull(allocatedDrawIsnull).AllocatedDrawLt(allocatedDrawLt).AllocatedDrawLte(allocatedDrawLte).AllocatedDrawN(allocatedDrawN).Cable(cable).CableIsnull(cableIsnull).CableN(cableN).Connected(connected).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Description(description).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIre(descriptionIre).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNire(descriptionNire).DescriptionNisw(descriptionNisw).DescriptionNre(descriptionNre).DescriptionRe(descriptionRe).Device(device).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).HasCable(hasCable).HasPowerOutlets(hasPowerOutlets).Id(id).IdN(idN).Label(label).LabelIc(labelIc).LabelIe(labelIe).LabelIew(labelIew).LabelIre(labelIre).LabelIsw(labelIsw).LabelN(labelN).LabelNic(labelNic).LabelNie(labelNie).LabelNiew(labelNiew).LabelNire(labelNire).LabelNisw(labelNisw).LabelNre(labelNre).LabelRe(labelRe).Limit(limit).Location(location).LocationN(locationN).MaximumDraw(maximumDraw).MaximumDrawGt(maximumDrawGt).MaximumDrawGte(maximumDrawGte).MaximumDrawIsnull(maximumDrawIsnull).MaximumDrawLt(maximumDrawLt).MaximumDrawLte(maximumDrawLte).MaximumDrawN(maximumDrawN).Module(module).ModuleIsnull(moduleIsnull).ModuleN(moduleN).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).PowerOutlets(powerOutlets).PowerOutletsIsnull(powerOutletsIsnull).PowerOutletsN(powerOutletsN).Q(q).Sort(sort).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Type_(type_).TypeIc(typeIc).TypeIe(typeIe).TypeIew(typeIew).TypeIre(typeIre).TypeIsw(typeIsw).TypeN(typeN).TypeNic(typeNic).TypeNie(typeNie).TypeNiew(typeNiew).TypeNire(typeNire).TypeNisw(typeNisw).TypeNre(typeNre).TypeRe(typeRe).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+> PaginatedPowerPortList DcimPowerPortsList(ctx).AllocatedDraw(allocatedDraw).AllocatedDrawGt(allocatedDrawGt).AllocatedDrawGte(allocatedDrawGte).AllocatedDrawIsnull(allocatedDrawIsnull).AllocatedDrawLt(allocatedDrawLt).AllocatedDrawLte(allocatedDrawLte).AllocatedDrawN(allocatedDrawN).AvailableForCable(availableForCable).Cable(cable).CableN(cableN).Connected(connected).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Description(description).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIre(descriptionIre).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNire(descriptionNire).DescriptionNisw(descriptionNisw).DescriptionNre(descriptionNre).DescriptionRe(descriptionRe).Device(device).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).HasCable(hasCable).HasPowerOutlets(hasPowerOutlets).Id(id).IdN(idN).Label(label).LabelIc(labelIc).LabelIe(labelIe).LabelIew(labelIew).LabelIre(labelIre).LabelIsw(labelIsw).LabelN(labelN).LabelNic(labelNic).LabelNie(labelNie).LabelNiew(labelNiew).LabelNire(labelNire).LabelNisw(labelNisw).LabelNre(labelNre).LabelRe(labelRe).Limit(limit).Location(location).LocationN(locationN).MaximumDraw(maximumDraw).MaximumDrawGt(maximumDrawGt).MaximumDrawGte(maximumDrawGte).MaximumDrawIsnull(maximumDrawIsnull).MaximumDrawLt(maximumDrawLt).MaximumDrawLte(maximumDrawLte).MaximumDrawN(maximumDrawN).Module(module).ModuleIsnull(moduleIsnull).ModuleN(moduleN).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).PowerOutlets(powerOutlets).PowerOutletsIsnull(powerOutletsIsnull).PowerOutletsN(powerOutletsN).Q(q).Sort(sort).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Type_(type_).TypeIc(typeIc).TypeIe(typeIe).TypeIew(typeIew).TypeIre(typeIre).TypeIsw(typeIsw).TypeN(typeN).TypeNic(typeNic).TypeNie(typeNie).TypeNiew(typeNiew).TypeNire(typeNire).TypeNisw(typeNisw).TypeNre(typeNre).TypeRe(typeRe).Depth(depth).ExcludeM2m(excludeM2m).Execute()
 
 
 
@@ -36553,9 +38453,9 @@ func main() {
 	allocatedDrawLt := []int32{int32(123)} // []int32 |  (optional)
 	allocatedDrawLte := []int32{int32(123)} // []int32 |  (optional)
 	allocatedDrawN := []int32{int32(123)} // []int32 |  (optional)
+	availableForCable := []string{"Inner_example"} // []string |  (optional)
 	cable := []string{"Inner_example"} // []string | Cable (optional)
-	cableIsnull := true // bool |  (optional)
-	cableN := []string{"Inner_example"} // []string | Cable (optional)
+	cableN := []string{"Inner_example"} // []string | Exclude Cable (optional)
 	connected := true // bool | Connected status (bool) (optional)
 	contacts := []string{"Inner_example"} // []string |  (optional)
 	contactsIsnull := true // bool | Contacts (name or ID) is null (optional)
@@ -36654,7 +38554,7 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DcimAPI.DcimPowerPortsList(context.Background()).AllocatedDraw(allocatedDraw).AllocatedDrawGt(allocatedDrawGt).AllocatedDrawGte(allocatedDrawGte).AllocatedDrawIsnull(allocatedDrawIsnull).AllocatedDrawLt(allocatedDrawLt).AllocatedDrawLte(allocatedDrawLte).AllocatedDrawN(allocatedDrawN).Cable(cable).CableIsnull(cableIsnull).CableN(cableN).Connected(connected).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Description(description).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIre(descriptionIre).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNire(descriptionNire).DescriptionNisw(descriptionNisw).DescriptionNre(descriptionNre).DescriptionRe(descriptionRe).Device(device).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).HasCable(hasCable).HasPowerOutlets(hasPowerOutlets).Id(id).IdN(idN).Label(label).LabelIc(labelIc).LabelIe(labelIe).LabelIew(labelIew).LabelIre(labelIre).LabelIsw(labelIsw).LabelN(labelN).LabelNic(labelNic).LabelNie(labelNie).LabelNiew(labelNiew).LabelNire(labelNire).LabelNisw(labelNisw).LabelNre(labelNre).LabelRe(labelRe).Limit(limit).Location(location).LocationN(locationN).MaximumDraw(maximumDraw).MaximumDrawGt(maximumDrawGt).MaximumDrawGte(maximumDrawGte).MaximumDrawIsnull(maximumDrawIsnull).MaximumDrawLt(maximumDrawLt).MaximumDrawLte(maximumDrawLte).MaximumDrawN(maximumDrawN).Module(module).ModuleIsnull(moduleIsnull).ModuleN(moduleN).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).PowerOutlets(powerOutlets).PowerOutletsIsnull(powerOutletsIsnull).PowerOutletsN(powerOutletsN).Q(q).Sort(sort).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Type_(type_).TypeIc(typeIc).TypeIe(typeIe).TypeIew(typeIew).TypeIre(typeIre).TypeIsw(typeIsw).TypeN(typeN).TypeNic(typeNic).TypeNie(typeNie).TypeNiew(typeNiew).TypeNire(typeNire).TypeNisw(typeNisw).TypeNre(typeNre).TypeRe(typeRe).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+	resp, r, err := apiClient.DcimAPI.DcimPowerPortsList(context.Background()).AllocatedDraw(allocatedDraw).AllocatedDrawGt(allocatedDrawGt).AllocatedDrawGte(allocatedDrawGte).AllocatedDrawIsnull(allocatedDrawIsnull).AllocatedDrawLt(allocatedDrawLt).AllocatedDrawLte(allocatedDrawLte).AllocatedDrawN(allocatedDrawN).AvailableForCable(availableForCable).Cable(cable).CableN(cableN).Connected(connected).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Description(description).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIre(descriptionIre).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNire(descriptionNire).DescriptionNisw(descriptionNisw).DescriptionNre(descriptionNre).DescriptionRe(descriptionRe).Device(device).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).HasCable(hasCable).HasPowerOutlets(hasPowerOutlets).Id(id).IdN(idN).Label(label).LabelIc(labelIc).LabelIe(labelIe).LabelIew(labelIew).LabelIre(labelIre).LabelIsw(labelIsw).LabelN(labelN).LabelNic(labelNic).LabelNie(labelNie).LabelNiew(labelNiew).LabelNire(labelNire).LabelNisw(labelNisw).LabelNre(labelNre).LabelRe(labelRe).Limit(limit).Location(location).LocationN(locationN).MaximumDraw(maximumDraw).MaximumDrawGt(maximumDrawGt).MaximumDrawGte(maximumDrawGte).MaximumDrawIsnull(maximumDrawIsnull).MaximumDrawLt(maximumDrawLt).MaximumDrawLte(maximumDrawLte).MaximumDrawN(maximumDrawN).Module(module).ModuleIsnull(moduleIsnull).ModuleN(moduleN).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).PowerOutlets(powerOutlets).PowerOutletsIsnull(powerOutletsIsnull).PowerOutletsN(powerOutletsN).Q(q).Sort(sort).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Type_(type_).TypeIc(typeIc).TypeIe(typeIe).TypeIew(typeIew).TypeIre(typeIre).TypeIsw(typeIsw).TypeN(typeN).TypeNic(typeNic).TypeNie(typeNie).TypeNiew(typeNiew).TypeNire(typeNire).TypeNisw(typeNisw).TypeNre(typeNre).TypeRe(typeRe).Depth(depth).ExcludeM2m(excludeM2m).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DcimAPI.DcimPowerPortsList``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -36682,9 +38582,9 @@ Name | Type | Description  | Notes
  **allocatedDrawLt** | **[]int32** |  | 
  **allocatedDrawLte** | **[]int32** |  | 
  **allocatedDrawN** | **[]int32** |  | 
+ **availableForCable** | **[]string** |  | 
  **cable** | **[]string** | Cable | 
- **cableIsnull** | **bool** |  | 
- **cableN** | **[]string** | Cable | 
+ **cableN** | **[]string** | Exclude Cable | 
  **connected** | **bool** | Connected status (bool) | 
  **contacts** | **[]string** |  | 
  **contactsIsnull** | **bool** | Contacts (name or ID) is null | 
@@ -38345,7 +40245,7 @@ import (
 )
 
 func main() {
-	bulkWritableRackReservationRequest := []openapiclient.BulkWritableRackReservationRequest{*openapiclient.NewBulkWritableRackReservationRequest("Id_example", interface{}(123), "Description_example", *openapiclient.NewBulkWritableCableRequestStatus())} // []BulkWritableRackReservationRequest | 
+	bulkWritableRackReservationRequest := []openapiclient.BulkWritableRackReservationRequest{*openapiclient.NewBulkWritableRackReservationRequest("Id_example", []int32{int32(123)}, "Description_example", *openapiclient.NewBulkWritableCableRequestStatus())} // []BulkWritableRackReservationRequest | 
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -38413,7 +40313,7 @@ import (
 )
 
 func main() {
-	rackReservationRequest := *openapiclient.NewRackReservationRequest(interface{}(123), "Description_example", *openapiclient.NewBulkWritableCableRequestStatus()) // RackReservationRequest | 
+	rackReservationRequest := *openapiclient.NewRackReservationRequest([]int32{int32(123)}, "Description_example", *openapiclient.NewBulkWritableCableRequestStatus()) // RackReservationRequest | 
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -39053,7 +40953,7 @@ import (
 
 func main() {
 	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | A UUID string identifying this rack reservation.
-	rackReservationRequest := *openapiclient.NewRackReservationRequest(interface{}(123), "Description_example", *openapiclient.NewBulkWritableCableRequestStatus()) // RackReservationRequest | 
+	rackReservationRequest := *openapiclient.NewRackReservationRequest([]int32{int32(123)}, "Description_example", *openapiclient.NewBulkWritableCableRequestStatus()) // RackReservationRequest | 
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -41542,7 +43442,7 @@ Name | Type | Description  | Notes
 
 ## DcimRearPortsList
 
-> PaginatedRearPortList DcimRearPortsList(ctx).Cable(cable).CableIsnull(cableIsnull).CableN(cableN).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Description(description).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIre(descriptionIre).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNire(descriptionNire).DescriptionNisw(descriptionNisw).DescriptionNre(descriptionNre).DescriptionRe(descriptionRe).Device(device).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).FrontPorts(frontPorts).FrontPortsIsnull(frontPortsIsnull).FrontPortsN(frontPortsN).HasCable(hasCable).HasFrontPorts(hasFrontPorts).Id(id).IdN(idN).Label(label).LabelIc(labelIc).LabelIe(labelIe).LabelIew(labelIew).LabelIre(labelIre).LabelIsw(labelIsw).LabelN(labelN).LabelNic(labelNic).LabelNie(labelNie).LabelNiew(labelNiew).LabelNire(labelNire).LabelNisw(labelNisw).LabelNre(labelNre).LabelRe(labelRe).Limit(limit).Location(location).LocationN(locationN).Module(module).ModuleIsnull(moduleIsnull).ModuleN(moduleN).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).Positions(positions).PositionsGt(positionsGt).PositionsGte(positionsGte).PositionsLt(positionsLt).PositionsLte(positionsLte).PositionsN(positionsN).Q(q).Sort(sort).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Type_(type_).TypeIc(typeIc).TypeIe(typeIe).TypeIew(typeIew).TypeIre(typeIre).TypeIsw(typeIsw).TypeN(typeN).TypeNic(typeNic).TypeNie(typeNie).TypeNiew(typeNiew).TypeNire(typeNire).TypeNisw(typeNisw).TypeNre(typeNre).TypeRe(typeRe).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+> PaginatedRearPortList DcimRearPortsList(ctx).AvailableForCable(availableForCable).Cable(cable).CableN(cableN).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Description(description).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIre(descriptionIre).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNire(descriptionNire).DescriptionNisw(descriptionNisw).DescriptionNre(descriptionNre).DescriptionRe(descriptionRe).Device(device).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).FrontPorts(frontPorts).FrontPortsIsnull(frontPortsIsnull).FrontPortsN(frontPortsN).HasCable(hasCable).HasFrontPorts(hasFrontPorts).Id(id).IdN(idN).Label(label).LabelIc(labelIc).LabelIe(labelIe).LabelIew(labelIew).LabelIre(labelIre).LabelIsw(labelIsw).LabelN(labelN).LabelNic(labelNic).LabelNie(labelNie).LabelNiew(labelNiew).LabelNire(labelNire).LabelNisw(labelNisw).LabelNre(labelNre).LabelRe(labelRe).Limit(limit).Location(location).LocationN(locationN).Module(module).ModuleIsnull(moduleIsnull).ModuleN(moduleN).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).Positions(positions).PositionsGt(positionsGt).PositionsGte(positionsGte).PositionsLt(positionsLt).PositionsLte(positionsLte).PositionsN(positionsN).Q(q).Sort(sort).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Type_(type_).TypeIc(typeIc).TypeIe(typeIe).TypeIew(typeIew).TypeIre(typeIre).TypeIsw(typeIsw).TypeN(typeN).TypeNic(typeNic).TypeNie(typeNie).TypeNiew(typeNiew).TypeNire(typeNire).TypeNisw(typeNisw).TypeNre(typeNre).TypeRe(typeRe).Depth(depth).ExcludeM2m(excludeM2m).Execute()
 
 
 
@@ -41561,9 +43461,9 @@ import (
 )
 
 func main() {
+	availableForCable := []string{"Inner_example"} // []string |  (optional)
 	cable := []string{"Inner_example"} // []string | Cable (optional)
-	cableIsnull := true // bool |  (optional)
-	cableN := []string{"Inner_example"} // []string | Cable (optional)
+	cableN := []string{"Inner_example"} // []string | Exclude Cable (optional)
 	contacts := []string{"Inner_example"} // []string |  (optional)
 	contactsIsnull := true // bool | Contacts (name or ID) is null (optional)
 	contactsN := []string{"Inner_example"} // []string |  (optional)
@@ -41660,7 +43560,7 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DcimAPI.DcimRearPortsList(context.Background()).Cable(cable).CableIsnull(cableIsnull).CableN(cableN).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Description(description).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIre(descriptionIre).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNire(descriptionNire).DescriptionNisw(descriptionNisw).DescriptionNre(descriptionNre).DescriptionRe(descriptionRe).Device(device).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).FrontPorts(frontPorts).FrontPortsIsnull(frontPortsIsnull).FrontPortsN(frontPortsN).HasCable(hasCable).HasFrontPorts(hasFrontPorts).Id(id).IdN(idN).Label(label).LabelIc(labelIc).LabelIe(labelIe).LabelIew(labelIew).LabelIre(labelIre).LabelIsw(labelIsw).LabelN(labelN).LabelNic(labelNic).LabelNie(labelNie).LabelNiew(labelNiew).LabelNire(labelNire).LabelNisw(labelNisw).LabelNre(labelNre).LabelRe(labelRe).Limit(limit).Location(location).LocationN(locationN).Module(module).ModuleIsnull(moduleIsnull).ModuleN(moduleN).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).Positions(positions).PositionsGt(positionsGt).PositionsGte(positionsGte).PositionsLt(positionsLt).PositionsLte(positionsLte).PositionsN(positionsN).Q(q).Sort(sort).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Type_(type_).TypeIc(typeIc).TypeIe(typeIe).TypeIew(typeIew).TypeIre(typeIre).TypeIsw(typeIsw).TypeN(typeN).TypeNic(typeNic).TypeNie(typeNie).TypeNiew(typeNiew).TypeNire(typeNire).TypeNisw(typeNisw).TypeNre(typeNre).TypeRe(typeRe).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+	resp, r, err := apiClient.DcimAPI.DcimRearPortsList(context.Background()).AvailableForCable(availableForCable).Cable(cable).CableN(cableN).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Description(description).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIre(descriptionIre).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNire(descriptionNire).DescriptionNisw(descriptionNisw).DescriptionNre(descriptionNre).DescriptionRe(descriptionRe).Device(device).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).FrontPorts(frontPorts).FrontPortsIsnull(frontPortsIsnull).FrontPortsN(frontPortsN).HasCable(hasCable).HasFrontPorts(hasFrontPorts).Id(id).IdN(idN).Label(label).LabelIc(labelIc).LabelIe(labelIe).LabelIew(labelIew).LabelIre(labelIre).LabelIsw(labelIsw).LabelN(labelN).LabelNic(labelNic).LabelNie(labelNie).LabelNiew(labelNiew).LabelNire(labelNire).LabelNisw(labelNisw).LabelNre(labelNre).LabelRe(labelRe).Limit(limit).Location(location).LocationN(locationN).Module(module).ModuleIsnull(moduleIsnull).ModuleN(moduleN).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).Positions(positions).PositionsGt(positionsGt).PositionsGte(positionsGte).PositionsLt(positionsLt).PositionsLte(positionsLte).PositionsN(positionsN).Q(q).Sort(sort).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Type_(type_).TypeIc(typeIc).TypeIe(typeIe).TypeIew(typeIew).TypeIre(typeIre).TypeIsw(typeIsw).TypeN(typeN).TypeNic(typeNic).TypeNie(typeNie).TypeNiew(typeNiew).TypeNire(typeNire).TypeNisw(typeNisw).TypeNre(typeNre).TypeRe(typeRe).Depth(depth).ExcludeM2m(excludeM2m).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DcimAPI.DcimRearPortsList``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -41681,9 +43581,9 @@ Other parameters are passed through a pointer to a apiDcimRearPortsListRequest s
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **availableForCable** | **[]string** |  | 
  **cable** | **[]string** | Cable | 
- **cableIsnull** | **bool** |  | 
- **cableN** | **[]string** | Cable | 
+ **cableN** | **[]string** | Exclude Cable | 
  **contacts** | **[]string** |  | 
  **contactsIsnull** | **bool** | Contacts (name or ID) is null | 
  **contactsN** | **[]string** |  | 
@@ -45559,7 +47459,7 @@ Name | Type | Description  | Notes
 
 ## DcimVirtualDeviceContextsList
 
-> PaginatedVirtualDeviceContextList DcimVirtualDeviceContextsList(ctx).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Created(created).CreatedGt(createdGt).CreatedGte(createdGte).CreatedIsnull(createdIsnull).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).Description(description).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIre(descriptionIre).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNire(descriptionNire).DescriptionNisw(descriptionNisw).DescriptionNre(descriptionNre).DescriptionRe(descriptionRe).Device(device).DeviceN(deviceN).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).HasInterfaces(hasInterfaces).HasPrimaryIp(hasPrimaryIp).HasTenant(hasTenant).Id(id).IdN(idN).Identifier(identifier).IdentifierGt(identifierGt).IdentifierGte(identifierGte).IdentifierIsnull(identifierIsnull).IdentifierLt(identifierLt).IdentifierLte(identifierLte).IdentifierN(identifierN).Interfaces(interfaces).InterfacesN(interfacesN).LastUpdated(lastUpdated).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedIsnull(lastUpdatedIsnull).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).PrimaryIp4(primaryIp4).PrimaryIp6(primaryIp6).Q(q).Role(role).RoleIsnull(roleIsnull).RoleN(roleN).Sort(sort).Status(status).StatusN(statusN).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Tenant(tenant).TenantIsnull(tenantIsnull).TenantN(tenantN).TenantGroup(tenantGroup).TenantGroupIsnull(tenantGroupIsnull).TenantGroupN(tenantGroupN).TenantId(tenantId).TenantIdIsnull(tenantIdIsnull).TenantIdN(tenantIdN).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+> PaginatedVirtualDeviceContextList DcimVirtualDeviceContextsList(ctx).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).ControllerManagedDeviceGroup(controllerManagedDeviceGroup).ControllerManagedDeviceGroupIsnull(controllerManagedDeviceGroupIsnull).ControllerManagedDeviceGroupN(controllerManagedDeviceGroupN).Created(created).CreatedGt(createdGt).CreatedGte(createdGte).CreatedIsnull(createdIsnull).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).Description(description).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIre(descriptionIre).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNire(descriptionNire).DescriptionNisw(descriptionNisw).DescriptionNre(descriptionNre).DescriptionRe(descriptionRe).Device(device).DeviceN(deviceN).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).HasInterfaces(hasInterfaces).HasPrimaryIp(hasPrimaryIp).HasTenant(hasTenant).Id(id).IdN(idN).Identifier(identifier).IdentifierGt(identifierGt).IdentifierGte(identifierGte).IdentifierIsnull(identifierIsnull).IdentifierLt(identifierLt).IdentifierLte(identifierLte).IdentifierN(identifierN).Interfaces(interfaces).InterfacesN(interfacesN).LastUpdated(lastUpdated).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedIsnull(lastUpdatedIsnull).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).PrimaryIp4(primaryIp4).PrimaryIp6(primaryIp6).Q(q).Role(role).RoleIsnull(roleIsnull).RoleN(roleN).Sort(sort).Status(status).StatusN(statusN).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Tenant(tenant).TenantIsnull(tenantIsnull).TenantN(tenantN).TenantGroup(tenantGroup).TenantGroupIsnull(tenantGroupIsnull).TenantGroupN(tenantGroupN).TenantId(tenantId).TenantIdIsnull(tenantIdIsnull).TenantIdN(tenantIdN).Depth(depth).ExcludeM2m(excludeM2m).Execute()
 
 
 
@@ -45582,6 +47482,9 @@ func main() {
 	contacts := []string{"Inner_example"} // []string |  (optional)
 	contactsIsnull := true // bool | Contacts (name or ID) is null (optional)
 	contactsN := []string{"Inner_example"} // []string |  (optional)
+	controllerManagedDeviceGroup := []string{"Inner_example"} // []string |  (optional)
+	controllerManagedDeviceGroupIsnull := true // bool |  (optional)
+	controllerManagedDeviceGroupN := []string{"Inner_example"} // []string |  (optional)
 	created := []time.Time{time.Now()} // []time.Time |  (optional)
 	createdGt := []time.Time{time.Now()} // []time.Time |  (optional)
 	createdGte := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -45674,7 +47577,7 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DcimAPI.DcimVirtualDeviceContextsList(context.Background()).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).Created(created).CreatedGt(createdGt).CreatedGte(createdGte).CreatedIsnull(createdIsnull).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).Description(description).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIre(descriptionIre).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNire(descriptionNire).DescriptionNisw(descriptionNisw).DescriptionNre(descriptionNre).DescriptionRe(descriptionRe).Device(device).DeviceN(deviceN).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).HasInterfaces(hasInterfaces).HasPrimaryIp(hasPrimaryIp).HasTenant(hasTenant).Id(id).IdN(idN).Identifier(identifier).IdentifierGt(identifierGt).IdentifierGte(identifierGte).IdentifierIsnull(identifierIsnull).IdentifierLt(identifierLt).IdentifierLte(identifierLte).IdentifierN(identifierN).Interfaces(interfaces).InterfacesN(interfacesN).LastUpdated(lastUpdated).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedIsnull(lastUpdatedIsnull).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).PrimaryIp4(primaryIp4).PrimaryIp6(primaryIp6).Q(q).Role(role).RoleIsnull(roleIsnull).RoleN(roleN).Sort(sort).Status(status).StatusN(statusN).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Tenant(tenant).TenantIsnull(tenantIsnull).TenantN(tenantN).TenantGroup(tenantGroup).TenantGroupIsnull(tenantGroupIsnull).TenantGroupN(tenantGroupN).TenantId(tenantId).TenantIdIsnull(tenantIdIsnull).TenantIdN(tenantIdN).Depth(depth).ExcludeM2m(excludeM2m).Execute()
+	resp, r, err := apiClient.DcimAPI.DcimVirtualDeviceContextsList(context.Background()).Contacts(contacts).ContactsIsnull(contactsIsnull).ContactsN(contactsN).ControllerManagedDeviceGroup(controllerManagedDeviceGroup).ControllerManagedDeviceGroupIsnull(controllerManagedDeviceGroupIsnull).ControllerManagedDeviceGroupN(controllerManagedDeviceGroupN).Created(created).CreatedGt(createdGt).CreatedGte(createdGte).CreatedIsnull(createdIsnull).CreatedLt(createdLt).CreatedLte(createdLte).CreatedN(createdN).Description(description).DescriptionIc(descriptionIc).DescriptionIe(descriptionIe).DescriptionIew(descriptionIew).DescriptionIre(descriptionIre).DescriptionIsw(descriptionIsw).DescriptionN(descriptionN).DescriptionNic(descriptionNic).DescriptionNie(descriptionNie).DescriptionNiew(descriptionNiew).DescriptionNire(descriptionNire).DescriptionNisw(descriptionNisw).DescriptionNre(descriptionNre).DescriptionRe(descriptionRe).Device(device).DeviceN(deviceN).DynamicGroups(dynamicGroups).DynamicGroupsN(dynamicGroupsN).Format(format).HasInterfaces(hasInterfaces).HasPrimaryIp(hasPrimaryIp).HasTenant(hasTenant).Id(id).IdN(idN).Identifier(identifier).IdentifierGt(identifierGt).IdentifierGte(identifierGte).IdentifierIsnull(identifierIsnull).IdentifierLt(identifierLt).IdentifierLte(identifierLte).IdentifierN(identifierN).Interfaces(interfaces).InterfacesN(interfacesN).LastUpdated(lastUpdated).LastUpdatedGt(lastUpdatedGt).LastUpdatedGte(lastUpdatedGte).LastUpdatedIsnull(lastUpdatedIsnull).LastUpdatedLt(lastUpdatedLt).LastUpdatedLte(lastUpdatedLte).LastUpdatedN(lastUpdatedN).Limit(limit).Name(name).NameIc(nameIc).NameIe(nameIe).NameIew(nameIew).NameIre(nameIre).NameIsw(nameIsw).NameN(nameN).NameNic(nameNic).NameNie(nameNie).NameNiew(nameNiew).NameNire(nameNire).NameNisw(nameNisw).NameNre(nameNre).NameRe(nameRe).Offset(offset).PrimaryIp4(primaryIp4).PrimaryIp6(primaryIp6).Q(q).Role(role).RoleIsnull(roleIsnull).RoleN(roleN).Sort(sort).Status(status).StatusN(statusN).Tags(tags).TagsIsnull(tagsIsnull).TagsN(tagsN).Teams(teams).TeamsIsnull(teamsIsnull).TeamsN(teamsN).Tenant(tenant).TenantIsnull(tenantIsnull).TenantN(tenantN).TenantGroup(tenantGroup).TenantGroupIsnull(tenantGroupIsnull).TenantGroupN(tenantGroupN).TenantId(tenantId).TenantIdIsnull(tenantIdIsnull).TenantIdN(tenantIdN).Depth(depth).ExcludeM2m(excludeM2m).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DcimAPI.DcimVirtualDeviceContextsList``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -45698,6 +47601,9 @@ Name | Type | Description  | Notes
  **contacts** | **[]string** |  | 
  **contactsIsnull** | **bool** | Contacts (name or ID) is null | 
  **contactsN** | **[]string** |  | 
+ **controllerManagedDeviceGroup** | **[]string** |  | 
+ **controllerManagedDeviceGroupIsnull** | **bool** |  | 
+ **controllerManagedDeviceGroupN** | **[]string** |  | 
  **created** | [**[]time.Time**](time.Time.md) |  | 
  **createdGt** | [**[]time.Time**](time.Time.md) |  | 
  **createdGte** | [**[]time.Time**](time.Time.md) |  | 

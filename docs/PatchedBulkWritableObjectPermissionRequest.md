@@ -6,10 +6,10 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **string** |  | 
 **ObjectTypes** | Pointer to **[]string** |  | [optional] 
+**Actions** | Pointer to **[]string** | The list of actions granted by this permission | [optional] 
 **Name** | Pointer to **string** |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
 **Enabled** | Pointer to **bool** |  | [optional] 
-**Actions** | Pointer to **interface{}** | The list of actions granted by this permission | [optional] 
 **Constraints** | Pointer to **interface{}** | Queryset filter matching the applicable objects of the selected type(s) | [optional] 
 **Groups** | Pointer to [**[]BulkWritableCableRequestStatus**](BulkWritableCableRequestStatus.md) |  | [optional] 
 **Users** | Pointer to [**[]BulkWritableCableRequestStatus**](BulkWritableCableRequestStatus.md) |  | [optional] 
@@ -77,6 +77,31 @@ SetObjectTypes sets ObjectTypes field to given value.
 `func (o *PatchedBulkWritableObjectPermissionRequest) HasObjectTypes() bool`
 
 HasObjectTypes returns a boolean if a field has been set.
+
+### GetActions
+
+`func (o *PatchedBulkWritableObjectPermissionRequest) GetActions() []string`
+
+GetActions returns the Actions field if non-nil, zero value otherwise.
+
+### GetActionsOk
+
+`func (o *PatchedBulkWritableObjectPermissionRequest) GetActionsOk() (*[]string, bool)`
+
+GetActionsOk returns a tuple with the Actions field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetActions
+
+`func (o *PatchedBulkWritableObjectPermissionRequest) SetActions(v []string)`
+
+SetActions sets Actions field to given value.
+
+### HasActions
+
+`func (o *PatchedBulkWritableObjectPermissionRequest) HasActions() bool`
+
+HasActions returns a boolean if a field has been set.
 
 ### GetName
 
@@ -153,41 +178,6 @@ SetEnabled sets Enabled field to given value.
 
 HasEnabled returns a boolean if a field has been set.
 
-### GetActions
-
-`func (o *PatchedBulkWritableObjectPermissionRequest) GetActions() interface{}`
-
-GetActions returns the Actions field if non-nil, zero value otherwise.
-
-### GetActionsOk
-
-`func (o *PatchedBulkWritableObjectPermissionRequest) GetActionsOk() (*interface{}, bool)`
-
-GetActionsOk returns a tuple with the Actions field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetActions
-
-`func (o *PatchedBulkWritableObjectPermissionRequest) SetActions(v interface{})`
-
-SetActions sets Actions field to given value.
-
-### HasActions
-
-`func (o *PatchedBulkWritableObjectPermissionRequest) HasActions() bool`
-
-HasActions returns a boolean if a field has been set.
-
-### SetActionsNil
-
-`func (o *PatchedBulkWritableObjectPermissionRequest) SetActionsNil(b bool)`
-
- SetActionsNil sets the value for Actions to be an explicit nil
-
-### UnsetActions
-`func (o *PatchedBulkWritableObjectPermissionRequest) UnsetActions()`
-
-UnsetActions ensures that no value is present for Actions, not even an explicit nil
 ### GetConstraints
 
 `func (o *PatchedBulkWritableObjectPermissionRequest) GetConstraints() interface{}`

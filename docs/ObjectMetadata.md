@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **AssignedObjectType** | **string** |  | 
 **AssignedObject** | [**NullableObjectMetadataAssignedObject**](ObjectMetadataAssignedObject.md) |  | [readonly] 
 **Value** | Pointer to **interface{}** |  | [optional] 
-**ScopedFields** | Pointer to **interface{}** | List of scoped fields, only direct fields on the model | [optional] 
+**ScopedFields** | Pointer to **[]string** | List of scoped fields, only direct fields on the model | [optional] 
 **AssignedObjectId** | **string** |  | 
 **MetadataType** | [**BulkWritableCableRequestStatus**](BulkWritableCableRequestStatus.md) |  | 
 **Contact** | Pointer to [**NullableApprovalWorkflowUser**](ApprovalWorkflowUser.md) |  | [optional] 
@@ -231,20 +231,20 @@ HasValue returns a boolean if a field has been set.
 UnsetValue ensures that no value is present for Value, not even an explicit nil
 ### GetScopedFields
 
-`func (o *ObjectMetadata) GetScopedFields() interface{}`
+`func (o *ObjectMetadata) GetScopedFields() []string`
 
 GetScopedFields returns the ScopedFields field if non-nil, zero value otherwise.
 
 ### GetScopedFieldsOk
 
-`func (o *ObjectMetadata) GetScopedFieldsOk() (*interface{}, bool)`
+`func (o *ObjectMetadata) GetScopedFieldsOk() (*[]string, bool)`
 
 GetScopedFieldsOk returns a tuple with the ScopedFields field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetScopedFields
 
-`func (o *ObjectMetadata) SetScopedFields(v interface{})`
+`func (o *ObjectMetadata) SetScopedFields(v []string)`
 
 SetScopedFields sets ScopedFields field to given value.
 
@@ -254,16 +254,6 @@ SetScopedFields sets ScopedFields field to given value.
 
 HasScopedFields returns a boolean if a field has been set.
 
-### SetScopedFieldsNil
-
-`func (o *ObjectMetadata) SetScopedFieldsNil(b bool)`
-
- SetScopedFieldsNil sets the value for ScopedFields to be an explicit nil
-
-### UnsetScopedFields
-`func (o *ObjectMetadata) UnsetScopedFields()`
-
-UnsetScopedFields ensures that no value is present for ScopedFields, not even an explicit nil
 ### GetAssignedObjectId
 
 `func (o *ObjectMetadata) GetAssignedObjectId() string`

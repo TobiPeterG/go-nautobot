@@ -7,6 +7,8 @@
 
 * `MUTUAL_TLS` (value: `"mutual_tls"`)
 
+* `NULL` (value: `"null"`)
+
 * `SERVER` (value: `"server"`)
 
 

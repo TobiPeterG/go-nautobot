@@ -9,6 +9,8 @@
 
 * `MLC` (value: `"mlc"`)
 
+* `NULL` (value: `"null"`)
+
 * `PANELBOARD` (value: `"panelboard"`)
 
 * `PDU` (value: `"pdu"`)

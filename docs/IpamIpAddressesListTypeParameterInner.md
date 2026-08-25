@@ -7,6 +7,8 @@
 
 * `HOST` (value: `"host"`)
 
+* `NULL` (value: `"null"`)
+
 * `SLAAC` (value: `"slaac"`)
 
 

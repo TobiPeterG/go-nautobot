@@ -3264,7 +3264,7 @@ func main() {
 	macAddressNisw := []string{"Inner_example"} // []string | Exclude MAC address starts with (optional)
 	macAddressNre := []string{"Inner_example"} // []string | Exclude MAC address matches regex (optional)
 	macAddressRe := []string{"Inner_example"} // []string | MAC address matches regex (optional)
-	mode := []openapiclient.DcimInterfacesListModeParameterInner{openapiclient.dcim_interfaces_list_mode_parameter_inner("access")} // []DcimInterfacesListModeParameterInner |  (optional)
+	mode := []openapiclient.IEEE8021QMode{openapiclient.IEEE802_1Q_Mode("access")} // []IEEE8021QMode |  (optional)
 	modeIc := []string{"Inner_example"} // []string |  (optional)
 	modeIe := []string{"Inner_example"} // []string |  (optional)
 	modeIew := []string{"Inner_example"} // []string |  (optional)
@@ -3408,7 +3408,7 @@ Name | Type | Description  | Notes
  **macAddressNisw** | **[]string** | Exclude MAC address starts with | 
  **macAddressNre** | **[]string** | Exclude MAC address matches regex | 
  **macAddressRe** | **[]string** | MAC address matches regex | 
- **mode** | [**[]DcimInterfacesListModeParameterInner**](DcimInterfacesListModeParameterInner.md) |  | 
+ **mode** | [**[]IEEE8021QMode**](IEEE8021QMode.md) |  | 
  **modeIc** | **[]string** |  | 
  **modeIe** | **[]string** |  | 
  **modeIew** | **[]string** |  | 

@@ -5,6 +5,8 @@
 
 * `AUTO` (value: `"auto"`)
 
+* `NULL` (value: `"null"`)
+
 * `POOL` (value: `"pool"`)
 
 * `STATIC` (value: `"static"`)

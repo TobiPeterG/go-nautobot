@@ -12,11 +12,12 @@ Name | Type | Description | Notes
 **Description** | Pointer to **string** |  | [optional] 
 **Enabled** | Pointer to **bool** |  | [optional] 
 **Mtu** | Pointer to **NullableInt32** |  | [optional] 
-**Mode** | Pointer to [**PatchedWritableInterfaceRequestMode**](PatchedWritableInterfaceRequestMode.md) |  | [optional] 
+**Mode** | Pointer to [**IEEE8021QMode1**](IEEE8021QMode1.md) |  | [optional] 
 **Type** | [**InterfaceTypeChoices**](InterfaceTypeChoices.md) |  | 
 **PortType** | Pointer to [**PatchedWritableInterfaceRequestPortType**](PatchedWritableInterfaceRequestPortType.md) |  | [optional] 
 **MgmtOnly** | Pointer to **bool** | This interface is used only for out-of-band management | [optional] 
 **Duplex** | Pointer to [**BulkWritableInterfaceTemplateRequestDuplex**](BulkWritableInterfaceTemplateRequestDuplex.md) |  | [optional] 
+**BreakoutPosition** | Pointer to **NullableInt32** | For a child interface of a breakout-cable trunk, the position on the parent interface&#39;s trunk connector that this child interface maps to. | [optional] 
 **Device** | Pointer to [**NullableApprovalWorkflowUser**](ApprovalWorkflowUser.md) |  | [optional] 
 **Module** | Pointer to [**NullableApprovalWorkflowUser**](ApprovalWorkflowUser.md) |  | [optional] 
 **Status** | [**BulkWritableCableRequestStatus**](BulkWritableCableRequestStatus.md) |  | 
@@ -27,7 +28,7 @@ Name | Type | Description | Notes
 **UntaggedVlan** | Pointer to [**NullableApprovalWorkflowUser**](ApprovalWorkflowUser.md) |  | [optional] 
 **Vrf** | Pointer to [**NullableApprovalWorkflowUser**](ApprovalWorkflowUser.md) |  | [optional] 
 **TaggedVlans** | Pointer to [**[]TaggedVLANs**](TaggedVLANs.md) |  | [optional] 
-**CustomFields** | Pointer to **map[string]interface{}** |  | [optional] 
+**CustomFields** | Pointer to **map[string]interface{}** | Custom field data for this object, keyed by each applicable Custom Field&#39;s &#x60;key&#x60;. Value types vary with the custom field&#39;s type (text, integer, boolean, date, URL, JSON, select, multi-select); undefined values are &#x60;null&#x60;. On write, the payload is merged with existing values (PATCH-style: keys omitted from the payload are left untouched), and keys that do not correspond to a defined custom field are ignored. | [optional] 
 **Relationships** | Pointer to [**map[string]ApprovalWorkflowDefinitionRequestRelationshipsValue**](ApprovalWorkflowDefinitionRequestRelationshipsValue.md) |  | [optional] 
 **Tags** | Pointer to [**[]BulkWritableCableRequestStatus**](BulkWritableCableRequestStatus.md) |  | [optional] 
 
@@ -277,20 +278,20 @@ HasMtu returns a boolean if a field has been set.
 UnsetMtu ensures that no value is present for Mtu, not even an explicit nil
 ### GetMode
 
-`func (o *WritableInterfaceRequest) GetMode() PatchedWritableInterfaceRequestMode`
+`func (o *WritableInterfaceRequest) GetMode() IEEE8021QMode1`
 
 GetMode returns the Mode field if non-nil, zero value otherwise.
 
 ### GetModeOk
 
-`func (o *WritableInterfaceRequest) GetModeOk() (*PatchedWritableInterfaceRequestMode, bool)`
+`func (o *WritableInterfaceRequest) GetModeOk() (*IEEE8021QMode1, bool)`
 
 GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMode
 
-`func (o *WritableInterfaceRequest) SetMode(v PatchedWritableInterfaceRequestMode)`
+`func (o *WritableInterfaceRequest) SetMode(v IEEE8021QMode1)`
 
 SetMode sets Mode field to given value.
 
@@ -395,6 +396,41 @@ SetDuplex sets Duplex field to given value.
 
 HasDuplex returns a boolean if a field has been set.
 
+### GetBreakoutPosition
+
+`func (o *WritableInterfaceRequest) GetBreakoutPosition() int32`
+
+GetBreakoutPosition returns the BreakoutPosition field if non-nil, zero value otherwise.
+
+### GetBreakoutPositionOk
+
+`func (o *WritableInterfaceRequest) GetBreakoutPositionOk() (*int32, bool)`
+
+GetBreakoutPositionOk returns a tuple with the BreakoutPosition field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBreakoutPosition
+
+`func (o *WritableInterfaceRequest) SetBreakoutPosition(v int32)`
+
+SetBreakoutPosition sets BreakoutPosition field to given value.
+
+### HasBreakoutPosition
+
+`func (o *WritableInterfaceRequest) HasBreakoutPosition() bool`
+
+HasBreakoutPosition returns a boolean if a field has been set.
+
+### SetBreakoutPositionNil
+
+`func (o *WritableInterfaceRequest) SetBreakoutPositionNil(b bool)`
+
+ SetBreakoutPositionNil sets the value for BreakoutPosition to be an explicit nil
+
+### UnsetBreakoutPosition
+`func (o *WritableInterfaceRequest) UnsetBreakoutPosition()`
+
+UnsetBreakoutPosition ensures that no value is present for BreakoutPosition, not even an explicit nil
 ### GetDevice
 
 `func (o *WritableInterfaceRequest) GetDevice() ApprovalWorkflowUser`
@@ -722,20 +758,20 @@ HasTaggedVlans returns a boolean if a field has been set.
 
 ### GetCustomFields
 
-`func (o *WritableInterfaceRequest) GetCustomFields() map[string]interface{}`
+`func (o *WritableInterfaceRequest) GetCustomFields() map[string]*interface{}`
 
 GetCustomFields returns the CustomFields field if non-nil, zero value otherwise.
 
 ### GetCustomFieldsOk
 
-`func (o *WritableInterfaceRequest) GetCustomFieldsOk() (*map[string]interface{}, bool)`
+`func (o *WritableInterfaceRequest) GetCustomFieldsOk() (*map[string]*interface{}, bool)`
 
 GetCustomFieldsOk returns a tuple with the CustomFields field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCustomFields
 
-`func (o *WritableInterfaceRequest) SetCustomFields(v map[string]interface{})`
+`func (o *WritableInterfaceRequest) SetCustomFields(v map[string]*interface{})`
 
 SetCustomFields sets CustomFields field to given value.
 

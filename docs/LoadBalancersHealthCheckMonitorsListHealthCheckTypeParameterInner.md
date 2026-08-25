@@ -11,6 +11,8 @@
 
 * `HTTPS` (value: `"https"`)
 
+* `NULL` (value: `"null"`)
+
 * `PING` (value: `"ping"`)
 
 * `TCP` (value: `"tcp"`)

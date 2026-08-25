@@ -19,6 +19,8 @@
 
 * `LEAST_RESPONSE_TIME` (value: `"least_response_time"`)
 
+* `NULL` (value: `"null"`)
+
 * `ROUND_ROBIN` (value: `"round_robin"`)
 
 * `SOURCE_IP_HASH` (value: `"source_ip_hash"`)

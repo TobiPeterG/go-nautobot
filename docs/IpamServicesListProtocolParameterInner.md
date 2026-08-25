@@ -3,6 +3,8 @@
 ## Enum
 
 
+* `NULL` (value: `"null"`)
+
 * `TCP` (value: `"tcp"`)
 
 * `UDP` (value: `"udp"`)
