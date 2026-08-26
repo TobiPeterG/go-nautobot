@@ -11885,8 +11885,8 @@ type ApiIpamPrefixesAvailableIpsCreateRequest struct {
 	format *CircuitsCircuitTerminationsListFormatParameter
 	limit *int32
 	offset *int32
-	rangeEnd *IpamPrefixesAvailableIpsListRangeEndParameter
-	rangeStart *IpamPrefixesAvailableIpsListRangeEndParameter
+	rangeEnd *string
+	rangeStart *string
 	sort *string
 }
 
@@ -11913,13 +11913,13 @@ func (r ApiIpamPrefixesAvailableIpsCreateRequest) Offset(offset int32) ApiIpamPr
 }
 
 // IP from which enumeration/allocation should stop.
-func (r ApiIpamPrefixesAvailableIpsCreateRequest) RangeEnd(rangeEnd IpamPrefixesAvailableIpsListRangeEndParameter) ApiIpamPrefixesAvailableIpsCreateRequest {
+func (r ApiIpamPrefixesAvailableIpsCreateRequest) RangeEnd(rangeEnd string) ApiIpamPrefixesAvailableIpsCreateRequest {
 	r.rangeEnd = &rangeEnd
 	return r
 }
 
 // IP from which enumeration/allocation should start.
-func (r ApiIpamPrefixesAvailableIpsCreateRequest) RangeStart(rangeStart IpamPrefixesAvailableIpsListRangeEndParameter) ApiIpamPrefixesAvailableIpsCreateRequest {
+func (r ApiIpamPrefixesAvailableIpsCreateRequest) RangeStart(rangeStart string) ApiIpamPrefixesAvailableIpsCreateRequest {
 	r.rangeStart = &rangeStart
 	return r
 }
@@ -12077,8 +12077,8 @@ type ApiIpamPrefixesAvailableIpsListRequest struct {
 	format *CircuitsCircuitTerminationsListFormatParameter
 	limit *int32
 	offset *int32
-	rangeEnd *IpamPrefixesAvailableIpsListRangeEndParameter
-	rangeStart *IpamPrefixesAvailableIpsListRangeEndParameter
+	rangeEnd *string
+	rangeStart *string
 	sort *string
 	depth *int32
 	excludeM2m *bool
@@ -12102,13 +12102,13 @@ func (r ApiIpamPrefixesAvailableIpsListRequest) Offset(offset int32) ApiIpamPref
 }
 
 // IP from which enumeration/allocation should stop.
-func (r ApiIpamPrefixesAvailableIpsListRequest) RangeEnd(rangeEnd IpamPrefixesAvailableIpsListRangeEndParameter) ApiIpamPrefixesAvailableIpsListRequest {
+func (r ApiIpamPrefixesAvailableIpsListRequest) RangeEnd(rangeEnd string) ApiIpamPrefixesAvailableIpsListRequest {
 	r.rangeEnd = &rangeEnd
 	return r
 }
 
 // IP from which enumeration/allocation should start.
-func (r ApiIpamPrefixesAvailableIpsListRequest) RangeStart(rangeStart IpamPrefixesAvailableIpsListRangeEndParameter) ApiIpamPrefixesAvailableIpsListRequest {
+func (r ApiIpamPrefixesAvailableIpsListRequest) RangeStart(rangeStart string) ApiIpamPrefixesAvailableIpsListRequest {
 	r.rangeStart = &rangeStart
 	return r
 }

@@ -495,7 +495,6 @@ docs/InventoryItem.md
 docs/InventoryItemRequest.md
 docs/IpamAPI.md
 docs/IpamIpAddressesListTypeParameterInner.md
-docs/IpamPrefixesAvailableIpsListRangeEndParameter.md
 docs/IpamServicesListProtocolParameterInner.md
 docs/IpamVlanGroupsAvailableVlansList200Response.md
 docs/Job.md
@@ -1180,6 +1179,7 @@ docs/PatchedWritableConsoleServerPortRequest.md
 docs/PatchedWritableConsoleServerPortTemplateRequest.md
 docs/PatchedWritableCustomFieldRequest.md
 docs/PatchedWritableDeviceRedundancyGroupRequest.md
+docs/PatchedWritableDeviceRedundancyGroupRequestFailoverStrategy.md
 docs/PatchedWritableDeviceRequest.md
 docs/PatchedWritableDeviceTypeRequest.md
 docs/PatchedWritableFrontPortRequest.md
@@ -1934,7 +1934,6 @@ model_ip_address_type_choices.go
 model_ip_addresses.go
 model_ip_allocation_request.go
 model_ipam_ip_addresses_list_type_parameter_inner.go
-model_ipam_prefixes_available_ips_list_range_end_parameter.go
 model_ipam_services_list_protocol_parameter_inner.go
 model_ipam_vlan_groups_available_vlans_list_200_response.go
 model_job.go
@@ -2618,6 +2617,7 @@ model_patched_writable_console_server_port_request.go
 model_patched_writable_console_server_port_template_request.go
 model_patched_writable_custom_field_request.go
 model_patched_writable_device_redundancy_group_request.go
+model_patched_writable_device_redundancy_group_request_failover_strategy.go
 model_patched_writable_device_request.go
 model_patched_writable_device_type_request.go
 model_patched_writable_front_port_request.go

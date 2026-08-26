@@ -136646,7 +136646,7 @@ paths:
         name: range_end
         required: false
         schema:
-          $ref: "#/components/schemas/ipam_prefixes_available_ips_list_range_end_parameter"
+          type: string
         style: form
       - description: IP from which enumeration/allocation should start.
         explode: true
@@ -136654,7 +136654,7 @@ paths:
         name: range_start
         required: false
         schema:
-          $ref: "#/components/schemas/ipam_prefixes_available_ips_list_range_end_parameter"
+          type: string
         style: form
       - description: Which field to use when ordering the results.
         explode: true
@@ -136751,7 +136751,7 @@ paths:
         name: range_end
         required: false
         schema:
-          $ref: "#/components/schemas/ipam_prefixes_available_ips_list_range_end_parameter"
+          type: string
         style: form
       - description: IP from which enumeration/allocation should start.
         explode: true
@@ -136759,7 +136759,7 @@ paths:
         name: range_start
         required: false
         schema:
-          $ref: "#/components/schemas/ipam_prefixes_available_ips_list_range_end_parameter"
+          type: string
         style: form
       - description: Which field to use when ordering the results.
         explode: true
@@ -258947,7 +258947,7 @@ components:
         id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         name: name
         description: description
-        failover_strategy: ""
+        failover_strategy: active-active
         comments: comments
         status:
           id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
@@ -259014,7 +259014,7 @@ components:
           maxLength: 255
           type: string
         failover_strategy:
-          $ref: "#/components/schemas/BulkWritableDeviceRedundancyGroupRequest_failover_strategy"
+          $ref: "#/components/schemas/PatchedWritableDeviceRedundancyGroupRequest_failover_strategy"
         comments:
           type: string
         status:
@@ -275574,7 +275574,7 @@ components:
         id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         name: name
         description: description
-        failover_strategy: ""
+        failover_strategy: active-active
         comments: comments
         status:
           id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
@@ -275641,7 +275641,7 @@ components:
           maxLength: 255
           type: string
         failover_strategy:
-          $ref: "#/components/schemas/BulkWritableDeviceRedundancyGroupRequest_failover_strategy"
+          $ref: "#/components/schemas/PatchedWritableDeviceRedundancyGroupRequest_failover_strategy"
         comments:
           type: string
         status:
@@ -279201,12 +279201,6 @@ components:
       - "null"
       - slaac
       type: string
-    ipam_prefixes_available_ips_list_range_end_parameter:
-      oneOf:
-      - format: ipv6
-        type: string
-      - format: ipv4
-        type: string
     ipam_services_list_protocol_parameter_inner:
       enum:
       - "null"
@@ -280893,12 +280887,14 @@ components:
           $ref: "#/components/schemas/Device_face_label"
       type: object
     DeviceRedundancyGroup_failover_strategy_value:
+      default: ""
       enum:
       - ""
       - active-active
       - active-passive
       type: string
     DeviceRedundancyGroup_failover_strategy_label:
+      default: (unspecified)
       enum:
       - (unspecified)
       - Active/Active
@@ -281535,6 +281531,12 @@ components:
       - usb-micro-b
       - usb-micro-ab
       - other
+      - ""
+      type: string
+    PatchedWritableDeviceRedundancyGroupRequest_failover_strategy:
+      enum:
+      - active-active
+      - active-passive
       - ""
       type: string
     Rack_face_1:

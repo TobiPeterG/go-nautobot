@@ -23,7 +23,7 @@ type WritableDeviceRedundancyGroupRequest struct {
 	Id *string `json:"id,omitempty"`
 	Name string `json:"name"`
 	Description *string `json:"description,omitempty"`
-	FailoverStrategy *BulkWritableDeviceRedundancyGroupRequestFailoverStrategy `json:"failover_strategy,omitempty"`
+	FailoverStrategy *PatchedWritableDeviceRedundancyGroupRequestFailoverStrategy `json:"failover_strategy,omitempty"`
 	Comments *string `json:"comments,omitempty"`
 	Status BulkWritableCableRequestStatus `json:"status"`
 	SecretsGroup NullableApprovalWorkflowUser `json:"secrets_group,omitempty"`
@@ -43,8 +43,6 @@ type _WritableDeviceRedundancyGroupRequest WritableDeviceRedundancyGroupRequest
 func NewWritableDeviceRedundancyGroupRequest(name string, status BulkWritableCableRequestStatus) *WritableDeviceRedundancyGroupRequest {
 	this := WritableDeviceRedundancyGroupRequest{}
 	this.Name = name
-	var failoverStrategy BulkWritableDeviceRedundancyGroupRequestFailoverStrategy = BULKWRITABLEDEVICEREDUNDANCYGROUPREQUESTFAILOVERSTRATEGY_EMPTY
-	this.FailoverStrategy = &failoverStrategy
 	this.Status = status
 	return &this
 }
@@ -54,8 +52,6 @@ func NewWritableDeviceRedundancyGroupRequest(name string, status BulkWritableCab
 // but it doesn't guarantee that properties required by API are set
 func NewWritableDeviceRedundancyGroupRequestWithDefaults() *WritableDeviceRedundancyGroupRequest {
 	this := WritableDeviceRedundancyGroupRequest{}
-	var failoverStrategy BulkWritableDeviceRedundancyGroupRequestFailoverStrategy = BULKWRITABLEDEVICEREDUNDANCYGROUPREQUESTFAILOVERSTRATEGY_EMPTY
-	this.FailoverStrategy = &failoverStrategy
 	return &this
 }
 
@@ -148,9 +144,9 @@ func (o *WritableDeviceRedundancyGroupRequest) SetDescription(v string) {
 }
 
 // GetFailoverStrategy returns the FailoverStrategy field value if set, zero value otherwise.
-func (o *WritableDeviceRedundancyGroupRequest) GetFailoverStrategy() BulkWritableDeviceRedundancyGroupRequestFailoverStrategy {
+func (o *WritableDeviceRedundancyGroupRequest) GetFailoverStrategy() PatchedWritableDeviceRedundancyGroupRequestFailoverStrategy {
 	if o == nil || IsNil(o.FailoverStrategy) {
-		var ret BulkWritableDeviceRedundancyGroupRequestFailoverStrategy
+		var ret PatchedWritableDeviceRedundancyGroupRequestFailoverStrategy
 		return ret
 	}
 	return *o.FailoverStrategy
@@ -158,7 +154,7 @@ func (o *WritableDeviceRedundancyGroupRequest) GetFailoverStrategy() BulkWritabl
 
 // GetFailoverStrategyOk returns a tuple with the FailoverStrategy field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *WritableDeviceRedundancyGroupRequest) GetFailoverStrategyOk() (*BulkWritableDeviceRedundancyGroupRequestFailoverStrategy, bool) {
+func (o *WritableDeviceRedundancyGroupRequest) GetFailoverStrategyOk() (*PatchedWritableDeviceRedundancyGroupRequestFailoverStrategy, bool) {
 	if o == nil || IsNil(o.FailoverStrategy) {
 		return nil, false
 	}
@@ -174,8 +170,8 @@ func (o *WritableDeviceRedundancyGroupRequest) HasFailoverStrategy() bool {
 	return false
 }
 
-// SetFailoverStrategy gets a reference to the given BulkWritableDeviceRedundancyGroupRequestFailoverStrategy and assigns it to the FailoverStrategy field.
-func (o *WritableDeviceRedundancyGroupRequest) SetFailoverStrategy(v BulkWritableDeviceRedundancyGroupRequestFailoverStrategy) {
+// SetFailoverStrategy gets a reference to the given PatchedWritableDeviceRedundancyGroupRequestFailoverStrategy and assigns it to the FailoverStrategy field.
+func (o *WritableDeviceRedundancyGroupRequest) SetFailoverStrategy(v PatchedWritableDeviceRedundancyGroupRequestFailoverStrategy) {
 	o.FailoverStrategy = &v
 }
 

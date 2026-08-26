@@ -32,6 +32,10 @@ type _DeviceRedundancyGroupFailoverStrategy DeviceRedundancyGroupFailoverStrateg
 // will change when the set of required properties is changed
 func NewDeviceRedundancyGroupFailoverStrategy() *DeviceRedundancyGroupFailoverStrategy {
 	this := DeviceRedundancyGroupFailoverStrategy{}
+	var value DeviceRedundancyGroupFailoverStrategyValue = DEVICEREDUNDANCYGROUPFAILOVERSTRATEGYVALUE_EMPTY
+	this.Value = &value
+	var label DeviceRedundancyGroupFailoverStrategyLabel = DEVICEREDUNDANCYGROUPFAILOVERSTRATEGYLABEL_UNSPECIFIED
+	this.Label = &label
 	return &this
 }
 
@@ -40,6 +44,10 @@ func NewDeviceRedundancyGroupFailoverStrategy() *DeviceRedundancyGroupFailoverSt
 // but it doesn't guarantee that properties required by API are set
 func NewDeviceRedundancyGroupFailoverStrategyWithDefaults() *DeviceRedundancyGroupFailoverStrategy {
 	this := DeviceRedundancyGroupFailoverStrategy{}
+	var value DeviceRedundancyGroupFailoverStrategyValue = DEVICEREDUNDANCYGROUPFAILOVERSTRATEGYVALUE_EMPTY
+	this.Value = &value
+	var label DeviceRedundancyGroupFailoverStrategyLabel = DEVICEREDUNDANCYGROUPFAILOVERSTRATEGYLABEL_UNSPECIFIED
+	this.Label = &label
 	return &this
 }
 

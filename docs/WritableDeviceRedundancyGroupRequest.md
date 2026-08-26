@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **Id** | Pointer to **string** |  | [optional] 
 **Name** | **string** |  | 
 **Description** | Pointer to **string** |  | [optional] 
-**FailoverStrategy** | Pointer to [**BulkWritableDeviceRedundancyGroupRequestFailoverStrategy**](BulkWritableDeviceRedundancyGroupRequestFailoverStrategy.md) |  | [optional] [default to BULKWRITABLEDEVICEREDUNDANCYGROUPREQUESTFAILOVERSTRATEGY_EMPTY]
+**FailoverStrategy** | Pointer to [**PatchedWritableDeviceRedundancyGroupRequestFailoverStrategy**](PatchedWritableDeviceRedundancyGroupRequestFailoverStrategy.md) |  | [optional] 
 **Comments** | Pointer to **string** |  | [optional] 
 **Status** | [**BulkWritableCableRequestStatus**](BulkWritableCableRequestStatus.md) |  | 
 **SecretsGroup** | Pointer to [**NullableApprovalWorkflowUser**](ApprovalWorkflowUser.md) |  | [optional] 
@@ -106,20 +106,20 @@ HasDescription returns a boolean if a field has been set.
 
 ### GetFailoverStrategy
 
-`func (o *WritableDeviceRedundancyGroupRequest) GetFailoverStrategy() BulkWritableDeviceRedundancyGroupRequestFailoverStrategy`
+`func (o *WritableDeviceRedundancyGroupRequest) GetFailoverStrategy() PatchedWritableDeviceRedundancyGroupRequestFailoverStrategy`
 
 GetFailoverStrategy returns the FailoverStrategy field if non-nil, zero value otherwise.
 
 ### GetFailoverStrategyOk
 
-`func (o *WritableDeviceRedundancyGroupRequest) GetFailoverStrategyOk() (*BulkWritableDeviceRedundancyGroupRequestFailoverStrategy, bool)`
+`func (o *WritableDeviceRedundancyGroupRequest) GetFailoverStrategyOk() (*PatchedWritableDeviceRedundancyGroupRequestFailoverStrategy, bool)`
 
 GetFailoverStrategyOk returns a tuple with the FailoverStrategy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFailoverStrategy
 
-`func (o *WritableDeviceRedundancyGroupRequest) SetFailoverStrategy(v BulkWritableDeviceRedundancyGroupRequestFailoverStrategy)`
+`func (o *WritableDeviceRedundancyGroupRequest) SetFailoverStrategy(v PatchedWritableDeviceRedundancyGroupRequestFailoverStrategy)`
 
 SetFailoverStrategy sets FailoverStrategy field to given value.
 

@@ -4587,8 +4587,8 @@ func main() {
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 	limit := int32(56) // int32 | Number of results to return per page. (optional)
 	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
-	rangeEnd := openapiclient.ipam_prefixes_available_ips_list_range_end_parameter{String: new(string)} // IpamPrefixesAvailableIpsListRangeEndParameter | IP from which enumeration/allocation should stop. (optional)
-	rangeStart := openapiclient.ipam_prefixes_available_ips_list_range_end_parameter{String: new(string)} // IpamPrefixesAvailableIpsListRangeEndParameter | IP from which enumeration/allocation should start. (optional)
+	rangeEnd := "rangeEnd_example" // string | IP from which enumeration/allocation should stop. (optional)
+	rangeStart := "rangeStart_example" // string | IP from which enumeration/allocation should start. (optional)
 	sort := "sort_example" // string | Which field to use when ordering the results. (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -4623,8 +4623,8 @@ Name | Type | Description  | Notes
  **format** | [**CircuitsCircuitTerminationsListFormatParameter**](CircuitsCircuitTerminationsListFormatParameter.md) |  | 
  **limit** | **int32** | Number of results to return per page. | 
  **offset** | **int32** | The initial index from which to return the results. | 
- **rangeEnd** | [**IpamPrefixesAvailableIpsListRangeEndParameter**](IpamPrefixesAvailableIpsListRangeEndParameter.md) | IP from which enumeration/allocation should stop. | 
- **rangeStart** | [**IpamPrefixesAvailableIpsListRangeEndParameter**](IpamPrefixesAvailableIpsListRangeEndParameter.md) | IP from which enumeration/allocation should start. | 
+ **rangeEnd** | **string** | IP from which enumeration/allocation should stop. | 
+ **rangeStart** | **string** | IP from which enumeration/allocation should start. | 
  **sort** | **string** | Which field to use when ordering the results. | 
 
 ### Return type
@@ -4670,8 +4670,8 @@ func main() {
 	format := openapiclient.circuits_circuit_terminations_list_format_parameter("csv") // CircuitsCircuitTerminationsListFormatParameter |  (optional)
 	limit := int32(56) // int32 | Number of results to return per page. (optional)
 	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
-	rangeEnd := openapiclient.ipam_prefixes_available_ips_list_range_end_parameter{String: new(string)} // IpamPrefixesAvailableIpsListRangeEndParameter | IP from which enumeration/allocation should stop. (optional)
-	rangeStart := openapiclient.ipam_prefixes_available_ips_list_range_end_parameter{String: new(string)} // IpamPrefixesAvailableIpsListRangeEndParameter | IP from which enumeration/allocation should start. (optional)
+	rangeEnd := "rangeEnd_example" // string | IP from which enumeration/allocation should stop. (optional)
+	rangeStart := "rangeStart_example" // string | IP from which enumeration/allocation should start. (optional)
 	sort := "sort_example" // string | Which field to use when ordering the results. (optional)
 	depth := int32(56) // int32 | Serializer Depth (optional) (default to 1)
 	excludeM2m := true // bool | Exclude many-to-many fields from the response (optional)
@@ -4707,8 +4707,8 @@ Name | Type | Description  | Notes
  **format** | [**CircuitsCircuitTerminationsListFormatParameter**](CircuitsCircuitTerminationsListFormatParameter.md) |  | 
  **limit** | **int32** | Number of results to return per page. | 
  **offset** | **int32** | The initial index from which to return the results. | 
- **rangeEnd** | [**IpamPrefixesAvailableIpsListRangeEndParameter**](IpamPrefixesAvailableIpsListRangeEndParameter.md) | IP from which enumeration/allocation should stop. | 
- **rangeStart** | [**IpamPrefixesAvailableIpsListRangeEndParameter**](IpamPrefixesAvailableIpsListRangeEndParameter.md) | IP from which enumeration/allocation should start. | 
+ **rangeEnd** | **string** | IP from which enumeration/allocation should stop. | 
+ **rangeStart** | **string** | IP from which enumeration/allocation should start. | 
  **sort** | **string** | Which field to use when ordering the results. | 
  **depth** | **int32** | Serializer Depth | [default to 1]
  **excludeM2m** | **bool** | Exclude many-to-many fields from the response | 
