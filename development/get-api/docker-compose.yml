@@ -62,7 +62,7 @@ services:
   #     - "nautobot-server celery worker -B -l $$NAUTOBOT_LOG_LEVEL"  # $$ because of docker-compose
   #   <<: *nautobot-base
   db:
-    image: "postgres:17-alpine"
+    image: "postgres:18-alpine"
     env_file:
       - "nautobot_dev.env"
     volumes:
